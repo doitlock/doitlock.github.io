@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+.container {
+    width: 1020px;
+    height: 100%;
+    position: relative;
+    padding-top: 100px;
+    margin: 0 auto;
+}
+.content {
+    
+}
+/*인트로*/
+.bank_intro {
+    color: #333;
+}
+.intro_head {
+    padding: 100px 0 30px;
+    font-size: 30px;
+    font-weight: 500;
+    border-bottom: 1px solid rgb(201, 201, 201);
+    margin-bottom: 70px;
+}
+.location_tit {
+    display: block;
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+.lacation_txt {
+    margin-bottom: 10px;
+}
+.lacation_txt span {
+    font-size: 15px;
+}
+.tit_info {
+    display: inline-block;
+    width: 70px;
+    height: 25px;
+}
+.office_box {
+    margin-bottom: 100px;
+}

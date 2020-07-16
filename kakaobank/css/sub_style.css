@@ -1,0 +1,236 @@
+@charset "utf-8";
+
+.container {}
+.content {
+    height: 100%;
+    position: relative;
+    padding-top: 100px;
+}
+/*인트로*/
+.bank_intro {
+    text-align: center;
+    color: #333;
+}
+.intro_head {
+    padding: 100px 0 30px;
+    font-size: 40px;
+    font-weight: 200;
+}
+.intro_desc {
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 100px;
+}
+.intro_img_slide {
+    overflow: hidden;
+    height: 470px;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+.intro_img_slide img { /*원하는 이미지 부분이 화면에 보이도록*/
+    width: 100%;
+    margin-top: -20%;
+}
+
+/*카카오뱅크 연혁*/
+.bank_history {
+    margin-bottom: 150px;
+}
+.wrap_history {
+    position: relative;
+    padding-top: 80px;
+    width: 750px;
+    margin: 0 auto;
+}
+.history_box {
+    margin-bottom: 40px;
+}
+.history_box .year {
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 50px;
+    vertical-align: top;
+    color: #333;
+    line-height: 0.8;
+}
+.history_cont {
+    display: inline-block;
+}
+.history_cont .month_row {
+    margin-bottom: 20px;
+}
+.history_cont .month_row .month {
+    display: inline-block; /*??이해안됨*/
+    width: 32px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #666;
+    margin-right: 25px;
+}
+
+/* 브랜드 비디오 */
+.brand_video {
+    background-color: #fafafa;
+    width: 100%;
+    min-width: 1200px;
+    height: 700px;
+}
+.wrap_slide {
+    /* border: 1px solid red; */
+    position: relative;
+    padding-top: 100px;
+    text-align: center;
+    width: 1200px;
+    margin: 0 auto  ;
+}
+.wrap_slide button {
+    background: none;
+    border: none;
+    font-size: 0;
+}
+.video_tit {
+    position: relative;
+    padding: 100px 0 30px;
+    font-weight: 200;
+    font-size: 31px;
+    text-align: center;
+}
+.video_tit:after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 60px;
+    height: 1px;
+    margin-left: -30px;
+    background-color: #000;
+    content: '';
+}
+.slide_item {
+    float: left;
+    margin-right: 10px;
+    position: relative;
+}
+.btn_prev {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    display: inline-block;
+    margin: 0 25px 0 0;
+}
+.btn_next {
+    position: absolute;
+    top: 35%;
+    right: 0;
+    display: inline-block;
+}
+.video_slide {
+   /*  border: 1px solid red; */
+   overflow: hidden;
+   position: relative;
+   display: inline-block;
+}
+.slide_item .tit_info {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+.slide_item .desc_info {
+    text-align: left;
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #555;
+    line-height: 20px;
+}
+.slide_item em {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 12px;
+    color: #fafafa;
+    font-style: normal;
+    padding: 15px;
+}
+/*영상 슬라이드 하단 점*/
+.slick-dots {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 340px;
+}
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin: 0 5px;
+    background-color: rgb(168, 168, 168);
+    border-radius: 100%;
+}
+
+/*bi 소개*/
+.bank_bi {
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+    min-width: 1200px;
+}
+.bi_tit {
+    position: relative;
+    padding: 100px 0 20px;
+    font-size: 40px;
+    font-weight: 200;
+}
+.bi_tit::after {
+    content: '';
+
+}
+.bi_img {
+    display: block;
+    width: 460px;
+    height: 100px;
+    margin: 100px auto 100px;
+    background: url(../img/img_brand_bi.png) no-repeat 0 -100px; /*아니; 위치를 왜 이렇게 잡아놓음?;*/
+    font-size: 0;
+    background-size: 460px 300px;
+}
+.info_bi {
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 100px;
+}
+.info_bi h3 {
+    font-size: 23px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.info_bi p {
+    font-size: 12px;
+}
+
+
+/*파일 다운로드 버튼*/
+.wrap_btn {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 200px;
+}
+.wrap_btn a {
+    display: inline-block;
+    width: 300px;
+    height: 50px;
+    font-size: 13px;
+    line-height: 50px;
+    margin: 0 6px 90px;
+    border: 1px solid #dcdcdc;
+    color: #666;
+    background-color: #fafafa;
+}
+.wrap_btn a:last-child {
+    content: '';
+    margin-right: 0;
+}
+/*이벤트 페이지*/

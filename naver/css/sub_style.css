@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+/*네이버 밑에 밑줄*/
+.select_menu::after { /*선생님 수업 소스 가져다 씀*/
+    content: '';
+    position: absolute;
+    left: -1px;
+    bottom: 20px;
+    width: calc(100% + 2px);
+    height: 2px;
+    background-color: #1ec545;
+}
+/*콘텐츠 인트로*/
+.container {
+    padding: 80px 0 130px;
+}
+.location {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 0 36px 30px;
+    text-align: left;
+    font-size: 12px;
+}
+.location::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.location li {
+    float: left;
+    padding-right: 10px;
+    
+}
+.location li a {
+    font-family: "NanumSquare", "나눔고딕", "Dotum", "돋움", "Helvetica", "Arial", "AppleSDGothicNeo", sans-serif;
+    color: rgb(126, 126, 126);
+}
+.content {
+    text-align: center;
+    width: 100%;
+}
+.page_title {
+    font-family: "NanumSquare-EB", "나눔고딕", "Dotum", "돋움", "Helvetica", "Arial", "AppleSDGothicNeo", sans-serif;
+    font-size: 42px;
+    color: #212121;
+    margin-bottom: 30px;
+}
+.page_tab {
+    margin-bottom: 30px;
+}
+.page_tab li {
+    display: inline-block;
+    padding: 0 30px;
+    position: relative;
+    font-family: "NanumSquare-EB", "나눔고딕", "Dotum", "돋움", "Helvetica", "Arial", "AppleSDGothicNeo", sans-serif;
+    font-size: 20px;
+}
+.intro_img {
+    margin-bottom: 75px;
+}
+.intro_img img { /*스크롤 안 생김*/
+    width: 100%;
+}
+
+/*연혁*/
+.content_container {
+    position: relative; 
+    max-width: 1120px;
+    margin: 0 auto;
+}
+.content_box {
+    display: inline-block;
+    font-family: "NanumSquare", "나눔고딕", "Dotum", "돋움", "Helvetica", "Arial", "AppleSDGothicNeo", sans-serif;
+}
+.box_left, .box_right {
+    display: inline-block;
+}
+.box_left {
+    vertical-align: top;
+}
+.content_box_left {
+    display: inline-block;
+    width: 220px;
+    font-family: "NanumSquare-EB", "나눔고딕", "Dotum", "돋움", "Helvetica", "Arial", "AppleSDGothicNeo", sans-serif;
+    font-size: 20px;
+    color: #333;
+}
+.content_box_left li {
+    margin-bottom: 10px;
+}
+.content_box_right {
+    width: 850px;
+    font-size: 15px;
+    color: #606167;
+}
+.content_box_right li:first-child {
+    padding-top: 0;
+}
+.content_box_right li:last-child {
+    border-bottom: 0;
+}
+.history_box {
+    padding: 35px;
+    border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+.history_year {
+    float: left;
+    width: 150px;
+    font-family: "NanumSquare-EB", "나눔고딕", "Dotum", "돋움", "Helvetica", "Arial", "AppleSDGothicNeo", sans-serif;
+    font-size: 20px;
+    color: #333;
+}
+.history_exp {
+    overflow: hidden; /*이 부분 이해 안됨*/
+}
+.history_exp > dl {
+    margin: 5px 0 14px; /* 이해안됨 */
+}
+.history_month {
+    float: left;
+    font-family: "NanumSquare-B", "나눔고딕", "Dotum", "돋움", "Helvetica", "Arial", "AppleSDGothicNeo", sans-serif;
+    font-size: 15px;
+    color: #444444;
+    padding-right: 20px;
+}
+.history_txt {
+    overflow: hidden;
+    font-family: "NanumSquare", "나눔고딕", "Dotum", "돋움", "Helvetica", "Arial", "AppleSDGothicNeo", sans-serif;
+    font-size: 14px;
+}
+.history_txt p {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+/*기업윤리규범*/
+.content .page_info {
+    padding: 0 0 25px;
+    font-size: 20px;
+    color: #333;
+    line-height: 32px;
+    letter-spacing: -2px;
+}
+
+/*기업윤리규범 리스트*/
+.content_contaoner {
+    width: 100%;
+    max-width: 1120px;
+    margin: 100px auto 120px;
+}
+.content_box {
+    margin-top: 64px;
+}
+.box_left {
+    display: inline-block;
+    vertical-align: top;
+    width: 19.5%;
+    font-family: "NanumSquare-EB", "나눔고딕", "Dotum", "돋움", "Helvetica", "Arial", "AppleSDGothicNeo", sans-serif;
+    font-size: 20px;
+    color: #333;
+    line-height: 27px;
+    letter-spacing: -0.2px;
+}
+.content_box h3 {
+    margin-top: -8px;
+}
+.content_box .box_right {
+    border-top: 2px solid #333;
+    display: inline-block;
+    width: 76.5%;
+    font-size: 15px;
+    color: #606167;
+    line-height: 1.6;
+}
+.info_list {
+    position: relative;
+    padding: 28px 0 26px 0;
+    border-bottom: 1px solid #efefef;
+}
+.info_list:last-child {
+    border-bottom: none;
+}
+.box_right .info_list.list02 {
+    padding-left: 0;
+}
+.info_list_tit {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}

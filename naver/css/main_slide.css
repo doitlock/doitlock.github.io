@@ -1,0 +1,152 @@
+@charset "utf-8";
+
+/* 컨테이너 */
+.container {
+    margin-top: 80px; /*메뉴부분과 안겹치게*/
+}
+.container .main_slide {
+    position: relative;
+    overflow: hidden; /* slide 400% 선언으로 인한 가로 스크롤 제거 */
+}
+.container .slide_info_container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+/* 컨테이너 슬라이드 이미지 */
+.container .slide {
+    width: 400%;
+}
+.container .slide::after {
+    content: "";
+    display: block;
+    clear: both; /*플롯레프트의 영향 안 받게*/
+}
+.container .slide .slide_item {
+    float: left;
+    width: 25%;
+}
+.container .slide .slide_item img {
+    width: 100%; 
+}
+.container .slide_info_box { /*a*/
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    position: relative; /*slide logo의 앱솔루트*/
+}
+.container .slide_logo {
+    background: url(../img/sprite.png) no-repeat;
+    position: absolute;
+    right: 160px;
+    bottom: 78px;
+    -webkit-background-size: 474px 1250px; /*구글,사파리에 적용*/
+    background-size: 474px 1250px;
+}
+/*슬라이드4개 로고*/
+.container .smartlens {
+    width: 191px;
+    height: 38px;
+    background-position: 0 -1062px;
+}
+.container .flower {
+    width: 191px;
+    height: 54px;
+    background-position: -142px -1101px;
+}
+.container .spacegreen {
+    width: 134px;
+    height: 48px;
+    background-position: 0 -1104px;
+}
+.container .labs {
+    width: 168px;
+    height: 24px;
+    background-position: -192px -1162px;
+}
+/*슬라이드 텍스트 부분*/
+.container .slide_text_box {
+    font-family: "NanumSquare",sans-serif;
+    position: absolute;
+    left: 160px;
+    bottom: 157px;
+}
+.container .slide_text_box .slide_title {
+    font-size: 36px;
+    margin-bottom: 32px;
+    line-height: 45px;
+}
+.container .slide_text_box .slide_title strong {
+    display: table-cell;
+    vertical-align: middle;
+    height: 92px;
+}
+
+.container .slide_text_box .slide_text {
+    font-size: 15px;
+}
+.container .slide_text_box .slide_text span {
+    display: table-cell;
+    vertical-align: middle;
+    height: 48px;
+}
+/* 프로그레스 바 */
+.container .slide_progressbar {
+    position: absolute;
+    left: 160px;
+    bottom: 221px;
+    width: calc(100% - 320px);
+    height: 1px;
+    background-color: rgb(255,255,255,0.3);
+}
+.container .slide_progressbar .fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1px;
+    width: 320px;
+    background-color: #ffffff;
+}
+/*페이징*/
+.container .slide_paging {
+    position: absolute;
+    left: 160px;
+    bottom: 114px;   
+    color: #ffffff;
+    font-size: 12px;
+}
+.container .slide_paging .current {
+    padding-right: 14px;
+}
+.container .slide_paging .total {
+    padding-left: 16px;
+    border-left: 1px solid #d6d6d5;
+}
+/*버튼*/
+.container .btn_prev, .btn_next {
+    position: absolute;
+    bottom: 198px;
+    width: 46px;
+    height: 46px;
+    background: url(../img/sprite.png) no-repeat;
+    -webkit-background-size: 474px 1250px; /*구글,사파리에 적용*/
+    background-size: 474px 1250px;
+    opacity: .8;
+    filter: alpha(opacity=80);
+    border: none;
+}
+.container .btn_prev {
+    left: 85px;
+    background-position: -296px -99px;
+}
+.container .btn_next {
+    right: 85px;
+    background-position: -346px -99px;
+}
+.container .btn_prev:hover, .btn_next:hover,
+.btn_prev:focus, .btn_next:focus {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
