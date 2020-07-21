@@ -22,8 +22,8 @@ $('.slide_list').slick({
   ]
 });
 
-var _scrollTop = window.scrollY || document.documentElement.scrollTop;
-console.log(_scrollTop)
+/* var _scrollTop = window.scrollY || document.documentElement.scrollTop;
+console.log(_scrollTop) */
 
 window.addEventListener('scroll', scrollWork)
 
