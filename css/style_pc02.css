@@ -1,5 +1,5 @@
   * {
-   /*  border: 1px solid red; */
+    /* border: 1px solid red; */
   }
   html {
     font-size:10px;
@@ -80,15 +80,24 @@
     animation-duration: 1s;
   }
   header .container.mid .item MARQUEE {
-    display: none;
+    padding-top: 5%;
   }
   /*헤더 그리드 하단*/
   header .container.bot {
-    display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-top: 1px solid #5d554a;
     padding: 10px 0;
   }
+  header .container.bot > div {
+    width: calc(100%/5);
+    border-right: 1px solid #b3b1b1;
+  }
+  header .container.bot > div:last-child {
+    border-right: none;
+  }
+
   /*헤더 온*/
   header.on {
     position: fixed;
@@ -101,10 +110,18 @@
   header.on .container.top {
     display: none;
   }
+  header.on .container.mid {
+
+  }
   header.on .container.mid .item.doit a {
     font-size: 35px;
   }
-
+  header.on .container.mid .item MARQUEE {
+    display: none;
+  }
+  header.on .container.mid .item img {
+    display: none;
+  }
 
 /*왼쪽 사이드*/
   aside {
@@ -291,10 +308,11 @@
     overflow: auto;
   }
 
-/*오른쪽 컨텐츠*/
+/*article 컨텐츠*/
   article {
     float: left;
     width: 100%;
+    height: auto;
     border-left: none;
     border-top: 1px solid #5d554a;
   }
@@ -306,14 +324,14 @@
   article .article_wrap .atc_txt {
     padding: 8px 0 10px 0;
     font-family: 'Bebas Neue', cursive;
-    font-size: 4vw;
+    font-size: 7vw;
     text-align: left;
-    margin-bottom: 30px;
     float: left;
+    margin-right: 3%;
   }
   article .article_wrap img {
     display: inline-block;
-    width: 30%;
+    width: 35%;
     margin: 0 auto;
     -webkit-filter: grayscale(100%);
     filter: gray;
@@ -322,6 +340,9 @@
   article .article_wrap img:hover {
     -webkit-filter: grayscale(0%);
     filter: none;
+  }
+  article .article_wrap .atc_slide01 p {
+    font-size: 1.5em;
   }
 /*푸터*/
   footer {
