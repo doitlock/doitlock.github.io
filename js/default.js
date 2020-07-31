@@ -9,7 +9,6 @@ $('.atc_slide01').slick({
 	arrows: false
   });
 
-
 window.addEventListener('scroll', scrollWork)
 
 const htmlElem = document.querySelector('html');
@@ -22,6 +21,11 @@ function scrollWork() {
     headerElem.classList.remove('on');
   }
 };
+
+$(document).mousemove(function(e){
+    $('.black-ball').css("top", e.pageY);
+    $('.black-ball').css("left", e.pageX);
+});
 
 
 
