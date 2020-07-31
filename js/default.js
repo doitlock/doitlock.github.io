@@ -10,7 +10,7 @@ $('.atc_slide01').slick({
   });
 
 
-window.addEventListener('scroll', scrollWork)
+/* window.addEventListener('scroll', scrollWork)
 
 const htmlElem = document.querySelector('html');
 const headerElem = document.getElementById('header');
@@ -22,7 +22,7 @@ function scrollWork() {
     headerElem.classList.remove('on');
   }
 };
-
+ */
 
 
 
