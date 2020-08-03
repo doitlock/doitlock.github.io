@@ -13,6 +13,17 @@
     /* padding: 25px; */
     font-family: 'Chosunilbo_myungjo';
   }
+  .black-ball{
+    position: absolute;
+    top:0;
+    left:0;
+    width:50px;
+    height:50px;
+    background:rgba(0,0,0,.3);
+    border-radius: 100%;
+    z-index: 9999;
+    transition: all 1s ease;
+  }
 /*헤더*/
   header {
     width: 100%;
@@ -33,12 +44,14 @@
   header .container.top .item {
     font-size: 1.2em;
   }
-  header .container.top .item.sns i {
-    margin-right: 5px;
-  }
-  header .container.top .item.time a {
+
+  header .container.top .item.time {
     display: none;
   }
+  header .container.top .item.date a {
+    display: none;
+  }
+
   /*헤더 그리드 중간*/
   header .container.mid {
     display: grid;
