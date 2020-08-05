@@ -37,19 +37,34 @@
     background-color: #f6f6f6;
     border-radius: 10px;
     margin-right: 10px;
+    transition: background-color .2s ease;
+}
+.cont_btn a:hover {
+    background-color: #fede22;
 }
 
 /* 입출금 통장 section01 */
 .section01 {
     position: relative;
 }
-.section01 .cont_img img {
+.section01 .cont_img {
     display: block;
     position: absolute;
     top: 40px;
     left: 0;
     width: 470px;
     z-index: 888;
+}
+.section01 .cont_img .with_img {
+    width: 470px;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 1.5s ease;
+}
+.section01 .cont_img .with_img.on {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 1.5s ease;
 }
 .section01 .cont_txt {
     position: absolute;
@@ -107,11 +122,21 @@
 .section03 .cont_img img {
     display: block;
     position: absolute;
-    top: 50%;
+    top: 50px;
     left: 0;
     width: 460px;
-    transform: translateY(-50%);
     margin-left: 40px;
+}
+.section03 .cont_img .moim_img {
+    width: 460px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 1s ease;
+}
+.section03 .cont_img .moim_img.on {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 1s ease;
 }
 .section03 .con_txt {
     position: absolute;
@@ -131,14 +156,24 @@
     background-color: #fff;
     height: 600px;
 }
-.section04 .cont_img img {
+.section04 .cont_img {
     display: block;
     position: absolute;
-    top: 50%;
+    top: 100px;
     right: 0;
     width: 480px;
-    transform: translateY(-50%);
     margin-right: 30px;
+}
+.section04 .cont_img .weeks26_img {
+    width: 480px;
+    opacity: 0;
+    transform: rotateY(90deg);
+    transition: all 1s ease;
+}
+.section04 .cont_img .weeks26_img.on {
+    opacity: 1;
+    transform: rotate(0);
+    transition: all 1s ease;
 }
 .section04 .con_txt {
     position: absolute;
@@ -220,12 +255,18 @@
     color: #a8a8a8;
 }
 .section06 .cont_btn a {
+    display: inline-block;
     padding: 15px 25px;
     border-radius: 10px;
     background-color: #626a85;
     color: #fff;
     font-size: 15px;
     font-weight: 500;
+    transition: background-color .1s ease;
+}
+.section06 .cont_btn:hover a {
+    background-color: #3b4f92;
+    color: #fff;
 }
 
 /* 체크카드 section07 */

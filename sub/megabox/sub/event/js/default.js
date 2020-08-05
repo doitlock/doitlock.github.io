@@ -8,12 +8,13 @@
 		autoplay:true,
 		autoplaySpeed:2000,
 		arrows:true,
-		dots:true,
+		dots:false,
 		centerPadding:30,
 		centerMode:true
 	});
   });
 		  
+  
   
   function show_menu(layer_sitemap){
 	const menu = document.getElementById('layer_sitemap');

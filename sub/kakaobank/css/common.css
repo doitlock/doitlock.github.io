@@ -51,3 +51,8 @@ html {
   height: 30px;
   background-color: #fafafa;
 }
+
+::selection {
+  color: black;
+  background: #fede22;
+}

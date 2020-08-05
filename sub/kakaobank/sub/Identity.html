@@ -8,10 +8,17 @@
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/identity_header.css">
-  <link rel="stylesheet" href="../css/sub_style.css">
+  <link rel="stylesheet" href="../css/sub_identity_style.css">
   <link rel="stylesheet" href="../css/main_footer.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
-  <title>카카오뱅크클론_은행소개</title>
+  <title>은행소개_</title>
+
+  <!--슬릭 슬라이더-->
+  <link rel="stylesheet" type="text/css" href="../slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
+
+   <!--파비콘-->
+   <link rel="icon" type="image/x-icon" sizes="32x32" href="../img/favicon.ico">
 </head>
 
 <body>
@@ -184,10 +191,18 @@
             카카오뱅크는 또 하나의 은행이 아닌 '은행의 새로운 시작' 입니다.
           </p>
           <div class="intro_img_slide">
-            <img src="../img/img_1_20200415.jpg" alt="">
-            <img src="../img/img_2_20180109.jpg" alt="" style="display: none;">
-            <img src="../img/img_3_20180109.jpg" alt="" style="display: none;">
-            <img src="../img/img_4_20180109.jpg" alt="" style="display: none;">
+            <div>
+              <img src="../img/img_1_20200415.jpg" alt="슬라이드이미지">
+            </div>
+            <div>
+              <img src="../img/img_2_20180109.jpg" alt="슬라이드이미지">
+            </div>
+            <div>
+              <img src="../img/img_3_20180109.jpg" alt="슬라이드이미지">
+            </div>
+            <div>
+              <img src="../img/img_4_20180109.jpg" alt="슬라이드이미지">
+            </div>
           </div>
         </div>
         <!--//브랜드 인트로-->
@@ -368,10 +383,9 @@
         <div class="brand_video">
           <h4 class="video_tit">브랜드 영상</h4>
           <div class="wrap_slide">
-            <button type="button" class="btn_prev">prev
-              <img src="../img/btn-arrow-l.png" alt="">
-            </button>
             <div class="video_slide">
+              <button type="button" class="slick-prev">Previous</button>
+              <button type="button" class="slick-next">Next</button>
               <div class="slide_item">
                 <em>[카카오뱅크 TV-CF] 광고 볼 시간에</em>
                 <a href="#">
@@ -405,20 +419,29 @@
                   전국 은행 및 편의점 ATM 수수료 0원
                 </p>
               </div>
-              <ul class="slick-dots">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
+              <div class="slide_item">
+                <em>[카카오뱅크 TV-CF] 광고 볼 시간에</em>
+                <a href="#">
+                  <img src="../img/brand_movie_08.png" alt="">
+                </a>
+                <h4 class="tit_info"># ATM 출금편</h4>
+                <p class="desc_info">
+                  광고 볼 시간에. ATM 출금<br>
+                  전국 은행 및 편의점 ATM 수수료 0원
+                </p>
+              </div>
+              <div class="slide_item">
+                <em>[카카오뱅크 TV-CF] 광고 볼 시간에</em>
+                <a href="#">
+                  <img src="../img/brand_movie_08.png" alt="">
+                </a>
+                <h4 class="tit_info"># ATM 출금편</h4>
+                <p class="desc_info">
+                  광고 볼 시간에. ATM 출금<br>
+                  전국 은행 및 편의점 ATM 수수료 0원
+                </p>
+              </div>
             </div>
-            <button type="button" class="btn_next">next
-              <img src="../img/btn-arrow-r.png" alt="">
-            </button>
           </div>
         </div>
         <!--video-->
@@ -462,8 +485,11 @@
           <a href="#" class="link_service">공지사항</a>
         </div>
         <div class="foot_copyright">
-          <span class="link_pnum"><b>대표전화 1599-3333</b> (해외 +82-2-6420-3333)</span>
-          <span class="kakao_copy">Copyright © KakaoBank Corp. All rights reserved.</span>
+          <p>
+            HELLO WORLD! 홍수기의 포트폴리오입니다. HTML, CSS, JavaScript, jQuery 를 사용하여 작업했습니다.<br>
+            <a href="mailto:doitlock@gmail.com" title="클릭하면 이메일을 보낼 수 있습니다.">	&#91; E-MAIL &#93; doitlock@gmail.com</a> · <a href="https://doitlock.tistory.com/" title="클릭하면 블로그로 이동합니다.">&#91; BLOG &#93; doitlock.tistory.com</a> · <a href="https://github.com/doitlock" title="클릭하면 깃허브페이지로 이동합니다.">&#91; GITHUB &#93; github.com/doitlock</a><br>
+            COPYRIGHT © Doit-Locker, Inc. All rights reserved
+          </p>
         </div>
         <div class="foot_bottom">
           <img src="../img/webaccessibility.png" alt="웹접근성 품질인증 이미지">
@@ -480,6 +506,10 @@
       </div>
     </footer><!-- //footer -->
   </div>
+  <script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="../slick/slick.min.js"></script>
+  <script type="text/javascript" src="js/default.js"></script>
 </body>
 
 </html>

@@ -38,11 +38,11 @@
 
 /*이미지 시작*/
 .event_content {
-    width: 100%;
-    margin-left: 20px;
+    margin: 0 auto;
+    width: 1500px;
 }
 .event_list {
-    width: 1080px;
+    width: 100%;
 }
 .event_list::after {
     content: '';
@@ -51,7 +51,7 @@
 }
 .event_list_item {
     float: left;
-    margin-right: 20px;
+    margin: 0 56px 0 0;
 }
 .event_list_item img {
     width: 510px;

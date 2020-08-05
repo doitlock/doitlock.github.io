@@ -11,15 +11,14 @@
   <link rel="stylesheet" href="css/main_section.css">
   <link rel="stylesheet" href="css/main_footer.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
-  <title>카카오뱅크클론코딩</title>
-
-  <!--animate.css-->
-  <link rel="stylesheet" href="css/animate.css" />
+  <title>KakaoBank_</title>
 
   <!--슬릭 슬라이더-->
   <link rel="stylesheet" type="text/css" href="slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 
+  <!--파비콘-->
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="img/favicon.ico">
 </head>
 
 <body>
@@ -28,19 +27,19 @@
       <div class="header_wrap">
         <div class="nav_content">
           <h1 class="header_logo">
-            <a href="#"><span class="blind">카카오뱅크로고</span></a>
+            <a href="index.html"><span class="blind">카카오뱅크로고</span></a>
           </h1>
           <nav>
             <ul class="gnb_menu">
               <li class="gnb_menu_list">
-                <a href="sub/Identity.html" class="gnb_menu_item" target="_blank">은행소개</a>
+                <a href="sub/Identity.html" class="gnb_menu_item" target="_self">은행소개</a>
                 <ul class="gnb_dropmenu_wrap">
                   <li>
                     <ul>
                       <li class="gnb_dropmenu"><a href="#" class="gnb_dropmenu_item"><strong>카카오뱅크</strong></a></li>
                       <li><a href="#" class="gnb_dropmenu_item"><span class="depth">브랜드</span></a></li>
                       <li><a href="#" class="gnb_dropmenu_item"><span class="depth">주주사 소개</span></a></li>
-                      <li><a href="sub/contanct.html" target="_blank" class="gnb_dropmenu_item"><span class="depth">오시는
+                      <li><a href="sub/contanct.html" target="_self" class="gnb_dropmenu_item"><span class="depth">오시는
                             길</span></a></li>
                       <li><a href="#" class="gnb_dropmenu_item"><span class="depth">제휴문의</span></a></li>
                     </ul>
@@ -167,7 +166,7 @@
               </li>
               <!--//고객센터-->
               <li class="gnb_menu_list">
-                <a href="sub/events.html" target="_blank" class="gnb_menu_item">이벤트</a>
+                <a href="sub/events.html" target="_self" class="gnb_menu_item">이벤트</a>
               </li>
               <!--//이벤트-->
               <li class="gnb_menu_list">
@@ -201,7 +200,7 @@
           <!-- 컨텐츠 입출금 통장 시작 -->
           <section class="intro_cont section01">
             <div class="cont_img">
-              <img src="img/main-withdrawal.png" alt="카카오뱅크 이체 및 계좌개설 이용화면">
+              <img src="img/main-withdrawal.png" alt="카카오뱅크 이체 및 계좌개설 이용화면" class="with_img">
             </div>
             <div class="cont_txt">
               <h3>모바일로 더 손쉬운<br>계좌개설, 간편한 이체</h3>
@@ -261,7 +260,7 @@
               </div>
             </div>
             <div class="cont_img">
-              <img src="img/main-moim.png" alt="함께 쓰고 같이 보는 모임통장">
+              <img src="img/main-moim.png" alt="함께 쓰고 같이 보는 모임통장" class="moim_img">
             </div>
           </section>
           <!--//모임 통장-->
@@ -284,7 +283,7 @@
               </div>
             </div>
             <div class="cont_img">
-              <img src="img/main-26weeks.png" alt="함께 도전해서 재미있는 26주적금">
+              <img src="img/main-26weeks.png" alt="함께 도전해서 재미있는 26주적금" class="weeks26_img">
             </div>
           </section>
           <!--//26주-->
@@ -316,6 +315,9 @@
           <div class="space"></div>
           <!--서류제출 간편하게-->
           <section class="intro_cont section06">
+            <div class="cont_img">
+              <img src="img/main-loan.png" class="main_loan_img" alt="복잡한 서류 대출을 간편하게">
+            </div>
             <div class="con_txt">
               <h3>
                 복잡한 서류 제출을 간편하게, 내가 원하는 시간에
@@ -336,9 +338,7 @@
                 <a href="#" alt="">전월세보증금 대출 ></a>
               </div>
             </div>
-            <div class="cont_img">
-              <img src="img/main-loan.png" class="main_loan_img" alt="복잡한 서류 대출을 간편하게">
-            </div>
+
           </section>
           <!--//서류제출 간편하게-->
           <!--체크카드-->
@@ -348,7 +348,7 @@
                 프렌즈 체크카드,<br>내가 고르는 선택의 즐거움
               </h3>
               <p>
-                프렌즈 디자인부터 멋스러운 블랙 컬러 카드까지 원하는 디자인과 기능을 선택할 수 있습니다.
+                프렌즈 디자인부터 멋스러운 블랙 컬러 카드까지 원하는 디자인과<br>기능을 선택할 수 있습니다.
               </p>
               <div class="cont_btn">
                 <a href="#" alt="">카카오뱅크 프렌즈 체크카드 ></a>
@@ -441,8 +441,13 @@
           <a href="#" class="link_service">공지사항</a>
         </div>
         <div class="foot_copyright">
-          <span class="link_pnum"><b>대표전화 1599-3333</b> (해외 +82-2-6420-3333)</span>
-          <span class="kakao_copy">Copyright © KakaoBank Corp. All rights reserved.</span>
+          <!-- <span class="link_pnum"><b>대표전화 1599-3333</b> (해외 +82-2-6420-3333)</span>
+          <span class="kakao_copy">Copyright © KakaoBank Corp. All rights reserved.</span> -->
+          <p>
+            HELLO WORLD! 홍수기의 포트폴리오입니다. HTML, CSS, JavaScript, jQuery 를 사용하여 작업했습니다.<br>
+            <a href="mailto:doitlock@gmail.com" title="클릭하면 이메일을 보낼 수 있습니다.">	&#91; E-MAIL &#93; doitlock@gmail.com</a> · <a href="https://doitlock.tistory.com/" title="클릭하면 블로그로 이동합니다.">&#91; BLOG &#93; doitlock.tistory.com</a> · <a href="https://github.com/doitlock" title="클릭하면 깃허브페이지로 이동합니다.">&#91; GITHUB &#93; github.com/doitlock</a><br>
+            COPYRIGHT © Doit-Locker, Inc. All rights reserved
+          </p>
         </div>
         <div class="foot_bottom">
           <img src="img/webaccessibility.png" alt="웹접근성 품질인증 이미지">
