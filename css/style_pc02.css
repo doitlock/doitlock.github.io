@@ -152,42 +152,6 @@
     width: 100%;
     display: block;
   }
-  aside .aside_wrap .aside_ani {
-    position: relative;
-  }
-  aside .aside_wrap .aside_ani .ani01 a{
-    display: inline-block;
-    width:140px;
-    height:140px;
-    background-color: black;
-    border-radius: 100%;
-    position:absolute;
-    animation: bounce 1s;
-    transform: translateY(0px);
-    animation-iteration-count: infinite;
-  }
-  @keyframes bounce {
-    0% {top: 0;
-      -webkit-animation-timing-function: ease-in;
-    }
-    40% {}
-    50% {top: 140px;
-      height: 140px;
-      -webkit-animation-timing-function: ease-out;
-    }
-    55% {top: 160px; height: 120px; 
-      -webkit-animation-timing-function: ease-in;}
-    65% {top: 120px; height: 140px; 
-      width: 160px;
-      -webkit-animation-timing-function: ease-out;}
-    95% {
-      top: 0;		
-      -webkit-animation-timing-function: ease-in;
-    }
-    100% {top: 0;
-      -webkit-animation-timing-function: ease-in;
-    }
-  }
 /*섹션*/
   section {
     float: left;

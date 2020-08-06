@@ -57,12 +57,21 @@
             안녕하세요. 반갑습니다! 홍수기의 포트폴리오입니다.
           </p>
         </div>
-        <div class="item time"><a href="">현재 시간</a></div>
+        <div class="item time">
+          <a href="">
+            <script>
+              let todayTime = new Date();
+              let hours = todayTime.getHours(); // 시
+              let minutes = todayTime.getMinutes();  // 분
+              document.write('현재 시간은 ' + hours + '시 ' + minutes + '분 입니다.');
+            </script>
+          </a>
+        </div>
       </div>
       <div class="container mid">
         <div class="item">
           <a href="" title="">
-            <MARQUEE scrolldelay="10" direction="right">이 곳을 클릭하세요. 이 곳을 클릭하세요. 이 곳을 클릭하세요. 이 곳을 클릭하세요.</MARQUEE>
+            <MARQUEE behavior=alternate>HELLO!</MARQUEE>
           </a>
           <a href="" title="">
             <img src="" alt="">
@@ -81,52 +90,105 @@
         </div>
       </div>
       <div class="container bot">
-        <div class="item"><a href="">WHO - AM - I</a></div>
-        <div class="item"><a href="https://www.youtube.com/channel/UCFZ1g65gwB2RpIvjjWkGg8A/featured">YOUTUBE</a></div>
+        <div class="item"><a href="">WHO-AM-I</a></div>
+        <div class="item"><a href="https://doitlock.tistory.com/">CODE BLOG</a></div>
         <div class="item"><a href="https://www.instagram.com/great_flood_/">INSTAGRAM</a></div>
-        <div class="item"><a href="https://doitlock.tistory.com/">T STORY - BLOG</a></div>
-        <div class="item"><a href="">GALLERY</a></div>
+        <div class="item"><a href="https://www.youtube.com/channel/UCFZ1g65gwB2RpIvjjWkGg8A/featured">YOUTUBE</a></div>
+        <div class="item"><a href="">CONTACT</a></div>
       </div>
     </header>
     <aside>
       <div class="aside_wrap">
-        <div class="side_img">
-          <img src="" alt="클릭하면 이동하는 이미지">
-        </div>
-        <div class="aside_ani">
-          <div class="ani01">
-            <a href="" title="팝업창" style="display: none;"></a>
-          </div>
-          <div class="ani02">
-            <a href="" title="팝업창"></a>
-          </div>
-          <div class="ani03">
-            <a href="" title="팝업창"></a>
+        <div class="aside_top">
+          <div class="inner_wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>#01. 도움주신 분들</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="">김버그의 CSS & HTML<span>&#62;</span> </a></td>
+                </tr>
+                <tr>
+                  <td><a href="">WEBSTORY BOY<span>&#62;</span></a></td>
+                </tr>
+                <tr>
+                  <td><a href="">생활코딩<span>&#62;</span></a></td>
+                </tr>
+                <tr>
+                  <td><a href="">드림코딩 BY 엘리<span>&#62;</span></a></td>
+                </tr>
+                <tr>
+                  <td><a href="">1분 코딩<span>&#62;</span></a></td>
+                </tr>
+                <tr>
+                  <td><a href="">노마드 코더<span>&#62;</span></a></td>
+                </tr>
+                <tr>
+                  <td><a href="">ZERO CHO<span>&#62;</span></a></td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <thead>
+                <tr>
+                  <th>#02. THANKS TO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="https://www.photopea.com/">PHOTOPEA - 간단한 이미지편집</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://evernote.com/intl/ko/">EVERNOTE - 기록</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.youtube.com/watch?v=AixAmLWzXYg&list=PLzQcjM-f6rkPx32dxsExoIaX1jDLrtu6N&index=36&t=25s">DarkCode - 유튜브 채널</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog">Online Tutorials - 유튜브채널</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q">Dev Ed - 유튜브 채널</a></td>
+                </tr>
+                <tr>
+                  <td><a href="">EVERNOTE</a></td>
+                </tr>
+                <tr>
+                  <td><a href="">EVERNOTE</a></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
         <div class="aside_slide">
-          <div class="slide01">
+          <div>
             <img src="" alt="">
           </div>
-          <div class="slide02" style="display: none;">
+          <div>
             <img src="" alt="">
           </div>
-          <div class="slide03" style="display: none;">
+          <div>
             <img src="" alt="">
           </div>
-          <div class="slide04" style="display: none;">
+          <div>
             <img src="" alt="">
           </div>
-          <div class="slide05" style="display: none;">
+          <div>
             <img src="" alt="">
           </div>
+        </div>
+        <div class="aside_bottom">
+          
         </div>
       </div>
     </aside>
     <section>
       <div class="sec_tit">
         <h2></h2>
-        <P> &#91; 클릭하면 포트폴리오 소개글 팝업이 열립니다. &#93;</P>
+        <P> &#91; 이미지를 클릭하면 포트폴리오 소개글 팝업창이 열립니다. &#93;</P>
       </div>
       <div class="pofol_wrap">
         <div class="pofol_list line">
@@ -271,15 +333,16 @@
         </div>
         <p>illustration by Doitlock.</p>
       </div> -->
-      <div class="skill">
-        <h2>SKILL</h2>
-        <div class="kill_list">
-          <h2>HTML</h2>
-          <p>html 중</p>
-        </div>
+      <div class="doit_work">
+        <p>[ DOITLOCK'S WORK ] <i>click!</i></p>
+        <ul>
+          <li><a href="" class="btn-1">Illustration</a></li>
+          <li><a href="" class="btn-2">Photograph</a></li>
+          <li><a href="" class="btn-3">GraphicDesign</a></li>
+          <li><a href="" class="btn-4">Video</a></li>
+        </ul>
       </div>
     </section>
-
     <article>
       <div class="article_wrap">
         <div class="atc_txt">
@@ -310,10 +373,14 @@
 
       </div>
       <div class="foot_bottom">
-        <h2 class="foot_doit">Doit<span>Portfolio</span></h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit repellat nulla adipisci soluta rem veniam
-          minima fugiat porro tempora, deserunt similique laboriosam explicabo quia? Culpa omnis ullam repellat sequi
-          saepe?</p>
+        <h2 class="foot_doit">HELLO WORLD! 안녕하세요. <span>홍수기</span>의 포트폴리오 페이지 입니다.</h2>
+        <p>
+          본 웹페이지는 HTML, CSS, JavaScript, jQuery 를 사용하여 작업했습니다.<br>
+          <a href="mailto:doitlock@gmail.com" title="클릭하면 이메일을 보낼 수 있습니다."> &#91; E-MAIL &#93; doitlock@gmail.com</a> ·
+          <a href="https://doitlock.tistory.com/" title="클릭하면 블로그로 이동합니다.">&#91; BLOG &#93; doitlock.tistory.com</a> ·
+          <a href="https://github.com/doitlock" title="클릭하면 깃허브페이지로 이동합니다.">&#91; GITHUB &#93;
+            github.com/doitlock</a>
+        </p>
         <p>copyright © 2020 DoitLock all rights reserved</p>
       </div>
     </footer>

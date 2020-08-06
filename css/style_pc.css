@@ -12,7 +12,7 @@
     /* padding: 25px; */
     font-family: 'Chosunilbo_myungjo';
   }
-  .black-ball{
+  .black-ball{ /*마우스따라다니는 볼*/
     position: absolute;
     top:0;
     left:0;
@@ -52,7 +52,7 @@
     grid-template-columns: 20% 60% 20%;
     border-top: 1px solid #5d554a;
     width: auto;
-    height: 315px;
+/*     height: 315px; */
   }
   header .container.mid .item {
     
@@ -61,12 +61,16 @@
     width: 30px;
   }
   header .container.mid .item.doit {
-
+    transition: all .3s ease-in;
+  }
+  header .container.mid .item.doit:hover {
+    transform: scale(.9);
+    transition: all .3s ease-out;
   }
   header .container.mid .item.doit a {
     position: relative;
     font-family: 'Shrikhand', cursive;
-    font-size: 18em;
+    font-size: 15vw;
     color: #ef1f16;
   }
   header .container.mid .item.doit a::before {
@@ -148,54 +152,50 @@
   aside {
     float: left;
     width: 20%;
+    height: auto;
   }
   aside .aside_wrap {
+    width: 100%;
+    padding-top: 20px;
+  }
+  aside .aside_wrap .inner_wrap{
     width: 90%;
     margin: 0 auto;
   }
-  aside .aside_wrap .side_img {
-    margin-top: 5%;
+  aside .aside_wrap .aside_top {
+    /* border-bottom: 1px solid #5d554a; */
   }
-  aside .aside_wrap .side_img img {
+  aside .aside_wrap .aside_top table {
     width: 100%;
+    margin-bottom: 10%;
+  }
+  aside .aside_wrap .aside_top table th, td {
+    border: 1px solid #444444;
+    padding: 10px;
+    font-size: 1.3em;
+  }
+  aside .aside_wrap .aside_top table th {
+    background-color: #333;
+    color: #fff;
+    font-weight: 300;
+  }
+  aside .aside_wrap .aside_top table td {
+  
+  }
+  aside .aside_wrap .aside_top table td a {
+    overflow: hidden;
     display: block;
   }
-  aside .aside_wrap .aside_ani {
-    position: relative;
+  aside .aside_wrap .aside_top table td:hover,  
+  aside .aside_wrap .aside_top table td a:hover{
+    background-color: royalblue;
+    color: #fff;
   }
-  aside .aside_wrap .aside_ani .ani01 a{
-    display: inline-block;
-    width:140px;
-    height:140px;
-    background-color: black;
-    border-radius: 100%;
-    position:absolute;
-    animation: bounce 1s;
-    transform: translateY(0px);
-    animation-iteration-count: infinite;
+  aside .aside_wrap .aside_top table span {
+    float: right;
+    font-size: 0.6em;
   }
-  @keyframes bounce {
-    0% {top: 0;
-      -webkit-animation-timing-function: ease-in;
-    }
-    40% {}
-    50% {top: 140px;
-      height: 140px;
-      -webkit-animation-timing-function: ease-out;
-    }
-    55% {top: 160px; height: 120px; 
-      -webkit-animation-timing-function: ease-in;}
-    65% {top: 120px; height: 140px; 
-      width: 160px;
-      -webkit-animation-timing-function: ease-out;}
-    95% {
-      top: 0;		
-      -webkit-animation-timing-function: ease-in;
-    }
-    100% {top: 0;
-      -webkit-animation-timing-function: ease-in;
-    }
-  }
+
 /*섹션*/
   section {
     float: left;
@@ -203,6 +203,7 @@
     overflow: hidden;
     border-left: 1px solid #5d554a;
     border-right: 1px solid #5d554a;
+    text-align: center;
   }
   section .sec_tit {
     text-align: center;
@@ -289,12 +290,13 @@
     transition: all .2s ease-out;
   }
   section .pofol_wrap .pofol_list .btn > a:hover {
-    background-color: black;
+    background-color: #5d554a;
     color: #fff;
     border: 1px #b4b4b4 solid;
   }
   section .pofol_wrap .pofol_list .btn > a:first-child:hover {
-    background-color: #c00e08;
+    /* background-color: #d63447; */
+    background-color: royalblue;
   }
 /*포폴 소개글 팝업창*/
   .pofol_wrap .pofol_list a {
@@ -327,6 +329,47 @@
     z-index: 1002;
     overflow: auto;
   }
+/*섹션하단*/
+.doit_work {
+  padding-top: 60px;
+}
+.doit_work > p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  letter-spacing: .1em;
+}
+.doit_work ul {
+  width: 100%;
+  border-top: 1px solid #5d554a;
+}
+.doit_work ul::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.doit_work ul li {
+  float: left;
+  width: 25%;
+  height: 100px;
+  line-height: 100px;
+  border-right: 1px solid #5d554a;
+  background-color: #e2dbdb;
+}
+.doit_work ul li:last-child {
+  border-right: none;
+}
+.doit_work ul li a {
+  display: block;
+  font-size: 1.8em;
+  font-family: 'Damion', cursive;
+  color: #333;
+}
+.doit_work ul li a:hover {
+  background-color: royalblue;
+  color: #fff;
+  transition: all .3s ease;
+  text-decoration: underline;
+}
 
 /*오른쪽 컨텐츠*/
   article {
@@ -367,7 +410,8 @@
   footer {
     clear: both;
     width: 100%;
-    height: 150px;
+    height: 200px;
     border-top: 1px solid #5d554a;
+    padding: 30PX;
   }
 
