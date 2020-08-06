@@ -188,7 +188,7 @@
   }
   aside .aside_wrap .aside_top table td:hover,  
   aside .aside_wrap .aside_top table td a:hover{
-    background-color: royalblue;
+    background-color: #0066ff;
     color: #fff;
   }
   aside .aside_wrap .aside_top table span {
@@ -290,13 +290,13 @@
     transition: all .2s ease-out;
   }
   section .pofol_wrap .pofol_list .btn > a:hover {
-    background-color: #5d554a;
+    background-color: #444;
     color: #fff;
     border: 1px #b4b4b4 solid;
   }
   section .pofol_wrap .pofol_list .btn > a:first-child:hover {
     /* background-color: #d63447; */
-    background-color: royalblue;
+    background-color: #0066ff;
   }
 /*포폴 소개글 팝업창*/
   .pofol_wrap .pofol_list a {
@@ -365,7 +365,7 @@
   color: #333;
 }
 .doit_work ul li a:hover {
-  background-color: royalblue;
+  background-color: #0066ff;
   color: #fff;
   transition: all .3s ease;
   text-decoration: underline;
