@@ -15,3 +15,12 @@
     background-color: royalblue;
     color: yellow;
 }
+
+a {
+    cursor: grab;
+}
+
+html {
+    font-size:10px;
+    cursor: url('../img/pngegg.png'), auto;
+  }

@@ -1,6 +1,6 @@
 new WOW().init();
 
-$('.sec01_slide').slick({
+$('.benefits_slide01').slick({
   infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -10,7 +10,7 @@ $('.sec01_slide').slick({
   dots: true
 });
 
-$('.sec02_slide').slick({
+$('.benefits_slide02').slick({
   infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,

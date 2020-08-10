@@ -1,0 +1,453 @@
+@charset "utf-8";
+
+* {
+        
+    box-sizing: border-box;
+}
+
+/* 메인 헤더 */
+#wrap {}
+header {
+    background-color: #313955;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    border-bottom: 1px solid #ddd;
+}
+header:hover {
+    background-color: #fff;
+}
+header:hover h1.header_logo {
+    background: url(../img/logo_black.svg) no-repeat;
+}
+header:hover .gnb_menu_item {
+    color: #333;
+}
+header:hover .gnb_menu_list .gnb_menu_item.underline {
+    border-bottom: 2px solid #333;
+    padding: 28px 0;
+}
+.header_wrap {
+    width: 1080px;
+    min-width: 1020px;
+    height: 80px;
+    margin: 0 auto;
+    text-align: center;
+}
+.nav_content {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    font-size: 0;
+}
+h1.header_logo {
+    width: 116px;
+    height: 20px;
+    margin: 32px 0 0 32px;
+    background: url(../img/logo_white.svg) no-repeat; 
+    background-size: cover;
+    float: left;
+}
+h1.header_logo a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+/* 로고가 클릭될 수 있도록 */
+.header_wrap .gnb_menu {}
+
+.gnb_menu_list .gnb_menu_item.underline {
+    border-bottom: 2px solid #fff;
+    padding: 28px 0;
+}
+/* nav 메뉴 */
+nav {
+    display: inline-block;
+    float: right;
+}
+.gnb_menu {font-size: 0; }
+
+/* 드랍메뉴 */
+.gnb_dropmenu_wrap {
+    display: none;
+    min-width: 1100px;
+    /*height: 276px;*/
+    background-color: #fff;
+    /* z-index: 999; */
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* top: auto;
+    bottom: 100%; */
+    height: auto;
+    text-align: center;
+    font-size: 0;
+  /*   border-top: 1px solid rgba(0,0,0,0.1); */
+}
+.gnb_dropmenu_wrap > li {
+    display: inline-block;
+    width: 190px;
+    /*height: 276px;*/
+    padding-top: 30px;
+    font-size: 1rem;
+    vertical-align: top; /*글자를 위로 정렬*/
+    margin-bottom: 50px;
+    line-height: 35px;
+}
+.gnb_dropmenu_wrap > li:hover {
+    background-color:#fff;
+}
+.gnb_menu_list:hover .gnb_dropmenu_wrap{
+    display: block;
+    /* top: 100%;
+    bottom: auto; */
+    height: auto;
+}
+.gnb_menu_list, .gnb_menu_list_recruit  {
+    display: inline-block;
+    font-size: 1rem;
+}
+.gnb_menu_item {
+    display: block;
+    margin: 0 10px;
+    padding: 30px 0;
+    font-size: 15px;
+    min-width: 80px;
+    color: #ffffff;
+}
+.gnb_menu_item:hover {
+    border-bottom: 2px solid #000;
+    padding: 28px 0;
+}
+/* 드랍메뉴 */
+.gnb_dropmenu {
+    font-size: 17px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+.gnb_dropmenu_item strong {
+    font-weight: bold;
+    color: #333333;
+}
+.gnb_dropmenu_item .depth {
+    font-size: 14px;
+    padding-bottom: 2px;
+    color: #444444;
+}
+/* 서류제출하기 */
+.gnb_menu_list #go-to-scraping {
+    padding: 10px 20px;
+    background: #fede22;
+    border: 1px solid #fede22;
+    border-radius: 22px;
+    color: #111;
+}
+
+/* 인트로 메인 */
+.container {
+    position: relative;
+    margin: 0 auto;
+}
+.intro_main {
+    position: relative;
+    top: 80px;
+    width: 100%;
+    height: 884px;
+    margin: 0;
+    background-color: #fff;
+}
+.intro_main .intro_main_content {
+    position: relative;
+    width: 1200px;
+    height: 884px;
+    background-image: url(../img/main-bg2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    z-index: 1;
+}
+.intro_main .background-line {
+    background-color: #fede22;
+    width: 100%;
+    height: 720px;
+    position: absolute;
+    top: 0;
+}
+
+/* 인트로 메인 텍스트 */
+.intro_main .tit_main {
+    position: absolute;
+    top: 215px;
+    width: 1200px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 52px;
+    font-weight: 500;
+    color: #333;
+    margin-left: 90px;
+    letter-spacing: -2px;
+    line-height: 65px;
+}
+.intro_main .tit_sub {
+    position: absolute;
+    top: 375px;
+    left: 90px;
+    font-size: 17px;
+    color: #111;
+    letter-spacing: -1px;
+    font-weight: normal;
+}
+.intro_main .list_store {
+    overflow: hidden;
+    position: absolute;
+    top: 490px;
+    margin-left: 85px;
+    
+}
+.intro_main .list_store > li {
+    float: left;
+    width: 178px;
+    height: 60px;
+    padding: 0 6px;
+}
+.intro_main .link_store {
+    display: block;
+    height: 56px;
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 56px;
+    color: #333;
+    background: #fff;
+    text-align: center;  
+}
+
+/*링크 스토어 아이콘*/
+.intro_main .list_store .img_kabang {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: -2px 10px 0 0;
+    background-position: -340px -292px;
+    text-indent: 0;
+    vertical-align: middle;
+}
+.img_kabang {
+    overflow: hidden;
+    background: url(../img/img-kabang-200417.png) no-repeat;
+}
+.intro_main .list_store .ico_app {
+    width: 24px;
+    height: 24px;
+    margin-top: -4px;
+    background-position: -371px -292px;
+}
+
+.container {}
+.content {
+    height: 100%;
+    position: relative;
+    padding-top: 100px;
+}
+/*인트로*/
+.bank_intro {
+    text-align: center;
+    color: #333;
+}
+.intro_head {
+    padding: 100px 0 30px;
+    font-size: 40px;
+    font-weight: 200;
+}
+.intro_desc {
+    font-size: 15px;
+    line-height: 25px;
+    margin-bottom: 100px;
+}
+.intro_img_slide {
+    overflow: hidden;
+    height: 470px;
+    width: 100%;
+    margin: 0 auto; 
+}
+.intro_img_slide img { /*원하는 이미지 부분이 화면에 보이도록*/
+    width: 100%;
+    margin-top: -20%;
+}
+
+/*카카오뱅크 연혁*/
+.bank_history {
+    margin-bottom: 150px;
+}
+.wrap_history {
+    position: relative;
+    padding-top: 80px;
+    width: 750px;
+    margin: 0 auto;
+}
+.history_box {
+    margin-bottom: 40px;
+}
+.history_box .year {
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 50px;
+    vertical-align: top;
+    color: #333;
+    line-height: 0.8;
+}
+.history_cont {
+    display: inline-block;
+}
+.history_cont .month_row {
+    margin-bottom: 20px;
+}
+.history_cont .month_row .month {
+    display: inline-block; /*??이해안됨*/
+    width: 32px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #666;
+    margin-right: 25px;
+}
+
+/* 브랜드 비디오 */
+.brand_video {
+    background-color: #fafafa;
+    width: 100%;
+    min-width: 1200px;
+    height: 700px;
+}
+.wrap_slide {
+    position: relative;
+    padding-top: 100px;
+    text-align: center;
+    width: 1200px;
+    margin: 0 auto  ;
+}
+.video_tit {
+    position: relative;
+    padding: 100px 0 30px;
+    font-weight: 200;
+    font-size: 31px;
+    text-align: center;
+}
+.video_tit:after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 60px;
+    height: 1px;
+    margin-left: -30px;
+    background-color: #000;
+    content: '';
+}
+
+/*슬릭슬라이더*/
+/* .video_slide {
+   overflow: hidden;
+   position: relative;
+   display: inline-block;
+} */
+/* .slide_item {
+    float: left;
+    position: relative;
+    padding: 3px 8px;
+} */
+.slide_item .tit_info {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+.slide_item .desc_info {
+    text-align: left;
+    margin-top: 15px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #555;
+    line-height: 20px;
+}
+.slide_item em {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 12px;
+    color: #fafafa;
+    font-style: normal;
+    padding: 15px;
+}
+
+
+/*bi 소개*/
+.bank_bi {
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+    min-width: 1200px;
+}
+.bi_tit {
+    position: relative;
+    padding: 100px 0 20px;
+    font-size: 40px;
+    font-weight: 200;
+}
+.bi_tit::after {
+    content: '';
+
+}
+.bi_img {
+    display: block;
+    width: 460px;
+    height: 100px;
+    margin: 100px auto 100px;
+    background: url(../img/img_brand_bi.png) no-repeat 0 -100px; /*아니; 위치를 왜 이렇게 잡아놓음?;*/
+    font-size: 0;
+    background-size: 460px 300px;
+}
+.info_bi {
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 100px;
+}
+.info_bi h3 {
+    font-size: 23px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.info_bi p {
+    font-size: 12px;
+}
+
+
+/*파일 다운로드 버튼*/
+.wrap_btn {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 200px;
+}
+.wrap_btn a {
+    display: inline-block;
+    width: 300px;
+    height: 50px;
+    font-size: 13px;
+    line-height: 50px;
+    margin: 0 6px 90px;
+    border: 1px solid #dcdcdc;
+    color: #666;
+    background-color: #fafafa;
+    transition: all .2s ease-out;
+}
+.wrap_btn a:hover {
+    border: 1px solid #dcdcdc;
+    color: #333;
+    background-color: #fede22;
+}
+.wrap_btn a:last-child {
+    content: '';
+    margin-right: 0;
+}
+/*이벤트 페이지*/

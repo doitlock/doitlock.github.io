@@ -289,25 +289,25 @@
 
 
 /* 컨테이너 */
-section {
+main {
 	width: 100%;
 	min-width: 1100px;
 	min-height: 100%;
 }
-section::after {
+main::after {
 	clear: both;
 }
-section .cont_top {
+main .cont_top {
 	display: block;
 	position: static;
 	width: 100%;
 	height: 42px;
 	background-color: #f8f8fa;
 }
-section .cont_top .top_txt {
+main .cont_top .top_txt {
 	float: left;
 }
-section .cont_top .top_txt a {
+main .cont_top .top_txt a {
 	color: #666;
 	font-size: 14px;
 	font-weight: 400;
@@ -315,12 +315,12 @@ section .cont_top .top_txt a {
 	vertical-align: middle;
 	margin-right: 5px;
 }
-section .cont_top .top_txt img {
+main .cont_top .top_txt img {
 	width: 13px;
 	line-height: 42px;
 	margin-bottom: 3px;
 }
-section .cont_top .top_txt a::after {
+main .cont_top .top_txt a::after {
 	content: '';
 	background: url(../img/bg-location-arr.png) no-repeat;
 	width: 5px;
@@ -328,7 +328,7 @@ section .cont_top .top_txt a::after {
 	display: inline-block;
 	margin-left: 10px;
 }
-section .cont_top .top_txt a:last-child::after {
+main .cont_top .top_txt a:last-child::after {
 	content: '';
 	background: none;
 }

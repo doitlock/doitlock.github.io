@@ -1,4 +1,3 @@
-
   
   $(document).ready(function(){
 	$('.slide_wrap').slick({
@@ -14,7 +13,6 @@
 	});
   });
 		  
-  
   
   function show_menu(layer_sitemap){
 	const menu = document.getElementById('layer_sitemap');

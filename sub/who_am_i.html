@@ -10,14 +10,13 @@
   <link rel="stylesheet" href="css/common.css">
   <link href="css/style_pc.css" rel="stylesheet" media="screen and (min-width : 1201px)" />
   <link href="css/style_pc02.css" rel="stylesheet" media="screen and (max-width : 1200px)" />
-    <link href="css/style_mobile.css" rel="stylesheet" media="screen and (max-width : 800px)" />
+  <!--   <link href="css/style_mobile.css" rel="stylesheet" media="screen and (max-width : 850px)" /> -->
 
   <!--폰트-->
   <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  
 
   <!--폰트 어썸-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -32,19 +31,22 @@
   <!--파비콘-->
   <link rel="icon" type="image/x-icon" sizes="32x32" href="img/favicon.ico">
 
-  <title>Doit Portfolio!</title>
+  <title>DoItPofol!</title>
 </head>
 
 <body>
   <div id="wrap">
     <div class="black-ball"></div>
+  <!--     <div id="draggable">
+        <p>What a Drag</p>
+      </div> -->
     <div class="fix_txt">
       <p></p>
     </div>
     <header id="header">
       <div class="container top">
         <div class="item date">
-          <div>
+          <a href="">
             <script>
               let today = new Date();
               let year = today.getFullYear(); // 년도
@@ -54,7 +56,7 @@
               document.write('오늘은 ' + year + ' 년 ' + month + ' 월 ' + date + ' 일 입니다.')
               document.write('<br>')
             </script>
-          </div>
+          </a>
         </div>
         <div class="item">
           <p>
@@ -62,14 +64,14 @@
           </p>
         </div>
         <div class="item time">
-          <div>
+          <a href="">
             <script>
               let todayTime = new Date();
               let hours = todayTime.getHours(); // 시
               let minutes = todayTime.getMinutes();  // 분
               document.write('현재 시간은 ' + hours + '시 ' + minutes + '분 입니다.');
             </script>
-          </div>
+          </a>
         </div>
       </div>
       <div class="container mid">
@@ -78,10 +80,10 @@
             <!-- <MARQUEE behavior=alternate>HELLO!</MARQUEE> -->
           </a>
           <a href="" title="">
-            <img src="#" alt="">
+            <img src="" alt="">
           </a>
         </div>
-        <div class="item doit"><a href="index.html" title="안녕하세요! 홍수기의 포트폴리오사이트입니다.">Doit<span class="wow">portfolio</span></a></div>
+        <div class="item doit"><a href="index.html">Doit<span class="wow">portfolio</span></a></div>
         <div class="item">
           <a href="" title="">
 <!--             <MARQUEE scrolldelay="10">HELLO BONGOUR NIHAO 안녕하세요 HELLO BONGOUR NIHAO 안녕하세요 HELLO BONGOUR NIHAO 안녕하세요
@@ -94,14 +96,11 @@
         </div>
       </div>
       <div class="container bot">
-        <div class="item"><a href="" title="홍수기가 누구야">WHO-AM-I</a></div>
-        <div class="item"><a href="https://doitlock.tistory.com/" title="코딩공부 기록하는 곳">CODE BLOG</a></div>
-        <div class="item"><a href="https://www.instagram.com/great_flood_/" title="홍수기 그림인스타 계정">INSTAGRAM</a></div>
-        <div class="item"><a href="https://www.youtube.com/channel/UCFZ1g65gwB2RpIvjjWkGg8A/featured" title="비디오작업물">YOUTUBE</a></div>
-        <div class="item"><a href="" title="PLEASE CONTACT ME!">CONTACT</a></div>
-      </div>
-      <div class="container space">
-        <span class="blind">비어있는칸</span>
+        <div class="item"><a href="">WHO-AM-I</a></div>
+        <div class="item"><a href="https://doitlock.tistory.com/">CODE BLOG</a></div>
+        <div class="item"><a href="https://www.instagram.com/great_flood_/">INSTAGRAM</a></div>
+        <div class="item"><a href="https://www.youtube.com/channel/UCFZ1g65gwB2RpIvjjWkGg8A/featured">YOUTUBE</a></div>
+        <div class="item"><a href="">CONTACT</a></div>
       </div>
     </header>
     <aside>
@@ -111,34 +110,30 @@
             <table>
               <thead>
                 <tr>
-                  <th colspan="2">#01. 도움주신 분들</th>
+                  <th>#01. 도움주신 분들</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td rowspan="2"><a href="https://edu.goorm.io/lecture/17829/%EA%B9%80%EB%B2%84%EA%B7%B8%EC%9D%98-css%EB%8A%94-%EC%9E%AC%EB%B0%8C%EB%8B%A4-%EA%B8%B0%EC%B4%88%EB%B6%80%ED%84%B0-%EC%8B%A4%EB%AC%B4-%EB%A0%88%EB%B2%A8%EA%B9%8C%EC%A7%80" title="김버그의 구름에듀 강의">KIM BUG 김버그</a></td>
-                  <td><a href="https://edu.goorm.io/lecture/17829/%EA%B9%80%EB%B2%84%EA%B7%B8%EC%9D%98-css%EB%8A%94-%EC%9E%AC%EB%B0%8C%EB%8B%A4-%EA%B8%B0%EC%B4%88%EB%B6%80%ED%84%B0-%EC%8B%A4%EB%AC%B4-%EB%A0%88%EB%B2%A8%EA%B9%8C%EC%A7%80" title="김버그의 구름에듀 강의">CSS<span>&#62;</span></a></td>
+                  <td><a href="https://edu.goorm.io/lecture/17829/%EA%B9%80%EB%B2%84%EA%B7%B8%EC%9D%98-css%EB%8A%94-%EC%9E%AC%EB%B0%8C%EB%8B%A4-%EA%B8%B0%EC%B4%88%EB%B6%80%ED%84%B0-%EC%8B%A4%EB%AC%B4-%EB%A0%88%EB%B2%A8%EA%B9%8C%EC%A7%80">김버그의 CSS & HTML<span>&#62;</span></a></td>
                 </tr>
                 <tr>
-                  <td><a href="https://edu.goorm.io/lecture/17829/%EA%B9%80%EB%B2%84%EA%B7%B8%EC%9D%98-css%EB%8A%94-%EC%9E%AC%EB%B0%8C%EB%8B%A4-%EA%B8%B0%EC%B4%88%EB%B6%80%ED%84%B0-%EC%8B%A4%EB%AC%B4-%EB%A0%88%EB%B2%A8%EA%B9%8C%EC%A7%80" title="김버그의 구름에듀 강의">HTML<span>&#62;</span></a></td>
+                  <td><a href="https://webstoryboy.co.kr/">WEBSTORY BOY<span>&#62;</span></a></td>
                 </tr>
                 <tr>
-                  <td colspan="2"><a href="https://webstoryboy.co.kr/">WEBSTORY BOY<span>&#62;</span></a></td>
+                  <td><a href="https://opentutorials.org/course/1">생활코딩<span>&#62;</span></a></td>
                 </tr>
                 <tr>
-                  <td colspan="2"><a href="https://opentutorials.org/course/1">생활코딩<span>&#62;</span></a></td>
+                  <td><a href="https://www.youtube.com/channel/UC_4u-bXaba7yrRz_6x6kb_w">드림코딩 BY 엘리<span>&#62;</span></a></td>
                 </tr>
                 <tr>
-                  <td colspan="2"><a href="https://www.youtube.com/channel/UC_4u-bXaba7yrRz_6x6kb_w">드림코딩 BY 엘리<span>&#62;</span></a></td>
+                  <td><a href="https://studiomeal.com/">1분 코딩<span>&#62;</span></a></td>
                 </tr>
                 <tr>
-                  <td colspan="2"><a href="https://studiomeal.com/">1분 코딩<span>&#62;</span></a></td>
+                  <td><a href="https://academy.nomadcoders.co/">노마드 코더<span>&#62;</span></a></td>
                 </tr>
                 <tr>
-                  <td colspan="2"><a href="https://academy.nomadcoders.co/">노마드 코더<span>&#62;</span></a></td>
-                </tr>
-                <tr>
-                  <td colspan="2"><a href="https://www.zerocho.com/">ZERO CHO<span>&#62;</span></a></td>
+                  <td><a href="https://www.zerocho.com/">ZERO CHO<span>&#62;</span></a></td>
                 </tr>
               </tbody>
             </table>
@@ -172,15 +167,7 @@
                 </tr>
               </tbody>
             </table>
-            <div class="contact_me">
-              <h2>PLEASE<br>CONTACT ME!</h2>
-              <div class="underline"></div>
-              <p class="phone_num">+82 10 0000 0000</p>
-              <p class="email_num">doitlock@gmail.com</p>
-              <a href="mailto:doitlock@gmail.com" class="contact_mail">contact me on e-mail</a>
-            </div>
           </div>
-          <!--//innerwrap-->
         </div>
         <div class="aside_slide">
           <div>
@@ -199,35 +186,12 @@
             <img src="" alt="">
           </div>
         </div>
+        <div class="aside_bottom">
+          
+        </div>
       </div>
     </aside>
     <section>
-      <div class="sec_tit">
-        <h2 class="blind">섹션 슬라이드</h2>
-      </div>
-      <div class="section_slide">
-        <div>
-          <a href=""><img src="img/list01.png" alt=""></a>
-        </div>
-        <div>
-          <a href=""><img src="img/list02.png" alt=""></a>
-        </div>
-        <div>
-          <a href=""><img src="img/list03.png" alt=""></a>
-        </div>
-        <div>
-          <a href=""><img src="img/list04.png" alt=""></a>
-        </div>
-        <div>
-          <a href=""><img src="img/list05.png" alt=""></a>
-        </div>
-        <div>
-          <a href=""><img src="img/list06.png" alt=""></a>
-        </div>
-      </div>
-      <div class="move_ani">
-        <p class="chatbox">Slide Show</p>
-      </div>
       <div class="sec_tit">
         <h2></h2>
         <P> &#91; 이미지를 클릭하면 포트폴리오 소개글 팝업창이 열립니다. &#93;</P>
@@ -378,27 +342,23 @@
       <div class="doit_work">
         <p>[ DOITLOCK'S WORKS ] <i>click!</i></p>
         <ul>
-          <li><a href="" class="btn-1 wow" title="두잇락의 일러스트그림">Illustration</a></li>
-          <li><a href="" class="btn-2 wow" title="두잇락의 포토" style="animation-delay: 0.2s;">Photograph</a></li>
-          <li><a href="" class="btn-3 wow" title="두잇락의 그래픽디자인" style="animation-delay: 0.4s;">GraphicDesign</a></li>
-          <li><a href="" class="btn-4 wow" title="두잇락의 비디오" style="animation-delay: 0.6s;">Video</a></li>
+          <li><a href="" class="btn-1">Illustration</a></li>
+          <li><a href="" class="btn-2">Photograph</a></li>
+          <li><a href="" class="btn-3">GraphicDesign</a></li>
+          <li><a href="" class="btn-4">Video</a></li>
         </ul>
       </div>
     </section>
     <article>
       <div class="article_wrap">
         <div class="atc_txt">
-          <div class="slide_txt">
-            <p>Go Wild</p>
-          </div>
-          <div class="slide_txt">
-            <p>Speak Loud</p>
-          </div>
-          <div class="slide_txt">
-            <p>Think Hard</p>
-          </div>
+          <p>
+            Go Wild<br>
+            Speak Loud<br>
+            Think Hard
+          </p>
         </div>
-        <!-- <div class="atc_slide01">
+        <div class="atc_slide01">
           <div class="slide01_01">
             <img src="img/round01.png" alt="">
             <p>불태웠다.</p>
@@ -411,29 +371,20 @@
             <img src="img/round03.png" alt="">
             <p>고양이밥이 그리 맛이 좋아</p>
           </div>
-          <div class="slide01_04">
-            <p>고양이밥이 그리 맛이 좋아</p>
-          </div>
-        </div> -->
+        </div>
       </div>
-<!--       <div id="draggable">
-        <p>What a Drag</p>
-      </div> -->
     </article>
     <footer>
       <div class="foot_top">
       </div>
       <div class="foot_bottom">
-        <h2>안녕하세요. 반갑습니다! <a href="">홍수기</a>의 포트폴리오 입니다.</h2>
-        <div class="sns">
-          <a href="" title="깃허브링크">
-            <i class="fa fa-github" aria-hidden="true"></i>
-          </a>
-          <a href="" title="블로그링크"><i class="fa fa-bold" aria-hidden="true"></i></a>
-          <a href="" title="인스타그램"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-          <a href="" title="이메일컨텍트"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
-          <a href="" title="유튜브링크"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-        </div>
+        <h2>안녕하세요. 반갑습니다! <a href="">홍수기</a>의 포트폴리오 페이지 입니다.</h2>
+        <p>
+          <a href="mailto:doitlock@gmail.com" title="클릭하면 이메일을 보낼 수 있습니다."> &#91; E-MAIL &#93; doitlock@gmail.com</a> ·
+          <a href="https://doitlock.tistory.com/" title="클릭하면 블로그로 이동합니다.">&#91; BLOG &#93; doitlock.tistory.com</a> ·
+          <a href="https://github.com/doitlock" title="클릭하면 깃허브페이지로 이동합니다.">&#91; GITHUB &#93;
+            github.com/doitlock</a>
+        </p>
         <p>copyright © 2020 DoitLock all rights reserved</p>
       </div>
     </footer>
