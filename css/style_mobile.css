@@ -103,6 +103,7 @@ header .container.bot {
   align-items: center;
   border-top: 1px solid #f8e984;
   padding: 18px 0;
+  background-color: #224d8f;
 }
 header .container.bot > div {
   width: calc(100%/5);
@@ -138,7 +139,7 @@ header.on .container.top {
   display: none;
 }
 header.on .container.mid {
-/*   height: 50px; */
+/*height: 50px;*/
 }
 header.on .container.mid .item.doit {
   background-color: #fff;
@@ -171,13 +172,11 @@ header.on .container.space {
 
 /*왼쪽 사이드*/
 aside {
-  margin-top: 20px;
   float: none;
   width: 100%;
 }
 aside .aside_wrap {
   width: 100%;
-  padding-top: 20px;
 }
 aside .aside_wrap .inner_wrap{
   width: 100%;
@@ -257,6 +256,62 @@ aside .aside_wrap .aside_top table span {
   color: #333;
   transition: all .2s ease-out;
 }
+/*컨텍트 하단 애니*/
+.contact_ani {
+  width: 50vw;
+  margin: 0 auto;
+  position: relative;
+}
+.contact_ani img {
+  width: 90%;
+  animation: rotate_image 4s linear infinite;
+  transform-origin: 50% 50%;
+  filter: drop-shadow(4px 4px 4px #203E6B);
+}
+@keyframes rotate_image {
+	100% {
+    	transform: rotate(360deg);
+    }
+}
+
+.circle_wrap div {
+position: absolute;
+background: #fff48f;
+border-radius: 50%;
+box-shadow: 4px 4px 7px 1px #203E6B;
+}
+.circle1 {
+  position: absolute;
+  width: 4vw;
+  height: 4vw;
+  top: 20px;
+  left: -20px;
+  /* 추가된 부분 */
+  animation: scale1 1s infinite alternate;
+}
+.circle2 {
+  position: absolute;
+  width: 2vw;
+  height: 2vw;
+  bottom: 30px;
+  left: 30px;
+  /* 추가된 부분 */
+  animation: scale1 2s infinite alternate;
+}
+.circle3 {
+  position: absolute;
+  width: 3vw;
+  height: 3vw;
+  right: 5px;
+  bottom: 70px;
+  /* 추가된 부분 */
+  animation: scale1 0.7s infinite alternate;
+}
+@keyframes scale1 {
+  0%   { transform: scale(0) }
+  100%  { transform: scale(1) }
+}
+
 
 /*섹션*/
 section {
@@ -288,6 +343,7 @@ width: 100%;
 height: auto;
 background-size: cover;
 background-position: center center;
+border-bottom: 1px solid #f8e984;
 }
 /*슬릭슬라이더 수정*/
 div.section_slide ul.slick-dots { 
@@ -298,10 +354,10 @@ bottom: 17px;
 	table-layout: fixed !important;
   width: 100% !important;
 }
-/*웰컴무브*/
+/*두잇포트폴리오 무브*/
 section .move_ani {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 section .move_ani .chatbox {
   display: inline-block;
@@ -334,6 +390,7 @@ section .pofol_wrap .pofol_list .pofol_img_wrap {
 }
 section .pofol_wrap .pofol_list  {    
  /*  margin-bottom: 30px; */
+ background-color: #203E6B;
 }
 section .pofol_wrap .pofol_list .pofol_img_wrap a img {
   display: block;
@@ -482,6 +539,41 @@ article .article_wrap img:hover {
 }
 article .article_wrap .atc_slide01 p {
   font-size: 1.5em;
+}
+
+/*article 애니메이션*/
+.article_ani {
+  width: 100%;
+  margin: 0 auto;
+  background: rgb(226, 226, 226);
+}
+.article_ani ul {
+  width: 100%;
+}
+.article_ani ul li {
+  width: 100%;
+}
+.article_ani .art_ani_tit {
+  text-align: right;
+  font-size: 3vw;
+  font-family: 'Damion', cursive;
+  font-weight: lighter;
+  color: #fff;
+  text-shadow:  2px 2px 4px #af990b;
+  margin: 2vw 3vw;
+}
+.article_ani .art_ani_01 {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  background-size: cover;
+  z-index: 1;
+  animation: upanddown 3s infinite;
+}
+@keyframes upanddown {
+  0%{transform:translateY(-35vh);}
+  50%{transform:translateY(0);}
+  100%{transform:translateY(-35vh);}
 }
 /*푸터*/
 footer {
