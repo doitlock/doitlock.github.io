@@ -311,9 +311,9 @@ div.section_slide ul.slick-dots {
 }
 /*섹션 포폴 부분*/
   section .pofol_wrap {
-    display: flex;
+/*     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     padding: 1%;
     overflow: hidden;
     margin-bottom: 2%;
@@ -325,11 +325,7 @@ div.section_slide ul.slick-dots {
     margin: .4%;
   }
   section .pofol_wrap .pofol_list .pofol_img_wrap {    
-    overflow: hidden;
-    
-  }
-  section .pofol_wrap .pofol_list  {    
-  
+    float: left;
   }
   section .pofol_wrap .pofol_list .pofol_img_wrap a img {
     display: block;
@@ -348,27 +344,19 @@ div.section_slide ul.slick-dots {
     translate: all .3s;
   }
   section .pofol_wrap .pofol_list .btn {
-    display: flex;
-    justify-content: center;
+    float: left;
     text-align: center;
     font-size: 1.2em;
     width: 100%;
   }
   section .pofol_wrap .pofol_list .btn > a {
-    width: calc(100%/3);
     padding: 10px 0;
-    border: 1px #949494 solid;
     transition: all .3s ease-in;
-    margin: 1% 1% 0 0;
     color: #333;
     background-color: #fff;
   }
-  section .pofol_wrap .pofol_list .btn > a:last-child {
-    margin-right: 0;
-  }
   section .pofol_wrap .pofol_list .btn > a:hover {
     color: #fff;
-    border: 1px #444 solid;
     box-shadow: 200px 0 0 0 #444 inset;
     transition: all .3s ease-out;
   }
@@ -376,7 +364,7 @@ div.section_slide ul.slick-dots {
     transition: all .3s ease-in;
   }
   section .pofol_wrap .pofol_list .btn > a:first-child:hover {
-    border: 1px #DC143C solid;
+
     box-shadow: 200px 0 0 0 #DC143C inset;
     transition: all .3s ease-out;
   }
