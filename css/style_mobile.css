@@ -28,6 +28,7 @@ header {
   font-size: 1.2em;
   text-align: center;
   color: #3b3b3b;
+  transition: all .2s ease-in;
 }
 /*헤더 그리드 상단*/
 header .container.top {
@@ -136,7 +137,7 @@ header.on {
   top: 0;
   left: 0;
   z-index: 9999;
-  transition: all .2s ease-in;
+/*   transition: all .2s ease-in; */
 }
 header.on .container.top {
   display: none;
@@ -145,7 +146,7 @@ header.on .container.mid {
 /*height: 50px;*/
 }
 header.on .container.mid .item.doit {
-  background-color: #e3e3e3;
+  background-color: #fff;
   transition: all .2s ease-out;
 }
 header.on .container.mid .item.doit a {
@@ -162,11 +163,12 @@ header.on .container.mid .item img {
   display: none;
 }
 header.on .container.bot {
-  padding: 10px 0;
+  padding: 6px 0;
   background-color: #e3e3e3;
 }
 header.on .container.bot div a {
   color: #3b3b3b;
+  display: block;
 }
 header.on .container.space {
   display: none;
@@ -224,8 +226,8 @@ aside .aside_wrap .aside_top table span {
   padding-top: 90px;
 }
 .contact_me h2 {
-  font-size: 5vw;
-  letter-spacing: .2em;
+  font-size: 7vw;
+  letter-spacing: .1em;
   margin-bottom: .5em;
   color: #3b3b3b;
   animation: color-change02 3s infinite;
@@ -233,21 +235,21 @@ aside .aside_wrap .aside_top table span {
 @keyframes color-change02 {
   0% { color: #3b3b3b; }
 /*   20% { color: #ff5555;} */
-  50% { color: #00c7a9;}
+  50% { color: #0066ff;}
   100% { color: #3b3b3b; }
 }
 .contact_me .underline {
   width: 40%;
   height: 3px;
   background-color: #0066ff;
-  margin: 0 auto 20px;
+  margin: 0 auto 30px;
 }
 .contact_me .phone_num, .email_num {
   font-size: 4vw;
   color: #3b3b3b;
 }
 .contact_me .contact_mail {
-  width: 90%;
+  width: 95%;
   display: block;
   font-size: 3vw;
   padding: 10px;
@@ -283,7 +285,7 @@ aside .aside_wrap .aside_top table span {
 position: absolute;
 background: #5297ff;
 border-radius: 50%;
-box-shadow: 4px 4px 7px 1px #ffffff;
+box-shadow: 4px 4px 4px 1px #dfdfdf;
 }
 .circle1 {
   position: absolute;
@@ -394,7 +396,7 @@ section .move_ani .chatbox {
   animation: motion .7s linear 0s infinite alternate;
 /*   background: linear-gradient(180deg, #fff, #fff); */
 border: 1px solid #3b3b3b;
-  box-shadow:  4px 4px 6px #929292, 
+  box-shadow:  4px 4px 6px #d8d8d8, 
                -5px -5px 5px #d8d8d8 ;
 }     
 @keyframes motion {
@@ -407,6 +409,8 @@ section .move_ani ul {
 /*섹션 포폴 부분*/
 section .pofol_wrap {
   overflow: hidden;
+  width: 95%;
+  margin: 0 auto;
 }
 section .pofol_wrap .pofol_list {
   display: block;
@@ -416,6 +420,8 @@ section .pofol_wrap .pofol_list {
 section .pofol_wrap .pofol_list .pofol_img_wrap {    
   width: 100%;
   overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid #d8d8d8;
 }
 section .pofol_wrap .pofol_list  {    
  background-color: #e3e3e3;
@@ -431,31 +437,45 @@ section .pofol_wrap .pofol_list .pofol_img_wrap img:hover {
 }
 section .pofol_wrap .pofol_list .btn {
   text-align: center;
-  font-size: 3vw;
+  font-size: 2.7vw;
+  font-weight: lighter;
   width: 100%;
-  background-color: #3b3b3b;
 }
 section .pofol_wrap .pofol_list .btn > a {
   width: 100%;
   padding: 10px 0;
   transition: all .3s ease-in;
   color: #e3e3e3;
-/*   background-color: #fff; */
   border-bottom: 1px solid #e3e3e3;
+  background-color: #3b3b3b;
+}
+section .pofol_wrap .pofol_list .btn > a:last-child {
+  border-radius: 0 0 10px 10px;
 }
 section .pofol_wrap .pofol_list .btn > a > span {
   display: block;
   animation: fadeInDown;
   animation-duration: .8s;
 }
-section .pofol_wrap .pofol_list .btn > a:first-child {
-  border-top: 1px solid #e3e3e3;
-}
 section .pofol_wrap .pofol_list .btn > a:hover  {
   color: #fff;
   background-color: #0066ff;
   transition: all .3s ease-out;
 }
+section .pofol_wrap .pofol_list.megabox .btn a {
+  background-color: #a80019;
+}
+section .pofol_wrap .pofol_list.megabox .btn a:hover {
+  background-color: #3b3b3b;
+}
+section .pofol_wrap .pofol_list.line .btn a {
+  background-color: #158467;
+}
+section .pofol_wrap .pofol_list.line .btn a:hover {
+  background-color: #3b3b3b;
+}
+
+
 /*포폴 하단 애니*/
 .pofol_wrap .pofol_list .illust_move {
   position: relative;
@@ -475,8 +495,8 @@ section .pofol_wrap .pofol_list .btn > a:hover  {
   100%{left:60%;} /*종료 */
 }
 .pofol_wrap .pofol_list.megabox .illust_move img {
-  width: 40%;
-  animation: rotate_image02 4s linear infinite;
+  width: 30%;
+  animation: rotate_image02 3s linear infinite;
 }
 @keyframes rotate_image02 {
   0% {transform: rotate(50deg);}
@@ -579,7 +599,7 @@ article .article_wrap .atc_txt .slide_txt {
   width: 100%;
   height: 100px;
   background-color: #3b3b3b;
-  color: #0066ff;
+  color: #1affde;
   line-height: 100px;
 }
 article .article_wrap img {
@@ -616,7 +636,8 @@ article .article_wrap .atc_slide01 p {
   font-size: 4vw;
   color: #3b3b3b;
   bottom: 40px;
-  right: 40%;
+  left: 50%;
+  transform: translateX(-40%);
 }
 .article_ani .art_ani_01 {
   display: block;
@@ -654,7 +675,7 @@ margin-bottom: 10px;
 }
 footer .foot_bottom .sns a {
 font-size: 2em;
-color: #fff;
+color: #e3e3e3;
 padding: 0 10px;
 }
 footer .foot_bottom .sns i {
@@ -666,9 +687,17 @@ transition: all .5s ease-out;
 color: #f8e984;
 }
 footer .foot_bottom p.copyright {
+  display: block;
+  padding-top: 50px;
+  font-size: 2vw;
+  letter-spacing: .1em;
+  color: #e3e3e3;
+  }
+  
+footer .foot_bottom p.illustby {
 display: block;
-padding-top: 50px;
 font-size: 2vw;
+padding-top: 10px;
 letter-spacing: .1em;
-color: #fff;
+color: #e3e3e3;
 }

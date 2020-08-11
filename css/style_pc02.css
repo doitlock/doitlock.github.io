@@ -87,8 +87,13 @@
     font-family: 'Damion', cursive;
     font-size: 0.4em;
     color: black;
-    animation: flipInX;
-    animation-duration: 1s;
+    animation: flipInX 2s, color-change 3s infinite;
+  }
+  @keyframes color-change {
+    0% { color: black; }
+    30% { color: #0066ff; }
+    70% { color: #05dfd7; }
+    100% { color: black; }
   }
   header .container.mid .item MARQUEE {
     display: none;
@@ -107,7 +112,8 @@
   }
   header .container.bot > div a {
     color: #333;
-    letter-spacing: 0.4em;
+    font-size: 1.2em;
+    letter-spacing: 0.3em;
     display: inline-block;
     animation: zoomIn;
     animation-duration: 2s;
@@ -234,7 +240,10 @@
     color: #fff;
     transition: all .2s ease-out;
   }
-
+/*컨텍트 하단 애니*/
+.contact_ani {
+  display: none;
+}
 /*섹션*/
   section {
     float: left;
@@ -311,9 +320,9 @@ div.section_slide ul.slick-dots {
 }
 /*섹션 포폴 부분*/
   section .pofol_wrap {
-/*     display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
     padding: 1%;
     overflow: hidden;
     margin-bottom: 2%;
@@ -326,6 +335,7 @@ div.section_slide ul.slick-dots {
   }
   section .pofol_wrap .pofol_list .pofol_img_wrap {    
     float: left;
+    overflow: hidden;
   }
   section .pofol_wrap .pofol_list .pofol_img_wrap a img {
     display: block;
@@ -354,19 +364,23 @@ div.section_slide ul.slick-dots {
     transition: all .3s ease-in;
     color: #333;
     background-color: #fff;
+    border: 1px #949494 solid;
+    border-top: none;
   }
   section .pofol_wrap .pofol_list .btn > a:hover {
     color: #fff;
-    box-shadow: 200px 0 0 0 #444 inset;
-    transition: all .3s ease-out;
+    box-shadow: 0 50px 0 0 #444 inset;
+    transition: all .4s ease-out;
   }
   section .pofol_wrap .pofol_list .btn > a:first-child{
-    transition: all .3s ease-in;
+    transition: all .4s ease-in;
   }
   section .pofol_wrap .pofol_list .btn > a:first-child:hover {
-
-    box-shadow: 200px 0 0 0 #DC143C inset;
+    box-shadow: 0 50px 0 0 #DC143C inset;
     transition: all .3s ease-out;
+  }
+  .pofol_wrap .pofol_list .illust_move {
+    display: none;
   }
 /*포폴 소개글 팝업창*/
   .pofol_wrap .pofol_list a {
@@ -441,7 +455,8 @@ div.section_slide ul.slick-dots {
   color: #fff;
   transition: all .3s ease-out;
   text-decoration: underline;
-  box-shadow: 0 100px 0 0 #DC143C inset, 0 -100px 0 0 #DC143C inset; 
+  box-shadow: 200px 0 0 0 #DC143C inset
+  /* , 0 -100px 0 0 #DC143C inset */; 
 }
 /*article 컨텐츠*/
   article {
@@ -484,6 +499,10 @@ div.section_slide ul.slick-dots {
   article .article_wrap .atc_slide01 p {
     font-size: 1.5em;
   }
+  /*article 애니메이션*/
+.article_ani {
+  display: none;
+}
 /*푸터*/
 footer {
   clear: both;
@@ -504,14 +523,23 @@ footer .foot_bottom .sns a {
   color: #555;
   padding: 0 10px;
 }
+footer .foot_bottom .sns i {
+  transition: all .5s ease-in;
+}
 footer .foot_bottom .sns i:hover {
-  animation: heartBeat;
-  animation-duration: 2s; 
+  transform: scale(1.5);
+  transition: all .5s ease-out;
   color: #ef1f16;
 }
-footer .foot_bottom p {
+footer .foot_bottom .copyright {
   display: block;
   padding-top: 50px;
-  font-size: 1.3em;
+  font-size: 1.5em;
+  letter-spacing: .1em;
+}
+footer .foot_bottom .illustby {
+  display: block;
+  padding-top: 10px;
+  font-size: 1.1em;
   letter-spacing: .1em;
 }

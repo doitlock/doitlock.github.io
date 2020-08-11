@@ -36,10 +36,13 @@ const htmlElem = document.querySelector('html');
 const headerElem = document.getElementById('header');
 
 function scrollWork() {
+  const sec = document.querySelector('section');
   if (htmlElem.scrollTop > 400) {
     headerElem.classList.add('on');
+    sec.style.paddingTop = '240px';
   } else if (htmlElem.scrollTop < 500){
     headerElem.classList.remove('on');
+    sec.style.paddingTop = 0;
   }
 };
 

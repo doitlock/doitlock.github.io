@@ -10,3 +10,14 @@ function scrollWork() {
     headerElem.classList.remove('on');
   }
 };
+
+new WOW().init();
+
+$('.visual_main_slide').slick({
+  dots: false,
+  infinite: true,
+  slidesToShow: 1,
+  autoplay: true,
+  autoplaySpeed: 500,
+  arrows: true
+});

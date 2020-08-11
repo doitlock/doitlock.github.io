@@ -258,7 +258,10 @@
     color: #fff;
     transition: all .2s ease-out;
   }
-
+/*컨텍트 하단 애니*/
+.contact_ani {
+  display: none;
+}
 /*섹션*/
   section {
     float: left;
@@ -369,40 +372,36 @@ div.section_slide ul.slick-dots {
     translate: all .3s;
   }
   section .pofol_wrap .pofol_list .btn {
-    display: flex;
-    justify-content: center;
+    float: left;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.3em;
     width: 100%;
   }
   section .pofol_wrap .pofol_list .btn > a {
-    width: calc(100%/3);
     padding: 10px 0;
-/*     border-radius: 3px; */
-    border: 1px #949494 solid;
     transition: all .3s ease-in;
-    margin: 1% 1% 0 0;
     color: #333;
     background-color: #fff;
+    border: 1px #949494 solid;
+    border-top: none;
+  }
+  section .pofol_wrap .pofol_list .btn > a:hover {
+    color: #fff;
+    box-shadow: 0 50px 0 0 #444 inset;
+    transition: all .4s ease-out;
   }
   section .pofol_wrap .pofol_list .btn > a:last-child {
     margin-right: 0;
   }
-  section .pofol_wrap .pofol_list .btn > a:hover {
-/*     background-color: #444; */
-    color: #fff;
-    border: 1px #444 solid;
-    box-shadow: 200px 0 0 0 #444 inset;
-    transition: all .3s ease-out;
-  }
   section .pofol_wrap .pofol_list .btn > a:first-child{
-    transition: all .3s ease-in;
+    transition: all .4s ease-in;
   }
   section .pofol_wrap .pofol_list .btn > a:first-child:hover {
-    /* background-color: #d63447; */
-    border: 1px #DC143C solid;
-    box-shadow: 200px 0 0 0 #DC143C inset;
+    box-shadow: 0 50px 0 0 #DC143C inset;
     transition: all .3s ease-out;
+  }
+  .pofol_wrap .pofol_list .illust_move {
+    display: none;
   }
 /*포폴 소개글 팝업창*/
   .pofol_wrap .pofol_list a {
@@ -529,7 +528,11 @@ div.section_slide ul.slick-dots {
     background-color: #DC143C;
 /*     border: 1px solid #949494; */
   }
-
+  
+/*article 애니메이션*/
+.article_ani {
+  display: none;
+}
 /*푸터*/
   footer {
     clear: both;
@@ -547,19 +550,28 @@ div.section_slide ul.slick-dots {
     margin-bottom: 10px;
   }
   footer .foot_bottom .sns a {
-    font-size: 1.5em;
+    font-size: 2em;
     color: #555;
     padding: 0 10px;
   }
+  footer .foot_bottom .sns i {
+    transition: all .3s ease-in;
+  }
   footer .foot_bottom .sns i:hover {
-    animation: heartBeat;
-    animation-duration: 2s; 
+    transform: scale(1.5);
+    transition: all .3s ease-out;
     color: #ef1f16;
   }
-  footer .foot_bottom p {
+  footer .foot_bottom .copyright {
     display: block;
     padding-top: 50px;
-    font-size: 1.3em;
+    font-size: 1.5em;
+    letter-spacing: .1em;
+  }
+  footer .foot_bottom .illustby {
+    display: block;
+    padding-top: 10px;
+    font-size: 1.1em;
     letter-spacing: .1em;
   }
 
