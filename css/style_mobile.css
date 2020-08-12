@@ -63,7 +63,7 @@ header .container.mid .item {
 header .container.mid .item.doit {
   position: relative;
   transition: all 1s ease-in;
-  background: linear-gradient(#fff, #d8d8d8);
+  background: linear-gradient(#fff, #ebebeb);
 }
 header .container.mid .item.doit a {
   position: relative;
@@ -468,12 +468,19 @@ section .pofol_wrap .pofol_list.megabox .btn a {
 section .pofol_wrap .pofol_list.megabox .btn a:hover {
   background-color: #3b3b3b;
 }
+section .pofol_wrap .pofol_list.navercompany .btn a {
+  background-color: #008f4c;
+}
+section .pofol_wrap .pofol_list.navercompany .btn a:hover {
+  background-color: #3b3b3b;
+}
 section .pofol_wrap .pofol_list.line .btn a {
-  background-color: #158467;
+  background-color: #ff5c2b;
 }
 section .pofol_wrap .pofol_list.line .btn a:hover {
   background-color: #3b3b3b;
 }
+
 
 
 /*포폴 하단 애니*/
@@ -484,7 +491,7 @@ section .pofol_wrap .pofol_list.line .btn a:hover {
 .pofol_wrap .pofol_list.pofol .illust_move img {
   width: 40%;
   height: auto;
-  animation:boxAni 3s;
+  animation:boxAni 2s;
   animation-fill-mode:forwards; /* 애니메이션이 끝나면 그대로 멈춤 */
   animation-iteration-count: infinite; /* 반복을 정해줌 infinite:무한번 */
   animation-direction: alternate; /* 왔다갔다 하게해줌 */
@@ -503,6 +510,53 @@ section .pofol_wrap .pofol_list.line .btn a:hover {
   50% {transform: rotate(-10deg);}
   100% {transform: rotate(50deg);}
 }
+.pofol_wrap .pofol_list.kakaobank .illust_move img {
+  width: 35%;
+  animation: rotate_image03 2s linear infinite;
+}
+@keyframes rotate_image03 {
+  100% {transform: rotateY(360deg);}
+}
+.pofol_wrap .pofol_list.navercompany .illust_move img {
+  width: 40%;
+  height: auto;
+  animation:rotate_image04;
+  animation-duration: 5s;
+  /* animation-fill-mode:forwards; */ /* 애니메이션이 끝나면 그대로 멈춤 */
+  animation-iteration-count: infinite; /* 반복을 정해줌 infinite:무한번 */
+  /* animation-direction: alternate; */ /* 왔다갔다 하게해줌 */
+  position: relative;
+}
+@keyframes rotate_image04 {
+  0%{right:-70%} /* 시작 */
+  100%{right:80%;} /*종료 */
+}
+.pofol_wrap .pofol_list.line .illust_move {
+  margin-bottom: 40%;
+}
+.pofol_wrap .pofol_list.line .illust_move img {
+  width: 15%;
+  animation: rotate_image05 3s linear infinite;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5% 0;
+}
+@keyframes rotate_image05 {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+
+
+
+
+
+
+
+
+
 
 /*포폴 소개글 팝업창*/
 .pofol_wrap .pofol_list a {
@@ -652,6 +706,8 @@ article .article_wrap .atc_slide01 p {
   50%{transform:translateY(0);}
   100%{transform:translateY(-35vh);}
 }
+
+
 /*푸터*/
 footer {
 clear: both;

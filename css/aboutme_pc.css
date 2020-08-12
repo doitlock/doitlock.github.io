@@ -1,0 +1,112 @@
+  * {
+    /* border: 1px solid red; */
+  }
+  #wrap {
+    max-width: 95%;
+    margin: 0 auto;
+    /* background: url(../img/bg_oldpaper_a.png) repeat; */
+    /* background: linear-gradient(#e9e9e9, #eee4e4) fixed; */
+    background-color: rgba(245, 245, 245, 0.8);
+    /* padding: 25px; */
+    font-family: 'Chosunilbo_myungjo';
+  }
+  .black-ball{ /*마우스따라다니는 볼*/
+    position: absolute;
+    top:0;
+    left:0;
+    width:60px;
+    height:60px;
+    background:rgba(0,0,0,.3);
+/*     background: url(../img/pngegg.png) no-repeat; */
+    z-index: 9999;
+  }
+  /*드래그 이미지*/
+  #draggable {
+    position: absolute;
+    white-space: nowrap;
+    cursor: move;
+  }
+  #draggable img {
+    width: 200px;
+    height: auto;
+  }
+
+/*헤더*/
+  header {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #949494;
+    text-align: center;
+    color: #333;
+  }
+  header .main_menu {
+    font-size: 1.3em;
+    padding: 0 100px;
+  }
+  header .main_menu ul li a {
+    float: left;
+    padding: 0 30px;
+  }
+
+
+
+
+  /*메인*/
+  main {width: 90%; margin: 0 auto; padding: 100px 0; text-align: center;}
+  main .my_face { margin: 0 auto;}
+  main .my_face img {display: block; width: 200px; margin: 0 auto;}
+  main .my_txt {font-size: 1.5em;}
+  main .my_txt h2 {padding: 10px;}
+  main .my_txt h3 {padding: 10px;}
+
+
+
+
+
+
+
+
+
+/*푸터*/
+  footer {
+    clear: both;
+    width: 100%;
+    height: 250px;
+    border-top: 1px solid #949494;
+    padding: 50PX;
+    text-align: center;
+  }
+  footer .foot_bottom h2 {
+    display: block;
+    margin-bottom: 20px;
+  }
+  footer .foot_bottom .sns {
+    margin-bottom: 10px;
+  }
+  footer .foot_bottom .sns a {
+    font-size: 2em;
+    color: #555;
+    padding: 0 10px;
+  }
+  footer .foot_bottom .sns i {
+    transition: all .3s ease-in;
+  }
+  footer .foot_bottom .sns i:hover {
+    transform: scale(1.5);
+    transition: all .3s ease-out;
+    color: #ef1f16;
+  }
+  footer .foot_bottom .copyright {
+    display: block;
+    padding-top: 50px;
+    font-size: 1.5em;
+    letter-spacing: .1em;
+  }
+  footer .foot_bottom .illustby {
+    display: block;
+    padding-top: 10px;
+    font-size: 1.1em;
+    letter-spacing: .1em;
+  }
+

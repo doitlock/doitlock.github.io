@@ -439,9 +439,8 @@ footer {
   background: #333333;
 }
 footer .footer_wrap {
-  border: 1px solid red;
   position: relative;
-  width: 95%;
+  width: 100%;
   margin: 0 auto;
 }
 footer h2 {
@@ -473,9 +472,15 @@ footer ul li {
 footer ul li a{
   color: #5c5e66;
 }
-footer .list-company-link,
-.list-company-info {
+footer .list-company-link {
+  display: none;
+}
+footer .list-company-info {
   margin-bottom: 20px;
+  text-align: center;
+}
+footer .list-company-info a {
+  display: none;
 }
 footer .list-company-link::after,
 ul.list-company-info::after {
@@ -488,7 +493,6 @@ footer .list-company-link a {
   color: #b2b2b2;
 }
 footer .list-company-info {
-  border: 1px solid red;
   width: 100%;
 }
 footer .list-company-info li {
