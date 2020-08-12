@@ -218,6 +218,9 @@ aside .aside_wrap .aside_top table span {
   float: right;
   font-size: 0.6em;
 }
+aside .atc_slide01 {
+  display: none;
+}
 /*contact*/
 .contact_me {
   text-align: center;
