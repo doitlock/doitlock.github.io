@@ -52,6 +52,8 @@ $(document).mousemove(function(e){
 });
 
 $( function() {
-  $( "#draggable" ).draggable();
+  $( "#draggable01" ).draggable();
+  $( "#draggable02" ).draggable();
 });
+
 
