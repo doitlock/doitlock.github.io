@@ -429,6 +429,7 @@ div.section_slide ul.slick-dots {
   .popup_wrap .pofol_list .modal-content .popup_body p {
     padding: 5%;
     font-size: 1.5em;
+    line-height: 1.5em;
     color: #555;
   }
   .popup_wrap .pofol_list .modal-content .close {
@@ -436,12 +437,14 @@ div.section_slide ul.slick-dots {
     position: absolute;
     top: 2%;
     right: 2%;
-    width: 50px;
-    height: 20px;
+    width: 70px;
+    height: 30px;
     background-color: #888;
     border-radius: 100px;
+    font-size: 12px;
     color: #fff;
-    line-height: 20px;
+    line-height: 30px;
+    cursor: pointer;
   }
   /*팝업 하단 버튼*/
   .pofol_list .popup_footer {
