@@ -353,10 +353,10 @@ div.section_slide ul.slick-dots {
     height: auto;
     margin: .4%;
   }
-  section .popup_wrap .pofol_list .pofol_img_wrap #myBtn {    
+  section .popup_wrap .pofol_list .pofol_img_wrap .myBtn {    
     overflow: hidden;
   }
-  section .popup_wrap .pofol_list .pofol_img_wrap #myBtn img {
+  section .popup_wrap .pofol_list .pofol_img_wrap .myBtn img {
     width: 100%;
     height: auto;
     object-fit: contain;
@@ -366,7 +366,7 @@ div.section_slide ul.slick-dots {
     border: 1px #949494 solid;
     display: block;
   }
-  section .popup_wrap .pofol_list .pofol_img_wrap #myBtn img:hover {
+  section .popup_wrap .pofol_list .pofol_img_wrap .myBtn img:hover {
     -webkit-filter: grayscale(0%);
     filter: none;
     transform: scale(1.1);
@@ -423,13 +423,22 @@ div.section_slide ul.slick-dots {
     color: #333;
     padding: 1%;
   }
+  .popup_wrap .pofol_list .modal-content .popup_body .popup_body_tit {
+    font-size: 1.5em;
+    padding: 2%;
+    line-height: 1.8em;
+  }
+  .popup_wrap .pofol_list .modal-content .popup_body .popup_body_tit span {
+    font-size: .8em;
+    color: #666;
+  }
   .popup_wrap .pofol_list .modal-content .popup_body img {
     width: 90%;
   }
   .popup_wrap .pofol_list .modal-content .popup_body p {
     padding: 5%;
     font-size: 1.5em;
-    line-height: 1.5em;
+    line-height: 2em;
     color: #555;
   }
   .popup_wrap .pofol_list .modal-content .close {
