@@ -5,14 +5,14 @@
   /* background: url(../img/bg_oldpaper_a.png) repeat; */
   /* background: linear-gradient(#e9e9e9, #eee4e4) fixed; */
   /* background-color: #e9e9e9; */
-  background-color: #e3e3e3;
+  background-color: #f8f8f8;
   /* padding: 25px; */
   /* font-family: 'Chosunilbo_myungjo'; */
   font-family:'Noto Sans KR';
   display: flex;
   flex-direction: column; /* 세로로 정렬하겠다는 의미 */
 }
-#wrap headerr { order: 1; }
+#wrap header { order: 1; }
 #wrap section { order: 2; }
 #wrap article { order: 3; }
 #wrap aside { order: 4; }
@@ -34,7 +34,7 @@ header {
 header .container.top {
   padding: 5px 0;
   font-weight: lighter;
-  background-color: #ebebeb;
+  background-color: #fff;
 }
 header .container.top .item {
   font-size: 1.1em;
@@ -60,7 +60,7 @@ header .container.mid .item {
 header .container.mid .item.doit {
   position: relative;
   transition: all 1s ease-in;
-  background: #ebebeb;
+  background: #f8f8f8;
 }
 header .container.mid .item.doit a {
   position: relative;
@@ -104,7 +104,7 @@ header .container.bot {
   align-items: center;
   border-top: 1px solid #3b3b3b;
   padding: 10px 0;
-  background-color: #e3e3e3;
+  background-color: #f8f8f8;
 }
 header .container.bot > div {
   width: calc(100%/5);
@@ -161,7 +161,7 @@ header.on .container.mid .item img {
 }
 header.on .container.bot {
   padding: 6px 0;
-  background-color: #e3e3e3;
+  background-color: #f8f8f8;
 }
 header.on .container.bot div a {
   color: #3b3b3b;

@@ -166,10 +166,6 @@
   header.on .container.space {
     display: none;
   }
-  header.on .container.mid #draggable01,
-  header.on .container.mid #draggable02 {
-    display: none;
-  }
 /*왼쪽 사이드*/
   aside {
     float: left;
@@ -355,6 +351,7 @@ div.section_slide ul.slick-dots {
   }
   section .popup_wrap .pofol_list .pofol_img_wrap .myBtn {    
     overflow: hidden;
+    cursor: pointer;
   }
   section .popup_wrap .pofol_list .pofol_img_wrap .myBtn img {
     width: 100%;
@@ -584,6 +581,13 @@ article .article_poster img {
   width: 90%;
   cursor: move;
   margin: 0 auto;
+}
+article .article_poster #draggable01 img{
+  transition: all 1s ease-in;
+}
+article .article_poster #draggable01 img:hover {
+  transform: rotateY(180deg);
+  transition: all 1s ease-out;
 }
 
 /*article 애니메이션*/

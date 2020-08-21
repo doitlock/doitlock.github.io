@@ -323,8 +323,8 @@ div.section_slide ul.slick-dots {
     margin: .4%;
   }
   section .popup_wrap .pofol_list .pofol_img_wrap .myBtn{    
-   /*  float: left; */
     overflow: hidden;
+    cursor: pointer;
   }
   section .popup_wrap .pofol_list .pofol_img_wrap .myBtn img {
     display: block;

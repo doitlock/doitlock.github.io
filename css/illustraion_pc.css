@@ -2,11 +2,12 @@
     /* border: 1px solid red; */
   }
   #wrap {
-    max-width: 95%;
+    width: 95%;
+    max-width: 2000px;
     margin: 0 auto;
     /* background: url(../img/bg_oldpaper_a.png) repeat; */
     /* background: linear-gradient(#e9e9e9, #eee4e4) fixed; */
-    background-color: rgba(245, 245, 245, 0.8);
+    background-color: #fff;
     /* padding: 25px; */
     font-family: 'Chosunilbo_myungjo';
   }
@@ -18,7 +19,7 @@
     padding: 0 100px;
     line-height: 50px;
     border-bottom: 1px solid #949494;
-    background-color: rgba(245, 245, 245, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     text-align: center;
     color: #333;
   }
@@ -36,21 +37,51 @@
 
 
   /*메인*/
-  main {width: 90%; margin: 0 auto; padding: 100px 0; text-align: center;}
+  main {width: 70%; margin: 0 auto; padding: 100px 0; text-align: center;}
   main .my_face { margin: 0 auto;}
   main .my_face img {display: block; width: 200px; margin: 0 auto;}
-  main .my_txt {font-size: 1.5em;}
-  main .my_txt h2 {margin: 20px;}
-  main .my_txt h3 {margin-bottom: 10px; font-size: 1em;}
+  main .my_txt {font-size: 1.3em;}
+  main .my_txt h2 {margin-top: 30px;}
   main .my_txt p {
-    padding: 20px;
-    font-size: 1em;
+    margin-top: 30px;
+    font-size: 1.1em;
     line-height: 2em;
   }
-
-
-
-
+  main .illust_wrap {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 3%;
+    -moz-column-gap: 3%; 
+    column-gap: 3%;
+    margin: 50px auto;
+  }
+  main .illust_wrap figure {
+    display: inline-block;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 10px;
+    margin-bottom: 10%;
+  }
+  main .illust_wrap figure img {
+    width: 100%;
+    padding: 10%;
+    border-bottom: 1px solid rgb(230, 230, 230);
+  }
+  main .illust_wrap figure figcaption {
+    padding: 15px;
+}   
+main .illust_wrap figure figcaption h3 {
+    font-size: 1.3em;
+    padding: 10px;
+    color: #333;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}   
+main .illust_wrap figure figcaption p {
+    text-align: left;
+    font-size: 1em;
+    padding-top: 10px;
+    color: #333;
+}
 
 
 
