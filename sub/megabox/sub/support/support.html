@@ -282,59 +282,77 @@
             &#42;필수
           </p>
           <div class="table_area">
-            <table>
-              <tbody>
-                <tr>
-                  <th>극장 <span>&#42;</span></th>
-                  <td>
-                    <input type="text">
-                  </td>
-                </tr>
-                <tr>
-                  <th>관람/대관일	<span>&#42;</span></th>
-                  <td>
-                    <input type="text">
-                  </td>
-                </tr>
-                <tr>
-                  <th>관람할 영화	<span>&#42;</span></th>
-                  <td>
-                    <input type="text">
-                  </td>               
-                </tr>
-                <tr>
-                  <th>관람인원 <span>&#42;</span></th>
-                  <td>
-                    <input type="text">
-                  </td>                
-                </tr>
-                <tr>
-                  <th>이름 <span>&#42;</span></th>
-                  <td>
-                    <input type="text">
-                  </td>                
-                </tr>
-                <tr>
-                  <th>연락처 <span>&#42;</span></th>
-                  <td>
-                    <input type="text">
-                  </td>                
-                </tr>
-                <tr>
-                  <th>제목 <span>&#42;</span></th>
-                  <td>
-                    <input type="text">
-                  </td>                
-                </tr>
-                <tr>
-                  <th>내용 <span>&#42;</span></th>
-                  <td>
-                    <textarea name="" id="" cols="30" rows="5" placeholder="※ 대관 목적과 관련하여 행사내용 등을 상세히 남겨주시면 더욱 빠른 답변이 가능합니다.">
-                    </textarea>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <form>
+                <fieldset>
+                  <legend>극장 대관을 위한 정보 입력 폼</legend>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <th><label for="ip-01">극장</label> <span>&#42;</span></th>
+                          <td>
+                            <select name="" id="ip-01">
+                              <option value="">지역선택</option>
+                              <option value="">서울</option>
+                              <option value="">경기</option>
+                              <option value="">인천</option>
+                              <option value="">대전</option>
+                            </select>
+                            <select name="" id="ip-01">
+                              <option value="">극장선택</option>
+                              <option value="">서울</option>
+                              <option value="">경기</option>
+                              <option value="">인천</option>
+                              <option value="">대전</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th><label for="ip-02">관람/대관일</label> <span>&#42;</span></th>
+                          <td>
+                            <input type="text" class="inp text" id="ip-02">
+                          </td>
+                        </tr>
+                        <tr>
+                          <th><label for="ip-03">관람할 영화</label>	<span>&#42;</span></th>
+                          <td>
+                            <input type="text" class="inp text" id="ip-03">
+                          </td>               
+                        </tr>
+                        <tr>
+                          <th><label for="ip-04">관람인원</label> <span>&#42;</span></th>
+                          <td>
+                            <input type="text" class="inp text" id="ip-04">
+                          </td>                
+                        </tr>
+                        <tr>
+                          <th><label for="ip-05">이름</label> <span>&#42;</span></th>
+                          <td>
+                            <input type="text" class="inp text" id="ip-05">
+                          </td>                
+                        </tr>
+                        <tr>
+                          <th><label for="ip-06">연락처</label> <span>&#42;</span></th>
+                          <td>
+                            <input type="text" class="inp text" id="ip-06">
+                          </td>                
+                        </tr>
+                        <tr>
+                          <th><label for="ip-07">제목</label> <span>&#42;</span></th>
+                          <td>
+                            <input type="text" class="inp text" id="ip-07">
+                          </td>                
+                        </tr>
+                        <tr>
+                          <th><label for="ip-08">내용</label> <span>&#42;</span></th>
+                          <td>
+                            <textarea title="대관 목적입력을 위한 입력 폼" placeholder="※ 대관 목적과 관련하여 행사내용 등을 상세히 남겨주시면 더욱 빠른 답변이 가능합니다." class="inp text" id="ip-08">
+                            </textarea>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </fieldset>
+            </form>
           </div>
           <button type="submit">등록</button>
         </div>

@@ -183,6 +183,7 @@
   aside .aside_wrap .aside_top {
     /* border-bottom: 1px solid #949494; */
   }
+  /*table*/
   aside .aside_wrap .aside_top table {
     width: 100%;
     margin-bottom: 20%;
@@ -203,14 +204,16 @@
   aside .aside_wrap .aside_top table td a {
     display: block;
   }
-  aside .aside_wrap .aside_top table td:hover {
+  aside .aside_wrap .aside_top table span {
+    float: right;
+    font-size: .7em;
+  }
+  aside .aside_wrap .aside_top table.study td:hover {
     background-color: #e9e9e9;
     color: #fff;
   }
-  aside .aside_wrap .aside_top table span {
-    float: right;
-    font-size: 0.6em;
-  }
+
+  
   aside .aside_wrap .atc_slide01 {
     margin-top: 30px;
   }
