@@ -458,8 +458,19 @@ nav .nav_info .time {}
 .table_area tbody tr th span {
 	color: red;
 }
-.table_area tbody tr td {
-	
+select:hover,
+select:focus {
+	border-color: #333;
+}
+.inp:hover,
+.inp:focus {
+	border-color: #333;
+}
+.inp.s-s {
+	width:80px;
+}
+.table_area tbody tr td .inp.tel {
+	width: 60px;
 }
 .table_area textarea {
 	display: inline-block;
