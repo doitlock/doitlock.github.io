@@ -12,6 +12,10 @@
 		centerPadding:30,
 		centerMode:true
 	});
+
+
+	
+	
   });
 		  
   

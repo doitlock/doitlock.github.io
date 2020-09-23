@@ -92,7 +92,7 @@ input[type="number"]::-webkit-outer-spin-button {-webkit-appearance:none; -moz-a
 input {
   font-size:1em;font-family:'Noto Sans KR'; font-weight:normal; color:#222; 
   height:44px; line-height:44px;
-  padding:0 15px; 
+  /* padding:0 15px;  */
   border:1px solid #dedede;
 }
 input[type="button"]:disabled,
@@ -115,15 +115,15 @@ textarea::placeholder, input::placeholder {
  color:#999;
  opacity:1; /* 파이어폭스에서 뿌옇게 나오는 현상을 방지하기 위한 css */
 }
-textarea::-webkit-input-placeholder, input::-webkit-input-placeholder {
+/* textarea::-webkit-input-placeholder, input::-webkit-input-placeholder {
  color:#999;
-}
-textarea:-ms-input-placeholder, input:-ms-input-placeholder {
+} */
+/* textarea:-ms-input-placeholder, input:-ms-input-placeholder {
  color:#999;
-}
-textarea:-mos-input-placeholder, input:-mos-input-placeholder {
+} */
+/* textarea:-mos-input-placeholder, input:-mos-input-placeholder {
  color:#999;
-}
+} */
 
 
 /* global */

@@ -278,18 +278,18 @@
           <div class="info_area_bot">
             <p>* 원활한 서비스 이용을 위한 최소한의 개인정보이므로 동의하지 않을 경우 서비스를 이용하실 수 없습니다</p>
           </div>
-          <p class="must">
-            &#42;필수
-          </p>
           <div class="table_area">
             <form>
                 <fieldset>
                   <legend>극장 대관을 위한 정보 입력 폼</legend>
                     <table>
+                      <p class="must_check">
+                        &#42;필수입력
+                      </p>
                       <tbody>
                         <tr>
                           <th><label for="ip-01">극장</label> <span>&#42;</span></th>
-                          <td>
+                          <td colspan="3">
                             <select name="" id="ip-01">
                               <option value="">지역선택</option>
                               <option value="">서울</option>
@@ -297,7 +297,7 @@
                               <option value="">인천</option>
                               <option value="">대전</option>
                             </select>
-                            <select name="" title="극장선택">
+                            <select name="" title="극장선택" disabled>
                               <option value="">극장선택</option>
                               <option value="">서울</option>
                               <option value="">경기</option>
@@ -308,49 +308,59 @@
                         </tr>
                         <tr>
                           <th><label for="ip-02">관람/대관일</label> <span>&#42;</span></th>
-                          <td>
-                            <input type="text" class="inp text" id="ip-02">
+                          <td colspan="3">
+                            <input type="date" class="inp date" id="ip-02">
+                            <select name="" title="시간선택" disabled>
+                              <option value="">시간선택</option>
+                              <option value="">서울</option>
+                              <option value="">경기</option>
+                              <option value="">인천</option>
+                              <option value="">대전</option>
+                            </select>
                           </td>
                         </tr>
                         <tr>
                           <th><label for="ip-03">관람할 영화</label>	<span>&#42;</span></th>
-                          <td>
-                            <input type="text" class="inp text" id="ip-03">
+                          <td colspan="3">
+                            <input type="text" class="inp text inp-s-all" id="ip-03">
                           </td>               
                         </tr>
                         <tr>
                           <th><label for="ip-04">관람인원</label> <span>&#42;</span></th>
-                          <td>
-                            <input type="text" class="inp text" id="ip-04"><span class="inp_desc">명</span>
+                          <td colspan="3">
+                            <input type="text" class="inp text inp-s-md" id="ip-04"><span class="inp_desc">명</span>
                           </td>                
                         </tr>
                         <tr>
                           <th><label for="ip-05">이름</label> <span>&#42;</span></th>
-                          <td>
-                            <input type="text" class="inp text" id="ip-05">
+                          <td colspan="3">
+                            <input type="text" class="inp text inp-s-md" id="ip-05">
                           </td>                
                         </tr>
                         <tr>
                           <th><label for="ip-06">연락처</label> <span>&#42;</span></th>
-                          <td>
+                          <td class="box-tel">
                             <input type="tel" class="inp tel s-s" id="ip-06">
                             <span class="inp_desc">-</span>
                             <input type="tel" class="inp tel" id="ip-06">
                             <span class="inp_desc">-</span>
                             <input type="tel" class="inp tel" id="ip-06">
-                          </td>                
+                          </td> 
+                          <th><label for="ip-09">이메일</label> <span>&#42;</span></th>
+                          <td>
+                            <input type="text" class="inp text inp-s-md" id="ip-09">
+                          </td>            
                         </tr>
                         <tr>
                           <th><label for="ip-07">제목</label> <span>&#42;</span></th>
-                          <td>
-                            <input type="text" class="inp text" id="ip-07">
+                          <td colspan="3">
+                            <input type="text" class="inp text inp-s-lg" id="ip-07" placeholder="제목을 입력해주세요.">
                           </td>                
                         </tr>
-                        <tr>
+                        <tr class="last_desc">
                           <th><label for="ip-08">내용</label> <span>&#42;</span></th>
-                          <td>
-                            <textarea title="대관 목적입력을 위한 입력 폼" placeholder="※ 대관 목적과 관련하여 행사내용 등을 상세히 남겨주시면 더욱 빠른 답변이 가능합니다." class="inp text" id="ip-08">
-                            </textarea>
+                          <td colspan="3">
+                            <textarea title="대관 목적입력을 위한 입력 폼" placeholder="※ 대관 목적과 관련하여 행사내용 등을 상세히 남겨주시면 더욱 빠른 답변이 가능합니다." class="inp text" id="ip-08"></textarea>
                           </td>
                         </tr>
                       </tbody>
