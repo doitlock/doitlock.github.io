@@ -11,18 +11,16 @@
     /* padding: 25px; */
     font-family: 'Chosunilbo_myungjo';
   }
-  .black-ball{ /*마우스따라다니는 볼*/
+  /* .black-ball{
     position: absolute;
     top:0;
     left:0;
     width:30px;
     height:30px;
     background:rgba(0,0,0,.3);
-    /* border: 20px solid #9b8a8a; */
     border-radius: 100%;
     z-index: 9999;
-    /* transition: all 0.1s ease-out; */
-  }
+  } */
 /*헤더*/
   header {
     width: 100%;
