@@ -1,0 +1,624 @@
+@charset "utf-8";
+
+* {  
+    box-sizing: border-box;
+}
+/* 메인 헤더 */
+#wrap    {}
+header {
+    background-color: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    border-bottom: 1px solid #ddd;
+}
+.header_wrap {
+    width: 1080px;
+    min-width: 1020px;
+    height: 80px;
+    margin: 0 auto;
+    text-align: center;
+}
+.nav_content {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    font-size: 0;
+}
+h1.header_logo {
+    width: 116px;
+    height: 20px;
+    margin: 32px 0 0 32px;
+    background: url(../img/logo-black.svg) no-repeat; 
+    background-size: cover;
+    float: left;
+}
+h1.header_logo a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+/* 로고가 클릭될 수 있도록 */
+.header_wrap .gnb_menu {}
+
+/* nav 메뉴 */
+nav {
+    display: inline-block;
+    float: right;
+}
+.gnb_menu {font-size: 0; }
+
+/* 드랍메뉴 */
+.gnb_dropmenu_wrap {
+    display: none;
+    min-width: 1100px;
+    /*height: 276px;*/
+    background-color: #fff;
+    /* z-index: 999; */
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* top: auto;
+    bottom: 100%; */
+    height: auto;
+    text-align: center;
+    font-size: 0;
+  /*   border-top: 1px solid rgba(0,0,0,0.1); */
+}
+.gnb_dropmenu_wrap > li {
+    display: inline-block;
+    width: 190px;
+    /*height: 276px;*/
+    padding-top: 30px;
+    font-size: 1rem;
+    vertical-align: top; /*글자를 위로 정렬*/
+    margin-bottom: 50px;
+    line-height: 35px;
+}
+.gnb_dropmenu_wrap > li:hover {
+    background-color:#fff;
+}
+.gnb_menu_list:hover .gnb_dropmenu_wrap{
+    display: block;
+    /* top: 100%;
+    bottom: auto; */
+    height: auto;
+}
+.gnb_menu_list, .gnb_menu_list_recruit  {
+    display: inline-block;
+    font-size: 1rem;
+}
+.gnb_menu_item {
+    display: block;
+    margin: 0 10px;
+    padding: 30px 0;
+    font-size: 15px;
+    min-width: 80px;
+    color: #111111;
+}
+.gnb_menu_item:hover {
+    border-bottom: 2px solid #000;
+    padding: 28px 0;
+}
+/* 드랍메뉴 */
+.gnb_dropmenu {
+    font-size: 17px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+}
+.gnb_dropmenu_item strong {
+    font-weight: bold;
+    color: #333333;
+}
+.gnb_dropmenu_item .depth {
+    font-size: 14px;
+    padding-bottom: 2px;
+    color: #444444;
+}
+/* 서류제출하기 */
+.gnb_menu_list #go-to-scraping {
+    padding: 10px 20px;
+    background: #fede22;
+    border: 1px solid #fede22;
+    border-radius: 22px;
+}
+
+/* 인트로 메인 */
+main {
+    position: relative;
+    margin: 0 auto;
+}
+.intro_main {
+    position: relative;
+    top: 80px;
+    width: 100%;
+    height: 884px;
+    margin: 0;
+    background-color: #fff;
+}
+.intro_main .intro_main_content {
+    position: relative;
+    width: 1200px;
+    height: 884px;
+    background-image: url(../img/main-bg2.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    z-index: 1;
+}
+.intro_main .background-line {
+    background-color: #fede22;
+    width: 100%;
+    height: 720px;
+    position: absolute;
+    top: 0;
+}
+
+/* 인트로 메인 텍스트 */
+.intro_main .tit_main {
+    position: absolute;
+    top: 215px;
+    width: 1200px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 52px;
+    font-weight: 500;
+    color: #333;
+    margin-left: 90px;
+    letter-spacing: -2px;
+    line-height: 65px;
+}
+.intro_main .tit_sub {
+    position: absolute;
+    top: 375px;
+    left: 90px;
+    font-size: 17px;
+    color: #111;
+    letter-spacing: -1px;
+    font-weight: normal;
+}
+.intro_main .list_store {
+    overflow: hidden;
+    position: absolute;
+    top: 490px;
+    margin-left: 85px;
+    
+}
+.intro_main .list_store > li {
+    float: left;
+    width: 178px;
+    height: 60px;
+    padding: 0 6px;
+}
+.intro_main .link_store {
+    display: block;
+    height: 56px;
+    border: 1px solid rgba(255,255,255,.3);
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 56px;
+    color: #333;
+    background: #fff;
+    text-align: center;  
+}
+
+/*링크 스토어 아이콘*/
+.intro_main .list_store .img_kabang {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: -2px 10px 0 0;
+    background-position: -340px -292px;
+    text-indent: 0;
+    vertical-align: middle;
+}
+.img_kabang {
+    overflow: hidden;
+    background: url(../img/img-kabang-200417.png) no-repeat;
+}
+.intro_main .list_store .ico_app {
+    width: 24px;
+    height: 24px;
+    margin-top: -4px;
+    background-position: -371px -292px;
+}
+
+
+/* 컨텐츠 공통 사항 */
+.section_cont {
+    position: relative;
+    background-color: #fff;
+    height: 750px;
+    width: 1020px;
+    margin: 0 auto;
+  }
+  
+  /* 컨텐츠 공통 */
+  .section_cont h2 {
+    font-size: 43px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #111111;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+  }
+  .section_cont p {
+    font-size: 15px;
+    color: #666;
+    letter-spacing: -1px;
+    margin-bottom: 35px;
+  }
+  .section_cont .cont_btn {
+    display: inline-block;
+    font-size: 16px;
+    color: #111111;
+    text-align: center;
+    letter-spacing: -1px;
+    margin-bottom: 50px;
+  }
+  .cont_btn a {
+    float: left;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    margin-right: 10px;
+    transition: background-color .2s ease;
+}
+.cont_btn a:hover {
+    background-color: #fede22;
+}
+
+/* 입출금 통장 */
+.easy_trans {
+    position: relative;
+}
+.easy_trans .cont_img {
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 470px;
+    z-index: 888;
+}
+.easy_trans .cont_img .with_img {
+    width: 470px;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 1.5s ease;
+}
+.easy_trans .cont_img .with_img.on {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 1.5s ease;
+}
+.easy_trans .cont_txt {
+    position: absolute;
+    top: 250px;
+    right: 50px;
+}
+.easy_trans .cont_btn .link_bank {
+    display: inline-block;
+    padding: 15px 30px;
+} 
+
+/* 예금, 적금 */
+.rational_bank {
+    position: relative;
+    margin-bottom: 50px;
+}
+.rational_bank .cont_img {
+    position: absolute;
+    right: 0;
+}
+.rational_bank .cont_img .saving_img {
+    width: 440px;
+    opacity: 0;
+    transition: all 1.5s ease;
+}
+.rational_bank .cont_img .saving_img.on {
+    opacity: 1;
+    transform: translateX(-30px);
+    transition: all 1.5s ease;
+}
+.rational_bank .con_txt {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    margin-left: 30px;
+}
+.rational_bank .con_txt img {
+    display: block;
+    width: 440px;
+}
+.rational_bank .cont_btn .link_deposit {
+    padding: 15px 50px;
+    border-radius: 10px;
+}
+
+/* 모임 통장  */
+.used_together {
+    position: relative;
+    background-color: #fff;
+}
+.used_together .cont_img img {
+    display: block;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 460px;
+    margin-left: 40px;
+}
+.used_together .cont_img .moim_img {
+    width: 460px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 1s ease;
+}
+.used_together .cont_img .moim_img.on {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 1s ease;
+}
+.used_together .con_txt {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-right: 65px;
+}
+.used_together .cont_btn .link_bank {
+    padding: 15px 90px;
+    border-radius: 10px;
+}
+
+/*26주 적금*/
+.funny_saving {
+    position: relative;
+    background-color: #fff;
+    height: 600px;
+}
+.funny_saving .cont_img {
+    display: block;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 480px;
+    margin-right: 30px;
+}
+.funny_saving .cont_img .weeks26_img {
+    width: 480px;
+    opacity: 0;
+    transform: rotateY(90deg);
+    transition: all 1s ease;
+}
+.funny_saving .cont_img .weeks26_img.on {
+    opacity: 1;
+    transform: rotate(0);
+    transition: all 1s ease;
+}
+.funny_saving .con_txt {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin-left: 65px;
+}
+.funny_saving .cont_btn .link_bank {
+    padding: 15px 90px;
+    border-radius: 10px;
+}
+
+/* 해외송금 */
+.wu_bank {
+    position: relative;
+    width: 100%;
+    min-width: 1020px; /*최소가로값*/
+    background: url(../img/home-map.png) no-repeat;
+    background-position: /* left center */-12% 50%; /*반응형*/
+}
+.wu_bank .cont_img {
+    width: 1020px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: 40px;
+    left: 0;
+}
+.wu_bank .cont_img .foreign_img {
+    width: 410px;
+    opacity: 0;
+    transform: translateY(170px);
+    transition: all 1.8s ease;
+}
+.wu_bank .cont_img .foreign_img.on {
+    opacity: 1;
+    transform: translateY(-10px);
+    transition: all 1.8s ease;
+}
+.wu_bank .con_txt {
+    position: absolute;
+    top: 190px;
+    left: 50%;
+    margin-left: 90px;
+}
+.wu_bank .cont_btn .link_bank {
+    padding: 15px 70px;
+    border-radius: 10px;
+}
+
+/* 서류제출 */
+.always_bank {
+    position: relative;
+    width: 100%;
+    height: 930px;
+    min-width: 1020px;
+    background-color: #333b58;
+}
+.always_bank .cont_img img {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 430px;
+    transform: translateX(-50%);
+}
+.always_bank .con_txt {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.always_bank .con_txt h2 {
+    color: #fff;
+}
+.always_bank .con_txt p {
+    color: #a8a8a8;
+}
+.always_bank .cont_btn a {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 10px;
+    background-color: #626a85;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color .1s ease;
+}
+.always_bank .cont_btn:hover a {
+    background-color: #3b4f92;
+    color: #fff;
+}
+
+/* 체크카드 */
+.friends_card {
+    position: relative;
+    background-color: #fff;
+    height: 1050px;
+}
+.friends_card .con_txt {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.friends_card .con_txt h2 {
+    color: #111;
+}
+.friends_card .con_txt p {
+    color: #555555;
+}
+.friends_card .cont_btn a {
+    padding: 15px 25px;
+    border-radius: 10px;
+}
+.friends_card .cont_img {
+    position: absolute;
+    bottom: 100px;
+    text-align: center; /*텍스트가 아니어도 적용됨*/
+    width: 100%;
+    min-width: 1020px;    
+}
+.friends_card .cont_img {
+    position: absolute;
+    bottom: 100px;
+    text-align: center; /*텍스트가 아니어도 적용됨*/
+    width: 100%;
+    min-width: 1020px;    
+}
+.friends_card .cont_img .slide_list img {
+    width: 300px;   
+}
+
+/* it기술 */
+.it_kakaobank {
+    position: relative;
+    width: 100%;
+    height: 950px;
+    min-width: 1020px;
+    background-color: #f6f6f6;
+}
+.it_kakaobank::after {
+    content:'';
+    position:absolute;
+    bottom:415px;
+    left:0;
+    right:0;
+    height:1px;
+    background:#ddd;
+}
+.it_kakaobank .con_txt {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.it_kakaobank .con_txt::after {
+    content: "";
+    display: block;
+    clear: both;
+    border: 1px solid #333333;
+    width: 100px;
+    margin: 0 auto;
+}
+.it_kakaobank .cont_img {
+    z-index: 1;
+    width: 1020px;
+    height: 450px;
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+.it_kakaobank .cont_img img {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    width:1020px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+.it_kakaobank .cont_img .content_list {
+  
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+.it_kakaobank .cont_img .cont_list {
+    
+    float: left;
+    width: 255px;
+}
+.it_kakaobank .cont_img .cont_list:last-child {
+    float: right;
+}
+.it_kakaobank .cont_img .cont_list strong {
+    
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+.it_kakaobank .cont_img .cont_list p {
+    margin-top: 15px;
+}
+/* .it_kakaobank::after {
+    content: "";
+    display: block;
+    clear: both;
+    position: absolute;
+    top: 50%;
+    border: 1px solid #f0f0f0;
+    width: 100%;
+    margin: 0 auto;
+}
+ 마무리부분 가운데 보더??*/
+
