@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 /* 메인 헤더 */
-#wrap {}
+#wrap    {}
 header {
     background-color: #fff;
     position: fixed;
