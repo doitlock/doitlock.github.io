@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOOKI PORTFOLIO</title>
+  <!--font-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+  <!--jqury, slick-->
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <!--style-->
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="css/sub.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+</head>
+<body id="main-page"> 
+  <div id="wrap">
+    <header role="header" data-include="include/header_inc.html"></header>
+
+    <main id="main">
+      <section class="sec01 mb150">
+        <div class="intro">
+          <p>Hello World</p>
+          <h2 class="eng">HI! I'M SOO KII HONG<br>
+            WEB PUBLISHER </h2>
+          <p>Please Contact Me</p>
+        </div>
+        <div class="intro-btm">
+          <p>
+            안녕하세요 반갑습니다! 웹퍼블리셔 홍수기의 포트폴리오 입니다!<br>
+            밑으로 스크롤해서 상세페이지를 확인해주세요.
+          </p>
+        </div>
+      </section>
+
+      <section class="sec02 mb150">
+        <div class="tact01">
+          <b>Contact</b>
+          <p>doitlock@gmail.com</p>
+        </div>
+        <div class="tact02">
+          <b>E-MAIL</b>
+          <p>doitlock@gmail.com</p>
+        </div>
+      </section>
+
+      <section class="sec03 af-line mb300">
+        <h2 class="tit">ABOUT</h2>
+        <div class="abt-wrap">
+          <div class="edu">
+            <h3>EDUCATION</h3>
+            <ul>
+              <li>
+                <h3>경기IT일자리센터 UI/UX 퍼블리셔 과정</h3>
+                <p>
+                  HTML5, CSS3, JavaScript, jQuery
+                  <span>2020.MAY ~ 2020.JUN</span>
+                </p>
+              </li>
+              <li>
+                <h3>한양여자대학교 조형일러스트레이션과</h3>
+                <p>
+                  Illustration, Adobe Program
+                  <span>2010.FAB ~ 2012.FAB</span>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="career">
+            <h3>CAREER</h3>
+            <ul>
+              <li>
+                <h3>퀴리오스</h3>
+                <p>
+                  Web Publisher, Developer Team<br>
+                  <span>2020.OCT ~ 202.FAB</span>
+                </p>
+              
+              </li>
+              <li>
+                <h3>Trini</h3>
+                <p>
+                  Web Designer, Design Team<br>
+                  <span>2020.MAR ~ 2020.MAR</span>
+                </p>
+              
+              </li>
+              <li>
+                <h3>YEON 글로벌</h3>
+                <p>
+                  Web Designer, Design Team<br>
+                  <span>2020.MAR ~ 2020.MAR</span>
+                </p>
+              
+              </li>
+              <li>
+                <h3>올리빙</h3>
+                <p>
+                  Web Designer, Design Team<br>
+                  <span>2020.MAR ~ 2020.MAR</span>
+                </p>
+              
+              </li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h3>SKILL</h3>
+            <canvas id="myChart" width="400" height="100"></canvas>
+            <script>
+              var ctx = document.getElementById("myChart");
+              var myRadarChart = new Chart(ctx, {
+                            type: 'horizontalBar',
+                            data: {
+                                    labels: ["HTML5", "CSS3", "JavaScript", "jQuery", "반응형", "Illustrator", "Photoshop"],
+                                    datasets: [
+                                        {
+                                            label: "WHAT CAN I DO",
+                                            backgroundColor: "#ddd",
+                                            borderColor: "#ccc",
+                                            pointBackgroundColor: "#5bc8c8",
+                                            pointBorderColor: "#fff",
+                                            pointHoverBackgroundColor: "#fff",
+                                            pointHoverBorderColor: "rgba(179,181,198,1)",
+                                            data: [90, 90, 60, 60, 80, 85, 90]
+                                        }
+                                    ],
+                                    lineTension:1
+                                }
+              });
+                  </script>
+          </div>
+        </div>
+        <b class="more_btn"><a href="sub/about.html">보러가기 &#62;</a></b>
+      </section>
+
+      <section class="sec04 mb150">
+        <h2 class="tit">CLONE PAGE</h2>
+        <div class="slick-wrap">
+          <div class="slide-wrap">
+            <div class="slide_list">
+              <a href=""><img src="images/list02.png" alt=""></a>
+            </div>
+            <div class="slide_list">
+              <a href=""><img src="images/list03.png" alt=""></a>
+            </div>
+            <div class="slide_list">
+              <a href=""><img src="images/list04.png" alt=""></a>
+            </div>
+            <div class="slide_list">
+              <a href=""><img src="images/list05.png" alt=""></a>
+            </div>
+            <div class="slide_list">
+              <a href=""><img src="images/list06.png" alt=""></a>
+            </div>
+            <div class="slide_list">
+              <a href=""><img src="images/list05.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </section>
+<!--
+      <section class="ration mb150">
+        <img src="images/illu01.png" alt="일러스트이미지" style="width: 90px;">
+      </section>
+-->
+      <section class="sec05 af-line mb300">
+        <h2 class="tit">DETAIL PAGE</h2>
+        <div class="detail-wrap">
+          <div class="left">
+            <a href="sub/sub01.html"><img src="images/sec05_01.png" alt="디테일페이지 미리보기 이미지01"></a>
+          </div>
+          <div class="right">
+            <a href="sub/sub02.html"><img src="images/sec05_02.png" alt="디테일페이지 미리보기 이미지02"></a>
+          </div>
+        </div>
+        <span>"이미지위에 마우스를 올리고 스크롤 해주세요."</span>
+      </section>
+
+      <section class="sec06 mb150">
+        <h2 class="tit">NAV HEADER</h2>
+        <div class="nav-wrap">
+          <div class="one">
+            <a href="sub/sub03.html"><img src="images/main_nav_img.png" alt=""></a>
+          </div>
+          <div class="two">
+            <a href="sub/sub03.html"><img src="images/main_nav02_img.png" alt=""></a>
+          </div>
+        </div>
+      </section>
+<!--
+      <section class="ration mb150">
+        <img src="images/illu02.png" alt="일러스트이미지" style="width: 105px; transform: rotate(
+          -15deg
+          );">
+      </section>
+-->
+      <section class="sec07 af-line mb300">
+        <h2 class="tit">GRID GALLERY</h2>
+        <div class="container">
+          <div class="item one"></div>
+          <div class="item two">
+            <a href="sub/sub04.html">이 곳을 클릭해주세요!</a>
+          </div>
+          <div class="item thr"><span>Parallax Scrolling</span></div>
+          <div class="item fur"></div>
+          <div class="item fiv"></div>
+          <div class="item six">타자치는 고양이.</div>
+        </div>
+      </section>
+<!--
+      <section class="sec08 mb150">
+        <div class="zone-wrap01">
+          <h2 class="tit">SCROLL ZONE</h2>
+          <div class="box"></div>
+        </div>
+        <div class="zone-wrap02">
+          <h2 class="tit">TAB ZONE</h2>
+          <div class="box"></div>
+        </div>
+      </section>
+-->      
+<!--
+      <section class="ration mb150">
+        <img src="images/illu03.png" alt="일러스트이미지" style="width: 80px;">
+      </section>
+
+      <section class="sec09">
+        <div class="univ-wrap01">
+          <h2 class="tit">DOG UNIVERSE</h2>
+          <div class="box"></div>
+        </div>
+        <div class="univ-wrap02">
+          <h2 class="tit">CAT UNIVERSE</h2>
+          <div class="box"></div>
+        </div>
+      </section>
+-->      
+      <div class="last-part">
+        <h3>I LOVE HTML5</h3>
+        <P>ALLWAYS LOVE HTML. Nemo animi error libero eligendi minus omnis? Architecto id, voluptate eos non <br />
+          quisquam sapiente ab soluta commodi, tempore illo cumque amet dolorum omnis quam.</P>
+      </div>
+    </main>
+    <footer role="footer" data-include="include/footer_inc.html"></footer>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $('.slide-wrap').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: false
+    });
+  });
+  </script>
+
+</body>
+
+</html>
