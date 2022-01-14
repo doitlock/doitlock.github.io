@@ -4,600 +4,263 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SOOKI HONG PORTFOLIO!</title>
-  <!--폰트-->
-  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!--슬릭-->
-  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-  <!--animate.css-->
-  <link rel="stylesheet" href="css/animate.css" />
-  <!--파비콘-->
-  <link rel="icon" type="image/x-icon" sizes="32x32" href="img/favicon.ico">
-  <!--css-->
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/common.css">
-  <link href="css/style_pc.css" rel="stylesheet" media="screen and (min-width : 1201px)" />
-  <link href="css/style_pc02.css" rel="stylesheet" media="screen and (max-width : 1200px) and (min-width:801px)" />
-  <link href="css/style_mobile.css" rel="stylesheet" media="screen and (max-width : 800px)" />
+  <title>SOOKI PORTFOLIO</title>
+  <!--font-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+  <!--jqury, slick-->
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <!--style-->
+  <link rel="stylesheet" type="text/css" href="css/common.css">
+  <link rel="stylesheet" type="text/css" href="css/sub.css">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
-
-<body>
+<body id="main-page"> 
   <div id="wrap">
-    <div class="fix_txt">
-      <p></p>
-    </div>
-    <header id="header">
-      <div class="container top">
-        <div class="item date">
-          <div>
-            <script>
-              let today = new Date();
-              let year = today.getFullYear(); // 년도
-              let month = today.getMonth() + 1;  // 월
-              let date = today.getDate();  // 날짜
-              let day = today.getDay();  // 요일
-              document.write('오늘은 ' + year + ' 년 ' + month + ' 월 ' + date + ' 일 입니다.')
-              document.write('<br>')
-            </script>
-          </div>
+    <header role="header" data-include="include/header_inc.html"></header>
+
+    <main id="main">
+      <section class="sec01 mb150">
+        <div class="intro">
+          <p>Hello World</p>
+          <h2 class="eng">HI! I'M SOO KII HONG<br>
+            WEB PUBLISHER </h2>
+          <p>Please Contact Me</p>
         </div>
-        <div class="item">
+        <div class="intro-btm">
           <p>
-            <a href="sub/new_pf/index.html" target="_blank">안녕하세요! 홍수기 포트폴리오입니다. 현재 리뉴얼 작업중입니다. GO!</a>
+            안녕하세요 반갑습니다! 웹퍼블리셔 홍수기의 포트폴리오 입니다!<br>
+            밑으로 스크롤해서 상세페이지를 확인해주세요.
           </p>
         </div>
-        <div class="item time">
-          <div>
+      </section>
+
+      <section class="sec02 mb150">
+        <div class="tact01">
+          <b>Contact</b>
+          <p>doitlock@gmail.com</p>
+        </div>
+        <div class="tact02">
+          <b>E-MAIL</b>
+          <p>doitlock@gmail.com</p>
+        </div>
+      </section>
+
+      <section class="sec03 af-line mb300">
+        <h2 class="tit">ABOUT</h2>
+        <div class="abt-wrap">
+          <div class="edu">
+            <h3>EDUCATION</h3>
+            <ul>
+              <li>
+                <h3>경기IT일자리센터 UI/UX 퍼블리셔 과정</h3>
+                <p>
+                  HTML5, CSS3, JavaScript, jQuery
+                  <span>2020.MAY ~ 2020.JUN</span>
+                </p>
+              </li>
+              <li>
+                <h3>한양여자대학교 조형일러스트레이션과</h3>
+                <p>
+                  Illustration, Adobe Program
+                  <span>2010.FAB ~ 2012.FAB</span>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="career">
+            <h3>CAREER</h3>
+            <ul>
+              <li>
+                <h3>용감한 컴퍼니</h3>
+                <p>
+                  Web Publisher, Developer Team<br>
+                  <span>2021.FEB ~ 2021.AUG</span>
+                </p>
+              
+              </li>
+              <li>
+                <h3>퀴리오스</h3>
+                <p>
+                  Web Publisher, Developer Team<br>
+                  <span>2020.OCT ~ 2020.FAB</span>
+                </p>
+              
+              </li>
+              <li>
+                <h3>Trini</h3>
+                <p>
+                  Web Designer, Design Team<br>
+                  <span>2020.MAR ~ 2020.MAR</span>
+                </p>
+              
+              </li>
+              <li>
+                <h3>YEON 글로벌</h3>
+                <p>
+                  Web Designer, Design Team<br>
+                  <span>2020.MAR ~ 2020.MAR</span>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="skill">
+            <h3>SKILL</h3>
+            <canvas id="myChart" width="400" height="100"></canvas>
             <script>
-              let todayTime = new Date();
-              let hours = todayTime.getHours(); // 시
-              let minutes = todayTime.getMinutes();  // 분
-              document.write('현재 시간은 ' + hours + '시 ' + minutes + '분 입니다.');
-            </script>
+              var ctx = document.getElementById("myChart");
+              var myRadarChart = new Chart(ctx, {
+                            type: 'horizontalBar',
+                            data: {
+                                    labels: ["HTML5", "CSS3", "JavaScript", "jQuery", "반응형", "Illustrator", "Photoshop"],
+                                    datasets: [
+                                        {
+                                            label: "WHAT CAN I DO",
+                                            backgroundColor: "#ddd",
+                                            borderColor: "#ccc",
+                                            pointBackgroundColor: "#5bc8c8",
+                                            pointBorderColor: "#fff",
+                                            pointHoverBackgroundColor: "#fff",
+                                            pointHoverBorderColor: "rgba(179,181,198,1)",
+                                            data: [90, 90, 60, 60, 80, 85, 90]
+                                        }
+                                    ],
+                                    lineTension:1
+                                }
+              });
+                  </script>
           </div>
         </div>
-      </div>
-      <div class="container mid">
-        <div class="item">
+        <b class="more_btn"><a href="sub/about.html">보러가기 &#62;</a></b>
+      </section>
 
+      <section class="sec04 mb150">
+        <h2 class="tit">CLONE PAGE</h2>
+        <div class="slick-wrap">
+          <div class="slide-wrap">
+            <div class="slide_list">
+              <a href=""><img src="images/list02.png" alt=""></a>
+            </div>
+            <div class="slide_list">
+              <a href=""><img src="images/list03.png" alt=""></a>
+            </div>
+            <div class="slide_list">
+              <a href=""><img src="images/list04.png" alt=""></a>
+            </div>
+            <div class="slide_list">
+              <a href=""><img src="images/list05.png" alt=""></a>
+            </div>
+            <div class="slide_list">
+              <a href=""><img src="images/list06.png" alt=""></a>
+            </div>
+            <div class="slide_list">
+              <a href=""><img src="images/list05.png" alt=""></a>
+            </div>
+          </div>
         </div>
-        <div class="item doit"><a href="index.html" title="안녕하세요! 홍수기의 포트폴리오사이트입니다.">Doit<span
-              class="wow">portfolio</span></a></div>
-        <div class="item">
+      </section>
+<!--
+      <section class="ration mb150">
+        <img src="images/illu01.png" alt="일러스트이미지" style="width: 90px;">
+      </section>
+-->
+      <section class="sec05 af-line mb300">
+        <h2 class="tit">DETAIL PAGE</h2>
+        <div class="detail-wrap">
+          <div class="left">
+            <a href="sub/sub01.html"><img src="images/sec05_01.png" alt="디테일페이지 미리보기 이미지01"></a>
+          </div>
+          <div class="right">
+            <a href="sub/sub02.html"><img src="images/sec05_02.png" alt="디테일페이지 미리보기 이미지02"></a>
+          </div>
+        </div>
+        <span>"이미지위에 마우스를 올리고 스크롤 해주세요."</span>
+      </section>
 
-        </div>
-      </div>
-      <div class="container bot">
-        <div class="item"><a target="_blank" href="sub/who_am_i.html" title="홍수기가 누구야">ABOUT ME</a></div>
-        <div class="item"><a target="_blank" href="https://doitlock.tistory.com/" title="코딩공부 기록하는 곳">CODE BLOG</a></div>
-        <div class="item"><a target="_blank" href="https://www.instagram.com/great_flood_/" title="홍수기 그림인스타 계정">S.N.S</a></div>
-        <div class="item"><a target="_blank" href="sub/illustration_i.html"
-            title="일러스트작업물">ILLUST</a></div>
-        <div class="item"><a target="_blank" href="
-          mailto:doitlock@gmail.com" title="PLEASE CONTACT ME!">CONTACT</a></div>
-      </div>
-      <div class="container space">
-        <span class="blind">비어있는칸</span>
-      </div>
-    </header>
-    <aside>
-      <div class="aside_wrap">
-        <div class="aside_top">
-          <div class="inner_wrap">
-            <table class="skill">
-              <thead>
-                <tr>
-                  <th>#01. MY SKILLS</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>HTML5<span>80&#37;</span></td>
-                </tr>
-                <tr>
-                  <td>CSS3<span>70&#37;</span></td>
-                </tr>
-                <tr>
-                  <td>JAVASCRIPT<span>50&#37;</span></td>
-                </tr>
-                <tr>
-                  <td>JQUERY<span>50&#37;</span></td>
-                </tr>
-                <tr>
-                  <td>PREMIERE PRO<span>40&#37;</span></td>
-                </tr>
-                <tr>
-                  <td>PHOTOSHOP<span>90&#37;</span></td>
-                </tr>
-                <tr>
-                  <td>ILLUSTRATOR<span>90&#37;</span></td>
-                </tr>
-              </tbody>
-            </table>
-            <!--             <table>
-              <thead>
-                <tr>
-                  <th>#02. THANKS TO</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><a href="https://www.photopea.com/">PHOTOPEA - Image Editor</a></td>
-                </tr>
-                <tr>
-                  <td><a href="https://evernote.com/intl/ko/">EVERNOTE</a></td>
-                </tr>
-                <tr>
-                  <td><a href="https://www.youtube.com/watch?v=AixAmLWzXYg&list=PLzQcjM-f6rkPx32dxsExoIaX1jDLrtu6N&index=36&t=25s">DarkCode - utube</a></td>
-                </tr>
-                <tr>
-                  <td><a href="https://www.youtube.com/channel/UCbwXnUipZsLfUckBPsC7Jog">Online Tutorials - utube</a></td>
-                </tr>
-                <tr>
-                  <td><a href="https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q">Dev Ed - utube</a></td>
-                </tr>
-                <tr>
-                  <td><a href="">스리스으리</a></td>
-                </tr>
-                <tr>
-                  <td><a href="">SAMSUNI & SUL-MOS</a></td>
-                </tr>
-              </tbody>
-            </table> -->
-            <table class="study">
-              <thead>
-                <tr>
-                  <th colspan="2">#02. 도움주신 분들</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td rowspan="2"><a target="_blank"
-                      href="https://edu.goorm.io/lecture/17829/%EA%B9%80%EB%B2%84%EA%B7%B8%EC%9D%98-css%EB%8A%94-%EC%9E%AC%EB%B0%8C%EB%8B%A4-%EA%B8%B0%EC%B4%88%EB%B6%80%ED%84%B0-%EC%8B%A4%EB%AC%B4-%EB%A0%88%EB%B2%A8%EA%B9%8C%EC%A7%80"
-                      title="김버그의 구름에듀 강의">KIM BUG 김버그</a></td>
-                  <td><a target="_blank"
-                      href="https://edu.goorm.io/lecture/17829/%EA%B9%80%EB%B2%84%EA%B7%B8%EC%9D%98-css%EB%8A%94-%EC%9E%AC%EB%B0%8C%EB%8B%A4-%EA%B8%B0%EC%B4%88%EB%B6%80%ED%84%B0-%EC%8B%A4%EB%AC%B4-%EB%A0%88%EB%B2%A8%EA%B9%8C%EC%A7%80"
-                      title="김버그의 구름에듀 강의">CSS<span>&#62;</span></a></td>
-                </tr>
-                <tr>
-                  <td><a target="_blank"
-                      href="https://edu.goorm.io/lecture/17829/%EA%B9%80%EB%B2%84%EA%B7%B8%EC%9D%98-css%EB%8A%94-%EC%9E%AC%EB%B0%8C%EB%8B%A4-%EA%B8%B0%EC%B4%88%EB%B6%80%ED%84%B0-%EC%8B%A4%EB%AC%B4-%EB%A0%88%EB%B2%A8%EA%B9%8C%EC%A7%80"
-                      title="김버그의 구름에듀 강의">HTML<span>&#62;</span></a></td>
-                </tr>
-                <tr>
-                  <td colspan="2"><a target="_blank" href="https://webstoryboy.co.kr/">WEBSTORY BOY<span>&#62;</span></a></td>
-                </tr>
-                <tr>
-                  <td colspan="2"><a target="_blank" href="https://opentutorials.org/course/1">생활코딩<span>&#62;</span></a></td>
-                </tr>
-                <tr>
-                  <td colspan="2"><a target="_blank" href="https://www.youtube.com/channel/UC_4u-bXaba7yrRz_6x6kb_w">드림코딩 BY
-                      엘리<span>&#62;</span></a></td>
-                </tr>
-                <tr>
-                  <td colspan="2"><a target="_blank" href="https://studiomeal.com/">1분 코딩<span>&#62;</span></a></td>
-                </tr>
-                <tr>
-                  <td colspan="2"><a target="_blank" href="https://academy.nomadcoders.co/">노마드 코더<span>&#62;</span></a></td>
-                </tr>
-                <tr>
-                  <td colspan="2"><a target="_blank" href="https://www.zerocho.com/">ZERO CHO<span>&#62;</span></a></td>
-                </tr>
-              </tbody>
-            </table>
-            <div class="contact_me" id="contact_me_move">
-              <h2>PLEASE<br>CONTACT ME!</h2>
-              <div class="underline"></div>
-              <p class="phone_num">+82 10 0000 0000</p>
-              <p class="email_num">doitlock@gmail.com</p>
-              <a href="mailto:doitlock@gmail.com" class="contact_mail" target="_blank">contact me on e-mail</a>
-            </div>
-            <div class="contact_ani">
-              <div class="circle_wrap">
-                <div class="circle1"></div>
-                <div class="circle2"></div>
-                <div class="circle3"></div>
-                <div class="circle4"></div>
-                <div class="circle5"></div>
-              </div>
-              <img src="img/bottom_img.png" alt="">
-            </div>
-            <!--             <div class="atc_slide01">
-              <div>
-                <img src="img/round01.png" alt="">
-                <p>불태웠다.</p>
-              </div>
-              <div>
-                <img src="img/round02.png" alt="">
-                <p>설모 화이팅하자.</p>
-              </div>
-              <div>
-                <img src="img/round03.png" alt="">
-                <p>고양이밥이 그리 맛이 좋아</p>
-              </div>
-              <div>
-                <img src="img/round08.png" alt="">
-                <p>홍수기입니다!반갑습니다!</p>
-              </div>
-              <div>
-                <img src="img/round04.png" alt="">
-                <p>SMASUNI</p>
-              </div>
-              <div>
-                <img src="img/round07.png" alt="">
-                <p>SAMSOOOON</p>
-              </div>
-              <div>
-                <img src="img/round06.png" alt="">
-                <p>샘순</p>
-              </div>
-            </div> -->
+      <section class="sec06 mb150">
+        <h2 class="tit">NAV HEADER</h2>
+        <div class="nav-wrap">
+          <div class="one">
+            <a href="sub/sub03.html"><img src="images/main_nav_img.png" alt=""></a>
           </div>
-          <!--//innerwrap-->
-        </div>
-      </div>
-    </aside>
-    <section>
-      <div class="sec_tit">
-        <h2 class="blind">섹션 슬라이드</h2>
-      </div>
-      <div class="section_slide">
-        <div>
-          <a href="sub/pofol.html" target="_blank"><img src="img/list01.png" alt=""></a>
-        </div>
-        <div>
-          <a href="sub/megabox/index.html" target="_blank"><img src="img/list02.png" alt=""></a>
-        </div>
-        <div>
-          <a href="javascript:;" target="_blank"><img src="img/list03.png" alt=""></a>
-        </div>
-        <div>
-          <a href="sub/naver/index.html" target="_blank"><img src="img/list04.png" alt=""></a>
-        </div>
-        <div>
-          <a href="sub/linefriends/index.html" target="_blank"><img src="img/list05.png" alt=""></a>
-        </div>
-        <div>
-          <a href="sub/29cm/index.html" target="_blank"><img src="img/list06.png" alt=""></a>
-        </div>
-      </div>
-      <div class="move_ani">
-        <p class="chatbox">Do It Portfolio!</p>
-      </div>
-      <div class="sec_tit">
-        <h2></h2>
-        <P> &#91; 이미지를 클릭하면 포트폴리오 소개글 팝업창이 열립니다. &#93;</P>
-      </div>
-      <div class="popup_wrap">
-        <div class="pofol_list pofol">
-          <div class="pofol_img_wrap">
-            <button class="myBtn">
-              <img src="img/list01.png" alt="포트폴리오 썸네일">
-            </button>
-            <div class="pofol_title">
-              <p>FIRST PORTFOLIO SITE</p>
-            </div>
-            <div class="illust_move">
-              <img src="img/illust01.png" alt="">
-            </div>
-          </div>
-          <div class="modal">
-            <div class="modal-content">
-              <span class="close">CLOSE</span>
-              <div class="popup_head">
-                <h2>1차 포트폴리오 사이트</h2>
-                <p>- CLONE SITE -</p>
-              </div>
-              <div class="popup_body">
-                <p class="popup_body_tit">HTML, CSS를 배우고 처음으로 만들어 본 개인 포트폴리오 홈페이지!<br><span>[HTML / CSS / PHOTOSHOP]</span></p>
-                <img src="img/pofol_img01.png" alt="">
-                <p>1차 포트폴리오의 메인화면!<br>시멘틱 태그 header, aside, main, footer를 사용하여 레이아웃을 잡았다.</p>
-                <img src="img/pofol_img02.png" alt="">
-                <p>header, aside, footer는 position을 fixed로 설정해 고정을 시켰다.<br>중앙의 main부분만 스크롤이 된다!<br><br>클론 작업 사이트의 썸네일박스는 display:flex 를 사용하여 정렬했다.<br>flex를 처음 써봤는데 float보다 훨씬 쉽게 정렬되었다.<br>썸네일에 마우스를 올리면 썸네일위로 투명한 배경에 텍스트가 보이도록 했다.</p>
-                <img src="img/pofol_img03.png" alt="">
-                <p>수업중에 배웠던 패럴랙스를 사용하여 스크롤해도 배경이미지가 고정되어 보이도록 했다.<br>이미지위에 넣은 텍스트는 '목표는 취업이다' 이다.</p>
-                <img src="img/pofol_img04.png" alt="">
-                <p>PLEASE CONTACT ME!<br>header부분의 contact를 클릭하면 링크를 걸어놓은 화면의 위치로 바로 이동하도록 해놓았다.<br><br>버튼은 a태그를 사용하여 만들었다.<br>마우스를 올리면 백그라운드 색상이 1초동안 바뀌도록 transition을 사용했다.<br>아이콘은 font awesome에서 가져왔다.</p>
-                <img src="img/pofol_img05.png" alt="">
-                <p>이전에 그려둔 그림들을 사용해보면 재미있을 것 같아서 넣어보았다.<br>rotate, infinite효과로 저 그림은 3초동안 한 바퀴씩 영원히 돌아갈 것 이다.<br><br>footer부분은 fixed를 사용하여 밑에 고정시켜 두었기에,<br>main화면의 하단에 따로 footer부분을 만들어두었다.</p>
-                <img src="img/pofol_img06.png" alt="">
-                <p>1차 포트폴리오 사이트의 하나밖에 없는 서브페이지다.<br>figure, figcaption을 사용하여 일러스트를 전시해보았다.<br>중간중간 애니메이션 효과를 넣어보기도 했다.<br><br>애니메이션 효과를 처음 사용해봤는데 위아래로 반복하는 것도 어려워서<br>옆짝꿍의 도움을 많이 받았다. thank to.한슬</p>
-                <img src="img/pofol_img07.png" alt="">
-                <p>미디어쿼리를 배우기 전이었는데 꼭 사용해보고 싶었다.<br>break point를 1260으로 두고 오른쪽의 aside가 왼쪽 aside밑으로 붙도록 작업했다.<br>이 작업도 당시엔 꽤 어려워서 도움을 받아 작업했다. thanks to.외자<br>반응형 홈페이지로 바꿔서 작업해 볼 계획!</p>
-              </div>
-              <div class="popup_footer">
-                <p>&#34;버튼을 클릭하면 메인페이지와 서브페이지로 이동합니다!&#34;</p>
-                <a class="first_btn" href="sub/pofol.html" target="_blank">1차 포트폴리오 메인페이지로 이동</a>
-                <a href="sub/sub/illustration.html" target="_blank">일러스트 서브페이지로 이동</a>
-              </div>
-            </div>
+          <div class="two">
+            <a href="sub/sub03.html"><img src="images/main_nav02_img.png" alt=""></a>
           </div>
         </div>
-        <div class="pofol_list linefriends">
-          <div class="pofol_img_wrap">
-            <button class="myBtn">
-              <img src="img/list05.png" alt="포트폴리오 썸네일">
-            </button>
-            <div class="pofol_title">
-              <p>LINE FRIENDS</p>
-            </div>
-            <div class="illust_move">
-              <img src="img/illust02.png" alt="">
-            </div>
+      </section>
+<!--
+      <section class="ration mb150">
+        <img src="images/illu02.png" alt="일러스트이미지" style="width: 105px; transform: rotate(
+          -15deg
+          );">
+      </section>
+-->
+      <section class="sec07 af-line mb300">
+        <h2 class="tit">GRID GALLERY</h2>
+        <div class="container">
+          <div class="item one"></div>
+          <div class="item two">
+            <a href="sub/sub04.html">이 곳을 클릭해주세요!</a>
           </div>
-          <div class="modal">
-            <div class="modal-content">
-              <span class="close">CLOSE</span>
-              <div class="popup_head">
-                <h2>LINE FRIENDS</h2>
-                <p>- CLONE SITE -</p>
-              </div>
-              <div class="popup_body">
-                <p class="popup_body_tit">원페이지로 제작된 라인프렌즈 홈페이지. 스크립트를 처음으로 사용해 보았다!<br><span>[HTML / CSS / JAVASCRIPT]</span></p>
-                <img src="img/lineimg01.png" alt="">
-                <p>라인프렌즈의 인트로 메인 화면!<br>시멘틱 태그 header, section, footer를 사용하여 레이아웃을 잡았다.<br>(롤배너는 플러그인 slick slider 사용)<br><br>로고는 h1태그에 background-image를 사용하여 이미지를 넣었고,<br>h1의 텍스트는 보이지 않도록 font-size:0 을 주었다.<br><br>메인 메뉴는 float을 사용했다. 부모 태그에는 overflow:hidden이 아닌<br>:after선택자를 만들어서 content를 주었다!<br><small>(after content가 아니라 부모태그에 overflow:hidden를 넣어 대응하면 때때로 컨텐츠가 전부 출력되지 않는다고 하니 :after content사용을 습관화 해야겠다!)</small> </p>
-                <img src="img/lineimg02.png" alt="">
-                <p>스크롤을 내렸을 때 헤더가 고정되도록 position:fixed! 롤배너 위에서는 보이지 않던 헤더의 배경색상이 흰색으로 바뀌도록 스크립트의 스크롤이벤트를 사용했다. 서로 비슷한 6개 section의 가로 사이즈와 위아래 여백에 max-width: 1020px, margin: 0 auto, padding: 110px 0 120px을 공통으로 주었다.</p>
-                <img src="img/lineimg03.png" alt="">
-                <p>dl, dt태그와 float을 사용하여 컨텐츠를 정렬했다.<br>컨텐츠의 width값을 똑같이 3등분으로 나누기 위해 width: calc(100%/3)을 사용해보았다!</p>
-                <img src="img/lineimg04.png" alt="">
-                <p>ul, li태그를 사용하여 정렬했고, li안의 a태그에 컨텐츠 내용을 넣었다.<br>이미지와 텍스트의 widht는 각각 65%, 35%로 나누었다. 밑의 pagenavigation부분도 ul, li태그를 사용했고 li를 옆으로 정렬하기 위해 display:inline-block을 주었다. </p>
-                <img src="img/lineimg05.png" alt="">
-                <p>역시 ul, li태그 사용! 각 컨텐츠마다 width를 50%! 모바일 반응형에서는 width를 100%!</p>
-                <img src="img/lineimg07.png" alt="">
-                <p>table 태그를 사용하여 공지사항 게시판 부분을 만들었다.<br>thead, tbody로 영역을 나누었고, thead에는 tr과 th를 tbody는 tr과 td를 사용하여 텍스트 입력!<br>표의 열을 묶기 위해 colgroup태그를 사용했다.</colgroup> </p>
-                <img src="img/lineimg06.png" alt="">
-                <p>footer부분은 내용 전체를 footer_wrap으로 묶어 position:relative로!<br>로고, 푸터 컨텐츠와 sns아이콘은 position:absolute로 위치를 잡아주었다.<br><br>현재 반응형으로 작업중이다!</p>
-              </div>
-              <div class="popup_footer">
-                <p>&#34;버튼을 클릭하면 메인페이지로 이동합니다!&#34;</p>
-                <a class="first_btn" href="sub/linefriends/index.html" target="_blank">라인프렌즈 클론 메인페이지로 이동</a>
-              </div>
-            </div>
-          </div>
+          <div class="item thr"><span>Parallax Scrolling</span></div>
+          <div class="item fur"></div>
+          <div class="item fiv"></div>
+          <div class="item six">타자치는 고양이.</div>
         </div>
-      </div>
-      <div class="popup_wrap">
-        <div class="pofol_list kakaobank">
-          <div class="pofol_img_wrap">
-            <button class="myBtn">
-              <img src="img/list03.png" alt="포트폴리오 썸네일">
-            </button>
-            <div class="pofol_title">
-              <p>KAKAO BANK</p>
-            </div>
-            <div class="illust_move">
-              <img src="img/illust03.png" alt="">
-            </div>
-          </div>
-          <div class="modal">
-            <div class="modal-content">
-              <span class="close">CLOSE</span>
-              <div class="popup_head">
-                <h2>KAKAO BANK</h2>
-                <p>- CLONE SITE -</p>
-              </div>
-              <div class="popup_body">
-                <p class="popup_body_tit">나의 첫 구축 프로젝트 카카오 뱅크! <br><span>[HTML / CSS / JAVASCRIPT / JQUERY]</span></p>
-                <img src="img/kakaoimg01.png" alt="">
-                <p>학원에서 처음 작업에 들어간 카카오뱅크는 스크롤 이벤트와 다양한 모션 애니메이션이 들어간 사이트!<br>웹표준에 준수하여 작업을 하였으며 추후 스크립트를 더 공부해서 업데이트 하고 싶은 작업이다.</p>
-                <img src="img/kakaoimg02.png" alt="">
-                <p>Script를 배우기 전단계이기 때문에, Script없이 CSS를 이용해 메뉴를 제작해보았다. </p>
-                <img src="img/kakaoimg03.png" alt="">
-                <p></p>
-                <img src="img/kakaoimg04.png" alt="">
-                <p>스크립트 스크롤 이벤트를 사용하여 스크롤이 이미지에 도착했을 때 애니메이션이 작동하도록 만들었다!<br>이미지가 서서히 나타나도록 transform과 transition을 사용하였다.</p>
-                <img src="img/kakaoimg05.png" alt="">
-                <p></p>
-              </div>  
-              <div class="popup_footer">
-                <p>&#34;버튼을 클릭하면 메인페이지와 서브페이지로 이동합니다!&#34;</p>
-                <a class="first_btn" href="javascript:;" target="_blank">카카오 뱅크 메인페이지로 이동</a>
-                <a href="sub/kakaobank/sub/Identity.html" target="_blank">은행소개 서브페이지로 이동</a>
-                <a href="sub/kakaobank/sub/events.html" target="_blank">이벤트 서브페이지로 이동</a>
-                <a href="sub/kakaobank/sub/contanct.html" target="_blank">오시는 길 서브페이지로 이동</a>
-              </div>
-            </div>
-          </div>
+      </section>
+<!--
+      <section class="sec08 mb150">
+        <div class="zone-wrap01">
+          <h2 class="tit">SCROLL ZONE</h2>
+          <div class="box"></div>
         </div>
-        <div class="pofol_list naver">
-          <div class="pofol_img_wrap">
-            <button class="myBtn">
-              <img src="img/list04.png" alt="포트폴리오 썸네일">
-            </button>
-            <div class="pofol_title">
-              <p>NAVER COMPANY</p>
-            </div>
-            <div class="illust_move">
-              <img src="img/illust04.png" alt="">
-            </div>
-          </div>
-          <div class="modal">
-            <div class="modal-content">
-              <span class="close">CLOSE</span>
-              <div class="popup_head">
-                <h2>NAVER COMPANY</h2>
-                <p>- CLONE SITE -</p>
-              </div>
-              <div class="popup_body">
-                <p class="popup_body_tit"><br><span>[HTML / CSS]</span></p>
-                <img src="img/navermain.png" alt="">
-                <p>스크립트를 배우기 전 작업했던 네이버 컴퍼니! CSS만 사용하여 만들어 보았다! 웹표준에 맞춰 작업하도록 노력하였으며 애니메이션 효과는 CSS의 transition을 사용하여 효과를 주었다!</p>
-              </div>
-              <div class="popup_footer">
-                <p>&#34;버튼을 클릭하면 메인페이지와 서브페이지로 이동합니다!&#34;</p>
-                <a class="first_btn" href="sub/naver/index.html" target="_blank">네이버컴퍼니 메인페이지로 이동</a>
-                <a href="sub/naver/sub/announcement.html" target="_blank">서브페이지로 이동01</a>
-                <a href="sub/naver/sub/businessEthics.html" target="_blank">서브페이지로 이동02</a>
-                <a href="sub/naver/sub/milestones.html" target="_blank">서브페이지로 이동03</a>
-              </div>
-            </div>
-          </div>
+        <div class="zone-wrap02">
+          <h2 class="tit">TAB ZONE</h2>
+          <div class="box"></div>
         </div>
-      </div>
-      <div class="popup_wrap">
-        <div class="pofol_list cm29">
-          <div class="pofol_img_wrap">
-            <button class="myBtn">
-              <img src="img/list06.png" alt="포트폴리오 썸네일">
-            </button>
-            <div class="pofol_title">
-              <p>29CM</p>
-            </div>
-            <div class="illust_move">
-              <img src="img/illust05.png" alt="">
-            </div>
-          </div>
-          <div class="modal">
-            <div class="modal-content">
-              <span class="close">CLOSE</span>
-              <div class="popup_head">
-                <h2>29CM</h2>
-                <p>- CLONE SITE -</p>
-              </div>
-              <div class="popup_body">
-                <p class="popup_body_tit">header를 따라 만들어보며 연습한 쇼핑몰 사이트<br><span>[HTML / CSS / JAVASCRIPT]</span></p>
-                <img src="img/29cm_mainimg.png" alt="">
-                <p>header를 만들어 보며 연습!</p>
-              </div>
-              <div class="popup_footer">
-                <p>&#34;버튼을 클릭하면 메인페이지로 이동합니다!&#34;</p>
-                <a class="first_btn" href="sub/29cm/index.html" target="_blank">29CM 포트폴리오 메인페이지로 이동</a>
-              </div>
-            </div>
-          </div>
+      </section>
+-->      
+<!--
+      <section class="ration mb150">
+        <img src="images/illu03.png" alt="일러스트이미지" style="width: 80px;">
+      </section>
+
+      <section class="sec09">
+        <div class="univ-wrap01">
+          <h2 class="tit">DOG UNIVERSE</h2>
+          <div class="box"></div>
         </div>
-        <div class="pofol_list megabox">
-          <div class="pofol_img_wrap">
-            <button class="myBtn">
-              <img src="img/list02.png" alt="포트폴리오 썸네일">
-            </button>
-            <div class="pofol_title">
-              <p>MEGABOX</p>
-            </div>
-          </div>
-          <div class="modal">
-            <div class="illust_move">
-              <img src="img/illust06.png" alt="">
-            </div>
-            <div class="modal-content">
-              <span class="close">CLOSE</span>
-              <div class="popup_head">
-                <h2>MEGABOX</h2>
-                <p>- CLONE SITE -</p>
-              </div>
-              <div class="popup_body">
-                <p class="popup_body_tit">교육과정 기간 중 마지막으로 작업한 사이트!<br><span>[HTML / CSS / JAVASCRIPT / JQUERY]</span></p>
-                <img src="img/megaboximg_01.png" alt="">
-                <p>메가박스는 3개월 짧은 학원 교육기간 중 마지막 작업이다.<br>기존 메가박스 홈페이지는 애니메이션, 이벤트 기능이 없었지만,<br>scroll animation plugin 을 사용하여재미를 주었다.</p>
-                <img src="img/megaboximg_02.png" alt="">
-                <p>Carousel 슬라이드는 slick slider 플러그인을,<br>고양이포스터의 애니메이션은 WOW를 사용했다. 위치는 position으로 잡았다!</p>
-                <img src="img/megaboximg_03.png" alt="">
-                <p></p> 
-                <img src="img/megaboximg_04.png" alt="">
-                <p>안내 이미지는 background-position을 사용하여 마우스오버하면 컬러이미지가 보인다.<br>CS아이콘은 a태그에 inline-block을 사용하여 정렬했다. 가로값은 15.6%로!<br><br>생각보다 컨텐츠 요소가 많아 위치 잡는 부분이 어려웠다.<br>요소를 배치하는 방법으로 position을 사용했는데 더 좋은 방법을 찾고싶다!</p>
-              </div>
-              <div class="popup_footer">
-                <p>&#34;버튼을 클릭하면 메인페이지와 서브페이지로 이동합니다!&#34;</p>
-                <a class="first_btn" href="sub/megabox/index.html" target="_blank">메가박스 메인페이지로 이동</a>
-                <a href="sub/megabox/sub/event/event.html" target="_blank">이벤트 서브페이지로 이동</a>
-                <a href="sub/megabox/sub/support/support.html" target="_blank">단체관람 문의 서브페이지로 이동</a>
-              </div>
-            </div>
-          </div>
+        <div class="univ-wrap02">
+          <h2 class="tit">CAT UNIVERSE</h2>
+          <div class="box"></div>
         </div>
+      </section>
+-->      
+      <div class="last-part">
+        <h3>I LOVE HTML5</h3>
+        <P>ALLWAYS LOVE HTML. Nemo animi error libero eligendi minus omnis? Architecto id, voluptate eos non <br />
+          quisquam sapiente ab soluta commodi, tempore illo cumque amet dolorum omnis quam.</P>
       </div>
-      <!-- <div class="sec_tit">
-        <h2>MOVE ON</h2><br>
-        <P>그림을 드래그해서 원하는 위치에 놓을 수 있습니다.</P>
-      </div>
-      <div class="illust_bg">
-        <div class="drag-box">
-          <a href="#" class="drag box1">BOX1</a>
-          <a href="#" class="drag box2">BOX2</a>
-        </div>
-        <p>illustration by Doitlock.</p>
-      </div> -->
-      <div class="doit_work">
-        <p>[ DOITLOCK'S WORKS ] <i>click!</i></p>
-        <ul>
-          <li><a href="sub/illustration_i.html" title="두잇락의 일러스트그림" target="_blank">Illustration</a></li>
-          <li><a href="" title="두잇락의 포토" target="_blank">Photograph</a></li>
-          <li><a href="" title="두잇락의 그래픽디자인" target="_blank">GraphicDesign</a></li>
-          <li><a href="" title="두잇락의 비디오" target="_blank">Video</a></li>
-        </ul>
-      </div>
-    </section>
-    <article>
-      <div class="article_wrap">
-        <div class="atc_txt">
-          <div class="slide_txt">
-            <p>Go Wild</p>
-          </div>
-          <div class="slide_txt">
-            <p>Speak Loud</p>
-          </div>
-          <div class="slide_txt">
-            <p>Think Hard</p>
-          </div>
-        </div>
-      </div>
-      <div class="article_poster">
-        <p>
-          <div id="draggable01">
-            <img src="img/draggable01.png" alt="">
-          </div>
-        </p>
-        <p>
-          <a id="draggable02" href="sub/who_am_i.html" target="_blank">
-            <img src="img/draggable02.png" alt="">
-          </a>
-        </p>
-      </div>
-      <div class="article_ani">
-        <ul>
-          <li>
-            <p class="art_ani_tit">안녕하세요? 반갑습니다!</p>
-            <img class="art_ani_01" src="img/il11.png" alt="">
-          </li>
-        </ul>
-      </div>
-    </article>
-    <footer>
-      <div class="foot_top">
-      </div>
-      <div class="foot_bottom">
-        <h2>안녕하세요. <sapn class="foot_hello">반갑습니다! </sapn><a href="http://doitlock11.dothome.co.kr/" target="_blank">홍수기의 포트폴리오 입니다. 현재 리뉴얼 작업을 진행중입니다. go!</a></h2>
-        <div class="sns">
-          <a href="https://github.com/doitlock" title="깃허브링크">
-            <i class="fa fa-github" aria-hidden="true"></i>
-          </a>
-          <a href="https://doitlock.tistory.com/" title="블로그링크" target="_blank"><i class="fa fa-bold" aria-hidden="true"></i></a>
-          <a href="https://www.instagram.com/great_flood_/" title="인스타그램" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-          <a href="mailto:doitlock@gmail.com" title="이메일컨텍트" target="_blank"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
-          <a href="" title="유튜브링크" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-        </div>
-        <p class="copyright">
-          copyright © 2020 DoitLock all rights reserved
-        </p>
-        <p class="illustby">
-          Illustration by Soo Ki Hong
-        </p>
-      </div>
-    </footer>
+    </main>
+    <footer role="footer" data-include="include/footer_inc.html"></footer>
   </div>
-  <!--스크립트-->
-  <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
-  <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="slick/slick.min.js"></script>
-  <script type="text/javascript" src="js/wow.min.js"></script>
-  <script type="text/javascript" src="js/default.js"></script>
-  <script type="text/javascript" src="js/jquery-ui.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('.slide-wrap').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        arrows: false
+    });
+  });
+  </script>
+
 </body>
 
 </html>
