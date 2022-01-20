@@ -4,7 +4,7 @@ main {
 
 /*sub01*/
 main#sub1 section {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   width: 100%;
   margin: 0 auto 70px;
   padding: 70px;
@@ -319,8 +319,6 @@ main#sub1 section.sec09 .sec09-wrap a.bg-g {
 
 /*sub02*/
 main#sub2 section {
-  max-width: 1400px;
-  width: 95%;
   margin: 0 auto 70px;
   padding: 70px;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .1);

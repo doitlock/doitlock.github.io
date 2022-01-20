@@ -57,7 +57,7 @@ a:hover, a:active {color:#000; text-decoration:none;}
   }
   #wrap {
     width:100%;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
   }
   header {
@@ -116,7 +116,7 @@ a:hover, a:active {color:#000; text-decoration:none;}
    transform: skew(-5deg,5deg);
    transition: all ease .2s;
    font-weight: 700;
-   color: #3498DB;
+   color: #4C4CFF;
    font-size: 20px;
   }
   header nav .right {
@@ -152,7 +152,7 @@ a:hover, a:active {color:#000; text-decoration:none;}
   }
   header nav .right a:hover {
     text-decoration: underline;
-    color: #3498DB;
+    color: #4C4CFF;
     transform: translateY(5px);
     transition: all ease .2s;
 
@@ -271,7 +271,7 @@ a:hover, a:active {color:#000; text-decoration:none;}
     transform: translateX(-50%);
     width: 50px;
     height: 5px;
-    background-color: #3498DB;
+    background-color: #4C4CFF;
   }
   #main .af-line {
     position: relative;
