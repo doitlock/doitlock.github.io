@@ -28,7 +28,7 @@
 
 
   /*common*/
-  body {color:#333333; font-family: 'NanumSquare', sans-serif; font-weight: 400; font-size:16px; line-height: 1.4; cursor: url(../images/pointer.png), auto; background-color: #f4f9f9;}
+  body {color:#333333; font-family: 'NotoSansKR', sans-serif; font-weight: 400; font-size:16px; line-height: 1.4; cursor: url(../images/pointer.png), auto; background-color: #f4f9f9;}
   body .eng {font-family: 'Montserrat', sans-serif;}
   #skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.6); color: #ffffff; font-size: 16px; transition: top 0.3s; z-index: 100000;}
   #skip-nav:focus {top: 0;}
@@ -95,7 +95,7 @@
   header nav .right_mb .mb_menu {
     display: none;
   }
-  header nav .right a {padding-left: 20px; transition: all ease .2s;}
+  header nav .right a {padding-left: 20px; transition: all ease .2s; font-size: 14px;}
   header nav .right a:hover {text-decoration: underline; color: #4C4CFF; transform: translateY(5px);}
   header h1,
   footer h1 {
@@ -178,32 +178,24 @@
   footer nav .right select {
     padding: 10px 20px;
   }
-  footer .fix-foot {position: fixed; left: 0; bottom: 0; width: 100%; height: 40px; line-height: 40px; background-color: rgba(255,255,255,0.8); border-top: 1px solid #ddd; box-sizing: border-box;}
+  footer .fix-foot {position: fixed; left: 0; bottom: 0; width: 100%; height: 40px; line-height: 40px; background-color: rgba(244,249,249,0.8); border-top: 1px solid #ddd; box-sizing: border-box;}
   footer .fix-foot p {font-size: 13px; color: #999; font-weight: 400;}
 
   /* main */
   #main section {text-align: center;}
   #main section + section {padding: 80px 0;}
-  #main section h2.tit {font-weight: 800; font-size: 18px; margin-bottom: 45px; position: relative;}
+  #main section h2.tit {font-weight: 800; font-size: 30px; margin-bottom: 45px; position: relative;}
   #main section h2.tit::after {content: ''; position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%); width: 50px; height: 5px; background-color: #4C4CFF;}
 
   #main .intro .intro-top {
     margin-bottom: 150px;
   }
-  #main .intro .intro-top p {
-    font-size: 40px; 
-    font-family: 'Sedan SC Regular';
-  } 
-  #main .intro .intro-top h2 {
-    font-size: 50px; 
-    line-height: 1.2; 
-    font-weight: 900;
-    margin: 20px 0 60px;
-  }
+  #main .intro .intro-top p {font-size: 30px; font-family: 'Sedan SC Regular';} 
+  #main .intro .intro-top h2 {font-size: 65px; line-height: 1.2; font-weight: 900;margin: 20px 0 40px;}
   #main .intro .intro-btm {
     position: relative;
   }
-  #main .intro .intro-btm p {font-weight: 500; line-height: 1.5; background-color: #f4f9f9; display: inline-block; padding: 0 20px;}
+  #main .intro .intro-btm p {font-weight: 400; line-height: 1.5; background-color: #f4f9f9; display: inline-block; padding: 0 20px;}
   #main .intro .intro-btm::after {
     content: '';
     display: inline-block;
@@ -225,15 +217,8 @@
     margin:0 3px;
     display: inline-block;
   }
-  #main .mailad b {
-    display: block;
-    margin-bottom: 12px;
-    font-weight: 800;
-  }
-  #main .mailad p {
-    font-size: 15px;
-    font-weight: 400;
-  }
+  #main .mailad b {display: block;margin-bottom: 12px;font-weight: 700;}
+  #main .mailad p {font-size: 14px;font-weight: 400;}
   #main .aboutme {
     position: relative;
   }
@@ -271,33 +256,13 @@
   #main .aboutme .abt-wrap > div ul li:last-child {
     border-bottom: none;
   }
-  #main .aboutme .abt-wrap > div.edu ul li em {
-    display: block;
-    margin: 10px 0;
-    font-weight: 700;
-    font-size: 16px;
-  }
-  #main .aboutme .abt-wrap > div.edu ul li p span {
-    display: inline-block;
-    padding-left: 15px;
-    color: #777;
-  }
-  #main .aboutme .abt-wrap > div.career ul li em {
-    display: inline-block;
-    width: 34%;
-    vertical-align: top;
-    font-weight: 700;
-    font-size: 16px;
-  }
-  #main .aboutme .abt-wrap > div.career ul li p {
-    display: inline-block;
-    line-height: 2;
-    width: 50%;
-  }
-  #main .aboutme .abt-wrap > div.career ul li p span {
-    display: inline-block;
-    color: #777;
-  }
+  #main .aboutme .abt-wrap > div.edu ul li em {display: block; margin-bottom: 10px; font-weight: 500;font-size: 16px;}
+  #main .aboutme .abt-wrap > div.edu ul li p span {display: inline-block;padding-left: 15px;color: #777;font-weight: 300;}
+  #main .aboutme .abt-wrap > div.career ul li em {display: inline-block;width: 34%;vertical-align: top;font-weight: 500;font-size: 16px;}
+  #main .aboutme .abt-wrap > div.career ul li p {display: inline-block;line-height: 2;width: 50%;}
+  #main .aboutme .abt-wrap > div.career ul li p span {display: inline-block;color: #777;font-weight: 300;}
+  #main .aboutme .abt-wrap > div.skill ul.skill-list {display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;}
+  #main .aboutme .abt-wrap > div.skill ul.skill-list li {width: calc(100% / 2 - 10px);}
 
 
 
@@ -458,16 +423,20 @@
 
   #main .project {} 
   #main .project .project-wrap + .project-wrap {padding-top: 80px;}
-  #main .project .project-wrap em {font-weight: 800; margin-bottom: 20px; display: block;}
-  #main .project .project-cont {display: flex; justify-content: space-between; align-items: center; text-align: left;}
-  #main .project .project-cont li {width: calc(100% / 3); height: auto;}
+  #main .project .project-wrap em {font-weight: 700; font-size: 18px; margin-bottom: 20px; display: block; text-align: left;border-bottom: 1px solid #ddd;padding-bottom: 15px;}
+  #main .project .project-cont {display: flex; justify-content: space-between; text-align: left;}
+  #main .project .project-cont li {width: calc(100% / 3); height: auto; background-color: #fff; border-radius: 10px; overflow: hidden; box-shadow: 2px 3px 8px rgb(0 0 0 / 2%);}
+  #main .project .project-cont li a {display: block;}
   #main .project .project-cont > li + li {margin-left: 5px;}
-  #main .project .project-cont li img {margin-bottom: 15px;}
-  #main .project .project-cont li p {margin-bottom: 5px; font-weight: 700;}
-  #main .project .project-cont li span {font-size: 14px; color: #999;}
+  #main .project .project-cont li .thum-img {width: 100%; height: 200px; overflow: hidden;}
+  #main .project .project-cont li .txt-cont {width: 100%; height: auto; overflow: hidden; padding: 20px 15px;}
+  #main .project .project-cont li img {display: block; width: 100%; height: auto; transition: all .4s ease;}
+  #main .project .project-cont li img:hover {transform: scale(1.2);}
+  #main .project .project-cont li p {margin-bottom: 15px; font-weight: 700;}
+  #main .project .project-cont li span {font-size: 14px; color: #999; line-height: 2;}
 
 
   /*module*/
   a.btn {display: inline-block;}
-  #main .more_btn {position: absolute;top: 10px;right: 0;font-size: 15px;}
+  #main .more_btn {position: absolute;top: 40px;right: 0;font-size: 15px;}
   #main .more_btn a {display: block;}
