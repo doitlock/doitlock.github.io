@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-title" content="KIA" />
+    <title>기아 - Movement that inspires | 기아 공식 사이트</title>
+    <meta name="description" content="기아자동차 웹사이트" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link rel="stylesheet" href="fa/css/all.min.css" />
+    <link rel="stylesheet" href="css/web-font.css" />
+    <link rel="stylesheet" href="css/style-pc.css" media="screen and (min-width: 1024.0px)" />
+    <link rel="stylesheet" href="css/style-m.css" media="screen and (max-width: 1023.9px)" />
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/dino-common.js"></script>
+  </head>
+  <body class="main">
+    <div id="wrapper">
+      <a href="#main" id="skip-nav">본문 바로가기</a>
+      <header id="header">
+        <div class="top">
+          <div class="content-box">
+            <ul class="pr">
+              <li><a href="#">기아소식</a></li>
+              <li><a href="#">인재채용</a></li>
+              <li><a href="#">EN Brochure</a></li>
+            </ul>
+            <ul class="function">
+              <li><a href="#">로그인</a></li>
+              <li><a href="#">회원가입</a></li>
+              <li><a href="#">마이기아</a></li>
+              <li class="search">
+                <a href="#"><i class="fas fa-search"></i>SEARCH</a>
+                <p>
+                  <label for="search-keyword" class="ir-hidden">통합검색</label>
+                  <input type="text" name="" id="search-keyword" />
+                  <a href="#"><i class="fas fa-search"><span>검색하기</span></i></a>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="content-box">
+            <h1><a href="#"><img alt="" src="img/logo-white.webp" /></a></h1>
+            <nav id="gnb">
+              <ul class="content">
+                <li>
+                  <a href="#">차량</a>
+                  <div class="vehicle">
+                    <dl>
+                      <dt><input type="radio" name="category" id="category-01" /><label for="category-01">EV</label></dt>
+                      <dd>
+                        <ul>
+                          <li><a href="#"><img alt="" src="img/gnb-ev-01.webp" /><em>EV6</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-ev-02.webp" /><em>니로 EV</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-ev-03.webp" /><em>봉고Ⅲ EV</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-ev-04.webp" /><em>탑차 EV</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-ev-05.webp" /><em>성력 EV</em></a></li>
+                        </ul>
+                      </dd>
+                      <dt class="on"><input type="radio" name="category" id="category-02" /><label for="category-02">승용</label></dt>
+                      <dd>
+                        <ul>
+                          <li><a href="#"><img alt="" src="img/gnb-vehicle-01.webp" /><em>모닝</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-vehicle-02.webp" /><em>레이</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-vehicle-03.webp" /><em>K3</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-vehicle-04.webp" /><em>K3 GT</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-vehicle-05.webp" /><em>K5</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-vehicle-06.webp" /><em>K5 하이브리드</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-vehicle-07.webp" /><em>스팅어</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-vehicle-08.webp" /><em>K8</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-vehicle-09.webp" /><em>K8 하이브리드</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-vehicle-10.webp" /><em>K9</em></a></li>
+                        </ul>
+                      </dd>
+                      <dt><input type="radio" name="category" id="category-03" /><label for="category-03">RV</label></dt>
+                      <dd>
+                        <ul>
+                          <li><a href="#"><img alt="" src="img/gnb-rv-01.webp" /><em>니로</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-rv-02.webp" /><em>셀토스</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-rv-03.webp" /><em>스포티지</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-rv-04.webp" /><em>스포티지 하이브리드</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-rv-05.webp" /><em>쏘렌토</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-rv-06.webp" /><em>쏘렌토 하이브리드</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-rv-07.webp" /><em>모하비</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-rv-08.webp" /><em>카니발</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-rv-09.webp" /><em>카니발 하이리무진</em></a></li>
+                        </ul>
+                      </dd>
+                      <dt><input type="radio" name="category" id="category-04" /><label for="category-04">상용/택시/버스</label></dt>
+                      <dd>
+                        <ul>
+                          <li><a href="#"><img alt="" src="img/gnb-work-01.webp" /><em>K8 택시</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-work-02.webp" /><em>봉고Ⅲ트럭</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-work-03.webp" /><em>탑차</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-work-04.webp" /><em>건설</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-work-05.webp" /><em>성력</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-work-06.webp" /><em>수송</em></a></li>
+                          <li><a href="#"><img alt="" src="img/gnb-work-07.webp" /><em>그랜버드</em></a></li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <ul>
+                      <li><a href="#">온라인 견적</a></li>
+                      <li><a href="#">카탈로그/가격표</a></li>
+                      <li><a href="#">이달의 구매혜택</a></li>
+                      <li><a href="#">구매 상담 신청</a></li>
+                      <li><a href="#">시승 예약</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#">구매정보</a>
+                  <ul>
+                    <li><a href="#">온라인 견적</a></li>
+                    <li><a href="#">상품 추천</a></li>
+                    <li><a href="#">모델 비교</a></li>
+                    <li><a href="#">카탈로그/가격표</a></li>
+                    <li><a href="#">이달의 구매혜택</a></li>
+                    <li><a href="#">영업망 안내</a></li>
+                    <li><a href="#">구매 상담 신청</a></li>
+                    <li><a href="#">구매 가이드</a></li>
+                    <li><a href="#">기아렌터카</a></li>
+                    <li><a href="#">기아플렉스</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">체험센터</a>
+                  <ul>
+                    <li><a href="#">시승 예약</a></li>
+                    <li><a href="#">전시차 조회</a></li>
+                    <li><a href="#">국내 사업장 안내</a></li>
+                    <li><a href="#">Kia 체험거점</a></li>
+                    <li><a href="#">Kia360</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">이벤트</a>
+                  <ul>
+                    <li><a href="#">진행중인 이벤트</a></li>
+                    <li><a href="#">종료된 이벤트</a></li>
+                    <li><a href="#">당첨자 발표</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">고객센터</a>
+                  <ul>
+                    <li><a href="#">고객센터 메인</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">온라인 상담</a></li>
+                    <li><a href="#">칭찬 알림방</a></li>
+                    <li><a href="#">하자 재발 통보</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="etc">
+                <li><a href="#">브랜드</a></li>
+                <li><a href="#">Kia EV</a></li>
+                <li><a href="#">기아멤버스</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main id="main">
+        <section id="main-visual">
+          <h3 class="ir-hidden">주요 차량 소개 및 링크</h3>
+          <div class="image-slide">
+            <p class="dummy">
+              <img src="img/main-visual-01.webp" alt="" />
+            </p>
+            <ul class="slide">
+              <li>
+                <em>내일을 향한 움직임<br />The all-new Kia Niro 출시</em>
+                <a href="#">The all-new Kia Niro</a>
+                <img alt="" src="img/main-visual-01.webp" />
+              </li>
+              <li>
+                <em>내일을 위한 여정의 시작<br />The Kia EV6</em>
+                <a href="#">The Kia EV6</a>
+                <img alt="" src="img/main-visual-02.webp" />
+              </li>
+              <li>
+                <em>궁금한 그곳으로 나를<br />The all-new Sportage</em>
+                <a href="#">The all-new Sportage</a>
+                <img alt="" src="img/main-visual-03.webp" />
+              </li>
+              <li>
+                <em>세상에 희망과 영감을 주는 마스터들과 함께하는<br />Masters that Inspire, The new Kia K9</em>
+                <a href="#">The new Kia K9</a>
+                <img alt="" src="img/main-visual-04.webp" />
+              </li>
+              <li>
+                <em>영감은 낯선 것으로부터<br />The Outstanding, The Kia K8 HEV</em>
+                <a href="#">The Kia K8 HEV</a>
+                <img alt="" src="img/main-visual-05.webp" />
+              </li>
+              <li>
+                <em>나만의 스토리는 계속된다.<br />Just the way you are, The 2022 Stinger</em>
+                <a href="#">The 2022 Stinger</a>
+                <img alt="" src="img/main-visual-06.webp" />
+              </li>
+              <li>
+                <em>영감은 낯선 것으로부터<br />The Outstanding, The Kia K8</em>
+                <a href="#">The Kia K8</a>
+                <img alt="" src="img/main-visual-07.webp" />
+              </li>
+            </ul>
+            <div class="inidcator">
+              <ul>
+                <li class="on"><a href="#">1번 슬라이드</a></li>
+                <li><a href="#">2번 슬라이드</a></li>
+                <li><a href="#">3번 슬라이드</a></li>
+                <li><a href="#">4번 슬라이드</a></li>
+                <li><a href="#">5번 슬라이드</a></li>
+                <li><a href="#">6번 슬라이드</a></li>
+                <li><a href="#">7번 슬라이드</a></li>
+              </ul>
+              <a href="#" class="play">
+                <i class="fas fa-pause"><span>정지</span></i>
+                <i class="fas fa-play"><span>시작</span></i>
+              </a>
+            </div>
+            <p class="control">
+              <a href="#" class="prev">이전</a>
+              <a href="#" class="next">다음</a>
+            </p>
+          </div>
+          <ul class="quick-link">
+            <li><a href="#"><em>온라인 견적</em></a></li>
+            <li><a href="#"><em>구매 상담</em></a></li>
+            <li><a href="#"><em>이달의 구매혜택</em></a></li>
+            <li><a href="#"><em>시승 신청</em></a></li>
+            <li><a href="#"><em>카탈로그/가격표</em></a></li>
+          </ul>
+        </section>
+
+        <section id="main-best">
+          <h3 class="main-cont-tit">BEST Kia</h3>
+          <div class="image-slide">
+            <ul class="slide">
+              <li class="on">
+                <a href="#">
+                  <img alt="" src="img/main-best-01.webp" />
+                  <em>K8</em>
+                  <p class="info"><span>승용차 </span>LPG,휘발유 | 2,497~3,470cc | 복합연비 7.7~12.0㎞/ℓ</p>
+                  <p class="save"><span>Save Auto </span>M할부 2.5% (36개월)</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img alt="" src="img/main-best-02.webp" />
+                  <em>카니발</em>
+                  <p class="info"><span>승용차 </span>LPG,휘발유 | 2,497~3,470cc | 복합연비 7.7~12.0㎞/ℓ</p>
+                  <p class="save"><span>Save Auto </span>M할부 2.5% (36개월)</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img alt="" src="img/main-best-03.webp" />
+                  <em>셀토스</em>
+                  <p class="info"><span>승용차 </span>LPG,휘발유 | 2,497~3,470cc | 복합연비 7.7~12.0㎞/ℓ</p>
+                  <p class="save"><span>Save Auto </span>M할부 2.5% (36개월)</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img alt="" src="img/main-best-04.webp" />
+                  <em>K3</em>
+                  <p class="info"><span>승용차 </span>LPG,휘발유 | 2,497~3,470cc | 복합연비 7.7~12.0㎞/ℓ</p>
+                  <p class="save"><span>Save Auto </span>M할부 2.5% (36개월)</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img alt="" src="img/main-best-05.webp" />
+                  <em>모하비</em>
+                  <p class="info"><span>승용차 </span>LPG,휘발유 | 2,497~3,470cc | 복합연비 7.7~12.0㎞/ℓ</p>
+                  <p class="save"><span>Save Auto </span>M할부 2.5% (36개월)</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img alt="" src="img/main-best-06.webp" />
+                  <em>쏘렌토</em>
+                  <p class="info"><span>승용차 </span>LPG,휘발유 | 2,497~3,470cc | 복합연비 7.7~12.0㎞/ℓ</p>
+                  <p class="save"><span>Save Auto </span>M할부 2.5% (36개월)</p>
+                </a>
+              </li>
+            </ul>
+            <div class="inidcator">
+              <ul>
+                <li class="on"><a href="#">1번 슬라이드</a></li>
+                <li><a href="#">2번 슬라이드</a></li>
+                <li><a href="#">3번 슬라이드</a></li>
+                <li><a href="#">4번 슬라이드</a></li>
+                <li><a href="#">5번 슬라이드</a></li>
+                <li><a href="#">6번 슬라이드</a></li>
+              </ul>
+              <a href="#" class="play">
+                <i class="fas fa-pause"><span>정지</span></i>
+                <i class="fas fa-play"><span>시작</span></i>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="main-promotion">
+          <div class="event_kia">
+            <h3 class="main-cont-tit">EVENT Kia</h3>
+            <div class="image-slide">
+              <ul class="slide">
+                <li class="on">
+                  <a href="#">
+                    <img alt="" src="img/main-event-01.webp" />
+                    <em>1월 이달의 구매혜택 이벤트</em>
+                    <p><span>이벤트 기간 </span>2021.01.01 ~ 2021.01.31</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img alt="" src="img/main-event-02.webp" />
+                    <em>1월 이달의 구매혜택 이벤트</em>
+                    <p><span>이벤트 기간 </span>2021.01.01 ~ 2021.01.31</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img alt="" src="img/main-event-03.webp" />
+                    <em>1월 이달의 구매혜택 이벤트</em>
+                    <p><span>이벤트 기간 </span>2021.01.01 ~ 2021.01.31</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img alt="" src="img/main-event-04.webp" />
+                    <em>1월 이달의 구매혜택 이벤트</em>
+                    <p><span>이벤트 기간 </span>2021.01.01 ~ 2021.01.31</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img alt="" src="img/main-event-05.webp" />
+                    <em>1월 이달의 구매혜택 이벤트</em>
+                    <p><span>이벤트 기간 </span>2021.01.01 ~ 2021.01.31</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img alt="" src="img/main-event-06.webp" />
+                    <em>1월 이달의 구매혜택 이벤트</em>
+                    <p><span>이벤트 기간 </span>2021.01.01 ~ 2021.01.31</p>
+                  </a>
+                </li>
+              </ul>
+              <div class="inidcator">
+                <ul>
+                  <li class="on"><a href="#">1번 슬라이드</a></li>
+                  <li><a href="#">2번 슬라이드</a></li>
+                  <li><a href="#">3번 슬라이드</a></li>
+                  <li><a href="#">4번 슬라이드</a></li>
+                  <li><a href="#">5번 슬라이드</a></li>
+                  <li><a href="#">5번 슬라이드</a></li>
+                </ul>
+                <a href="#" class="play">
+                  <i class="fas fa-pause"><span>정지</span></i>
+                  <i class="fas fa-play"><span>시작</span></i>
+                </a>
+              </div>
+              <p class="control">
+                <a href="#" class="prev">이전</a>
+                <a href="#" class="next">다음</a>
+              </p>
+            </div>
+          </div>
+          <div class="channer_kia">
+            <h3 class="main-cont-tit">CHANNEL Kia</h3>
+            <div class="image-slide">
+              <ul class="slide">
+                <li class="on">
+                  <a href="#">
+                    <img alt="" src="img/main-channel-01.webp" />
+                    <span>PLAY KIA</span>
+                    <em>전기차 2년 오너가 직접 타보고 검증하다</em>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img alt="" src="img/main-channel-02.webp" />
+                    <span>인스타그램</span>
+                    <em>22년 예비 전기차 오너를 위한 필수 정보들</em>
+                  </a>
+                </li>
+              </ul>
+              <div class="inidcator">
+                <ul>
+                  <li class="on"><a href="#">1번 슬라이드</a></li>
+                  <li><a href="#">2번 슬라이드</a></li>
+                </ul>
+                <a href="#" class="play">
+                  <i class="fas fa-pause"><span>정지</span></i>
+                  <i class="fas fa-play"><span>시작</span></i>
+                </a>
+              </div>
+              <p class="control">
+                <a href="#" class="prev">이전</a>
+                <a href="#" class="next">다음</a>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="main-esg">
+          <h3 class="main-cont-tit">Kia ESG</h3>
+          <div class="image-slide">
+            <ul class="slide">
+              <li class="on">
+                <a href="#">
+                  <img alt="" src="img/main-cert-01.webp" />
+                  <em>기아, 탄소정보공개(CDP) 최고 등급 선정<br>기후변화 및 수자원 관리 부문</em>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img alt="" src="img/main-cert-02.webp" />
+                  <em>기아, 탄소정보공개(CDP) 최고 등급 선정<br>기후변화 및 수자원 관리 부문</em>
+                </a>
+              </li>
+            </ul>
+            <div class="inidcator">
+              <ul>
+                <li class="on"><a href="#">1번 슬라이드</a></li>
+                <li><a href="#">2번 슬라이드</a></li>
+              </ul>
+              <a href="#" class="play">
+                <i class="fas fa-pause"><span>정지</span></i>
+                <i class="fas fa-play"><span>시작</span></i>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section id="main-cs">
+          <div class="news_kia">
+            <h3 class="main-cont-tit">Kia NEWS</h3>
+            <div class="image-slide">
+              <ul class="slide">
+                <li class="on">
+                  <a href="#">
+                    <img alt="" src="img/main-news-01.webp" />
+                    <p>2022-01-25</p>
+                    <em>기아, 2021 판매 우수자 TOP 10 공개</em>
+                  </a>
+                </li>
+                <li class="">
+                  <a href="#">
+                    <img alt="" src="img/main-news-02.webp" />
+                    <p>2022-01-24</p>
+                    <em>기아, 신형 나로 출시</em>
+                  </a>
+                </li>
+                <li class="">
+                  <a href="#">
+                    <img alt="" src="img/main-news-03.webp" />
+                    <p>2022-01-17</p>
+                    <em>기아, 탄소정보공개&#40;CDP&#41; 수자원·기후변화 부문 우수기업 선정</em>
+                  </a>
+                </li>
+                
+              </ul>
+              <div class="inidcator">
+                <ul>
+                  <li class="on"><a href="#">1번 슬라이드</a></li>
+                  <li><a href="#">2번 슬라이드</a></li>
+                  <li><a href="#">3번 슬라이드</a></li>
+                  <li><a href="#">4번 슬라이드</a></li>
+                  <li><a href="#">5번 슬라이드</a></li>
+                  <li><a href="#">5번 슬라이드</a></li>
+                </ul>
+              </div>
+              <p class="control">
+                <a href="#" class="prev">이전</a>
+                <a href="#" class="next">다음</a>
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer id="footer">
+        <div class="footer-inner">
+          <h3 class="footer-logo"><img src="img/logo-white.webp" alt="기아자동차 로고" /></h3>
+          <section id="footer-top">
+            <h3 class="ir-hidden">기아자동차 하단 메뉴</h3>
+            <div class="menu">
+              <ul>
+                <li><a href="#">온라인 견적</a></li>
+                <li><a href="#">구매 상담 신청</a></li>
+                <li><a href="#">이달의 구매혜택</a></li>
+                <li><a href="#">시승 예약</a></li>
+                <li><a href="#">카탈로그/가격표</a></li>
+                <li><a href="#">영업망 안내</a></li>
+                <li><a href="#">기아렌터카</a></li>
+                <li><a href="#">모델 비교</a></li>
+                <li><a href="#">진행중인 이벤트</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">사이트맵</a></li>
+              </ul>
+            </div>
+            <div class="car">
+              <ul>
+                <li class="tit-txt">EV</li>
+                <li><a href="#">EV6</a></li>
+                <li><a href="#">니로 EV</a></li>
+                <li><a href="#">봉고Ⅲ EV</a></li>
+                <li><a href="#">탑차 EV</a></li>
+                <li><a href="#">성력 EV</a></li>
+              </ul>
+              <ul>
+                <li class="tit-txt">승용</li>
+                <li><a href="#">모닝</a></li>
+                <li><a href="#">레이</a></li>
+                <li><a href="#">K3</a></li>
+                <li><a href="#">K3 GT</a></li>
+                <li><a href="#">K5</a></li>
+                <li><a href="#">K5 HEV</a></li>
+                <li><a href="#">K스팅어5</a></li>
+                <li><a href="#">K8</a></li>
+                <li><a href="#">K8 HEV</a></li>
+                <li><a href="#">K9</a></li>
+              </ul>
+              <ul>
+                <li class="tit-txt">RV</li>
+                <li><a href="#">니로</a></li>
+                <li><a href="#">셀토스</a></li>
+                <li><a href="#">스포티지</a></li>
+                <li><a href="#">스포티지 HEV</a></li>
+                <li><a href="#">쏘렌토</a></li>
+                <li><a href="#">쏘렌토 HEV</a></li>
+                <li><a href="#">모하비</a></li>
+                <li><a href="#">카니발</a></li>
+                <li><a href="#">카니발 하이리무진</a></li>
+              </ul>
+            </div>
+            <div class="award">
+              <ul>
+                <li class="tit-txt">Award</li>
+                <li>
+                  <img src="img/footer-award-01.webp" alt="NCSI" />
+                  <p>21년 국가고객만족도(NCSI)<br />RV(6년 연속), 경형(7년 연속),<br />중형(2년 연속), 대형승용부문 1위</p>
+                </li>
+                <li>
+                  <img src="img/footer-award-01.webp" alt="NCSI" />
+                  <p>21년 한국 산업의 서비스 품질지수<br />우수 콜센터 선정 (18년 연속)</p>
+                </li>
+                <li>
+                  <img src="img/footer-award-01.webp" alt="NCSI" />
+                  <p>20년 한국산업의 서비스 품질지수<br />자동차 A/S부문 1위(7년 연속)</p>
+                </li>
+                <li>
+                  <img src="img/footer-award-01.webp" alt="NCSI" />
+                  <p>21년 대한민국 국가브랜드 대상<br />자동차 멤버십 부문 1위(10년 연속)</p>
+                </li>
+                <li>
+                  <img src="img/footer-award-01.webp" alt="NCSI" />
+                  <p>21년 한국서비스품질지수(KS-SQI)<br />자동차 판매서비스 부문 1위</p>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section id="footer-link">
+            <h3 class="ir-hidden">기아자동차 SNS</h3>
+            <div class="sns">
+              <a href="#" title="기아 멤버스" class="members ir-hidden">기아멤버스</a>
+              <a href="#" title="플레이기아" class="playkia ir-hidden">플레이기아</a>
+              <a href="#" title="네이버포스트" class="naverpost ir-hidden">네이버포스트</a>
+              <a href="#" title="페이스북" class="facebook ir-hidden">페이스북</a>
+              <a href="#" title="인스타그램" class="insta ir-hidden">인스타그램</a>
+              <a href="#" title="유튜브" class="utube ir-hidden">유튜브</a>
+            </div>
+            <div class="korean">
+              <a href="#"><img src="img/icon-korea.webp" alt="한국국기">한국</a>
+            </div>
+            <div class="family-site">
+              <a href="#">Family Site</a>
+              <ul>
+                <li><a href="#">현대자동차그룹</a></li>
+                <li><a href="#">브랜드</a></li>
+                <li><a href="#">기아멤버스</a></li>
+                <li><a href="#">기아블로그</a></li>
+                <li><a href="#">기아 드라이빙 아카데미</a></li>
+                <li><a href="#">인재채용</a></li>
+                <li><a href="#">동반성장</a></li>
+                <li><a href="#">지속가능경영</a></li>
+              </ul>
+            </div>
+          </section>
+          <section id="footer-btm">
+            <h3 class="ir-hidden">기아자동차 정보</h3>
+            <div class="info-top">
+              <ul>
+                <li><a href="#">개인정보 처리방침</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">윤리경영</a></li>
+                <li><a href="#">사이버감사실</a></li>
+                <li><a href="#">전자공고</a></li>
+                <li><a href="#">사이트맵</a></li>
+              </ul>
+            </div>
+            <div class="info-btm">
+              <p>사업자 기아㈜ 대표 송호성, 최준영 사업자등록번호 119-81-02316 06797 서울특별시 서초구 헌릉로 12 (양재동)</p>
+            </div>
+            <div class="footer-btm">
+              <div class="home">
+                <a href="#">홈</a>
+              </div>
+              <div class="corp">
+                <p>Ⓒ Kia CORP. ALL RIGHTS RESERVED.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </footer>
+    </div>
+
+<script>
+'use strict';
+
+
+
+// header search UI
+$('#header li.search > a').on('click', function() {
+  $('#header li.search').addClass('on');
+});
+$('#header li.search').on('click', function(e) {
+  e.stopPropagation();
+});
+$(document).on('click', function() {
+  $('#header li.search').removeClass('on');
+});
+
+
+// header position
+setHeaderPosition();
+$(window).on('resize', function() {
+  setHeaderPosition();
+});
+function setHeaderPosition() {
+  var windowHeight = $(window).height();
+  if (windowHeight < 700) {
+    $('#header').addClass('move');
+  } else {
+    $('#header').removeClass('move');
+  }
+}
+
+
+// header design
+$('#header').on('mouseenter', function() {
+  $('#header').addClass('white');
+});
+$('#header').on('mouseleave', function() {
+  setHeaderDesign();
+});
+
+setHeaderDesign();
+$(window).on('scroll', function() {
+  setHeaderDesign();
+});
+function setHeaderDesign() {
+  var scrollAmt = $(document).scrollTop();
+  if (scrollAmt > 200) {
+    $('#header').addClass('white');
+  } else {
+    $('#header').removeClass('white');
+  }
+}
+
+  
+// GNB 동작
+$('#gnb > ul.content > li > a').on('click', function() {
+  if ($(this).parent().hasClass('open') === true) {
+    $(this).next().css({'height': 0});
+    $(this).parent().removeClass('open');
+    $('header').removeClass('open');
+    $('#wrapper').removeClass('cover');
+  } else {
+    var height = 0;
+    $(this).next().find('> *').each(function() {
+      height += $(this).outerHeight();
+    });
+    $(this).next().css({'height': height + 'px'});
+    $(this).parent().addClass('open');
+    $('header').addClass('open');
+    $('#wrapper').addClass('cover');
+
+    // 주변 gnb는 모두 닫음
+    $(this).parent().siblings().find('ul').css({'height': 0});
+    $(this).parent().siblings().removeClass('open');
+  }
+});
+
+$(document).on('click', function() {
+  $('#wrapper').removeClass('cover');
+  $('#header').removeClass('open');
+  $('#gnb > ul.content > li').removeClass('open');
+  $('#gnb > ul.content > li > ul').css({'height': 0});
+});
+$('#header').on('click', function(e) {
+  e.stopPropagation();
+});
+
+
+
+
+
+
+
+</script>
+
+  </body>
+</html>
+
+

@@ -1,0 +1,256 @@
+@charset "utf-8";
+
+/* reset */
+html {-webkit-text-size-adjust: none; text-size-adjust: none;}
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+img {vertical-align: middle; max-width: 100%;}
+address, em, i, cite {font-style: normal;}
+table {border-collapse: collapse;}
+table caption {overflow: hidden; width: 0; height: 0;}
+i[class^="fa"] {position: relative; display: inline-block; vertical-align: middle;}
+i[class^="fa"] span {position: absolute; left: -9999px;}
+.ir-hidden {position: absolute; left: -9999px;}
+.pc {display: none !important;}
+br.only-pc {content: '';}
+br.only-pc::after {content: '\00a0';}
+
+
+/* common */
+body {font-family: 'NotoSansKR', sans-serif; font-size: 14px; color: #333333; background: #ffffff;}
+#wrapper {min-width: 320px; max-width: 1024px; margin: 0 auto; overflow: hidden;}
+#skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.8); color: #ffffff; font-size: 16px; transition: top 0.3s; z-index: 100000;}
+#skip-nav:focus {top: 0;}
+#header {position: fixed; left: 0; top: 0; width: 100%; height: 70px; background-color: #f6f5ef; border-bottom: 1px solid #e5e5e5; box-sizing: border-box; z-index: 10000;}
+
+#header h1 {position: absolute; left:10px; top: 50%; transform: translate(0,-50%); width: 50px;}  
+#top-menu {display: none;}
+#mobile-menu {position: absolute; right: 10px; top: 50%; transform: translate(0,-50%); font-size: 20px;}
+#mobile-menu::after {content: ''; display: block; clear: both;}
+#mobile-menu > li {float: left; line-height: 24px;} 
+#mobile-menu > li + li {margin-left: 15px;}
+#mobile-menu > li > a {display: block; width: 28px; text-align: center;}
+#mobile-menu > li a.menu {display: block; width: 28px; height: 26px; position: relative;}
+#mobile-menu > li a.menu::before {content: ''; position: absolute; left: 50%; top: 0; transform: translate(-50%,0); width: 100%; height: 2px; background-color: #453d3d; border-radius: 3px; transition: all .3s ease;}
+#mobile-menu > li a.menu span {position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 100%; height: 2px; background-color: #453d3d; text-indent: -9999px; border-radius: 3px; transition: all .3s ease;}
+#mobile-menu > li a.menu::after {content: ''; position: absolute; left: 50%; bottom: 0; transform: translate(-50%,0); width: 100%; height: 2px; background-color: #453d3d; border-radius: 3px; transition: all .3s ease;}
+
+#mobile-menu > li a.menu.close::before {transform: translate(-50%, -50%)  rotate(45deg); top: 50%; width: 120%;}
+#mobile-menu > li a.menu.close span {opacity: 0;}
+#mobile-menu > li a.menu.close::after {transform: translate(-50%, 50%)  rotate(-45deg); bottom: 50%; width: 120%;}
+
+#gnb {display: none;}
+#header #top-ad {position: absolute; right: 10px; top: calc(100% + 20px); width: 100px;}
+
+#main {padding-top: 70px;}
+
+#footer {}
+#footer section.etc-menu nav a {display: block; line-height: 50px; font-size: 14px; padding-left: 20px; color: #fff; background-color: #645952; }
+#footer section.etc-menu nav > ul > li {box-sizing: border-box;}
+#footer section.etc-menu nav > ul > li > a {color: #fff; background-color: #554c46; position: relative; border-bottom: 1px solid #403a36;}
+#footer section.etc-menu nav > ul > li > a i {position: absolute; right: 20px; top: 50%; transform: translate(0,-50%);}
+#footer section.etc-menu nav > ul > li > ul {overflow: hidden; height: 0;}
+
+#footer section.award-list {background-color: #282828;}
+#footer section.award-list ul {overflow: hidden;}
+#footer section.award-list ul > li {float: left; width: 50%; text-align: center; padding: 10px 0; border-bottom: 1px dashed #645952; box-sizing: border-box;}
+#footer section.award-list ul > li:nth-child(odd) {border-right: 1px dashed #645952; }
+#footer section.award-list ul > li img {height: 32px;}
+
+#footer section.site-info {position: relative; background-color: #2C2A29; color: #ffffff; padding: 30px 15px;}
+#footer section.site-info ul.regulation-link {text-align: center; font-size: 12px; color: #cccccc;}
+#footer section.site-info ul.regulation-link > li {display: inline-block; line-height: 1.6em;}
+#footer section.site-info ul.regulation-link > li + li::before {content: '|'; margin: 0 10px; color: #999999; font-size: 8px;}
+#footer section.site-info ul.regulation-link > li.first {clear: right;}
+#footer section.site-info ul.regulation-link > li.first::before {display: none;}
+#footer section.site-info ul.regulation-link > li > a em {color: #00b050; font-weight: 700;}
+#footer section.site-info ul.info-link {text-align: center; margin: 20px 0;}
+#footer section.site-info ul.info-link > li {display: inline-block;}
+#footer section.site-info ul.info-link > li + li {margin-left: 5px;}
+#footer section.site-info ul.info-link > li > a {display: block; width: 90px; height: 34px; border: 2px solid #ffffff; line-height: 30px; text-align: center; box-sizing: border-box; font-size: 11px;}
+#footer section.site-info address ul {text-align: center; font-size: 12px; color: #cccccc; margin-bottom: 20px;}
+#footer section.site-info p.copyright {font-size: 12px; text-align: center; color: #cccccc;}
+
+
+
+/*main*/
+#main-visual {position: relative; background: url('../img/main-visual-bg-m.png') center center no-repeat; background-size: cover; padding-top: 200px; padding-bottom: 100px;}
+
+#main-visual div.title {position: absolute; left: 50px; top: 80px; width: 240px;}
+#main-visual ul.product li {width: 80%; margin: 0 auto 50px;}
+
+#main-promotion {position: relative; background-color: #f6f5ef;}
+#main-promotion div.section {overflow: hidden; max-width: 1100px; margin: 0 auto;}
+#main-promotion div.section > div {height: 60px; position: relative; z-index: 10;}
+#main-promotion div.section > div.notice {width: 100%; background: #111111; color: #ffffff;}
+#main-promotion div.section > div.notice > em {position: absolute; left: 0; top: 50%; transform: translate(0, -50%); font-size: 18px; font-weight: 700;}
+#main-promotion div.section > div.notice > ul {position: absolute; left: 90px; top: 50%; transform: translate(0, -50%); width: calc(100% - 200px); height: 30px; overflow: hidden;}
+#main-promotion div.section > div.notice > ul > li {line-height: 30px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; position: absolute; left: 0; top: 0; width: 100%; background-color: #111111; display: none;}
+#main-promotion div.section > div.notice > ul > li:first-child {display: block;}
+#main-promotion div.section > div.notice > a {position: absolute; right: 30px; top: 50%; transform: translate(0, -50%); width: 38px; height: 38px; border: 1px solid #ffffff; border-radius: 100px; font-size: 18px; box-sizing: border-box;}
+#main-promotion div.section > div.notice > a i {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+#main-promotion div.section > div.promotion {width:100%; background: #ffffff; color: #333333;}
+#main-promotion div.section > div.promotion > em {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 18px; font-weight: 700;}
+#main-promotion div.section > div.promotion > a {position: absolute; right: 30px; top: 50%; transform: translate(0, -50%); width: 38px; height: 38px; border: 1px solid #000000; border-radius: 100px; font-size: 18px; box-sizing: border-box;}
+#main-promotion div.section > div.promotion > a i {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+#main-promotion div.section > div.promotion.open > a i {transform: translate(-50%, -50%) rotate(180deg);}
+
+#main-promotion div.banner-slide {overflow: hidden;}
+#main-promotion div.banner-slide > div.box {position: relative; width: 100%; margin: 30px auto;}
+#main-promotion div.banner-slide ul.slide {width: 3000px; overflow: hidden; left: 0; position: relative;}
+#main-promotion div.banner-slide ul.slide > li {float: left; text-align: center; width: 100vw;}
+#main-promotion div.banner-slide ul.slide > li + li {margin-left: 20px;}
+#main-promotion div.banner-slide ul.slide > li img {display: block;}
+#main-promotion div.banner-slide p.control > a {position: absolute; top: 50%; transform: translate(0, -50%); width: 40px; height: 40px; border: 2px solid #000000; border-radius: 100px; box-sizing: border-box; background-color: rgba(255, 255, 255, 0.1); transition: background-color 0.3s;}
+#main-promotion div.banner-slide p.control > a.prev {left: 30px;}
+#main-promotion div.banner-slide p.control > a.next {right: 30px;}
+#main-promotion div.banner-slide p.control > a img {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+#main-promotion div.banner-slide ul.indicator {text-align: center; margin-top: 30px;}
+#main-promotion div.banner-slide ul.indicator > li {display: inline-block; vertical-align: middle;}
+#main-promotion div.banner-slide ul.indicator > li + li {margin-left: 3px;}
+#main-promotion div.banner-slide ul.indicator > li:not(.play) > a {display: block; width: 12px; height: 12px; border: 3px solid transparent; background-color: rgba(0, 0, 0, 0.3); border-radius: 40px; box-sizing: border-box; overflow: hidden; text-indent: -999px;}
+#main-promotion div.banner-slide ul.indicator > li:not(.play).on > a {border-color: #1e3932; background-color: transparent;}
+#main-promotion div.banner-slide ul.indicator > li.play {margin-right: 8px;}
+#main-promotion div.banner-slide ul.indicator > li.play img.start {display: block;}
+#main-promotion div.banner-slide ul.indicator > li.play img.stop {display: none;}
+#main-promotion div.banner-slide ul.indicator > li.play.on img.start {display: none;}
+#main-promotion div.banner-slide ul.indicator > li.play.on img.stop {display: block;}
+
+#main-rewards {background: #1e3932; color: #ffffff; padding: 50px 30px 60px; text-align: center;}
+#main-rewards h3 {width: 40%; margin: 0 auto 30px;}
+#main-rewards div.content > div {position: relative; font-size: 14px; line-height: 1.5em;}
+#main-rewards div.content > div em {font-weight: 700; display: block;}
+#main-rewards div.content > div.member p.title {font-size: 18px; margin-bottom: 20px;}
+#main-rewards div.content > div.member p.text {font-size: 15px;}
+#main-rewards div.content > div.member p.link {margin-top: 30px;}
+#main-rewards div.content > div.gift {margin-top: 40px;}
+#main-rewards div.content > div.gift::before {content: ''; position: absolute; left: 0; top: -20px; width: 100%; height: 1px; background-color: #4f7161;}
+#main-rewards div.content > div.gift a {margin-top: 30px;}
+
+#main-product > section.beans {background: url('../img/main-product-bg-01-m.png') center center no-repeat; background-size: cover; position: relative; text-align: center; padding: 50px 30px;}
+#main-product > section.beans img {transform: translate(21%,0); width: 80%;}
+#main-product > section.beans div.content h4 {font-size: 24px; color: #39557e;}
+#main-product > section.beans div.content h4 span {display: block; font-size: 15px; margin-bottom: 5px; color: #5d81b8;}
+#main-product > section.beans div.content p {margin: 20px 0;}
+
+
+/* sub(common) */
+body.sub #main {padding: 100px 0 60px 0;}
+body.sub #main > section {background-color: #ffffff; position: relative;}
+body.sub #main > section.gray {background-color: #f4f4f2}
+body.sub #main > section > div.content-box {position: relative; padding: 30px 15px;}
+/* body.sub #main > section.no-padding > div.content-box {padding: 0;} */
+div.sub-header {padding: 0 15px; margin-bottom: 40px;}
+div.sub-header h2 {font-size: 24px;}
+#bread-crumb {display: none;}
+
+
+
+/*module*/
+a.btn {display: inline-block; min-width: 125px; height: 38px; box-sizing: border-box; border: 2px solid #4f7161; font-size: 15px; color: #4f7161; border-radius: 5px; text-align: center; line-height: 34px; padding: 0 15px; transition: all 0.3s;}
+a.btn.black {border-color: #222222; color: #222222;}
+a.btn.green {border-color: #4f7161; color: #4f7161;}
+a.btn.dark {border-color: #453d3d; color: #453d3d;}
+a.btn.brown {border-color: #b9813e; color: #b9813e;}
+a.btn.white {border-color: #ffffff; color: #ffffff;}
+a.btn.main {border-color: #00704a; background-color: #00704a; color: #ffffff;}
+a.btn.small {min-width: 80px;}
+a.btn.medium {min-width: 125px;}
+a.btn.large {min-width: 170px;}
+
+div.product-search {border: 1px solid #dddddd; padding: 0 30px; overflow: hidden;}
+div.product-search.close {height: 80px;}
+div.product-search div.title {position: relative; height: 80px; border-bottom: 1px solid #dddddd;}
+div.product-search div.title p {position: absolute; left: 0; top: 50%; transform: translate(0, -50%); font-size: 18px; font-weight: 700;}
+div.product-search div.title a {position: absolute; right: 0; top: 50%; transform: translate(0, -50%);}
+div.product-search div.title a img.close {display: block;}
+div.product-search div.title a img.open {display: none;}
+div.product-search.close div.title a img.close {display: none;}
+div.product-search.close  div.title a img.open {display: block;}
+div.product-search div.search {padding: 30px 0;}
+div.product-search div.search ul.category {overflow: hidden; margin-bottom: 20px;}
+div.product-search div.search ul.category > li {float: left; width: calc(100% / 3 - 4px)}
+div.product-search div.search ul.category > li + li {margin-left: 6px;}
+div.product-search div.search ul.category > li > a {display: block; line-height: 35px; text-align: center; font-size: 12px; background-color: #f4f4f1; border-radius: 5px;}
+div.product-search div.search ul.category > li.on > a {background-color: #006633; color: #ffffff;}
+div.product-search div.search ul.product-type {overflow: hidden; font-size: 12px;}
+div.product-search div.search ul.product-type > li {float: left; width: 50%;}
+div.product-search input[type="checkbox"] {margin: 0; vertical-align: middle;}
+div.product-search div.search ul.product-type > li label {padding-left: 10px;}
+
+div.product-list {position: relative;}
+div.product-list div.select {margin-bottom: 10px;}
+div.product-list div.select a {display: block; height: 40px; border: 1px solid #dddddd; border-radius: 5px; box-sizing: border-box; font-size: 14px; padding-left: 10px; line-height: 38px; background: #ffffff url('../img/icon-select-arrow.png') right 10px center no-repeat;}
+div.product-list div.select ul {position: absolute; background: #ffffff; border: 1px solid #dddddd; width: 100%; box-sizing: border-box; font-size: 13px; border-top: none; border-radius: 5px; display: block;}
+div.product-list div.select ul > li {line-height: 40px; padding-left: 10px;}
+div.product-list div.select ul > li + li {border-top: 1px solid #dddddd;}
+div.product-list div.select ul > li img {height: 24px; margin-right: 5px;}
+div.product-list div.select ul > li input {margin: 0; vertical-align: middle;}
+div.product-list dl dt {background: #f4f4f2; line-height: 58px; font-size: 18px; font-weight: 700; padding-left: 20px; margin-bottom: 20px;}
+div.product-list dl dt img {margin-right: 10px;}
+div.product-list dl dd ul {overflow: hidden;}
+div.product-list dl dd ul > li {position: relative; float: left; overflow: hidden; width: calc(50% - 15px); height: 300px; margin: 0 30px 40px 0; box-sizing: border-box; background: #ffffff; text-align: center;}
+div.product-list dl dd ul > li:nth-child(2n) {margin-right: 0;}
+div.product-list dl dd ul > li img.photo {width: 100%; max-width: 260px; transition: transform 0.5s;}
+div.product-list dl dd ul > li em.title {position: absolute; left: 0; bottom: 0; width: 100%; line-height: 60px; text-align: center; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+div.product-list dl dd ul > li img.tag {position: absolute; left: 20px; bottom: 60px;}
+div.product-list dl dd ul > li > a:hover img.photo {transform: scale(1.1);}
+
+
+div.image-slide div.box {position: relative; overflow: hidden;}
+div.image-slide div.box p.dummy {opacity: 0;}
+div.image-slide div.box ul.slide {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+div.image-slide div.box ul.slide > li {position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: none;}
+div.image-slide div.box ul.slide > li:first-child {display: block;}
+div.image-slide div.box p.control a {position: absolute; top: 50%; transform: translate(0, -50%); color: #ffffff; width: 30px; height: 30px; border-radius: 100px; border: 1px solid #ffffff; box-sizing: border-box; transition: all 0.3s;}
+div.image-slide div.box p.control a i {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 15px;}
+div.image-slide div.box p.control a.prev {left: 30px;}
+div.image-slide div.box p.control a.next {right: 30px;}
+div.image-slide ul.indicator {text-align: center; margin-top: 30px;}
+div.image-slide ul.indicator > li {display: inline-block; vertical-align: middle;}
+div.image-slide ul.indicator > li + li {margin-left: 3px;}
+div.image-slide ul.indicator > li:not(.play) > a {display: block; width: 12px; height: 12px; border: 3px solid transparent; background-color: rgba(0, 0, 0, 0.3); border-radius: 40px; box-sizing: border-box; overflow: hidden; text-indent: -999px;}
+div.image-slide ul.indicator > li:not(.play).on > a {border-color: #1e3932; background-color: transparent;}
+div.image-slide ul.indicator > li.play {margin-right: 8px;}
+div.image-slide ul.indicator > li.play img.start {display: block;}
+div.image-slide ul.indicator > li.play img.stop {display: none;}
+div.image-slide ul.indicator > li.play.on img.start {display: none;}
+div.image-slide ul.indicator > li.play.on img.stop {display: block;}
+
+
+@media screen and (min-width: 650px) {
+  div.product-list dl dd ul > li {width: calc(100% / 3 - 20px);}
+  div.product-list dl dd ul > li:nth-child(2n) {margin-right: 30px;}
+  div.product-list dl dd ul > li:nth-child(3n) {margin-right: 0;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* animation keyframes */
+/*
+@keyframes show-up {
+  0% {transform: translate(0, 50px); opacity: 0;}
+  100% {transform: translate(0, 0); opacity: 1;}
+}
+@keyframes btn-effect-right {
+  0% {transform: translate(0, 0);}
+  100% {transform: translate(5px, 0);}
+}
+#main-faq a.more:hover i {animation: btn-effect-right 0.3s ease 0s infinite alternate forwards;}
+*/

@@ -1,0 +1,26 @@
+@charset 'utf-8';
+
+/*폰트 조선일보*/
+
+@font-face {
+    font-family: 'Chosunilbo_myungjo'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal;
+}
+
+
+/*공통css*/
+::selection {
+    background-color: royalblue;
+    color: yellow;
+}
+
+a {
+    cursor: grab;
+}
+
+html {
+    font-size:10px;
+    cursor: url('../img/pngegg.png'), auto;
+  }
