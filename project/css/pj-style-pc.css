@@ -41,16 +41,7 @@ body#sub02 header, body#sub02 header a,
 body#sub02 footer, body#sub02 footer a, body#sub02 footer h1 {color: #ffffff;}
 body#sub04 header, body#sub04 header a,
 body#sub04 footer, body#sub04 footer a, body#sub04 footer h1 {color: #ffffff;}
-header .hd-top {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 75px;
-  line-height: 75px;
-  padding: 0 50px;
-  border-bottom: 1px solid #999999;
-}
-
+header .hd-top {display: flex;justify-content: space-between;width: 100%;height: 75px;line-height: 75px;padding: 0 50px;border-bottom: 1px solid #999999;}
 #sub04 header .hd-top {
   border-bottom: 1px solid #fff;
 }
@@ -153,7 +144,7 @@ footer nav .right select {
 
 
 #main .project {width: 100%;}
-#main .project .project-wrap + .project-wrap {padding-top: 120px;}
+#main .project .project-wrap + .project-wrap {padding-top: 90px;}
 #main .project .project-wrap em {font-weight: 700; font-size: 18px; margin-bottom: 20px; display: block; text-align: left;border-bottom: 1px solid #ddd;padding-bottom: 15px;}
 #main .project .project-cont {display: flex; justify-content: space-between; flex-wrap: wrap; text-align: left;}
 #main .project .project-cont li {width: calc(100% / 3 - 6px); height: auto; margin-bottom: 50px; background-color: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 2px 2px rgba(0,0,0,0.1), 0 4px 4px rgba(0,0,0,0.1),  0 8px 8px rgba(0,0,0,0.1), 0 16px 16px rgba(0,0,0,0.1); transition: all .3s linear;}

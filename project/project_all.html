@@ -14,7 +14,7 @@
 	<link rel="stylesheet" media="screen and (min-width: 1024.0px)" href="css/pj-style-pc.css" />
 	<link rel="stylesheet" media="screen and (max-width: 1023.9px)" href="css/pj-style-m.css" />
 </head>
-<body id="progect-page"> 
+<body id="progect-page">
 	<div id="wrapper">
 	  <header>
       <div class="content-box">
@@ -28,27 +28,27 @@
             <em>HAVE A GOOD DAY!</em>
           </div>
           <div class="right">
-          <a href="#aboutme">ABOUT</a>
-          <a href="#project">PROJECT</a>
-          <a href="https://github.com/doitlock" target="_blank">GITHUB</a>
-          <a href="https://doitlock.tistory.com/category/Code" target="_blank">BLOG</a>
-          <a href="https://clear-pancake-cdb.notion.site/d02ec69f404c473da4650549557843dc" target="_blank">NOTION</a>
-          <a href="../index.html#contact">CONTACT</a>
+            <a href="about.html" target="_blank">ABOUT</a>
+            <a href="javascript:;" onclick="go_scroll('project')">PROJECT</a>
+            <a href="https://github.com/doitlock" target="_blank">GITHUB</a>
+            <a href="https://doitlock.tistory.com/category/Code" target="_blank">BLOG</a>
+            <a href="https://clear-pancake-cdb.notion.site/d02ec69f404c473da4650549557843dc" target="_blank">NOTION</a>
+            <a href="../index.html#contact">CONTACT</a>
           </div>
-        <div class="right_mb">
-          <a href="#this" class="mb_menu_btn">
-          <span></span>
-          <span></span>
-          <span></span>
-          </a>
-          <div class="mb_menu">
-          <a href="../project/about.html" target="_self" title="about me">ABOUT</a>
-          <a href="#project">PROJECT</a>
-          <a href="https://github.com/doitlock" target="_blank">GITHUB</a>
-          <a href="https://doitlock.tistory.com/category/Code" target="_blank">BLOG</a>
-          <a href="https://clear-pancake-cdb.notion.site/d02ec69f404c473da4650549557843dc" target="_blank">NOTION</a>
-          <a href="../index.html#contact">CONTACT</a>
-          </div>
+          <div class="right_mb">
+            <a href="#this" class="mb_menu_btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+            <div class="mb_menu">
+              <a href="about.html" target="_blank">ABOUT</a>
+              <a href="javascript:;" onclick="go_scroll('project')">PROJECT</a>
+              <a href="https://github.com/doitlock" target="_blank">GITHUB</a>
+              <a href="https://doitlock.tistory.com/category/Code" target="_blank">BLOG</a>
+              <a href="https://clear-pancake-cdb.notion.site/d02ec69f404c473da4650549557843dc" target="_blank">NOTION</a>
+              <a href="../index.html#contact">CONTACT</a>
+            </div>
           </div>
         </nav>
       </div>
@@ -60,13 +60,13 @@
           <h2 class="tit eng">PROJECT</h2>
           <div class="project-link">
             <ul>
-              <li><a href="#publ">#PUBLISHING #STATIC</a></li>
-              <li><a href="#dynamic">#JAVASCRIPT #DYNAMIC</a></li>
-              <li><a href="#project">#LIBRARY #FRAMEWORK</a></li>
+              <li><a href="javascript:;" onclick="go_scroll('publ')">#PUBLISHING #STATIC</a></li>
+              <li><a href="javascript:;" onclick="go_scroll('dynamic')">#JAVASCRIPT #DYNAMIC</a></li>
+              <li><a href="javascript:;" onclick="go_scroll('project')">#LIBRARY #FRAMEWORK</a></li>
             </ul>
           </div>
           <div class="project-wrap frame" id="library">
-            <em>Library / Framework</em>
+            <em>LIBRARY / FRAMEWORK</em>
             <ul class="project-cont">
               <li>
                 <a href="#">
@@ -140,6 +140,17 @@
             <em>HTML / CSS / JavaScript</em>
             <ul class="project-cont">
               <li>
+                <a href="site/sejong/index.html" target="_blank">
+                  <div class="thum-img">
+                    <img src="../images/god_cat01.jpg" alt="고앵">
+                  </div>
+                  <div class="txt-cont">
+                    <p>세종복지다옴</p>
+                    <span>HTML, CSS, JAVASCRIPT<br />반응형 클론 코딩 / UI개발</span>
+                  </div>
+                </a>
+              </li>
+              <li>
                 <a href="site/kia/index.html" target="_blank" title="기아자동차클론코딩페이지">
                   <div class="thum-img">
                     <img src="../images/god_cat01.jpg" alt="고앵">
@@ -162,17 +173,6 @@
                 </a>
               </li>
               <li>
-                <a href="#">
-                  <div class="thum-img">
-                    <img src="../images/god_cat01.jpg" alt="고앵">
-                  </div>
-                  <div class="txt-cont">
-                    <p>미니 프로젝트 모음 MINI&TOY</p>
-                    <span>HTML, CSS, JAVASCRIPT<br />반응형 / UI개발</span>
-                  </div>
-                </a>
-              </li>
-              <li>
                 <a href="mini/eyeballs.html" target="_blank" title="눈알굴리기">
                   <div class="thum-img">
                     <img src="../images/god_cat01.jpg" alt="고앵">
@@ -184,13 +184,13 @@
                 </a>
               </li>
               <li>
-                <a href="site/starbucks/index.html" target="_blank" title="스타벅스클론코딩페이지">
+                <a href="site/megabox/index.html" target="_blank">
                   <div class="thum-img">
                     <img src="../images/god_cat01.jpg" alt="고앵">
                   </div>
                   <div class="txt-cont">
-                    <p>미니 프로젝트 모음 MINI&TOY</p>
-                    <span>HTML, CSS, JAVASCRIPT<br />반응형 / UI개발</span>
+                    <p>메가박스 MEGABOX</p>
+                    <span>HTML, CSS, JAVASCRIPT<br />PC / UI개발</span>
                   </div>
                 </a>
               </li>
@@ -319,6 +319,7 @@
       </div>
 	  </footer>
 	</div>
-  
-  </body>
+  <script src="js/pj-main.js" defer></script>
+  <script src="js/jquery-3.6.0.min.js" defer></script>
+</body>
 </html>

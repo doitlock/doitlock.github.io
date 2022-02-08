@@ -1,12 +1,9 @@
 @charset "utf-8";
 
-* {
-    /* border: 1px solid red; */
-    
-}
 #wrap {
     position: relative;
     width: 100%;
+    overflow: hidden;
 }
 #wrap_section {
     width: 1100px;
