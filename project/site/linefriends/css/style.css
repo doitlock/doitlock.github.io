@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 /* reset */
-* {box-sizing: border-box;}
+*, *::before, *::after {box-sizing: border-box;}
 html {-webkit-text-size-adjust: none; text-size-adjust: none;}
-body {margin: 0;}
+body {margin: 0; word-break: keep-all;}
 h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p {margin: 0; padding: 0;}
 h1, h2, h3, h4, h5, h6 {font-weight: 700;}
 a {color: inherit; text-decoration: inherit;}
@@ -12,13 +12,8 @@ img {vertical-align: middle; max-width: 100%;}
 address, em, i, cite {font-style: normal;}
 table {border-collapse: collapse;}
 table caption {overflow: hidden; width: 0; height: 0;}
-i[class^="fa"] {position: relative; display: inline-block; vertical-align: middle;}
-i[class^="fa"] span {position: absolute; left: -9999px;}
 .ir-hidden {position: absolute; left: -9999px;}
 .pc {display: none !important;}
-br.only-m {content: '';}
-br.only-m::after {content: '\00a0';}
-
 
 /*common*/
 body {font-family: 'Noto Sans KR', sans-serif; font-size: 16px; color: #333; background: #fff; scroll-behavior:smooth;}
@@ -67,6 +62,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 16px; color: #333; bac
 .visual-section01 {position: relative;text-align: center;}
 .visual-section01 strong {display: inline-block;font-size: 80px;color: #404040;margin-bottom: 50px;}
 .visual-section01 p {display: inline-block;margin-bottom: 50px;font-size: 14px;color: #333;line-height: 24px;width: 700px;}
+
 .visual-section01 .visual-section01_video {display: inline-block;width: 80%;height: auto;}
 
 .visual-section02 {position: relative;background-color: #faf8f5;text-align: center;}
@@ -163,10 +159,8 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 16px; color: #333; bac
 .visual-section05 tbody tr td.tit a {color: #333;}
 .pagenavigation {font-size: 13px;text-align: center;}
 .pagenavigation ul {display: inline-block;}
- .pagenavigation ul li {display: inline-block;width: 30px;height: 30px;}
- .pagenavigation a {
-  color: #808080;
-}
+.pagenavigation ul li {display: inline-block; width: 30px;height: 30px; vertical-align: middle;}
+.pagenavigation a {color: #808080; display: block; }
 
 .visual-section06 {position: relative;width: 95%;margin: 0 auto;}
 .visual-section06 ul.list-product {width: 100%;}
@@ -223,6 +217,7 @@ footer .footer_wrap {
 footer h2 {
   position: absolute;
   left: 0;
+  top: 54px;
   font-size: 0;
   width: 152px;
   height: 19px;
