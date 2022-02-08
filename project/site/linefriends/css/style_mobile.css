@@ -1,9 +1,9 @@
 @charset "utf-8";
 
 /* reset */
-* {box-sizing: border-box;}
-html {-webkit-text-size-adjust: none; text-size-adjust: none;}
-body {margin: 0;}
+*, *::before, *::after {box-sizing: border-box;}
+html {-webkit-text-size-adjust: none; text-size-adjust: none; font-size: 12px;}
+body {margin: 0; word-break: keep-all;}
 h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p {margin: 0; padding: 0;}
 h1, h2, h3, h4, h5, h6 {font-weight: 700;}
 a {color: inherit; text-decoration: inherit;}
@@ -20,7 +20,7 @@ br.only-m {content: '';}
 br.only-m::after {content: '\00a0';}
 
 /*common*/
-body {font-family: 'Noto Sans KR', sans-serif; font-size: 13px; color: #333; background: #fff;}
+body {font-family: 'Noto Sans KR', sans-serif;  color: #333; background: #fff;}
 #skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.8); color: #ffffff; font-size: 16px; transition: top 0.3s; z-index: 100000;}
 #skip-nav:focus {top: 0;}
 
@@ -108,11 +108,12 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 13px; color: #333; bac
 .visual-section01 p {
   display: inline-block;
   margin-bottom: 7%;
-  font-size: 2vh;
+  font-size: 1.2rem;
   color: #333;
   line-height: 24px;
   width: 90%;
 }
+.visual-section01 p br {display: none;}
 .visual-section01 .visual-section01_video {
   display: inline-block;
   width: 90%;
