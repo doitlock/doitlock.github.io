@@ -47,8 +47,6 @@ body {font-family: 'NotoSansKR', sans-serif; font-size: 14px; color: #fff; backg
 #footer .address {line-height: 1.7; font-weight: 300;}
 
 
-
-
 /*main*/
 #main .side_menu {position: fixed; right: 0; top: 50%; line-height: 60px; transform: translate(0,-50%); z-index: 1000;}
 #main .side_menu::before {content: ''; position: absolute; left: 0; top: 0; width: 1px; height: 100vh; background-color: #b49b805e;}
@@ -97,7 +95,6 @@ body {font-family: 'NotoSansKR', sans-serif; font-size: 14px; color: #fff; backg
 #main .main-program .program-list ul li {width: calc(100% / 2 - 20px); background-color: #fff; margin: 10px; box-shadow: 4px 0 14px 2px rgb(0 0 0 / 5%); transition: all .4s linear;}
 #main .main-program .program-list ul li:hover {transform: translateY(-5px);}
 #main .main-program .program-list ul li a {display: block; padding: 1.3rem;}
-
 #main .main-program .program-list span.round {display: table; width: 62px; height: 62px; margin: 0 auto 1rem; background: #4c665b; border-radius: 50%; font-size: .7rem; line-height: 1.2; color: #fff; font-weight: 400; word-break: keep-all; text-align: center; padding-top: 12px;}
 #main .main-program .program-list span.round.brn {background: #b49b80;}
 #main .main-program .program-list em {position: relative; display: block;line-height: 1.25;word-break: keep-all;padding-bottom: 1rem;margin-bottom: 0.75rem;color: #000;font-size: 1rem; font-weight: 700; border-bottom: 2px solid #f5f5f5;}
