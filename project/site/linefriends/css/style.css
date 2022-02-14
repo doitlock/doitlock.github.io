@@ -12,12 +12,8 @@ img {vertical-align: middle; max-width: 100%;}
 address, em, i, cite {font-style: normal;}
 table {border-collapse: collapse;}
 table caption {overflow: hidden; width: 0; height: 0;}
-i[class^="fa"] {position: relative; display: inline-block; vertical-align: middle;}
-i[class^="fa"] span {position: absolute; left: -9999px;}
 .ir-hidden {position: absolute; left: -9999px;}
 .pc {display: none !important;}
-br.only-m {content: '';}
-br.only-m::after {content: '\00a0';}
 
 
 /*common*/
@@ -26,7 +22,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 16px; color: #333; bac
 #skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.8); color: #ffffff; font-size: 16px; transition: top 0.3s; z-index: 100000;}
 #skip-nav:focus {top: 0;}
 
-#header {position: fixed;z-index: 100;left:50%;transform: translateX(-50%);width: 100%;}
+#header {position: fixed; z-index: 100; left:50%; transform: translateX(-50%);width: 100%;}
 #header #wrap_nav {position: relative;width: 80%;min-width: 800px;margin: 50px auto;}
 #header #wrap_nav::after {content:'';display:block;clear:both;}
 #header #wrap_nav .head_logo {position: absolute; left: 0; background-image: url('../img/img_logo.png'); background-repeat: no-repeat; width: 174px; height: 24px; font-size:0; overflow: hidden; float: left; transition: all .3s ease;}
@@ -65,12 +61,10 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 16px; color: #333; bac
 .main-section > div {max-width: 1020px;margin: 0 auto;padding: 110px 0 120px;}
 
 .visual-section01 {position: relative;text-align: center;}
-.visual-section01 strong {display: inline-block;font-size: 80px;color: #404040;margin-bottom: 50px;}
 .visual-section01 p {display: inline-block;margin-bottom: 50px;font-size: 14px;color: #333;line-height: 24px;width: 700px;}
 .visual-section01 .visual-section01_video {display: inline-block;width: 80%;height: auto;}
 
 .visual-section02 {position: relative;background-color: #faf8f5;text-align: center;}
-.visual-section02 strong {display: inline-block;padding-bottom: 20px;font-size: 80px; color: #404040;}
 .visual-section02 .section2-list {overflow: hidden;width: 100%;margin: 0 auto;}
 .visual-section02 .section2-list dl {float: left;width: calc(100%/3);padding: 3%;}
 .visual-section02 .section2-list dl dt {margin: 16px 0 25px;font-size: 16px;font-weight: bold;}
@@ -78,12 +72,11 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 16px; color: #333; bac
 .visual-section02 .box-btns a {display: inline-block;background: #5c5e66;width: 280px;line-height: 60px;text-align: center;font-size: 15px;color: #fff;transition: all .3s ease;}
 .visual-section02 .box-btns a:hover {background: #404040;}
 
-.visual-section03 {position: relative;width: 100%;height: 100vh;}
-.visual-section03 img {position: absolute;top: 0;left: 0;width: 100%;}
-.visual-section03 strong {position: absolute;bottom: 100px;color: #fff;z-index: 999;}
+.visual-section03 {width: 100%;height: auto; overflow: hidden;}
+.visual-section03 .visual_sec03_slide {width: 100%; height: 100%;}
+.visual-section03 .visual_sec03_slide img {display: block; width: 100%; height: 100%;}
 
 .visual-section04 {position: relative;background-color: #f7f7f7;}
-.visual-section04 strong {display: block;margin-bottom: 38px;font-size: 70px;color: #404040;text-align: center;}
 .visual-section04 ul.list-news {
   width: 100%;
   padding: 3%;
@@ -141,13 +134,6 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 16px; color: #333; bac
   background-color: #fff;
   width: 95%;
   margin: 0 auto;
-}
-.visual-section05 strong {
-  display: block;
-  margin-bottom: 38px;
-  font-size: 70px;
-  color: #404040;
-  text-align: center;
 }
 .visual-section05 table {
   width: 100%;
@@ -220,14 +206,7 @@ footer .footer_wrap {
   padding: 50px;
   margin: 0 auto;
 }
-footer h2 {
-  position: absolute;
-  left: 0;
-  font-size: 0;
-  width: 152px;
-  height: 19px;
-  background: url(../img/footer_logo.png) no-repeat;
-}
+footer h2 {position: absolute;left: 0;top: 54px;font-size: 0;width: 152px;height: 19px;background: url(../img/footer_logo.png) no-repeat;}
 footer section.txt {
   position: absolute;
   top: 50px;
@@ -286,10 +265,7 @@ footer .social-area a {
   display: inline-block;
   /*폰트사이즈 0으로 하니까 클릭이 안 됨*/
 }
-footer .social a {
-  display:inline-block;
-  background: url(../img/spr.png) no-repeat;
-}
+footer .social a {display:inline-block;background: url('../img/spr.png') no-repeat;}
 footer .social01 a {
   width: 8px;
   height: 17px;
@@ -305,16 +281,9 @@ footer .social03 a {
   height: 15px;
   background-position: 1px -42px;
 }
-footer .social04 a {
-  width: 20px;
-  height: 14px;
-  background-position: 0 -62px;
-}
-footer .social05 a {
-  width: 22px;
-  height: 19px;
-  background-position: 0 -81px;
-}
+footer .social04 a {width: 20px;height: 14px;background-position: 0 -62px;}
+footer .social05 a {width: 22px;height: 19px;background-position: 0 -81px;}
 
-/*module*/
+/** module **/
+section .txt-visual {display: block; font-size: 5rem; line-height: 1.3; color: #333; margin-bottom: 3rem; text-align: center;}
 
