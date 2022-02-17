@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+/* reset */
+html {-webkit-text-size-adjust: none; text-size-adjust: none;}
+body {margin: 0;}
+* {box-sizing: border-box;}
+html,body,div,span,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,blockquote,p,address,pre,cite,form,fieldset,input,textarea,select,table,th,td{padding:0;margin:0}
+h1, h2, h3, h4, h5, h6 {font-weight: 700;}
+fieldset,img,abbr,acronym{border:0 none}
+ul,ol{list-style-type:none}
+address, caption, em, cite{font-weight:normal;font-style:normal}
+b,strong{font-weight:normal;}
+a{color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+img {vertical-align: middle; max-width: 100%;}
+address, em, i, cite {font-style: normal;}
+fieldset, button, input, select{vertical-align:middle}
+table {border-collapse: collapse;}
+table caption {overflow: hidden; width: 0; height: 0;}
+i[class^="xi"] {position: relative; display: inline-block; vertical-align: middle;}
+i[class^="xi"] span {position: absolute; left: -9999px;}
+.ir-hidden {position: absolute; left: -9999px;}
+textarea:focus, input:focus, select:focus{outline:0;}
+input {font-family: inherit;}
+
+
+/*common*/
+html {font-size: 14px;}
+body#publ-page {color:#333; font-family: 'NotoSansKR', sans-serif; font-weight: 400; line-height: 1.4; background-color: #fff;}
+#skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.6); color: #ffffff; font-size: 16px; transition: top .3s; z-index: 100000;}
+#skip-nav:focus {top: 0;}
+::selection {background-color: #e9d649; color: #fff;}
+
+#header {width: 100%; height: 100px; position: fixed; top: 0; left: 0;}
+#aside {display: none;}
+#main {width: 100%; height: auto;}
+#main section {}
+
+
+
+
+
+#footer {width: 100%; height: 100px; position: fixed; bottom: 0; left: 0;}
+
+
+
+/*module*/
+.content-box {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
