@@ -25,8 +25,12 @@ input {font-family: inherit;}
 
 
 /*common*/
-html {font-size: 14px;}
-body#publ-page {color:#333; font-family: 'NotoSansKR', sans-serif; font-weight: 400; line-height: 1.4; background-color: #fff;}
+html {font-size: 14px; scroll-behavior: smooth;}
+body {font-family: 'NotoSansKR', sans-serif; font-weight: 400; line-height: 1.4;}
+body#publ-page {color:#333; background-color: #fff;}
+body#poodle-page {color:#fff; background-color: #FF1E56;}
+
+
 #skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.6); color: #ffffff; font-size: 16px; transition: top .3s; z-index: 100000;}
 #skip-nav:focus {top: 0;}
 ::selection {background-color: #e9d649; color: #fff;}
@@ -45,5 +49,7 @@ body#publ-page {color:#333; font-family: 'NotoSansKR', sans-serif; font-weight: 
 
 
 /*module*/
-.content-box {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.content-box {width: 100%; max-width: 1920px; margin: 0 auto;}
+.inner-box {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
 
