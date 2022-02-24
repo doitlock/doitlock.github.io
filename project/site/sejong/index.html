@@ -8,6 +8,7 @@
     <title>세종복지다옴 | 포트폴리오</title>
     <meta name="description" content="세종복지다옴 웹사이트" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="../../../xi/xeicon.min.css" />
     <link rel="stylesheet" href="css/web-font.css" />
     <link rel="stylesheet" href="css/style-pc.css" media="screen and (min-width: 1024.0px)" />
     <link rel="stylesheet" href="css/style-m.css" media="screen and (max-width: 1023.9px)" />
@@ -15,7 +16,7 @@
 <body class="main">
 	<div id="wrapper">
 		<a href="#main" id="skip-nav">본문 바로가기</a>
-    <header id="header">
+    <header id="header" class="">
       <div class="head-inner-box">
         <h1>
           <a href="index.html">
@@ -26,55 +27,55 @@
           <ul class="big-menu">
             <li>
               <a href="#">복지정보</a>
-              <ul class="sub-menu">
+              <div class="sub-menu">
                 <a href="#">세종시 지원사업</a>
                 <a href="#">정부 지원사업</a>
                 <a href="#">도움되는 사이트</a>
-              </ul>
+              </div>
             </li>
             <li>
               <a href="#">복지시설</a>
-              <ul class="sub-menu">
-                <li><a href="#">지역별</a></li>
-                <li><a href="#">분야별</a></li>
-              </ul>
+              <div class="sub-menu">
+                <a href="#">지역별</a>
+                <a href="#">분야별</a>
+              </div>
             </li>
             <li>
               <a href="#">프로그램 신청</a>
-              <ul class="sub-menu">
-                <li><a href="#">프로그램 정보</a></li>
-              </ul>
+              <div class="sub-menu">
+                <a href="#">프로그램 정보</a>
+              </div>
             </li>
             <li>
               <a href="#">도움 요청</a>
-              <ul class="sub-menu">
-                <li><a href="#">본인 도움요청</a></li>
-                <li><a href="#">이웃 도움요청</a></li>
-                <li><a href="#">접수결과 확인</a></li>
-              </ul>
+              <div class="sub-menu">
+                <a href="#">본인 도움요청</a>
+                <a href="#">이웃 도움요청</a>
+                <a href="#">접수결과 확인</a>
+              </div>
             </li>
             <li>
               <a href="#">나눔 신청</a>
-              <ul class="sub-menu">
-                <li><a href="#">자원봉사 신청</a></li>
-                <li><a href="#">후원 신청</a></li>
-              </ul>
+              <div class="sub-menu">
+                <a href="#">자원봉사 신청</a>
+                <a href="#">후원 신청</a>
+              </div>
             </li>
             <li>
               <a href="#">복지 인력뱅크</a>
-              <ul class="sub-menu">
-                <li><a href="#">채용공고</a></li>
-                <li><a href="#">지원서 확인</a></li>
-                <li><a href="#">채용문의</a></li>
-              </ul>
+              <div class="sub-menu">
+                <a href="#">채용공고</a>
+                <a href="#">지원서 확인</a>
+                <a href="#">채용문의</a>
+              </div>
             </li>
             <li>
               <a href="#">알림 문의</a>
-              <ul class="sub-menu">
-                <li><a href="#">공지사항</a></li>
-                <li><a href="#">자주하는 질문</a></li>
-                <li><a href="#">문의접수</a></li>
-              </ul>
+              <div class="sub-menu">
+                <a href="#">공지사항</a>
+                <a href="#">자주하는 질문</a>
+                <a href="#">문의접수</a>
+              </div>
             </li>
           </ul>
         </nav>
@@ -88,7 +89,7 @@
             <li><a href="#">회원가입</a></li>
           </ul>
         </div>
-        <div class="ham-menu">
+        <div class="ham-menu mobile">
 
         </div>
       </div>
@@ -110,6 +111,7 @@
           <p>세종복지다옴</p>
           <span>세종시에 있는 다양한 복지자원 정보와 참여기회를 제공하는 플랫폼입니다.<br />다옴은 '하는일 마다 복이 온다는 순수 한글말이며, 복지다옴은 세종시의 복지가 다 모인다'는 뜻을 가지고 있습니다.</span>
         </div>
+        <div class="scroll-down" id="scroll-down"></div>
       </section>
       <section class="main-work" id="work">
         <div class="txt-cont">
@@ -252,16 +254,16 @@
               <img src="asset/linkicon1.png" alt="">
               <em>도움이 필요하다고 알릴때</em>
               <div class="txt-cont">
-                <a href="#"><span>본인</span> 도움요청</a>
-                <a href="#"><span>이웃</span> 도움요청</a>
+                <a href="#"><span>본인</span> 도움요청 <i class="xi-angle-right"><span>오른쪽 화살표</span></i></a>
+                <a href="#"><span>이웃</span> 도움요청 <i class="xi-angle-right"><span>오른쪽 화살표</span></i></a>
               </div>
             </div>
             <div class="give">
               <img src="asset/linkicon2.png" alt="">
               <em>도움을 주기위해 참여할때</em>
               <div class="txt-cont">
-                <a href="#"><span>자원봉사</span> 신청</a>
-                <a href="#"><span>후원</span> 신청</a>
+                <a href="#"><span>자원봉사</span> 신청 <i class="xi-angle-right"><span>오른쪽 화살표</span></i></a>
+                <a href="#"><span>후원</span> 신청 <i class="xi-angle-right"><span>오른쪽 화살표</span></i></a>
               </div>
             </div>
           </div>
@@ -333,9 +335,9 @@
         </div>
         <div class="address">
           <p>
-            (우)30127 세종특별자치시 새롬로 14 (새롬동 66-1)<br />
+            프론트엔드개발자 홍수기의 포트폴리오 랜딩페이지 클론코딩 웹사이트입니다.<br />
             Copyright © Sejong Walfare Platform. All Rights Reserved.<br />
-            본 플랫폼은 행정안전부가 주최하고, 한국정보화 진흥원이 주관하는 ‘2019년 디지털 사회혁신 프로젝트'의 지원을 받아 구축 되었습니다.
+            <a href="https://doitlock.github.io/">이 곳을 누르시면 PRONTEND DEVELOPER SOO KI HONG PORTFOLIO 사이트로 이동할 수 있습니다. 바로가기 ></a>
           </p>
         </div>
         <div class="footer-logo">

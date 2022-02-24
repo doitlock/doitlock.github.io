@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+/** reset **/
+*, *::before, *::after {box-sizing: border-box;}
+html {-webkit-text-size-adjust: none; text-size-adjust: none;}
+body {margin: 0;}
+html,body,div,span,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,blockquote,p,address,pre,cite,form,fieldset,input,textarea,select,table,th,td{padding:0;margin:0}
+h1, h2, h3, h4, h5, h6 {font-weight: 700;}
+fieldset,img,abbr,acronym{border:0 none}
+ul,ol{list-style-type:none}
+address, caption, em, cite{font-weight:normal;font-style:normal}
+b,strong{font-weight:normal;}
+a{color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+img {vertical-align: middle; max-width: 100%;}
+address, em, i, cite {font-style: normal;}
+fieldset, button, input, select{vertical-align:middle}
+table {border-collapse: collapse;}
+table caption {overflow: hidden; width: 0; height: 0;}
+i[class^="xi"] {position: relative; display: inline-block; vertical-align: middle;}
+i[class^="xi"] span {position: absolute; left: -9999px;}
+.ir-hidden {position: absolute; left: -9999px;}
+textarea:focus, input:focus, select:focus{outline:0;}
+input {font-family: inherit;}
+
+
+/** common **/
+html {font-size: 14px; scroll-behavior: smooth;}
+body {font-family: 'NotoSansKR', sans-serif; font-weight: 400; line-height: 1.4;}
+body#publ-page {color:#333; background-color: #fff;}
+body#poodle-page {color:#FDE8CD; background-color: #433520;}
+body#paulkim-page {color:#000; background-color: #0D7236;}
+body#hufflepuff-page {color:#433520; background-color: #FFCE45;}
+body#gallery-page {color:#333; background-color: #F1F1F1;}
+body#vegan-page {color:#333; background-color: #fff;}
+
+#skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.6); color: #ffffff; font-size: 16px; transition: top .3s; z-index: 100000;}
+#skip-nav:focus {top: 0;}
+#wrapper {overflow: hidden;}
+
+
+#header {width: 100%; margin: auto;}
+#poodle-page #header {width: 100%; height: 80px; display: flex; justify-content: space-between; align-items: center; background-color: rgba(0, 0, 0, 0.2);}
+
+#main {width: 100%; height: auto;}
+#main section {position: relative;}
+
+
+/*main-poodle*/
+#poodle-page #header .content-box {display: flex; justify-content: space-between; align-items: center;}
+#poodle-page #header #gnb a {display: inline-block; margin-left: 20px; letter-spacing: 4px;}
+.poodle-main{padding-top: 70px;}
+.poodle-main .content-box {display: flex; justify-content: space-between; align-items: center;}
+.poodle-main #main-top {width: 60%;}
+.poodle-main #main-top .img-slide {width: 100%; height: 400px; border: 1px solid #fff;}
+.poodle-main #main-top .txt-box {margin-top: -70px; margin-left: 30px;}
+.poodle-main #main-top .txt-box em {display: block; font-size: 7rem; line-height: 1.1; font-weight: 900; color: #fff; margin-bottom: 30px;}
+.poodle-main #main-btm {width: 40%;}
+
+
+
+/*main-paulkim*/
+
+/*main-vegan*/
+
+/*main-gallery*/
+
+
+
+
+
+
+
+#footer {width: 100%; font-size: 1rem;}
+body#poodle-page #footer {width: 100%; height: auto; padding: 50px 0; text-align: center; position: absolute; bottom: 0; left: 0; border-top: 1px solid #FDE8CD;}
+
+
+
+/** module **/
+.content-box {width: 100%; max-width: 1200px; margin: 0 auto;}
+.inner-box {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
+
+
