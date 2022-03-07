@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+/* font */
+
+
 /* reset */
 *, *::before, *::after {box-sizing: border-box;}
 html {-webkit-text-size-adjust: none; text-size-adjust: none; font-size:14px;}
@@ -26,14 +29,13 @@ input {font-family: inherit;}
 
 
 /*common*/
-body#momen-page {color:#fff; font-family: 'NotoSansKR', sans-serif; font-weight: 400; line-height: 1.4; background-color: #fff;}
+body.momentum-main {font-family: 'NotoSansKR', sans-serif; font-weight: 400; line-height: 1.4; background-color: #fff;}
 #skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.6); color: #ffffff; font-size: 16px; transition: top 0.3s; z-index: 100000;}
 #skip-nav:focus {top: 0;}
 body .content-box {max-width: 1024px; margin: 0 auto; position: relative;}
 #wrapper {overflow: hidden;}
-
-
-
+#header {}
+#footer {}
 
 /*module*/
-
+.hidden {display: none;}
