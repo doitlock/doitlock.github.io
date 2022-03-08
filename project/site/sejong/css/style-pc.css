@@ -25,7 +25,7 @@ body {font-family: 'NotoSansKR', sans-serif; font-size: 14px; color: #fff; backg
 #skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.8); color: #ffffff; font-size: 1rem; transition: top 0.3s; z-index: 100000;}
 #skip-nav:focus {top: 0;}
 
-#header {width: 100%; height: 80px; position: fixed; top: 0; left: 0; line-height: 80px; background: rgba(0,0,0,.1); border-bottom: 1px solid rgba(255,255,255,.08); color: #fff; z-index: 100;}
+#header {width: 100%; height: 80px; position: fixed; top: 0; left: 0; line-height: 80px; background: rgba(0,0,0,.1); border-bottom: 1px solid rgba(255,255,255,.08); color: #fff; z-index: 100; transition: background .3s ease;}
 #header .head-inner-box {width: 95%; margin: 0 auto; display: flex; justify-content: space-between;}
 #header h1 {width: 200px;}
 #header #gnb {width: 64%;}
@@ -37,14 +37,16 @@ body {font-family: 'NotoSansKR', sans-serif; font-size: 14px; color: #fff; backg
 
 #header .right-menu {width: 10%;}
 #header .right-menu ul {display: flex;}
-#header .right-menu ul li {display: inline-block; vertical-align: middle;}
+#header .right-menu ul li {display: inline-block; vertical-align: middle; padding: 0 .5rem;}
 #header .right-menu ul li a {display: block;}
 #header .right-menu ul li a img {width: 30px; height: 40px; display: block;}
+#header .bg {display: none; transition: all .3s ease; transform: translateY(50px); width: 100%; height: 200px; position: absolute; top: 80px; left: 0; background-color: #fafafa; border-top: 1px solid #ddd; z-index: -1;}
 
-#header.active {background: #fff; color: #333;}
-#header.active::after {content: ''; width: 100%; height: 200px; background-color: #fafafa; position: absolute; top: 80px; left: 0; z-index:-1; border-top: 1px solid #eeede8; border-bottom: 1px solid #989189; }
+#header.active, #header.on {background-color: #fff;}
+#header.active #gnb .big-menu li > a, #header.on #gnb .big-menu li > a {color: #333;}
 #header.active #gnb .sub-menu {display: block;}
-
+#header.active .bg {display: block; transform: translateY(0);}
+#header.active .right-menu ul li a {color: #333;}
 
 #footer {position: relative; width: 100%; height: auto; background-color: #262724; padding: 4rem 0;}
 #footer .footer-inner {width: 95%; margin: 0 auto; color: rgba(255,255,255,.3);}
@@ -59,7 +61,19 @@ body {font-family: 'NotoSansKR', sans-serif; font-size: 14px; color: #fff; backg
 #main .side_menu {position: fixed; right: 0; top: 50%; line-height: 60px; transform: translate(0,-50%); z-index: 1000;}
 #main .side_menu::before {content: ''; position: absolute; left: 0; top: 0; width: 1px; height: 100vh; background-color: #b49b805e;}
 #main .side_menu ul li a {color:#b49b80; font-size: .7rem; font-weight: 700; writing-mode: vertical-rl;}
-#main .main-visual {background: url('../asset/visual_bg.jpg') center center no-repeat; background-size: cover;}
+#main .main-visual {background: url('../asset/visual_bg.jpg') center center no-repeat; background-size: cover; animation: zoomin 2s linear; animation-fill-mode: forwards;  background-origin:center;}
+
+@-webkit-keyframes zoomin {
+    0% {
+       background-size: 120%;
+       opacity: .5; 
+    }
+    100% {
+       background-size: 110%; 
+       opacity: 1;
+    }
+}
+
 #main .main-visual .txt-cont {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; width: 100%;}
 #main .main-visual .txt-cont h3 {font-size: 1.2rem; display: block; font-weight: 500;}
 #main .main-visual .txt-cont p {font-size: 4rem; font-family: 'Aritaburi', sans-serif;}
@@ -211,5 +225,9 @@ body {font-family: 'NotoSansKR', sans-serif; font-size: 14px; color: #fff; backg
 .help-main .detail-intro {background: url(../asset/s_visual01.jpg) center center no-repeat; background-size: cover;}
 .detail-box {width: 70%; height: auto; margin: 3rem auto; color: #333;} 
 .detail-box ul.detail-tab {display: flex; justify-content: space-around; align-items: center;}
-.detail-box ul.detail-tab li {}
-.detail-box ul.detail-tab li a {display: block; font-size: 1.5rem; font-weight: 500; padding: 1rem 0; border: 1px solid #ddd; width: 100%;}
+.detail-box ul.detail-tab li {width: 100%; text-align: center;}
+.detail-box ul.detail-tab li a {display: block; font-size: 1.3rem; font-weight: 500; padding: 1.2rem 0; border: 1px solid #ddd; width: 100%; background-color: #fff;}
+.detail-box ul.detail-tab li.check-on a {background-color: #4c665b; color: #fff;}
+.detail-box .detail-cont em {position: relative; display: block; margin: 3.75rem 0 1.2rem;font-size: 1.7rem;font-weight: 700;color: #444;}
+.detail-box .detail-cont p {margin: 1rem 0 1.5rem; font-weight: 200;color: #666; font-size: 1.1rem; line-height: 1.6;}
+.detail-box .detail-cont .info-txt {width: 100%; height: 300px; overflow: auto; border: 1px solid #ddd; padding: 1rem 2.5rem;}

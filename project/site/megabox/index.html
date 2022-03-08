@@ -5,32 +5,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>메가박스 | 포트폴리오 | 홍수기</title>
-
-  <!--스타일 시트-->
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
-
-  <!--폰트 어썸-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <!--슬릭 슬라이더-->
   <link rel="stylesheet" type="text/css" href="slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-
-  <!--animate.css-->
-  <link rel="stylesheet" href="css/animate.css" />
-
-  <!--파비콘-->
   <link rel="icon" type="image/x-icon" sizes="16x16" href="img/favicon.ico">
-
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/font.css">
 </head>
 <body>
-  <div id="wrap">
-    <header>
+  <div id="wrapper">
+    <a href="#main" id="skip-nav">본문 바로가기</a>
+    <header id="header">
       <div class="top_ads_box">
         <div id="wrap_section">
           <a href="#">
-            <img src="img/top_ads.jpg" alt="상단 광고 이미지">
+            
           </a>
         </div>
       </div>
@@ -49,14 +38,8 @@
                 <li><a href="">회원가입</a></li>
                 <li><a href="">빠른예매</a></li>
               </ul>
-
-              <gnb class="main_menu">
-                <h1 class="main_logo">
-                  <a href="index.html" title="">
-                    <img src="img/logo-white.png" alt="">
-                    <span class="blind">메가박스로고</span>
-                  </a>
-                </h1>
+              <nav class="main_menu" id="gnb">
+                <h1 class="main_logo"><img src="https://img.megabox.co.kr/static/pc/images/common/ci/logo-white_new2.png" alt=""></h1>
                 <div class="gnb_icon_left">
                   <a href="#" onClick="show_menu('layer_sitemap')" class="dropdown_button menu_button" title="메뉴버튼"></a>
                   <a href="" class="search_btn" title="영화 검색 버튼"></a>
@@ -109,7 +92,7 @@
                   <a href="#"><img src="img/ico-schedule-white.png" alt="상영시간표 버튼"></a>
                   <a href="#"><img src="img/ico-mymega-white.png" alt="나의 메가박스 버튼"></a>
                 </div>
-              </gnb>
+              </nav>
               <!--//gnb 메뉴 -->
             </div>
             <div id="layer_sitemap" class="dropdown-content">
@@ -233,12 +216,12 @@
       </div>
     </header>
     <!--//header-->
-    <main>
+    <main id="main">
       <div class="container">
         <section class="intro_wrap">
           <div class="intro" id="wrap_section">
             <div class="intro_top">
-              <h2><a href="" class="intro_head">박스오피스</a></h2>
+              <h2><a href="" class="intro_head">BOXOFFICE</a></h2>
               <a href="" class="intro_more">더 많은 영화보기 +</a>
             </div>
             <div class="intro_poster">
@@ -360,24 +343,12 @@
                     <div>
                       <img src="img/original_book.jpg" alt="">
                     </div>
-                    <div>
-                      <img src="img/original_ticket.jpg" alt="">
-                    </div>
-                    <div>
-                      <img src="img/original_ticket_17.jpg" alt="">
-                    </div>
                   </div>
                 </div>
                 <div class="slide_wrap_right">
                   <div class="benefits_slide02">
                     <div>
                       <img src="img/original_book_sub.jpg" alt="">
-                    </div>
-                    <div>
-                      <img src="img/original_ticket_sub.jpg" alt="">
-                    </div>
-                    <div>
-                      <img src="img/original_ticket_17_sub.jpg" alt="">
                     </div>
                   </div>
                 </div>
@@ -402,7 +373,7 @@
             </div>
             <div class="grand_open_grand">
               <div class="grand_open_txt">
-                <p>LIFE THEATER MEGABOX</p>
+                <p>영화인 소개</p>
                 <P class="grand_txt">GRAND<br>OPENING</P>
               </div>
               <div class="grand_open_open">
@@ -518,11 +489,6 @@
               <a href=""><img src="img/ico-main-boutique.png" alt="">더 부티크 프라이빗<br>대관예매</a>
             </div>
           </div>
-          <div class="megacs_ads">
-            <div id="wrap_section">
-              <img src="img/bottom_ads.jpg" alt="광고 포스터 이미지">
-            </div>
-          </div>
         </section>
         <!--//CS-->
       </div>
@@ -545,7 +511,7 @@
               <a href=""><i class="fa fa-search" aria-hidden="true"></i>극장찾기</a>
             </div>
           </div>
-          <h2 class="foot_logo"><img src="img/logo-opacity.png" alt=""><span class="blind">메가박스 푸터 로고</span></h2>
+          <h2 class="foot_logo"><img src="img/logo-opacity.png" alt=""><span class="ir-hidden">메가박스 푸터 로고</span></h2>
           <div class="foot_info_txt">
             <!-- <p>서울특별시 성동구 왕십리로 50, 6층(성수동 1가, 메가박스스퀘어) ARS 1544-0070<br>
               대표자명 김진선 · 개인정보보호책임자 조상연 · 사업자등록번호 211-86-59478 · 통신판매업신고번호 제 833호<br>
@@ -558,10 +524,10 @@
             </p>
           </div>
           <div class="foot_sns wow">
-            <a href=""><img src="img/ico-facebook.png" alt="" class="wow"><span class="blind">페이스북</span></a>
-            <a href=""><img src="img/ico-kakao.png" alt="" class="wow"><span class="blind">카카오톡</span></a>
-            <a href=""><img src="img/ico-payco.png" alt="" class="wow"><span class="blind">페이코</span></a>
-            <a href="""><img src=" img/ico-naver.png" alt="" class="wow"><span class="blind">네이버블로그</span></a>
+            <a href=""><img src="img/ico-facebook.png" alt="" class="wow"><span class="ir-hidden">페이스북</span></a>
+            <a href=""><img src="img/ico-kakao.png" alt="" class="wow"><span class="ir-hidden">카카오톡</span></a>
+            <a href=""><img src="img/ico-payco.png" alt="" class="wow"><span class="ir-hidden">페이코</span></a>
+            <a href="""><img src=" img/ico-naver.png" alt="" class="wow"><span class="ir-hidden">네이버블로그</span></a>
           </div>
         </div>
       </div>
@@ -570,9 +536,7 @@
   </div>
   <!--//wrap-->
   <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
-  <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
   <script type="text/javascript" src="slick/slick.min.js"></script>
-  <script type="text/javascript" src="js/wow.min.js"></script>
   <script type="text/javascript" src="js/default.js"></script>
   <!--script-->
 </body>
