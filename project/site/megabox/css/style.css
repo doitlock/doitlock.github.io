@@ -93,7 +93,7 @@ i[class^="xi"] span {position: absolute; left: -9999px;}
 .intro_wrap {position: relative;z-index: 3;width: 100%;height: 100%;background-color: rgba(1,1,1,.9);}
 .intro {position: relative;display: block;padding-top: 100px;text-align: center;}
 .intro_top .intro_more {position: absolute;top: 100px;right: 0;color: #999;}
-.intro_top .intro_head {font-size: 1.5rem; z-index: 99999;color: #fff; font-family: 'Paytone One', sans-serif; letter-spacing: 1px; border-bottom: 1px solid #fff;}
+.intro_top .intro_head {font-size: 1.2rem; z-index: 99999;color: #fff; font-family: 'Paytone One', sans-serif; letter-spacing: 1px; border-bottom: 1px solid #fff;}
 .intro_poster {position: relative; margin-top: 20px; display: flex; justify-content: space-between;}
 .intro_poster::after {content: '';display: block;clear: both;}
 .intro_poster > div {width: calc(100% / 4);}

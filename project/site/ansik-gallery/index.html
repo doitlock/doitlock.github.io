@@ -1,18 +1,284 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>안식갤러리 | 웹포트폴리오 | 홍수기</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>안식갤러리 | 웹포트폴리오 | 홍수기</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/web-font.css">
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/slideimg.js" defer></script>
+  <script src="js/common.js" defer></script>
 </head>
-<body>
-	<header>
-		<nav></nav>
-	</header>
-	<main>
-		안식갤러리
-	</main>
-	<footer></footer>
+
+<body class="main custom-scroll">
+  <div id="wrapper">
+    <a href="#main" id="skip-nav">본문 바로가기</a>
+    <header id="header">
+      <h1 class="logo">
+        <a href="../index.html">DRAW ANSIK</a>
+      </h1>
+      <nav id="gnb">
+        <a href="#">DRAWING</a>
+        <a href="#">STORE</a>
+        <a href="#">MY PAGE</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="intro" id="intro">
+        <div class="content-box">
+          <div class="image-slide" id="intro-slide">
+            <div class="box">
+              <p class="dummy"><img alt=""
+                  src="https://images.unsplash.com/photo-1646746868856-278a64a3a7c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" />
+              </p>
+              <ul class="slide">
+                <li><img alt="000000"
+                    src="https://images.unsplash.com/photo-1646746868856-278a64a3a7c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" />
+                </li>
+                <li><img alt="000000"
+                    src="https://images.unsplash.com/photo-1646746868856-278a64a3a7c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" />
+                </li>
+                <li><img alt="000000"
+                    src="https://images.unsplash.com/photo-1646746868856-278a64a3a7c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" />
+                </li>
+                <li><img alt="000000"
+                    src="https://images.unsplash.com/photo-1646746868856-278a64a3a7c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" />
+                </li>
+              </ul>
+            </div>
+            <ul class="indicator">
+
+            </ul>
+            <p class="control">
+              <a href="#" class="play">
+                <i class="fas fa-play fa-fw"><span>타이머 시작</span></i>
+                <i class="fas fa-pause fa-fw"><span>타이머 정지</span></i>
+              </a>
+            </p>
+          </div>
+          <div class="intro-frame">
+            <ul>
+              <li><img alt="000000"
+                  src="https://images.unsplash.com/photo-1646746868856-278a64a3a7c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" />
+              </li>
+              <li><img alt="000000"
+                  src="https://images.unsplash.com/photo-1646746868856-278a64a3a7c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" />
+              </li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, repudiandae.</p>
+          </div>
+        </div>
+      </section>
+      <section class="img-part" id="img-part">
+        <div class="content-box">
+          <em>ANSIK<br />GALLERY</em>
+          <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, debitis. Odit dicta itaque
+            recusandae sit quis atque aut corrupti corporis?</p>
+          <p class="img-01"><img alt="000000"
+              src="https://images.unsplash.com/photo-1593679916468-851527f3ee27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" />
+          </p>
+          <p class="img-02"><img alt="000000"
+              src="https://images.unsplash.com/photo-1646744599275-429361fcd0a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" />
+          </p>
+        </div>
+      </section>
+      <section class="img-plx" id="img-plx">
+        <div class="plx-box">
+          <div class="plx-box-cap">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, at.</p>
+          </div>
+        </div>
+        <p></p>
+      </section>
+      <section class="img-part part2" id="img-part">
+        <div class="content-box">
+          <em>ANSIK<br />GALLERY</em>
+          <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, debitis. Odit dicta itaque
+            recusandae sit quis atque aut corrupti corporis?</p>
+          <p class="img-01"><img alt="000000"
+              src="https://images.unsplash.com/photo-1593679916468-851527f3ee27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" />
+          </p>
+          <p class="img-02"><img alt="000000"
+              src="https://images.unsplash.com/photo-1646744599275-429361fcd0a5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" />
+          </p>
+        </div>
+      </section>
+      <section class="intro" id="intro">
+        <div class="content-box">
+          <div class="image-slide" id="image-slide2">
+            <div class="box">
+              <p class="dummy"><img alt=""
+                  src="https://images.unsplash.com/photo-1646746868856-278a64a3a7c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" />
+              </p>
+              <ul class="slide">
+                <li><a href="#"><img alt="000000"
+                      src="https://images.unsplash.com/photo-1646746868856-278a64a3a7c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a>
+                </li>
+                <li><a href="#"><img alt="000000"
+                      src="https://images.unsplash.com/photo-1646746868856-278a64a3a7c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a>
+                </li>
+                <li><a href="#"><img alt="000000"
+                      src="https://images.unsplash.com/photo-1646746868856-278a64a3a7c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" /></a>
+                </li>
+              </ul>
+            </div>
+            <ul class="indicator">
+
+            </ul>
+            <p class="control">
+              <a href="#" class="play">
+                <i class="fas fa-play fa-fw"><span>타이머 시작</span></i>
+                <i class="fas fa-pause fa-fw"><span>타이머 정지</span></i>
+              </a>
+            </p>
+          </div>
+          <div class="intro-frame">
+            <ul>
+              <li><img alt="000000"
+                  src="https://images.unsplash.com/photo-1646746868856-278a64a3a7c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" />
+              </li>
+              <li><img alt="000000"
+                  src="https://images.unsplash.com/photo-1646746868856-278a64a3a7c7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" />
+              </li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, repudiandae.</p>
+          </div>
+        </div>
+      </section>
+      <section class="img-tab" id="img-tab">
+        <div class="content-box">
+          <ul>
+            <li class="list active" data-filter="all">ALL</li>
+            <li class="list" data-filter="lovely">LOVELY</li>
+            <li class="list" data-filter="awesome">AWESOME</li>
+            <li class="list" data-filter="goodjob">GOODJOB</li>
+            <li class="list" data-filter="fruits">FRUITS</li>
+          </ul>
+          <div class="product">
+            <div class="itembox" data-item="lovely"><img
+                src="https://images.unsplash.com/photo-1646518166716-8b42b7dc74eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                alt=""></div>
+            <div class="itembox" data-item="awesome"><img
+                src="https://images.unsplash.com/photo-1640622842924-3ae860f77265?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80"
+                alt=""></div>
+            <div class="itembox" data-item="goodjob"><img
+                src="https://images.unsplash.com/photo-1646743860667-23e6a1087a5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                alt=""></div>
+            <div class="itembox" data-item="fruits"><img
+                src="https://images.unsplash.com/photo-1646671130206-943e7f46010b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                alt=""></div>
+            <div class="itembox" data-item="lovely"><img
+                src="https://images.unsplash.com/photo-1646518166716-8b42b7dc74eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                alt=""></div>
+            <div class="itembox" data-item="awesome"><img
+                src="https://images.unsplash.com/photo-1640622842924-3ae860f77265?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80"
+                alt=""></div>
+            <div class="itembox" data-item="goodjob"><img
+                src="https://images.unsplash.com/photo-1646743860667-23e6a1087a5d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                alt=""></div>
+            <div class="itembox" data-item="fruits"><img
+                src="https://images.unsplash.com/photo-1646671130206-943e7f46010b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                alt=""></div>
+          </div>
+        </div>
+      </section>
+      <section class="qna" id="qna">
+        <div class="content-box">
+          <h2>
+            Some common qna <br> were often asked
+          </h2>
+          <div class="qna-container">
+            <div class="qna-group">
+              <div class="qna-item">
+                <div class="qna-header">
+                  <h3 class="qna-item-title">
+                    My flowers are falling off or dying?
+                  </h3>
+                </div>
+                <div class="qna-content">
+                  <p class="qna-description">
+                    Plants are easy way to add color energy and transform your
+                    space but which planet is for you. Choosing the right plant.
+                  </p>
+                </div>
+              </div>
+              <div class="qna-item">
+                <div class="qna-header">
+                  <h3 class="qna-item-title">
+                    What causes leaves to become pale?
+                  </h3>
+                </div>
+                <div class="qna-content">
+                  <p class="qna-description">
+                    Plants are easy way to add color energy and transform your
+                    space but which planet is for you. Choosing the right plant.
+                  </p>
+                </div>
+              </div>
+              <div class="qna-item">
+                <div class="qna-header">
+                  <h3 class="qna-item-title">
+                    What causes brown crispy leaves?
+                  </h3>
+                </div>
+                <div class="qna-content">
+                  <p class="qna-description">
+                    Plants are easy way to add color energy and transform your
+                    space but which planet is for you. Choosing the right plant.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="qna-group">
+              <div class="qna-item">
+                <div class="qna-header">
+                  <h3 class="qna-item-title">
+                    How do i choose a plant?
+                  </h3>
+                </div>
+                <div class="qna-content">
+                  <p class="qna-description">
+                    Plants are easy way to add color energy and transform your
+                    space but which planet is for you. Choosing the right plant.
+                  </p>
+                </div>
+              </div>
+              <div class="qna-item">
+                <div class="qna-header">
+                  <h3 class="qna-item-title">
+                    How do I change the pots?
+                  </h3>
+                </div>
+                <div class="qna-content">
+                  <p class="qna-description">
+                    Plants are easy way to add color energy and transform your
+                    space but which planet is for you. Choosing the right plant.
+                  </p>
+                </div>
+              </div>
+              <div class="qna-item">
+                <div class="qna-header">
+                  <h3 class="qna-item-title">
+                    Why are gnats flying around my plant?
+                  </h3>
+                </div>
+                <div class="qna-content">
+                  <p class="qna-description">
+                    Plants are easy way to add color energy and transform your
+                    space but which planet is for you. Choosing the right plant.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </div>
 </body>
+
 </html>
