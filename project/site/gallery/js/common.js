@@ -3,18 +3,19 @@
 let list = document.querySelectorAll('.img-tab .list');
 let itemBox = document.querySelectorAll('.img-tab .product .itembox');
 let mainBody = document.querySelector('body.main');
-let scrollTop = $('body, html').scrollTop();
-
 
 /* 스크롤이벤트 */
-// $(window).scroll(function() {	
-//     let imgTab = $('#img-tab').offset().top - 100;
-//     let mainQna = $('#qna').offset().top - 100;
+$(document).scroll(function() {	
+    let scrollTop = $(document).scrollTop();
+    let imgTab = $('#img-tab').offset().top - 100;
+    let mainQna = $('#qna').offset().top - 100;
 
-//     if (scrollTop > imgTab && scrollTop < mainQna) {
-//         mainBody.classList.add('change');
-//     }
-// });
+    if (scrollTop > imgTab && scrollTop < mainQna) {
+        mainBody.classList.add('change');
+    } else {
+        mainBody.classList.remove('change');
+    }
+});
 
 /* 갤러리필터 */
 for (let i = 0; i < list.length; i++) {

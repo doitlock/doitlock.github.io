@@ -4,7 +4,6 @@
 const header = $('#header');
 
 
-
 $(document).scroll(function(){		
 	if($(document).scrollTop() > 50) {	
 		$(header).addClass("on");
@@ -25,4 +24,6 @@ function go_scroll(id_name)	{
 	let top_offs = $('#'+id_name).offset().top;
 	$( 'html, body' ).stop().animate( { scrollTop : top_offs } );
 };
+
+
 
