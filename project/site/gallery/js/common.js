@@ -7,8 +7,8 @@ let mainBody = document.querySelector('body.main');
 /* 스크롤이벤트 */
 $(document).scroll(function() {	
     let scrollTop = $(document).scrollTop();
-    let imgTab = $('#img-tab').offset().top - 100;
-    let mainQna = $('#qna').offset().top - 100;
+    let imgTab = $('#img-tab').offset().top - 300;
+    let mainQna = $('#qna').offset().top - 300;
 
     if (scrollTop > imgTab && scrollTop < mainQna) {
         mainBody.classList.add('change');
