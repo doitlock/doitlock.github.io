@@ -4,7 +4,7 @@ let list = document.querySelectorAll('.img-tab .list');
 let itemBox = document.querySelectorAll('.img-tab .product .itembox');
 let mainBody = document.querySelector('body.main');
 
-/* 스크롤이벤트 */
+/* scroll event */
 $(document).scroll(function() {	
     let scrollTop = $(document).scrollTop();
     let imgTab = $('#img-tab').offset().top - 300;
@@ -17,7 +17,7 @@ $(document).scroll(function() {
     }
 });
 
-/* 갤러리필터 */
+/* gallery filter */
 for (let i = 0; i < list.length; i++) {
 	list[i].addEventListener('click', function() {
 		for (let j = 0; j < list.length; j++) {
@@ -42,7 +42,7 @@ for (let i = 0; i < list.length; i++) {
 /* qna */
 const accordionItems = document.querySelectorAll('.qna-item');
 
-accordionItems.forEach((item) =>{
+accordionItems.forEach((item) => {
     const accordionHeader = item.querySelector('.qna-header');
     accordionHeader.addEventListener('click', () =>{
         const openItem = document.querySelector('.accordion-open');
@@ -54,7 +54,7 @@ accordionItems.forEach((item) =>{
     });
 });
 
-const toggleItem = (item) =>{
+const toggleItem = (item) => {
     const accordionContent = item.querySelector('.qna-content');
     if(item.classList.contains('accordion-open')){
         accordionContent.removeAttribute('style');

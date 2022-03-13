@@ -1,6 +1,6 @@
  @charset "utf-8";
 
-  /* reset */
+  /***** reset *****/
   *, *::before, *::after {box-sizing: border-box;}
   html {-webkit-text-size-adjust: none; text-size-adjust: none; font-size:14px;}
   body {margin: 0;}
@@ -24,28 +24,26 @@
   input {font-family: inherit;}
   .mobile {display: none !important;}
 
-  /*common*/
+  /******common******/
   body {color:#F7ECDE; font-family: 'NotoSansKR', sans-serif; font-weight: 400; line-height: 1.4; background-color: #2C3333;}
   #wrapper {overflow: hidden;}
   #skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.8); color: #ffffff; font-size: 16px; transition: top 0.3s; z-index: 100000;}
   #skip-nav:focus {top: 0;}
   ::selection {background-color: #e9d649; color: #fff;}
+
+  /*header*/
   header {margin-bottom: 115px;color: #F7ECDE;}
   header .hd-top {border-bottom: 1px solid #F7ECDE; width: 100%; height: 75px;line-height: 75px; padding: 0 50px;}
   header .hd-top .content-box {display: flex;justify-content: space-between;}
   header .hd-top h1{text-align: left; font-size: 1rem;}
   header .hd-top h1 a {color: #F5F2E7; border: 2px solid #F5F2E7; padding: 5px 15px; transition: all .2s ease;} 
-  header .hd-top h1 a:hover {color: #FFE162; background-color: #2666CF; border-color: #2666CF;}
-  header .hd-top em {font-size: 1.5rem; text-align: right; color: #2666CF;}
+  header .hd-top h1 a:hover {color: #FFE162; background-color: #1876f2; border-color: #1876f2;}
+  header .hd-top em {font-size: 1.5rem; text-align: right; color: #1876f2;}
   header nav {width: 100%; padding: 0 50px; height: 75px;line-height: 75px;}
   header nav .content-box {display: flex; justify-content: space-between;}
   header nav .left em {display: block; font-weight: 300;}
   header nav .left em b {color: #FFE162;}
   header nav .right {display: flex;}
-  header nav .right_mb {display: none;}
-  header nav .right_mb .mb_menu_btn {display: block;width: 30px;height: 30px;}
-  header nav .right_mb .mb_menu_btn span {width: 30px;height: 1px;display: block;margin: 5px 0;background-color: #333;}
-  header nav .right_mb .mb_menu {display: none;}
   header nav .right a {padding-left: 20px; transition: all ease .2s; font-size: 14px;}
   header nav .right a:hover {text-decoration: underline; color: #FFE162; transform: translateY(5px);}
   header .flt-nav {position: fixed; right: 0; top: 50%; transform: translate(0,-50%);}
@@ -54,102 +52,42 @@
   header .flt-nav-left a {display: block; margin: 1.5rem; color: rgba(245,242,231,0.5); font-size: 1.4rem; transition: all .2s ease;}
   header .flt-nav-left a:hover,
   header .flt-nav a:hover {color: #F7ECDE;}
-
-
-
-
   header h1,
   footer h1 {font-family: 'Montserrat', sans-serif;}
 
-  main .last-part {
-    text-align: center;
-    padding: 150px 0 170px;
-  }
-  main .last-part h3 {
-    font-size: 23px;
-    font-weight: 900;
-    margin-bottom: 10px;
-    color: #666;
-  }
-  main .last-part p {
-    font-size: 10px;
-    font-weight: 300;
-    line-height: 1.5;
-    color: #888;
-  }
-  main#main .last-part h3,
-  main#main .last-part p {
-    color: #333;
-  }
+  /*footer*/
   footer {width: 100%; margin-bottom: 50px;}
-
   footer .foot-abt {padding: 0 50px;width: 100%;height: 75px;line-height: 75px;border-top: 1px solid #999999;border-bottom: 1px solid #999999;
   }
   footer nav {padding: 0 50px; width: 100%;height: 75px;line-height: 75px;}
   footer nav .content-box {display: flex;justify-content: space-between;}
-  footer nav .left em {font-weight: 500; font-size: 20px; color: #2666CF;}
+  footer nav .left em {font-weight: 500; font-size: 20px; color: #1876f2;}
   footer nav .right select {padding: 10px 20px;}
   footer .fix-foot {position: fixed; left: 0; bottom: 0; width: 100%; height: 40px; line-height: 40px; background-color: rgba(44,51,51,0.8); border-top: 1px solid #7474748f;}
   footer .fix-foot .fix-foot-area {width: 95%; margin: 0 auto;}
   footer .fix-foot p {font-size: 13px; color: #999; font-weight: 400;}
 
-  /* main */
+  /*main*/
+  #main .last-part {text-align: center;padding: 150px 0 170px;}
+  #main .last-part h3 {font-size: 23px;font-weight: 900;margin-bottom: 10px;color: #333;}
+  #main .last-part p {font-size: 10px;font-weight: 300;line-height: 1.5;color: #333;}
   #main section {text-align: center;}
   #main section + section {padding: 80px 0;}
-  #main section h2.tit {font-weight: 800; font-size: 30px; margin-bottom: 45px; position: relative; color: #2666CF;}
-  #main section h2.tit::after {content: ''; position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%); width: 50px; height: 5px; background-color: #2666CF;}
-
-  #main .intro .intro-top {
-    margin-bottom: 150px;
-  }
+  #main section h2.tit {font-weight: 800; font-size: 30px; margin-bottom: 45px; position: relative; color: #1876f2;}
+  #main section h2.tit::after {content: ''; position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%); width: 50px; height: 4px; background-color: #1876f2;}
+  #main .intro .intro-top {margin-bottom: 150px;}
   #main .intro .intro-top p {font-size: 30px; font-family: 'Sedan SC Regular';} 
   #main .intro .intro-top h2 {font-size: 65px; line-height: 1.2; font-weight: 900;margin: 20px 0 40px;}
-  #main .intro .intro-btm {
-    position: relative;
-  }
+  #main .intro .intro-btm {position: relative;}
   #main .intro .intro-btm p {font-weight: 400; line-height: 1.5; background-color: #2C3333; display: inline-block; padding: 0 20px;}
-  #main .intro .intro-btm::after {
-    content: '';
-    display: inline-block;
-    width: 100%;
-    height: 1px;
-    background-color: #C4C4C4;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    z-index: -1;
-  }
-  #main .aboutme .abt-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-
-  #main .aboutme .abt-wrap > div {
-    border:1px solid #C4C4C4;
-    padding: 20px;
-  }
+  #main .intro .intro-btm::after {content: '';display: inline-block;width: 100%;height: 1px;background-color: #C4C4C4;position: absolute;left: 0;top: 50%;z-index: -1;}
+  #main .aboutme .abt-wrap {display: flex;flex-wrap: wrap; justify-content: space-between;}
+  #main .aboutme .abt-wrap > div {border:1px solid #C4C4C4;padding: 20px;}
   #main .aboutme .abt-wrap > div:first-child, 
-  #main .aboutme .abt-wrap > div:nth-child(2) {
-    width: calc(100% / 2 - 5px);
-  }
-  #main .aboutme .abt-wrap > div:nth-child(3) {
-    width: 100%;
-    margin-top: 10px;
-  }
-  
-  #main .aboutme .abt-wrap > div ul {
-    padding-top: 30px;
-  }
-  #main .aboutme .abt-wrap > div ul li {
-    font-size: 14px;
-    line-height: 2;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 20px;    
-    width: 100%;
-    text-align: left;
-  }
+  #main .aboutme .abt-wrap > div:nth-child(2) {width: calc(100% / 2 - 5px);}
+  #main .aboutme .abt-wrap > div:nth-child(3) {width: 100%;margin-top: 10px;}
+  #main .aboutme .abt-wrap > div ul {padding-top: 30px;}
+  #main .aboutme .abt-wrap > div ul li {font-size: 14px;line-height: 2;border-bottom: 1px solid #ddd;padding: 10px 20px;width: 100%;text-align: left;}
   #main .aboutme .abt-wrap > div ul li:last-child {border-bottom: none;}
   #main .aboutme .abt-wrap > div ul li p,
   #main .aboutme .abt-wrap > div ul li span {font-weight: 300; display: inline-block;}
@@ -163,28 +101,28 @@
 
   /*about*/
   #main .project .project-wrap + .project-wrap {padding-top: 80px;}
-  #main .project .project-wrap em {font-weight: 700; font-size: 18px; margin-bottom: 20px; display: block; text-align: left;border-bottom: 1px solid #ddd;padding-bottom: 15px;}
   #main .project .project-cont {display: flex; justify-content: space-between; text-align: left;}
   #main .project .project-cont li {width: calc(100% / 3); height: auto; background-color: #fff; border-radius: 5px 5px 0 0; overflow: hidden; box-shadow: 2px 3px 8px rgb(0 0 0 / 2%); transition: all .3s linear;}
   #main .project .project-cont li:hover {transform: translateY(-3px);}
   #main .project .project-cont > li + li {margin-left: 5px;}
-  #main .project .project-cont li .thum-img {width: 100%; height: 210px; overflow: hidden;}
+  #main .project .project-cont li .thum-img {width: 100%; height: auto; overflow: hidden;}
+  #main .project .project-cont li .thum-img img {width: 100%; height: 100%; object-fit: cover;}
   #main .project .project-cont li .txt-cont {width: 100%; height: auto; overflow: hidden; padding: 20px 15px;}
   #main .project .project-cont li img {display: block; width: auto; height: 100%; transition: all .4s ease;}
   #main .project .project-cont li img:hover {transform: scale(1.05);}
   #main .project .project-cont li p {margin-bottom: 1.1rem; font-weight: 700; color: #444; font-size: 1.1rem;}
   #main .project .project-cont li p i {font-weight: 400; font-size: 1rem;}
   #main .project .project-cont li span {font-size: 14px; color: #999; line-height: 2;}
-  #main .project .project-cont .live-btn {display: flex; justify-content: space-between; align-items: center; text-align: center; margin-bottom: 2.2rem;}
-  #main .project .project-cont .live-btn a {display: block; width: calc(100% / 2 - .2rem); background-color: #9D9D9D; color: #fff; font-size: .9rem; font-weight: 400; height: 2.5rem; line-height: 2.5rem; letter-spacing: 1px; transition: all .2s linear;}
+  #main .project .project-cont .live-btn {display: flex; justify-content: flex-start; align-items: center; text-align: center; margin-bottom: 2.2rem;}
+  #main .project .project-cont .live-btn a {display: block; width: calc(100% / 3.5); margin-right: 3px; background-color: #2C3333; color: #fff; font-size: .8rem; font-weight: 400; height: 2.5rem; line-height: 2.3rem; letter-spacing: 1px; transition: all .2s linear; border: 1px solid #2C3333; border-radius: 3px;}
   #main .project .project-cont .live-btn a span {display: inline-block; font-size: inherit; color: inherit; font-weight: 700;}
-  #main .project .project-cont .live-btn a:hover {background-color: #2666CF; border-radius: 3px;}
+  #main .project .project-cont .live-btn a:hover {background-color: #1876f2; border-color: #1876f2;}
 
   
   /*module*/
   .btn {display: inline-block;}
   .eng {font-family: 'Montserrat', sans-serif;}
-  .content-box {max-width: 1024px; margin: 0 auto; position: relative;}
-  #main .more_btn {position: absolute;top: 40px;right: 0;font-size: 15px;}
-  #main .more_btn a {display: block;}
+  .content-box {max-width: 1200px; margin: 0 auto; position: relative;}
+  .more_btn {position: absolute;top: 40px;right: 0;font-size: 15px;}
+  .more_btn a {display: block;}
   
