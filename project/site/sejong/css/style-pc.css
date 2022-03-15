@@ -219,12 +219,15 @@ body.sejong-main::-webkit-scrollbar { display: none; }
 }
 
 /* 도움요청 */
+.main-help {display: none;}
+.main-help.active {display: block;}
 .help-main .detail-intro {background: url('../asset/s_visual01.jpg') center center no-repeat; background-size: cover;}
 .detail-box {width: 70%; height: auto; margin: 3rem auto; color: #333;} 
 .detail-box ul.detail-tab {display: flex; justify-content: space-around; align-items: center; border: 1px solid #ddd;}
 .detail-box ul.detail-tab li {width: 100%; text-align: center;}
-.detail-box ul.detail-tab li + li {border-right: 1px solid #ddd;}
-.detail-box ul.detail-tab li a {display: block; font-size: 1.3rem; font-weight: 500; padding: 1.2rem 0; width: 100%; background-color: #fff;}
+.detail-box ul.detail-tab li + li {border-left: 1px solid #ddd;}
+.detail-box ul.detail-tab li a {display: block; font-size: 1.3rem; font-weight: 500; padding: 1.2rem 0; width: 100%; background-color: #fff; transition: all .1s ease;}
+.detail-box ul.detail-tab li a:hover {background-color: #4c665b; color: #fff;}
 .detail-box ul.detail-tab li.check-on a {background-color: #4c665b; color: #fff;}
 .detail-box .detail-cont em {position: relative; display: block; margin: 3.75rem 0 1.2rem;font-size: 1.7rem;font-weight: 700;color: #444;}
 .detail-box .detail-cont p {font-weight: 200;color: #666; font-size: 1.1rem; line-height: 1.6;}

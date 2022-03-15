@@ -1,7 +1,7 @@
 'use strict';
 
-setImageSlide('#intro-slide', 1, true, 2000);
-setImageSlide('#image-slide2', 3, true, 2000);
+setImageSlide('#intro-slide', 1, true, 2500);
+setImageSlide('#image-slide2', 2, true, 3000);
 
 function setImageSlide(selector, first, status, speed) {
   $(selector).each(function() {
@@ -103,7 +103,6 @@ function setImageSlide(selector, first, status, speed) {
       }
     });
 
-
     function startTimer() {
       timerId = setTimeout(function() {showSlide(slideNext);}, timerSpeed);
       $selector.find('span.bar').css({'animation-duration': timerSpeed + 'ms'}).addClass('on');
@@ -129,7 +128,7 @@ function setImageSlide(selector, first, status, speed) {
 
     function showSlide(n) {
       resetTimer();
-      $selector.find('.slide').css({'transition': 'left 0.3s', 'left': (-(n - 1) * 100) + '%'});
+      $selector.find('.slide').css({'transition': 'left 1.3s', 'left': (-(n - 1) * 100) + '%'});
       $selector.find('.indicator li').removeClass('on');
       $selector.find('.indicator li:eq(' + (n - 1) + ')').addClass('on');
       slideNow = n;

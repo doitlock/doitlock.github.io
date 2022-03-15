@@ -7,6 +7,7 @@ function settingsMenuToggle() {
 	settingsMenu.classList.toggle('settings-menu-height');
 }
 
+//dark mode
 darkBtn.onclick = function() {
 	darkBtn.classList.toggle('dark-btn-on');
 	document.body.classList.toggle('dark-theme');
