@@ -65,7 +65,7 @@
   #main section h2.tit::after {content: ''; position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%); width: 50px; height: 4px; background-color: #1876f2;}
   #main .intro .intro-top {margin-bottom: 150px;}
   #main .intro .intro-top p {font-size: 30px; font-family: 'Sedan SC Regular';} 
-  #main .intro .intro-top h2 {font-size: 65px; line-height: 1.2; font-weight: 900;margin: 20px 0 40px;}
+  #main .intro .intro-top h2 {font-size: 65px; line-height: 1.2; font-weight: 900;margin: 20px 0 40px; color: #fff;}
   #main .intro .intro-btm {position: relative;}
   #main .intro .intro-btm p {font-weight: 400; line-height: 1.5; background-color: #2C3333; display: inline-block; padding: 0 40px;}
   #main .intro .intro-btm::after {content: '';display: inline-block;width: 100%;height: 1px;background-color: #C4C4C4;position: absolute;left: 0;top: 50%;z-index: -1;}
