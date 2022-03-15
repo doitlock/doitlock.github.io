@@ -13,7 +13,6 @@
   <script src="js/jquery-3.6.0.min.js" defer></script>
   <script src="js/common.js" defer></script>
   <script src="js/slideimg.js" defer></script>
-  <script src="js/scrollevent.js" defer></script>
 
 </head>
 
@@ -113,11 +112,11 @@
           <em class="eng-head">GALLERY<br />ANSIK</em>
           <p class="sub-text">Hallo. Es ist Hochwassersaison. Ich träume davon, Web-Frontend-Entwickler zu werden. Die Website, die Sie gerade ansehen, ist die Portfolio-Website. Mein einziges Hobby ist das Zeichnen. Ich habe an dem Konzept einer Webgalerie mit den von mir gezeichneten Bildern als Inhalt gearbeitet. Danke fürs zuschauen. immer glücklich sein</p>
           <div class="content-box-flex">
-            <p class="img-03" style="margin-top: 10%;"><img alt="000000" src="assets/up_slice04.jpg" /></p>
-            <p class="img-01" style="margin-top: -10%;"><img alt="000000" src="assets/up_slice02.jpg" /></p>
-            <p class="img-02" style="margin-top: 25%;"><img alt="000000" src="assets/up_slice01.jpg" /></p>
-            <p class="img-01" style="margin-top: -15%;"><img alt="000000" src="assets/up_slice03.jpg" /></p>
-            <p class="img-03" style="margin-top: 13%;"><img alt="000000" src="assets/up_full.jpg" /></p>
+            <p class="img-03"><img alt="000000" src="assets/up_slice04.jpg" /></p>
+            <p class="img-01"><img alt="000000" src="assets/up_slice02.jpg" /></p>
+            <p class="img-02"><img alt="000000" src="assets/up_slice01.jpg" /></p>
+            <p class="img-01"><img alt="000000" src="assets/up_slice03.jpg" /></p>
+            <p class="img-03"><img alt="000000" src="assets/up_full.jpg" /></p>
           </div>  
         </div>
         <div class="img-part-txt">
@@ -154,7 +153,7 @@
           <span class="top-sub-text">We think about the woods.</span>
           <em class="eng-head">ANSIK<br />GALLERY</em>
           <p class="sub-text">Hallo. Es ist Hochwassersaison. Ich träume davon, Web-Frontend-Entwickler zu werden. Die Website, die Sie gerade ansehen, ist die Portfolio-Website. Mein einziges Hobby ist das Zeichnen. Ich habe an dem Konzept einer Webgalerie mit den von mir gezeichneten Bildern als Inhalt gearbeitet. Danke fürs zuschauen. immer glücklich sein</p>
-          <div class="content-box-flex after-bg">
+          <div class="content-box-flex">
             <p class="img-01 hover-bg"><img alt="000000" src="assets/run_slice02.jpg" />
             <span class="eng-text">HONG SOO KI<br />PORTFOLIO<br />👋</span>
             </p>
@@ -166,6 +165,19 @@
             </p>
             <p class="img-01"><img alt="000000" src="assets/run_slice01.jpg" />
             </p>
+          </div>
+        </div>
+        <div class="pop-img">
+          <a href="javascript:;" onclick="openLayerPopup('popup-01', 723, 883, this);">
+            <img src="assets/cute_img.png" alt="그림이미지" />
+          </a>
+          <div class="layer-mask"></div>
+          <div id="popup-01" class="layer-popup" title="레이어 팝업창 01">
+            <header class="header">
+              <h3 class="ir-hidden">레이어 팝업창 1</h3>
+              <a href="javascript:;" class="close"><i class="xi-close-circle"><span>팝업창 닫기</span></i></a>
+            </header>
+            <img src="assets/cute_img.png" alt="그림이미지">
           </div>
         </div>
       </section>
@@ -271,7 +283,7 @@
       </section>
       <section class="store" id="store">
         <div class="content-box">
-          <h2 class="eng-head">STORE</h2>
+          <h2 class="eng-head"><span>GIFT SHOP</span>STORE</h2>
           <div class="store-wrap">
             <div class="left">
               <a href="#"><img src="assets/special.jpg" alt="그림 이미지" /></a>
@@ -299,6 +311,9 @@
                     <h3 class="qna-item-title">
                       이 홈페이지가 제작된 목적
                     </h3>
+                    <div class="qna-icon">
+                      <i class="xi-arrow-down"></i>
+                    </div>
                   </div>
                   <div class="qna-content">
                     <p class="qna-description">
@@ -311,6 +326,9 @@
                     <h3 class="qna-item-title">
                       작업 기간
                     </h3>
+                    <div class="qna-icon">
+                      <i class="xi-arrow-down"></i>
+                    </div>
                   </div>
                   <div class="qna-content">
                     <p class="qna-description">
@@ -323,6 +341,9 @@
                     <h3 class="qna-item-title">
                       웹사이트에 사용된 언어
                     </h3>
+                    <div class="qna-icon">
+                      <i class="xi-arrow-down"></i>
+                    </div>
                   </div>
                   <div class="qna-content">
                     <p class="qna-description">
@@ -339,6 +360,9 @@
                     <h3 class="qna-item-title">
                       참고한 래퍼런스 사이트
                     </h3>
+                    <div class="qna-icon">
+                      <i class="xi-arrow-down"></i>
+                    </div>
                   </div>
                   <div class="qna-content">
                     <p class="qna-description">
@@ -352,6 +376,9 @@
                     <h3 class="qna-item-title">
                       앞으로의 계획
                     </h3>
+                    <div class="qna-icon">
+                      <i class="xi-arrow-down"></i>
+                    </div>
                   </div>
                   <div class="qna-content">
                     <p class="qna-description">
@@ -364,6 +391,9 @@
                     <h3 class="qna-item-title">
                       아코디언 메뉴
                     </h3>
+                    <div class="qna-icon">
+                      <i class="xi-arrow-down"></i>
+                    </div>
                   </div>
                   <div class="qna-content">
                     <p class="qna-description">

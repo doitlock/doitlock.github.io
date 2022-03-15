@@ -133,4 +133,33 @@ function checkVisibility(selector) {
     });
 }
 
-
+/* popup */
+function openLayerPopup(id, width, height, el) {
+    var $popup = $('#' + id);
+    var widthPopup = (width === undefined) ? 600 : width;
+    var heightPopup = (height === undefined) ? 800 : height;
+    var $return = $(el);
+    
+    $('.layer-mask').addClass('on');
+    $popup.css({'width': widthPopup + 'px', 'height': heightPopup + 'px'}).attr({'tabindex': 0}).addClass('on');
+    $popup.before('<a href="#"></a>').after('<a href="#"></a>');
+    $popup.find('.last').attr({'tabindex': 0});
+    $popup.trigger('focus');
+    
+    $popup.find('.close').on('click', function() {close();});
+    $popup.prev().on('focus', function() {
+      $popup.find('.last').trigger('focus');
+    });
+    $popup.next().on('focus', function() {
+      $popup.trigger('focus');
+    });
+    
+    function close() {
+      $return.trigger('focus');
+      $('.layer-mask').removeClass('on');
+      $popup.removeClass('on');
+      $popup.prev().remove();
+      $popup.next().remove();
+      $popup.find('.close').off('click');
+    }
+  }

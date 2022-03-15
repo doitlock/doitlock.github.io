@@ -89,7 +89,7 @@
 
   /*about*/
   #main .project .project-wrap + .project-wrap {padding-top: 80px;}
-  #main .project .project-cont {display: flex; justify-content: space-between; text-align: left;}
+  #main .project .project-cont {display: flex; justify-content: space-between; text-align: left; margin-bottom: 2rem;}
   #main .project .project-cont li {width: calc(100% / 3); height: auto; background-color: #fff; border-radius: 5px 5px 0 0; overflow: hidden; box-shadow: 2px 3px 8px rgb(0 0 0 / 2%); transition: all .3s linear;}
   #main .project .project-cont li:hover {transform: translateY(-3px);}
   #main .project .project-cont > li + li {margin-left: 5px;}
@@ -101,15 +101,32 @@
   #main .project .project-cont li p {margin-bottom: 1.1rem; font-weight: 700; color: #444; font-size: 1.1rem;}
   #main .project .project-cont li p i {font-weight: 400; font-size: 1rem;}
   #main .project .project-cont li span {font-size: 14px; color: #999; line-height: 2;}
-  #main .project .project-cont .live-btn {display: flex; justify-content: flex-start; align-items: center; text-align: center; margin-bottom: 2.2rem;}
-  #main .project .project-cont .live-btn a {display: block; width: calc(100% / 3.5); margin-right: 3px; background-color: #2C3333; color: #fff; font-size: .8rem; font-weight: 400; height: 2.5rem; line-height: 2.3rem; letter-spacing: 1px; transition: all .2s linear; border: 1px solid #2C3333; border-radius: 4px;}
-  #main .project .project-cont .live-btn a span {display: inline-block; font-size: inherit; color: inherit; font-weight: 700;}
-  #main .project .project-cont .live-btn a:hover {background-color: #1876f2; border-color: #1876f2;}
+  #main .project .live-btn {display: flex; justify-content: flex-start; align-items: center; text-align: center; margin-bottom: 2.2rem;}
+  #main .project .live-btn a {display: block; width: calc(100% / 3.5); margin-right: 3px; background-color: #2C3333; color: #fff; font-size: .8rem; font-weight: 400; height: 2.5rem; line-height: 2.3rem; letter-spacing: 1px; transition: all .2s linear; border: 1px solid #2C3333; border-radius: 4px;}
+  #main .project .live-btn a span {display: inline-block; font-size: inherit; color: inherit; font-weight: 700;}
+  #main .project .live-btn a:hover {background-color: #1876f2; border-color: #1876f2;}
+  #main .project .more-btn {font-size: 1.2rem;}
+
+
+  .project-top3 ul {margin-bottom: 10rem;}
+  .project-top3 ul {display: flex; flex-direction: column;}
+  .project-top3 ul li {display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; margin-bottom: 1rem;}
+  .project-top3 ul li .top3-thum {width: 50%; border-radius: 5px; overflow: hidden;}
+  .project-top3 ul li .top3-thum img {width: 100%; object-fit: cover;}
+  .project-top3 ul li .top3-cont {text-align: left; width: 50%; height: 100%; color: #fff; padding: 2rem; border-radius: 5px;}
+  .project-top3 ul li .top3-cont span {display: block; margin-bottom: 1rem;}
+  .project-top3 ul li .top3-cont em {font-size: 2.5rem; font-weight: 700; margin-bottom: 1.2rem; display: block;}
+  .project-top3 ul li .top3-cont .sub-tit {margin-bottom: 1rem; color: #f5f5f5;}
+  .project-top3 ul li .top3-cont .cont-txt {line-height: 1.5; margin-bottom: 2rem;}
+  .project-top3 ul li .top3-cont .live-btn a {border-color: #f5f5f5 !important}
+
+
+
 
   .contact {margin-bottom: 80px;}
   .contact .contact-box p {font-size: 1.2rem; margin-bottom: 4rem;}
-  .contact .contact-box a {display: block; width: 40%; margin: 0 auto; padding: 20px 0; background-color: #1876f2; border-radius: 100px; margin-bottom: 20px; transition: background-color .3s ease;}
-  .contact .contact-box a:hover {background-color: #0d57b9;}
+  .contact .contact-box a {display: block; width: 40%; margin: 0 auto; padding: 20px 0; background-color: #1876f2; border-radius: 100px; margin-bottom: 20px; transition: all .3s ease;}
+  .contact .contact-box a:hover {background-color: #f5f5f5; color: #141414;}
 
 
   /*footer*/
@@ -120,7 +137,6 @@
   footer nav {padding: 0 50px; width: 100%;height: 75px;line-height: 75px;}
   footer nav .content-box {display: flex;justify-content: space-between;}
   footer nav .left em {font-weight: 500; font-size: 20px; color: #1876f2;}
-  footer nav .right select {padding: 10px 20px;}
   footer .fix-foot {position: fixed; left: 0; bottom: 0; width: 100%; height: 40px; line-height: 40px; background-color: rgba(44,51,51,0.8); border-top: 1px solid #7474748f;}
   footer .fix-foot .fix-foot-area {width: 95%; margin: 0 auto;}
   footer .fix-foot p {font-size: 13px; color: #999; font-weight: 400;}
