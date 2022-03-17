@@ -92,8 +92,8 @@ const toggleItem = (item) => {
 function checkScroll() {
     let scrollAmt = $(document).scrollTop();
     let imgPartTop = $('#img-part').offset().top - 200;
-    let drawSlideTop = $('#draw-slide').offset().top - 200;
-    let imgTabTop = $('#img-tab').offset().top;
+    let drawSlideTop = $('#draw-slide').offset().top - 300;
+    let imgTabTop = $('#img-tab').offset().top - 300;
     let asideMenu = $('#aside');
     let scrollTop = $('#scroll-top');
 
@@ -101,14 +101,16 @@ function checkScroll() {
     if (scrollAmt > imgPartTop) {
         asideMenu.stop(true).animate({'opacity':1}, 100);
         scrollTop.stop(true).animate({'opacity':1}, 100);
-    } else if (scrollAmt > drawSlideTop && scrollAmt < imgTabTop) {
-        //슬라이드부분에서 안보였으면 좋겠는데 안 됨
-        asideMenu.stop(true).animate({'opacity':0}, 100);
+
+        if (scrollAmt > drawSlideTop && scrollAmt < imgTabTop) { 
+            //if문안에 if문을 작성해서 해결함!
+            asideMenu.stop(true).animate({'opacity':0}, 100);
+        }
     } else {
         asideMenu.stop(true).animate({'opacity':0}, 100);
         scrollTop.stop(true).animate({'opacity':0}, 100);
     }
-
+    
     $('#aside').css({'top': (scrollAmt + 150) + 'px'});
 };
 
