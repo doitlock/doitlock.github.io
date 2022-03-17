@@ -113,19 +113,19 @@
 
   /*about*/
   #main .project .project-wrap + .project-wrap {padding-top: 80px;}
-  #main .project .project-cont {display: flex; justify-content: space-between; text-align: left; margin-bottom: 2rem; flex-wrap: wrap; gap: 5px;}
-  #main .project .project-cont li {width: calc(100% / 3 - 5px); height: auto; background-color: var(--main06-color); border-radius: 6px; overflow: hidden; box-shadow: 2px 3px 8px rgb(0 0 0 / 2%); transition: all .3s linear;}
+  #main .project .project-cont {display: flex; justify-content: space-between; text-align: left; margin-bottom: 4rem; flex-wrap: wrap; gap: 5px;}
+  #main .project .project-cont li {width: calc(100% / 3 - 5px); height: auto; background-color:#f5f5f5; border: 1px solid rgba(0, 0, 0, .1); border-radius: 6px; overflow: hidden; box-shadow: 2px 3px 10px rgb(0 0 0 / 3%); transition: all .3s linear;}
   #main .project .project-cont li:hover {transform: translateY(-3px);}
   #main .project .project-cont li .thum-img {width: 100%; height: auto; overflow: hidden;}
   #main .project .project-cont li .thum-img img {width: 100%; height: 100%; object-fit: cover;}
   #main .project .project-cont li .txt-cont {width: 100%; height: auto; overflow: hidden; padding: 1.5rem 1.5rem 2rem;}
   #main .project .project-cont li img {display: block; width: auto; height: 100%; transition: all .4s ease;}
   #main .project .project-cont li img:hover {transform: scale(1.05);}
-  #main .project .project-cont li p {margin-bottom: .8rem; font-weight: 700; color: var(--bg-color); font-size: 1.1rem;}
+  #main .project .project-cont li p {margin-bottom: .8rem; font-weight: 700; color: #2c3333; font-size: 1.1rem;}
   #main .project .project-cont li p i {font-weight: 400; font-size: 1rem;}
   #main .project .project-cont li span {font-size: 14px; color: #999; line-height: 2;}
   #main .project .live-btn {display: flex; justify-content: flex-start; align-items: center; text-align: center; margin-top: 1.7rem;}
-  #main .project .live-btn a {display: block; width: calc(100% / 3.5); margin-right: 3px; background-color: var(--bg-color); color: var(--main04-color); font-size: .8rem; font-weight: 400; height: 2.5rem; line-height: 2.3rem; letter-spacing: 1px; transition: all .2s linear; border: 1px solid var(--bg-color); border-radius: 4px;}
+  #main .project .live-btn a {display: block; width: calc(100% / 3.5); margin-right: 3px; background-color: #2c3333; color: #fff; font-size: .8rem; font-weight: 400; height: 2.5rem; line-height: 2.3rem; letter-spacing: 1px; transition: all .2s linear; border: 1px solid var(--bg-color); border-radius: 4px;}
   #main .project .live-btn a span {display: inline-block; font-size: inherit; color: inherit; font-weight: 700;}
   #main .project .live-btn a:hover {background-color: var(--main02-color); border-color: var(--main02-color);}
   #main .project .more-btn {font-size: 1.2rem; color: var(--main01-color); font-weight: 700;}
@@ -163,9 +163,9 @@
   footer nav .content-box {display: flex;justify-content: space-between;}
   footer nav .left em {font-weight: 500; font-size: 20px; color: var(--main02-color);}
   footer nav .right a {font-weight: 500; font-size: 1.2rem; color: var(--main01-color);}
-  footer .fix-foot {position: fixed; left: 0; bottom: 0; width: 100%; height: 40px; line-height: 40px; background-color: rgba(44,51,51,0.8); border-top: 1px solid #7474748f;}
+  footer .fix-foot {position: fixed; left: 0; bottom: 0; width: 100%; height: 40px; line-height: 40px; background-color: rgba(255,255,255,0.1); border-top: 1px solid #7474748f;}
   footer .fix-foot .fix-foot-area {width: 95%; margin: 0 auto;}
-  footer .fix-foot p {font-size: 13px; color: #999; font-weight: 400;}
+  footer .fix-foot p {font-size: 13px; color: var(--main04-color); font-weight: 400; opacity: .7;}
 
   /*module*/
   .btn {display: inline-block;}
