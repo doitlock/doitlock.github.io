@@ -8,6 +8,7 @@
    --main04-color : #fff;
    --main05-color : #C4C4C4;
    --main06-color : #f5f5f5;
+   --main07-color : #FFE162;
  }
 
  .light-theme {
@@ -17,6 +18,7 @@
   --main03-color : #1876f2;
   --main04-color : #141414;
   --main06-color : #333;
+  --main07-color : #FFC93C;
  }
 
   /***** reset *****/
@@ -113,8 +115,8 @@
 
   /*about*/
   #main .project .project-wrap + .project-wrap {padding-top: 80px;}
-  #main .project .project-cont {display: flex; justify-content: space-between; text-align: left; margin-bottom: 4rem; flex-wrap: wrap; gap: 5px;}
-  #main .project .project-cont li {width: calc(100% / 3 - 5px); height: auto; background-color:#f5f5f5; border: 1px solid rgba(0, 0, 0, .1); border-radius: 6px; overflow: hidden; box-shadow: 2px 3px 10px rgb(0 0 0 / 3%); transition: all .3s linear;}
+  #main .project .project-cont {display: flex; justify-content: space-between; text-align: left; flex-wrap: wrap; margin-bottom: 20px;}
+  #main .project .project-cont li {width: calc(100% / 3 - 5px); height: auto; background-color:#f5f5f5; border: 1px solid rgba(0, 0, 0, .1); border-radius: 6px; overflow: hidden; box-shadow: 2px 3px 10px rgb(0 0 0 / 3%); transition: all .3s linear; margin-bottom: 10px;}
   #main .project .project-cont li:hover {transform: translateY(-3px);}
   #main .project .project-cont li .thum-img {width: 100%; height: auto; overflow: hidden;}
   #main .project .project-cont li .thum-img img {width: 100%; height: 100%; object-fit: cover;}
@@ -123,7 +125,7 @@
   #main .project .project-cont li img:hover {transform: scale(1.05);}
   #main .project .project-cont li p {margin-bottom: .8rem; font-weight: 700; color: #2c3333; font-size: 1.1rem;}
   #main .project .project-cont li p i {font-weight: 400; font-size: 1rem;}
-  #main .project .project-cont li span {font-size: 14px; color: #999; line-height: 2;}
+  #main .project .project-cont li span {font-size: 14px; color: #777; line-height: 2;}
   #main .project .live-btn {display: flex; justify-content: flex-start; align-items: center; text-align: center; margin-top: 1.7rem;}
   #main .project .live-btn a {display: block; width: calc(100% / 3.5); margin-right: 3px; background-color: #2c3333; color: #fff; font-size: .8rem; font-weight: 400; height: 2.5rem; line-height: 2.3rem; letter-spacing: 1px; transition: all .2s linear; border: 1px solid var(--bg-color); border-radius: 4px;}
   #main .project .live-btn a span {display: inline-block; font-size: inherit; color: inherit; font-weight: 700;}
@@ -146,8 +148,6 @@
   .project-top3 ul li .top3-cont .live-btn a {border-color: var(--main06-color) !important}
 
 
-
-
   .contact {margin-bottom: 80px;}
   .contact .contact-box p {font-size: 1.2rem; margin-bottom: 4rem;}
   .contact .contact-box a {display: block; width: 40%; margin: 0 auto; padding: 20px 0; background-color: var(--main02-color); border-radius: 100px; margin-bottom: 20px; transition: all .3s ease; color: #fff;}
@@ -166,6 +166,16 @@
   footer .fix-foot {position: fixed; left: 0; bottom: 0; width: 100%; height: 40px; line-height: 40px; background-color: rgba(255,255,255,0.1); border-top: 1px solid #7474748f;}
   footer .fix-foot .fix-foot-area {width: 95%; margin: 0 auto;}
   footer .fix-foot p {font-size: 13px; color: var(--main04-color); font-weight: 400; opacity: .7;}
+
+  /*sub*/
+  #progect-page #main section h2.tit {font-weight: 800; font-size: 60px; margin-bottom: 45px; position: relative; color: var(--main07-color);}
+  #progect-page #main .project-link {text-align: center; margin-bottom: 70px;}
+  #progect-page #main .project-link ul li {display: inline-block;}
+  #progect-page #main .project-link ul li + li {margin-left: 10px;}
+  #progect-page #main .project-link ul li a {font-size: 13px; color: var(--main04-color); padding: 6px 12px; border: 1px solid var(--main04-color); border-radius: 50px; display: block; transition: all .2s linear;}
+  #progect-page #main .project-link ul li a:hover {color: #fff; background-color: var(--main02-color); border-color: var(--main02-color); transform: rotate(0.02turn);}
+  #progect-page #main #say-goodbye {padding: 80px 0;}
+  #progect-page #main #say-goodbye h3 {font-size: 14px; font-weight: 400; color: var(--main04-color);}
 
   /*module*/
   .btn {display: inline-block;}
