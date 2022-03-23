@@ -3,19 +3,23 @@
 /** reset **/
 *, *::before, *::after {box-sizing: border-box;}
 html {-webkit-text-size-adjust: none; text-size-adjust: none;}
-body {margin: 0; font-family: 'LeferiPoint-WhiteObliqueA', sans-serif;}
+body {margin: 0; font-family: 'IBM Plex Sans KR', sans-serif;}
 h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p {margin: 0; padding: 0;}
 h1, h2, h3, h4, h5, h6 {font-weight: 700;}
 a {color: inherit; text-decoration: inherit;}
 li {list-style: none;}
 img {vertical-align: middle; max-width: 100%;}
 address, em, i, cite {font-style: normal;}
+button, input {border: 0;}
 table {border-collapse: collapse;}
 table caption {overflow: hidden; width: 0; height: 0;}
 i[class^="xi"] {position: relative; display: inline-block; vertical-align: middle;}
 i[class^="xi"] span {position: absolute; left: -9999px;}
 .ir-hidden {position: absolute; left: -9999px;}
-.mobile {display: none !important;}
+
+:root {
+    --main01-color:#252451;
+}
 
 #wrapper {position: relative; width: 100%; overflow: hidden;}
 #wrap_section {width: 1200px; margin: 0 auto;}
@@ -24,9 +28,10 @@ i[class^="xi"] span {position: absolute; left: -9999px;}
 
 /** common **/
 /* 헤더 */
-.header_wrap {position: relative;width: 100%;}
-.header {position: relative;}
-.header a {color: #fff;}
+#header {position: relative;}
+#header .main_logo {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10;}
+.menu-wrap {position: relative;width: 100%;}
+.menu-wrap a {color: #fff;}
 .top_menu_wrap {border-bottom: 1px solid rgba(255,255,255,0.2);background-color: #111;  }
 .top_menu {position: relative;width: 100%;height: 90px;}
 .top_menu .top_menu_left {position: absolute;top: 15px;left: 0;font-size: 13px;}
@@ -37,11 +42,12 @@ i[class^="xi"] span {position: absolute; left: -9999px;}
 .top_menu .top_menu_right::after {content: '';display: block;clear: both;}
 .top_menu .top_menu_right > li {float: left;}
 .top_menu .top_menu_right > li > a {color: #888;margin-left: 20px;}
-.top_ads_box {width: 100%;height: 80px;background-color: #4f79a9;}
+
+.top_ads_box {width: 100%; height: 80px; background-color: #4f79a9;}
 
 /* 메인 메뉴 */
 .main_menu {width: 100%;height: 90px;position: absolute;top: 0;left: 0;z-index: 9999;}
-.main_menu .main_logo {position: absolute;line-height: 80px;top: 0;left: 50%;transform: translateX(-50%); font-family: 'Paytone One', sans-serif; color: #fff;}
+
 
 .main_menu .gnb_icon_left {position: absolute;top: 40px;left: 0;z-index: 9999;}
 .main_menu .gnb_icon_left a {width: 36px;height: 36px;display: inline-block;} 
@@ -56,22 +62,15 @@ i[class^="xi"] span {position: absolute; left: -9999px;}
 .main_menu_list.left {left: 0;padding-left: 160px;}
 .main_menu_list.right {right: 80px;padding-left: 160px;}
 .main_menu_list.left::after, .main_menu_list.right::after {content: '';display: block;clear: both;}
-.main_menu_list.left > li , .main_menu_list.right > li{float: left;width:calc(100% / 3);padding-bottom: 18px;}
-.main_menu_list .menu_1depth {padding-bottom: 20px;}
-.main_menu_list .sub_menu {position: absolute;opacity: 0;top: 40px;width: 100%;height: 100%;visibility: hidden;}
-.main_menu_list > li:hover .sub_menu {opacity: 1;visibility: visible;}
-.sub_menu:hover .menu_1depth {border-bottom: 3px solid #fff;}
-.main_menu_list .menu_1depth:hover {border-bottom: 3px solid #fff;}
-.main_menu_list .sub_menu li a {display: inline-block;padding: 10px 20px 0 0;}
-.main_menu_list .sub_menu::after{content: '';display: block;clear: both;}
-.main_menu_list .sub_menu > li {float: left;}
+.main_menu_list > li, .main_menu_list > li {float: left; width:calc(100% / 3); padding-bottom: 18px; position: relative;}
+.main_menu_list .sub_menu {position: absolute; opacity: 0; top: 40px;width: 100%;height: 100%;}
+.main_menu_list > li.active .sub_menu {opacity: 1;}
+.main_menu_list .sub_menu > li a {display: block; padding: 10px 20px 0 0;}
+.main_menu_list .sub_menu > li {display: flex;}
 
-/*서브메뉴 위치*/
-.main_menu_list li:nth-child(1) .sub_menu {left: 66px;}
-.main_menu_list li:nth-child(2) .sub_menu {left: 103px;}
-.main_menu_list li:nth-child(3) .sub_menu {left: 293px;}
-.main_menu_list li:nth-child(4) .sub_menu {left: 36px;}
-.main_menu_list li:nth-child(6) .sub_menu {left: 265px;}
+
+
+
 
 
 /* 햄버거 클릭 시 전체 메뉴 보이도록 */
@@ -85,14 +84,15 @@ i[class^="xi"] span {position: absolute; left: -9999px;}
 .sitemap_list:first-child {padding-left: 0;}
 .sitemap_list .tit_depth {display: inline-block;color: #fff;font-size: 17px;padding: 15px 60px;border-top: 1px solid #444;border-bottom: 1px solid #444;margin-bottom: 20px;}
 .sitemap_list .tit_depth.last {padding: 15px 30px;}
-.sitemap_list .list_depth li {padding: 10px 0;}
+.sitemap_list .list_depth li {padding-bottom: 10px;}
 .sitemap_list .list_depth li a {font-size: 14px;color: #999;}
 
 
 /* 인트로 */
-.intro_wrap {position: relative;z-index: 3;width: 100%;height: 100%;background-color: rgba(1,1,1,.9);}
+.intro_wrap {position: relative; z-index: 3; width: 100%;height: 100%;background-color: rgba(1,1,1,.9);}
 .intro {position: relative;display: block;padding-top: 100px;text-align: center;}
-.intro_top .intro_more {position: absolute;top: 100px;right: 0;color: #999;}
+.intro_top {margin-bottom: 30px;}
+.intro_top .intro_more {position: absolute;top: 115px; right: 0; font-weight: 500; color: #999;}
 .intro_top .intro_head {font-size: 1.2rem; z-index: 99999;color: #fff; font-family: 'Paytone One', sans-serif; letter-spacing: 1px; border-bottom: 1px solid #fff;}
 .intro_poster {position: relative; margin-top: 20px; display: flex; justify-content: space-between;}
 .intro_poster::after {content: '';display: block;clear: both;}
