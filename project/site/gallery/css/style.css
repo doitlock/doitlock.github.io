@@ -90,7 +90,8 @@ section.img-part .img-part-txt span:nth-of-type(3) {top: 100%; left: 47%; transf
 section.img-part .img-part-txt span:nth-of-type(4) {top: 25%; right: -10%; transform: rotate(40deg); color: var(--main02-color);}
 section.img-part .img-part-txt span:nth-of-type(5) {top: 65%; right: 10%;}
 section.img-part .img-part-txt span:nth-of-type(6) {top: 35%; right: 40%; transform: rotate(-30deg); color: var(--main02-color);}
-section.img-part .content-box-flex p {margin: 1%; position: relative;}
+section.img-part .content-box-flex p {margin: 1%; position: relative; overflow: hidden; transition: border-radius .3s ease;}
+section.img-part .content-box-flex p:hover {border-radius: 100px;}
 section.img-part .content-box-flex p.hover-bg::after {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; background-color: rgba(0,0,0,0.5); transition: 0.5s;}
 section.img-part .content-box-flex p.hover-bg:hover::after {opacity: 1;} 
 section.img-part .content-box-flex p.hover-bg span {display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 0; color: #fff; text-align: center; z-index: 10; line-height: 2; font-weight: 300;}
@@ -136,6 +137,16 @@ section.draw-slide {width: 100%; margin-bottom: 30rem;}
 section.draw-slide .image-slide {width: 40%; margin: 0 auto;}
 section.draw-slide .image-slide .box {overflow: visible;}
 section.draw-slide .image-slide .slide li {padding: 2px;}
+
+section.text-move {margin-bottom: 15rem; width: 100%; overflow: hidden;}
+section.text-move h3 {font-size: 11vw; font-family: 'Sora', sans-serif; font-weight: 300; letter-spacing: -15px; line-height: 1; text-transform: uppercase; white-space: nowrap; transition: all .3s linear; position: relative;}
+section.text-move h3.text01 {left: 0;}
+section.text-move h3.text01:hover {color: var(--main01-color); transform: skewX(10deg);}
+section.text-move h3.text02 {left: 0;}
+section.text-move h3.text02:hover {color: var(--main04-color); transform: skewX(-10deg);}
+section.text-move h3.text03 {left: 0;}
+section.text-move h3.text03:hover {color: var(--main01-color); transform: skewX(10deg);}
+
 
 section.img-tab {margin-bottom: 15rem;}
 section.img-tab ul {display: flex; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; margin: 0 auto 5rem;}
@@ -223,7 +234,7 @@ section.img-tab .product .itembox img {width: 100%;}
 }
 
 @keyframes trans-up {
-  0% {transform: translateY(300px); opacity: 0;}
+  0% {transform: translateY(10%); opacity: 0;}
   100% {transform: translateY(0); opacity: 1;}
 }
 

@@ -33,6 +33,8 @@ $(document).on('scroll resize', function() {
     }
 });
 
+
+
 /* top btn */
 $('#scroll-top').on('click', function() {
     $('html, body').stop(true).animate({'scrollTop': 0}, 500);
@@ -88,6 +90,7 @@ const toggleItem = (item) => {
     };
 };
 
+
 /* aside menu */
 function checkScroll() {
     let scrollAmt = $(document).scrollTop();
@@ -97,7 +100,6 @@ function checkScroll() {
     let asideMenu = $('#aside');
     let scrollTop = $('#scroll-top');
 
-    
     if (scrollAmt > imgPartTop) {
         asideMenu.stop(true).animate({'opacity':1}, 100);
         scrollTop.stop(true).animate({'opacity':1}, 100);
@@ -122,25 +124,34 @@ function checkVisibility(selector) {
         let min = $selector.offset().top - $(window).height();
         let max = $selector.offset().top + $selector.outerHeight();
 
+        let textMoveMin = $('.text-move').offset().top - $(window).height();
+        let textMoveMax = $('.text-move').offset().top + $selector.outerHeight();
+        let textMove01 = $('.text-move h3.text01');
+        let textMove02 = $('.text-move h3.text02');
+        let textMove03 = $('.text-move h3.text03');
+
         if (scrollTop <= min) {
-            $selector.removeClass('on');
+            $selector.removeClass('trans-up');
         } else if (scrollTop >= max) {
-            $selector.removeClass('on');
+            $selector.removeClass('trans-up');
         } else {
-            if ($selector.hasClass('on') === false) {
-            $selector.addClass('on');
-            }
             $selector.addClass('trans-up');
         }
+
+        let scale = (((scrollTop - textMoveMin) * 500) / (textMoveMax - textMoveMin)) + 1;
+        textMove01.css({'left': scale });
+        textMove02.css({'left': -scale });
+        textMove03.css({'left': scale });
     });
 }
 
+
 /* popup */
 function openLayerPopup(id, width, height, el) {
-    var $popup = $('#' + id);
-    var widthPopup = (width === undefined) ? 600 : width;
-    var heightPopup = (height === undefined) ? 800 : height;
-    var $return = $(el);
+    let $popup = $('#' + id);
+    let widthPopup = (width === undefined) ? 600 : width;
+    let heightPopup = (height === undefined) ? 800 : height;
+    let $return = $(el);
     
     $('.layer-mask').addClass('on');
     $popup.css({'width': widthPopup + 'px', 'height': heightPopup + 'px'}).attr({'tabindex': 0}).addClass('on');

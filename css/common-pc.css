@@ -130,8 +130,6 @@
   #main .project .live-btn a {display: block; width: calc(100% / 3.5); margin-right: 3px; background-color: #2c3333; color: #fff; font-size: .8rem; font-weight: 400; height: 2.5rem; line-height: 2.3rem; letter-spacing: 1px; transition: all .2s linear; border: 1px solid var(--bg-color); border-radius: 4px;}
   #main .project .live-btn a span {display: inline-block; font-size: inherit; color: inherit; font-weight: 700;}
   #main .project .live-btn a:hover {background-color: var(--main02-color); border-color: var(--main02-color);}
-  #main .project .more-btn {font-size: 1.2rem; color: var(--main01-color); font-weight: 700;}
-
 
   .project-top3 ul {margin-bottom: 10rem;}
   .project-top3 ul {display: flex; flex-direction: column;}
@@ -181,6 +179,12 @@
   .btn {display: inline-block;}
   .eng {font-family: 'Montserrat', sans-serif;}
   .content-box {max-width: 1200px; margin: 0 auto; position: relative;}
-  .more_btn {position: absolute;top: 40px;right: 0;font-size: 15px;}
-  .more_btn a {display: block; color: var(--main01-color); font-weight: 700;}
-  
+  .more-btn {font-size: .9rem; color: #141414; font-weight: 700; display: block; margin: 50px auto 0; width: 100px; height: 100px; border-radius: 100%; background-color: #ddd; line-height: 100px; transition: all .3s ease 0s}
+  .more-btn:hover {background-color: #FF9A3C; color: #fff;}
+  .swing {animation: swing 2s ease-in-out infinite;}
+
+  @keyframes swing {
+    0% {transform: translateY(40px);}
+    50% {transform: translateY(0);}
+    100% {transform: translateY(40px);}
+  }
