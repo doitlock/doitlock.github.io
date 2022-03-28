@@ -4,14 +4,14 @@ let list = document.querySelectorAll('.img-tab .list');
 let itemBox = document.querySelectorAll('.img-tab .product .itembox');
 let mainBody = document.querySelector('body.main');
 
+const imgPartFirst = document.querySelector('#img-part .content-box');
+const imgPartSecond = document.querySelector('#img-part02 .content-box');
 const fullBgTxt = document.querySelector('.full-bg h4.first');
 const fullBgTxt02 = document.querySelector('.full-bg h4.second');
-const imgPartFirst = document.querySelector('#img-part');
-const imgPartSecond = document.querySelector('#img-part02');
 
 /* scroll event */
 $(document).on('scroll resize', function() {
-    checkScroll();
+    asideCheckScroll();
     checkVisibility([imgPartFirst, imgPartSecond, fullBgTxt, fullBgTxt02]);
 
     let scrollTop = $(document).scrollTop();
@@ -33,14 +33,10 @@ $(document).on('scroll resize', function() {
     }
 });
 
-
-
 /* top btn */
 $('#scroll-top').on('click', function() {
     $('html, body').stop(true).animate({'scrollTop': 0}, 500);
 });
-
-
 
 /* gallery filter */
 for (let i = 0; i < list.length; i++) {
@@ -92,7 +88,7 @@ const toggleItem = (item) => {
 
 
 /* aside menu */
-function checkScroll() {
+function asideCheckScroll() {
     let scrollAmt = $(document).scrollTop();
     let imgPartTop = $('#img-part').offset().top - 200;
     let drawSlideTop = $('#draw-slide').offset().top - 300;
@@ -124,6 +120,8 @@ function checkVisibility(selector) {
         let min = $selector.offset().top - $(window).height();
         let max = $selector.offset().top + $selector.outerHeight();
 
+        //console.log(`${min} + ${max}`);
+
         let textMoveMin = $('.text-move').offset().top - $(window).height();
         let textMoveMax = $('.text-move').offset().top + $selector.outerHeight();
         let textMove01 = $('.text-move h3.text01');
@@ -135,7 +133,9 @@ function checkVisibility(selector) {
         } else if (scrollTop >= max) {
             $selector.removeClass('trans-up');
         } else {
-            $selector.addClass('trans-up');
+            if ($selector.hasClass('trans-up') === false) {
+                $selector.addClass('trans-up');
+            }
         }
 
         let scale = (((scrollTop - textMoveMin) * 500) / (textMoveMax - textMoveMin)) + 1;

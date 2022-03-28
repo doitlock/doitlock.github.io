@@ -29,3 +29,32 @@ if (localStorage.getItem('theme') == 'dark') {
 } else {
 	localStorage.setItem('theme', 'dark');
 }
+
+//header text
+const headText = document.querySelector('.fancy');
+const strHeadText = headText.textContent;
+const splitHeadText = strHeadText.split(""); //글자 조각
+headText.textContent = "";
+
+let char = 0;
+let timer = setInterval(onTik, 50);
+
+for (let i = 0; i < splitHeadText.length; i++) {
+	headText.innerHTML += `<span>${splitHeadText[i]}</span>`	
+}
+
+function onTik() {
+	const span = headText.querySelectorAll('span')[char];
+	span.classList.add('fade');
+	char++;
+
+	if(char === splitHeadText.length) {
+		complete();
+		return;
+	}
+}
+
+function complete() {
+	clearInterval(timer);
+	timer = null;
+}
