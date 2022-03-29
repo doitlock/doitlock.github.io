@@ -20,7 +20,7 @@ $(header).hover(function() {
 });
 
 
-//도움요청 탭 메뉴
+//도움요청, 공지사항 탭 메뉴
 $('.detail-tab li').click(function(e) {
 	e.preventDefault();
 
