@@ -4,7 +4,7 @@ let list = document.querySelectorAll('.img-tab .list');
 let itemBox = document.querySelectorAll('.img-tab .product .itembox');
 let mainBody = document.querySelector('body.main');
 
-const imgPartFirst = document.querySelector('#img-part .content-box');
+const imgPartFirst = document.querySelector('#img-part .top-txt-wrap');
 const imgPartSecond = document.querySelector('#img-part02 .content-box');
 const fullBgTxt = document.querySelector('.full-bg h4.first');
 const fullBgTxt02 = document.querySelector('.full-bg h4.second');

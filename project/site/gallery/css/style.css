@@ -201,6 +201,15 @@ body.story {background:#f1f1f1;}
 body.story .text-move h3 {font-size: 7vw;}
 
 /* sub works */
+body.works {background:#f1f1f1;}
+body.works .ansik-works {}
+body.works .ansik-works .works-wrap {display: flex; justify-content: space-between; flex-wrap: wrap;}
+body.works .ansik-works .works-wrap figure {width: calc(100% / 3); margin: 0; padding:0 .2rem 6rem;}
+body.works .ansik-works .works-wrap figure img {margin-bottom: 1.5rem;}
+
+body.works .ansik-works .works-wrap figcaption {}
+body.works .ansik-works .works-wrap figcaption p em {display: block; font-size: 1rem; font-weight: 700; padding-bottom: .7rem; margin-bottom: 1.5rem; border-bottom: 1px solid #ddd;}
+body.works .ansik-works .works-wrap figcaption p span {display: block; font-size: .8rem; font-weight: 400; color: #333; line-height: ;}
 
 
 /* sub store */
