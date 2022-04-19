@@ -1,46 +1,190 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>프론트엔드개발자 | 홍수기 | PORTFOLIO | ABOUT</title>
-  <!--font-->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700;900&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
-  <!--style-->
-  <link rel="stylesheet" type="text/css" href="../css/sub.css" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>프론트엔드개발자 | 홍수기 | PROJECT 모음</title>
+  <meta name="description" content="프론트엔드개발자 홍수기 포트폴리오 사이트" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+  <link rel="stylesheet" type="text/css" href="../xi/xeicon.min.css" />
   <link rel="stylesheet" type="text/css" href="../css/web_font.css" />
-  <link rel="stylesheet" media="screen and (min-width: 1024.0px)" href="../css/common-pc.css" />
+	<link rel="stylesheet" media="screen and (min-width: 1024.0px)" href="../css/common-pc.css" />
   <link rel="stylesheet" media="screen and (max-width: 1023.9px)" href="../css/common-m.css" />
+  <script type="text/javascript" src="../js/jquery-3.6.0.min.js" defer></script>
+  <script type="text/javascript" src="../js/main.js" defer></script>
 </head>
-
-<body id="aboutme">
-  <div id="wrapper">
-    <main id="main">
-      <section class="sec01 mb150">
-        <div class="intro">
-          <p>Hello World</p>
-          <img src="../images/hello.png" alt="제 사진입니다">
-          <p>Please Contact Me</p>
+<body id="progect-page">
+	<div id="wrapper">
+    <a href="#main" id="skip-nav">본문 바로가기</a>
+	  <header id="header">
+      <div class="hd-top">
+        <div class="content-box">
+          <h1><a href="../index.html">DEVELOPER HSK</a></h1>
+          <em class="eng">PORTFOLIO WEBSITE 📁</em>
+          <div class="mobile-menu mobile">
+            <a href="#" class="all-menu">
+              <span>메뉴열기/닫기</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <nav id="gnb">
+        <div class="content-box">
+          <div class="left">
+              <em>성장하고 발전하는 개발자 <b>홍수기</b>의 포트폴리오입니다</em>
+          </div>
+          <div class="right">
+            <a href="about.html">ABOUT</a>
+            <a href="project_all.html">PROJECT</a>
+            <a href="../index.html#contact">CONTACT</a>
+            <div id="light-btn">
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="flt-nav-left pc">
+        <a href="https://github.com/doitlock" target="_blank"><i class="xi-github"><span>깃허브</span></i></a>
+        <a href="https://clear-pancake-cdb.notion.site/d02ec69f404c473da4650549557843dc" target="_blank"><i class="xi-pen"><span>노션</span></i></a>
+        <a href="https://doitlock.tistory.com/category/Code" target="_blank"><i class="xi-blogger"><span>블로그</span></i></a>
+        <a href="https://www.instagram.com/great_flood_/" target="_blank"><i class="xi-instagram"><span>인스타그램</span></i></a>
+      </div>
+	  </header>
+  
+	  <main id="main">
+      <section id="aboutme" class="aboutme">
+        <div class="content-box">
+          <h2 class="tit eng">WHO AM I</h2>
+          <div class="about-me-top">
+            <div class="img-me">
+              <img src="../images/about_me_img.jpg" alt="홍수기 사진">
+            </div>
+            <div class="about-txt">
+              <em>안녕하세요😁 프론트엔드 개발자를 꿈꾸는 홍수기입니다!</em>
+              <p>저는 비혼 주의자로, 80살까지 건강하게 일하는 것이 꿈입니다.
+                <br />'배워서 남 주자'를 모토로 하고 있습니다.
+                <br />저는 동물을 좋아합니다 (갑자기). 
+                <br />동물을 먹는 것을 좋아하는 것이 아니라 동물이 존재하는 것을 좋아합니다. 
+                <br />2018년 7월 어느 날 봉준호 감독의 영화 '옥자'를 보고
+                <br />갑작스럽게 그날 저녁부터 지금까지 채식 지향인🥬으로 살고 있습니다. 
+                <br />유일한 취미는 그림 그리기입니다. 
+                <br />이상 간단한 저의 소개를 해보았습니다. 
+                <br />읽어주셔서 감사합니다.
+              </p>
+            </div>
+            <div class="img-cute">
+              <img src="../images/bottom_img.png" alt="일러스트 이미지">
+            </div>
+          </div>
+          <div class="abt-wrap">
+            <div class="edu">
+              <h3>EDUCATION</h3>
+              <ul>
+                <li>
+                  <em>아카데미 정글 프론트엔드개발 취업 아카데미</em>
+                  <p>
+                    JavaScript, React, Vue, Node.js
+                    <span>2022.JAN ~ 2022.APR</span>
+                  </p>
+                </li>
+                <li>
+                  <em>경기IT일자리센터 UI/UX 퍼블리셔 과정</em>
+                  <p>
+                    HTML5, CSS3, JavaScript, jQuery
+                    <span>2020.MAY ~ 2020.AUG</span>
+                  </p>
+                </li>
+                <li>
+                  <em>한양여자대학교 조형일러스트레이션학과</em>
+                  <p>
+                    Illustration, Adobe Program
+                    <span>2010.FAB ~ 2012.FAB</span>
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="career">
+              <h3>CAREER</h3>
+              <ul>
+                <li>
+                  <em>용감한컴퍼니</em>
+                  <p>
+                    Web Publisher, Developer Team<br>
+                    <span>2021.FEB ~ 2021.DEC</span>
+                  </p>
+                </li>
+                <li>
+                  <em>퀴리오스</em>
+                  <p>
+                    Web Publisher, Developer Team<br>
+                    <span>2020.OCT ~ 2021.FAB</span>
+                  </p>
+                </li>
+                <li>
+                  <em>Trini</em>
+                  <p>
+                    Web Designer, Design Team<br>
+                    <span>2019.MAR ~ 2020.MAR</span>
+                  </p>
+                </li>
+                <li>
+                  <em>YEON글로벌</em>
+                  <p>
+                    Web Designer, Design Team<br>
+                    <span>2020.MAR ~ 2020.MAR</span>
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="skill">
+              <h3>MAIN SKILL</h3>
+              <ul class="skill-list">
+                <li>
+                  <em>HTML</em>
+                  <span></span>
+                </li>
+                <li>
+                  <em>CSS</em>
+                  <span></span>
+                </li>
+                <li>
+                  <em>JavaScript</em>
+                  <span></span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
-
-      <section class="sec02">
-        <div class="tact01">
-          <b>Contact</b>
-          <p>doitlock@gmail.com</p>
-        </div>
-        <div class="tact02">
-          <b>Contact</b>
-          <p>doitlock@gmail.com</p>
-        </div>
+      <section id="say-goodbye">
+        <h3>프론트엔드 개발자 홍수기의 포트폴리오를 봐주셔서 진심으로 감사드립니다🙇‍♀️<br />항상 건강하시고 행복하세요!</h3>
       </section>
     </main>
-  </div>
-  <script>
 
-  </script>
+	  <footer id="footer">
+      <div class="foot-abt">
+        <div class="content-box">
+          <h1>Copyright ⓒ 2022. SOO KI HONG All Rights Reserved</h1>
+        </div>
+      </div>
+      <nav id="footer-gnb">
+        <div class="content-box">
+          <div class="left">
+            <em class="eng">PORTFOLIO WEBSITE 📁</em>
+          </div>
+          <div class="right pc">
+            <a class="eng" href="../index.html">IF NOT NOW, THEN WHEN?</a>
+          </div>
+        </div>
+      </nav>
+      <div class="fix-foot">
+        <div class="fix-foot-area">
+          <p>목표는 끊임없는 배움과 성장이다. 80살까지 건강하게 일하자. 배워서 남 주자.</p>
+        </div>
+      </div>
+    </footer>
+	</div>
+
 </body>
-
 </html>
