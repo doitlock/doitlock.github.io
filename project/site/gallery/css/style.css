@@ -52,6 +52,7 @@ body.change02 {background-color: var(--main04-color); color: #fff;}
 #footer address {color: #141414; font-weight: 700;}
 #footer #scroll-top {position: fixed; right: 10px; bottom: 30px; width: 50px; height: 50px; background-color: var(--main05-color); border-radius: 100%; text-align: center; line-height: 50px; color: var(--main02-color); font-size: .9rem; font-weight: bold; transition: all .3s ease; opacity: 0;}
 #footer #scroll-top:hover {transform: scale(1.2);}
+#footer .btm-copy-txt {text-align: center; display: block; font-size: 12px; margin: 3rem auto 0; color: #999;}
 
 section.intro {margin-bottom: 15rem; position: relative;}
 section.intro .intro-flex-box {display: flex; justify-content: space-between;}
@@ -72,8 +73,8 @@ section.intro .intro-bg-txt span:hover {color: var(--main04-color);}
 section.intro .round-arw {margin: 3rem auto;}
 
 section.img-part {margin-bottom: 15rem; position: relative;}
-section.img-part em {font-size: 10rem; width: 100%; text-align: left; transition: color .3s ease;}
-section.img-part em:hover {color: var(--main01-color);}
+section.img-part em {font-size: 10rem; display: inline-block; text-align: left; transition: all .5s ease;}
+section.img-part em:hover {color: var(--main01-color); letter-spacing: 1.5rem;}
 section.img-part p.img-01 {width: calc(30% - 2%);}
 section.img-part p.img-02 {width: calc(25% - 2%);}
 section.img-part p.img-03 {width: calc(45% - 2%);}
@@ -91,9 +92,9 @@ section.img-part .content-box-flex p {margin: 1%; position: relative; overflow: 
 section.img-part .content-box-flex p:hover {border-radius: 100px;}
 section.img-part .content-box-flex p.hover-bg::after {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; background-color: rgba(0,0,0,0.5); transition: 0.5s;}
 section.img-part .content-box-flex p.hover-bg:hover::after {opacity: 1;} 
-section.img-part .content-box-flex p.hover-bg span {display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 0; color: #fff; text-align: center; z-index: 10; line-height: 2; font-weight: 300;}
+section.img-part .content-box-flex p.hover-bg span {display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 0; color: #fff; text-align: center; z-index: 10; line-height: 2; font-weight: 300; width: 90%;}
 
-section.img-part .content-box-flex p.hover-bg:hover span {font-size: 1.1rem;}
+section.img-part .content-box-flex p.hover-bg:hover span {font-size: 1rem;}
 section.img-part .content-box-flex p:nth-of-type(1) {margin-top: 10%;}
 section.img-part .content-box-flex p:nth-of-type(2) {margin-top: -10%;}
 section.img-part .content-box-flex p:nth-of-type(3) {margin-top: 25%;}
@@ -171,17 +172,17 @@ section.img-tab .product .itembox img {width: 100%;}
 .draw-slide .img-slide-txt .txt02 {color: var(--main05-color); font-size: .9rem;font-weight: 500;}
 
 .qna {margin-bottom: 11rem;}
-.qna * {transition: all .3s ease;}
+.qna * {transition: all .5s ease;}
 .qna h2 {width: 20%; text-align: center;}
 .qna h2 em {font-size: 5rem; margin-bottom: 1.5rem; display: block;}
-.qna-container {width: 80%; display: flex; justify-content: space-between;}
-.qna-group {width: calc(50% - 2px);}
-.qna-item{border-radius: 5px; background-color: #f5f5f5; padding: 2rem; margin-bottom: 4px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
-.qna-header{cursor: pointer; display: flex; justify-content: space-between;}
-.qna-item-title{font-size: 1rem; color: #151515; font-weight: 700;}
-.qna-description{font-size: 1rem; padding-top: 15px; color: #141414;}
-.qna-content{overflow: hidden;height: 0;}
-.accordion-open .qna-icon{transform: rotate(-180deg); color: #141414;}
+.qna .qna-container {width: 80%; display: flex; justify-content: space-between;}
+.qna .qna-group {width: calc(50% - 2px);}
+.qna .qna-item{border-radius: 5px; background-color: #f5f5f5; padding: 2rem; margin-bottom: 4px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+.qna .qna-header{cursor: pointer; display: flex; justify-content: space-between;}
+.qna .qna-item-title{font-size: 1rem; color: #151515; font-weight: 700;}
+.qna .qna-description{font-size: 1rem; padding-top: 15px; color: #141414;}
+.qna .qna-content{overflow: hidden;height: 0;}
+.qna .accordion-open .qna-icon{transform: rotate(-540deg); color: #141414; transform-origin: center;}
 
 .store {margin-bottom: 18rem;}
 .store h2 {flex: 1; text-align: center; font-size: 4rem; letter-spacing: 10px; margin-bottom: 3rem;}
@@ -302,10 +303,6 @@ body.works .ansik-works .works-wrap figcaption p span {display: block; font-size
 
 /* media query */
 @media only screen and (max-width: 1024px) {
-
-}
-
-@media only screen and (max-width: 1024px) {
   body {font-size: 14px;}
   #header {width: 94%;}
   #header nav {display: none;}
@@ -317,7 +314,7 @@ body.works .ansik-works .works-wrap figcaption p span {display: block; font-size
   section.intro .image-slide {width: 100%;}
   section.intro .intro-frame {width: 100%; margin-top: 5px;}
   section.intro .intro-bg-txt p {font-size: 8rem;}
-  section.img-part em {font-size: 6rem;}
+  section.img-part em {font-size: 18vw;}
   .content-box .sub-text {font-size: 1rem;}
   section.img-part .img-part-txt span {display: none;}
   section.img-part .content-box-flex p {width: calc(50% - 4px); margin: 2px; margin-top: 2px !important;}
@@ -327,7 +324,7 @@ body.works .ansik-works .works-wrap figcaption p span {display: block; font-size
   .full-bg article h3, .full-bg article h4 {display: table-cell; vertical-align: middle;}
   section.draw-slide .image-slide {width: 70%;}
   .qna h2 {width: 100%; margin-bottom: 3rem;}
-  .qna-container {width: 100%;}
+  .qna .qna-container {width: 100%;}
 }
 
 @media only screen and (max-width: 768px) {
@@ -335,10 +332,15 @@ body.works .ansik-works .works-wrap figcaption p span {display: block; font-size
   section.img-tab .product .itembox {width: calc(25% - 4px); margin: 2px;}
   section.img-tab ul {margin: 0 auto 2rem;}
   section.img-tab ul li {margin: 2px;}
+  section.img-part em {font-size: 15vw;}
+  section.img-part .content-box-flex p.hover-bg:hover span {font-size: .9rem;}
   .store {margin-bottom: 10rem;}
   .store h2, .qna h2 em {font-size: 3rem;}
   .qna-container {flex-wrap: wrap;}
   .qna-group {width: 100%;}
+  .qna .qna-item {padding: 1rem 1.5rem;}
+  .qna .qna-item-title, .qna .qna-description {font-size: .9rem;}
+  
 }
 
 @media only screen and (max-width: 480px) {
@@ -364,7 +366,7 @@ body.works .ansik-works .works-wrap figcaption p span {display: block; font-size
   section.img-tab .product .itembox {width: calc(100% / 3 - 4px);}
   section.img-tab {margin-bottom: 10rem;}
   .store h2, .qna h2 em {font-size: 2rem;}
-  .qna-item {padding: 1rem 1.5rem;}
+  .qna .qna-item {padding: 1rem;}
   #footer {padding: 3rem 1rem 1rem;}
   #footer h3 {font-size: 2rem;}
   #footer #scroll-top {bottom: 20px;}
@@ -379,9 +381,9 @@ body.works .ansik-works .works-wrap figcaption p span {display: block; font-size
 @media only screen and (max-width: 320px) {
   section.intro .intro-bg-txt {width: 230%; margin-top: 2rem;}
   section.intro .intro-bg-txt p {font-size: 3rem; letter-spacing: -2px;}
+  section.img-tab .product .itembox {width: calc(100% / 2 - 4px);}
   .full-bg article h3 {font-size: 1rem;}
   .full-bg article h4 {font-size: 2rem;}
   .full-bg, section.img-part {margin-bottom: 7rem;}
   .draw-slide .img-slide-txt .txt02 {font-size: 0.8rem;}
-  section.img-tab .product .itembox {width: calc(100% / 2 - 4px);}
 }
