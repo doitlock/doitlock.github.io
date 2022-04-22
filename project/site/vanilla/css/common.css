@@ -1,0 +1,49 @@
+/*reset*/
+*, *::before, *::after {box-sizing: border-box;}
+html {-webkit-text-size-adjust: none; text-size-adjust: none;}
+body {margin: 0;}
+h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+img {vertical-align: middle; max-width: 100%;}
+address, em, i, cite {font-style: normal;}
+table {border-collapse: collapse;}
+table caption {overflow: hidden; width: 0; height: 0;}
+i[class^="xi"] {position: relative; display: inline-block; vertical-align: middle;}
+i[class^="xi"] span {position: absolute; left: -9999px;}
+.ir-hidden {position: absolute; left: -9999px;}
+.mobile {display: none !important;}
+.t-right {text-align: right !important;}
+.t-left {text-align: left !important;}
+
+/*color*/
+:root {
+	--body-color: #F1F1F1;
+	--main01-color: #E27D53;
+	--main02-color: #DEE0A1;
+	--main03-color: #BFBFBF;
+	--main04-color: #2A6746;
+	--main05-color: #2265D8;
+}
+
+/*common*/
+body {font-family: 'NotoSansKR', sans-serif; color: #141414; background: var(--body-color); font-weight: 400; word-break: keep-all; -ms-overflow-style: none; transition: background-color .3s ease;}
+body.change {background-color: var(--main01-color); color: #141414;}
+body.change02 {background-color: var(--main04-color); color: #fff;}
+#wrapper {overflow: hidden;}
+#skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.8); color: #ffffff; font-size: 1rem; transition: top 0.3s; z-index: 100000;}
+#skip-nav:focus {top: 0;}
+
+
+
+/*module*/
+
+
+
+
+
+/* media query */
+@media only screen and (max-width: 1024px) {
+  
+}
