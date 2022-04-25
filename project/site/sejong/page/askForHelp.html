@@ -179,7 +179,7 @@
                     <th>행정구역 선택<span class="point1">*</span></th>
                     <td>
                       <select name="select" id="select" title="행정구역선택">
-                        <option value="">-행정구역 선택-</option>
+                        <option value="">행정구역 선택</option>
                         <option value="DONG001" >조치원읍</option>
                         <option value="DONG002" >연기면</option>
                         <option value="DONG003" >연동면</option>
@@ -235,30 +235,50 @@
                   <tr>
                     <th>연락처<span class="point1">*</span></th>
                     <td>
-                      <input type="text" name="name" id="name" class="text" maxlength="3" value="" /> -
-                      <input type="text" name="name" id="name" class="text" maxlength="4" value="" /> -
-                      <input type="text" name="name" id="name" class="text" maxlength="4" value="" />
+                      <select class="phn_num" name="ph_num" id="ph_num" title="연락처 첫째 자리를 선택하세요.">
+                        <option value="">선택없음</option>
+                        <option value="010">010</option>
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                        <option value="018">018</option>
+                        <option value="019">019</option>
+                      </select> -
+                      <input type="text" name="name" id="name" class="text phn_num" maxlength="4" value="" /> -
+                      <input type="text" name="name" id="name" class="text phn_num" maxlength="4" value="" />
                       <p>※진행 상황이나 도움을 드리기 위한 답변을 위해서 전화번호는 꼭 입력해주세요. 비밀번호 분실 시 해당 연락처 문자메시지로 보내드립니다.</p>
                     </td>
                   </tr>
                   <tr>
                     <th>이메일 주소</th>
                     <td>
-                      <input type="text" name="name" id="name" class="text" maxlength="20" value="" /> @
-                      <input type="text" name="name" id="name" class="text" maxlength="20" value="" />
-                      <input type="text" name="name" id="name" class="text" maxlength="20" value="" />
+                      <input type="text" name="name" id="name" class="text" maxlength="20" value="" title="이메일 아이디를 입력하세요." /> @
+                      <input type="text" name="name" id="name" class="text" maxlength="20" value="" title="이메일 도메인을 입력하세요." />
+                      <select name="mail_domain" id="mail_domain" title="이메일 도메인을 선택하세요.">
+                        <option value="">직접입력</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="yahoo.co.kr">yahoo.co.kr</option>
+                        <option value="freechal.com">freechal.com</option>
+                        <option value="empal.com">empal.com</option>
+                        <option value="intizen.com">intizen.com</option>
+                        <option value="hanmir.com">hanmir.com</option>
+                        <option value="paran.com">paran.com</option>
+                        <option value="hotmail.com">hotmail.com</option>
+                        <option value="hanmail.net">hanmail.net</option>
+                        <option value="nate.com">nate.com</option>
+                      </select>
                       <p>※진행상황 통보방식을 이메일로 하실 경우 이메일 주소도 꼭 입력해주세요.</p>
                     </td>
                   </tr>
                   <tr>
                     <th>비밀번호<span class="point1">*</span></th>
-                    <td><input type="password" name="password" id="password" class="text" maxlength="16" value="" />
+                    <td><input type="password" name="password" id="password" class="text" maxlength="16" value="" title="비밀번호를 입력하세요" />
                       <p>※도움요청 한 내용을 확인하기 위해서는 비밀번호가 필요합니다.</p>
                     </td>
                   </tr>
                   <tr>
                     <th>비밀번호 확인<span class="point1">*</span></th>
-                    <td><input type="password" name="password" id="password" class="text" maxlength="16" value="" />
+                    <td><input type="password" name="password" id="password" class="text" maxlength="16" value="" title="비밀번호 확인을 위해 비밀번호를 한번더 입력하세요." />
                       <p>※비밀번호 확인 입력칸 입니다.</p>
                     </td>
                   </tr>
@@ -298,8 +318,8 @@
           </div>
         </div>
         <div class="detail-btn">
-          <a href="#">취소</a>
-          <a href="#">확인</a>
+          <button type="button" class="cancel">취소</button>
+          <button type="submit" class="submit">확인</button>
         </div>
       </section>
 
@@ -393,9 +413,52 @@
             </div>
           </div>
           <div class="detail-cont table-box">
+            <em class="under-line">도움이 필요한 이웃 정보</em>
+            <div class="sj-table-wrap">
+              <table>
+                <caption>사연내용</caption>
+                <colgroup>
+                  <col style="width: 20%;">
+                  <col style="width: 80%;">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>성명</th>
+                    <td><input type="text" name="name" id="name" class="text" maxlength="5" value="" /></td>
+                  </tr>
+                  <tr>
+                    <th>주소</th>
+                    <td>
+                      <input type="text" name="name" id="name" class="text" maxlength="20" value="" />
+                      <input type="text" name="name" id="name" class="text" maxlength="20" value="" />
+                      <input type="text" name="name" id="name" class="text" maxlength="20" value="" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>연락처</th>
+                    <td>
+                      <select class="phn_num" name="ph_num" id="ph_num" title="연락처 첫째 자리를 선택하세요.">
+                        <option value="">선택없음</option>
+                        <option value="010">010</option>
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                        <option value="018">018</option>
+                        <option value="019">019</option>
+                      </select> -
+                      <input type="text" name="name" id="name" class="text phn_num" maxlength="4" value="" /> -
+                      <input type="text" name="name" id="name" class="text phn_num" maxlength="4" value="" />
+                      <p>※알고 있는 전화번호가 있다면 입력해 주십시오.</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="detail-cont table-box">
             <em class="under-line">작성자 정보</em>
             <span class="poin-txt"><span class="point1">*</span> 표시 항목은 필수 입력 항목입니다</span>
-            <div class="sj-table-wrap ask-table">
+            <div class="sj-table-wrap">
               <table>
                 <caption>작성자 정보</caption>
                 <colgroup>
@@ -419,40 +482,60 @@
                   <tr>
                     <th>연락처<span class="point1">*</span></th>
                     <td>
-                      <input type="text" name="name" id="name" class="text" maxlength="3" value="" /> -
-                      <input type="text" name="name" id="name" class="text" maxlength="4" value="" /> -
-                      <input type="text" name="name" id="name" class="text" maxlength="5" value="" />
-                      <p>※알고 있는 전화번호가 있다면 입력해 주십시오.</p>
+                      <select class="phn_num" name="ph_num" id="ph_num" title="연락처 첫째 자리를 선택하세요.">
+                        <option value="">선택없음</option>
+                        <option value="010">010</option>
+                        <option value="011">011</option>
+                        <option value="016">016</option>
+                        <option value="017">017</option>
+                        <option value="018">018</option>
+                        <option value="019">019</option>
+                      </select> -
+                      <input type="text" name="name" id="name" class="text phn_num" maxlength="4" value="" /> -
+                      <input type="text" name="name" id="name" class="text phn_num" maxlength="4" value="" />
+                      <p>※진행 상황이나 도움을 드리기 위한 답변을 위해서 전화번호는 꼭 입력해주세요. 비밀번호 분실 시 해당 연락처 문자메시지로 보내드립니다.</p>
                     </td>
                   </tr>
                   <tr>
                     <th>이메일 주소</th>
                     <td>
-                      <input type="text" name="name" id="name" class="text" maxlength="20" value="" /> @
-                      <input type="text" name="name" id="name" class="text" maxlength="20" value="" />
-                      <input type="text" name="name" id="name" class="text" maxlength="20" value="" />
+                      <input type="text" name="name" id="name" class="text" maxlength="20" value="" title="이메일 아이디를 입력하세요." /> @
+                      <input type="text" name="name" id="name" class="text" maxlength="20" value="" title="이메일 도메인을 입력하세요." />
+                      <select name="mail_domain" id="mail_domain" title="이메일 도메인을 선택하세요.">
+                        <option value="">직접입력</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="yahoo.co.kr">yahoo.co.kr</option>
+                        <option value="freechal.com">freechal.com</option>
+                        <option value="empal.com">empal.com</option>
+                        <option value="intizen.com">intizen.com</option>
+                        <option value="hanmir.com">hanmir.com</option>
+                        <option value="paran.com">paran.com</option>
+                        <option value="hotmail.com">hotmail.com</option>
+                        <option value="hanmail.net">hanmail.net</option>
+                        <option value="nate.com">nate.com</option>
+                      </select>
                       <p>※진행상황 통보방식을 이메일로 하실 경우 이메일 주소도 꼭 입력해주세요.</p>
                     </td>
                   </tr>
                   <tr>
                     <th>비밀번호<span class="point1">*</span></th>
-                    <td><input type="password" name="password" id="password" class="text" maxlength="16" value="" />
+                    <td><input type="password" name="password" id="password" class="text" maxlength="16" value="" title="비밀번호를 입력하세요" />
                       <p>※도움요청 한 내용을 확인하기 위해서는 비밀번호가 필요합니다.</p>
                     </td>
                   </tr>
                   <tr>
                     <th>비밀번호 확인<span class="point1">*</span></th>
-                    <td><input type="password" name="name" id="name" class="text" maxlength="16" value="" />
+                    <td><input type="password" name="password" id="password" class="text" maxlength="16" value="" title="비밀번호 확인을 위해 비밀번호를 한번더 입력하세요." />
                       <p>※비밀번호 확인 입력칸 입니다.</p>
                     </td>
                   </tr>
                   <tr>
                     <th>진행상황 통보방식<span class="point1">*</span></th>
                     <td>
-                      <input type="radio" name="agree" id="email-nb" class="radio" value="Y" />
-                      <label for="email-nb"> 이메일</label>
-                      <input type="radio" name="agree" id="message-nb" class="radio" value="N" />
-                      <label for="message-nb"> 휴대전화 문자메시지</label>
+                      <input type="radio" name="agree" id="email-self" class="radio" value="Y">
+                      <label for="email-self"> 이메일</label>
+                      <input type="radio" name="agree" id="message-self" class="radio" value="N">
+                      <label for="message-self"> 휴대전화 문자메시지</label>
                     </td>
                   </tr>
                 </tbody>
@@ -482,8 +565,8 @@
           </div>
         </div>
         <div class="detail-btn">
-          <a href="#">취소</a>
-          <a href="#">확인</a>
+          <button type="button" class="cancel">취소</button>
+          <button type="submit" class="submit">확인</button>
         </div>
       </section>
 
@@ -491,86 +574,43 @@
       <section class="main-help main-help-check" id="help-check">
         <h3 class="hr-hidden">접수결과 확인 페이지</h3>
         <div class="detail-box">
-          <div class="detail-cont blue-bird">
-            <div class="info-txt">
-              <em>접수한 도움요청 사항의 진행사항을 확인하실 수 있습니다.<br />
-                아래 접수번호와 비밀번호를 입력해주세요.</em>
-              <p>접수번호는 도움요청 신청 후 발송된 문자메시지에서 확인하실 수 있습니다.<br />
-                접수된 사항은 접수 시 안내된 사항과 같이 수정, 취소가 불가합니다.
-              </p>
-            </div>
-          </div>
-          <div class="detail-cont table-box">
-            <em class="under-line">작성자 정보</em>
-            <span class="poin-txt">표시 항목은 필수 입력 항목입니다</span>
-            <div class="sj-table-wrap">
+          <div class="help-check-wrap">
+            <em>접수한 도움요청 사항의 진행사항을 확인하실 수 있습니다.<br />
+              아래 접수번호와 비밀번호를 입력해주세요.</em>
+            <p>접수번호는 도움요청 신청 후 발송된 문자메시지에서 확인하실 수 있습니다.<br />
+              접수된 사항은 접수 시 안내된 사항과 같이 수정, 취소가 불가합니다.
+            </p>
+            <div class="help-check-input">
               <table>
-                <caption>작성자 정보</caption>
-                <colgroup>
-                  <col style="width: 20%;" />
-                  <col style="width: 80%;" />
-                </colgroup>
+                <caption>접수 결과 확인</caption>
                 <tbody>
                   <tr>
-                    <th>성명</th>
-                    <td><input type="text" name="name" id="name" class="text" maxlength="5" value="" /></td>
-                  </tr>
-                  <tr>
-                    <th>주소</th>
+                    <th>작성자명</th>
                     <td>
-                      <input type="text" name="name" id="name" class="text" maxlength="20" value="" />
-                      <input type="text" name="name" id="name" class="text" maxlength="20" value="" />
-                      <input type="text" name="name" id="name" class="text" maxlength="20" value="" />
-                      <p>※진행상황 통보방식을 이메일로 하실 경우 이메일 주소도 꼭 입력해주세요.</p>
+                      <input type="text" name="" id="" class="help-check-text" value="" title="작성자 이름을 입력해주세요." />
                     </td>
                   </tr>
                   <tr>
-                    <th>연락처</th>
+                    <th>접수번호</th>
                     <td>
-                      <input type="text" name="name" id="name" class="text" maxlength="3" value="" /> -
-                      <input type="text" name="name" id="name" class="text" maxlength="4" value="" /> -
-                      <input type="text" name="name" id="name" class="text" maxlength="4" value="" />
-                      <p>※진행 상황이나 도움을 드리기 위한 답변을 위해서 전화번호는 꼭 입력해주세요. 비밀번호 분실 시 해당 연락처 문자메시지로 보내드립니다.</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>이메일 주소</th>
-                    <td>
-                      <input type="text" name="name" id="name" class="text" maxlength="20" value="" /> @
-                      <input type="text" name="name" id="name" class="text" maxlength="20" value="" />
-                      <input type="text" name="name" id="name" class="text" maxlength="20" value="" />
-                      <p>※진행상황 통보방식을 이메일로 하실 경우 이메일 주소도 꼭 입력해주세요.</p>
+                      <input type="text" name="" id="" class="help-check-text" value="" title="접수번호를 입력해주세요." />
                     </td>
                   </tr>
                   <tr>
                     <th>비밀번호</th>
-                    <td><input type="password" name="password" id="password" class="text" maxlength="16" value="" />
-                      <p>※도움요청 한 내용을 확인하기 위해서는 비밀번호가 필요합니다.</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>비밀번호 확인</th>
-                    <td><input type="password" name="password" id="password" class="text" maxlength="16" value="" />
-                      <p>※비밀번호 확인 입력칸 입니다.</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th>진행상황 통보방식</th>
                     <td>
-                      <input type="radio" name="agree" id="email" class="radio" value="Y">
-                      <label for="email"> 이메일</label>
-                      <input type="radio" name="agree" id="message" class="radio" value="N">
-                      <label for="message"> 휴대전화 문자메시지</label>
+                      <input type="text" name="" id="" class="help-check-text" value="" title="비밀번호를 입력해주세요." />
                     </td>
                   </tr>
                 </tbody>
               </table>
+              <p>비밀번호를 분실하신 경우 접수번호 입력 후 <a href="">여기</a>를 눌러주세요.</p>
+            </div>
+            <div class="detail-btn">
+              <button type="button" class="cancel">취소</button>
+              <button type="submit" class="submit">확인</button>
             </div>
           </div>
-        </div>
-        <div class="detail-btn">
-          <a href="#">취소</a>
-          <a href="#">확인</a>
         </div>
       </section>
     </main>
