@@ -191,6 +191,13 @@ section.img-tab .product .itembox img {width: 100%;}
 .store .store-wrap .right li a {display: block; height: 60%; overflow: hidden;}
 
 
+/* sub module */
+
+body.works .intro, body.story .intro, body.about .intro {color: #161a14;}
+body.works .intro h1, body.story .intro h1, body.about .intro h1 {font-size: 1.7rem; font-weight: 700; letter-spacing: 1rem;}
+body.works .intro em, body.story .intro em, body.about .intro em {font-size: 8rem; font-weight: 700; display: inline-block; margin: 2.5rem 0 1rem; transition: all .7s ease;}
+body.works .intro span, body.story .intro span, body.about .intro span {display: block;}
+
 /* sub about */
 
 
@@ -200,10 +207,6 @@ body.story .text-move h3 {font-size: 7vw;}
 
 /* sub works */
 body.works {background:#f1f2ed;}
-body.works .intro {color: #161a14;}
-body.works .intro h1 {font-size: 1.7rem; font-weight: 700; letter-spacing: 1rem;}
-body.works .intro em {font-size: 8rem; font-weight: 700; display: inline-block; margin: 2.5rem 0 1rem; transition: all .7s ease;}
-body.works .intro span {display: block;}
 
 body.works .ansik-works {}
 body.works .ansik-works .works-wrap {display: flex; justify-content: space-between; flex-wrap: wrap;}
