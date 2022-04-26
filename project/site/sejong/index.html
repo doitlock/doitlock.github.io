@@ -15,16 +15,15 @@
     <script src="js/jquery-3.6.0.min.js" defer></script>
     <script src="js/common.js" defer></script>
     <script src="js/slideimg.js" defer></script>
+    <script src="js/scroll.js" defer></script>
 </head>
 <body class="sejong-main">
 	<div id="wrapper">
 		<a href="#main" id="skip-nav">본문 바로가기</a>
-    <header id="header" class="">
+    <header id="header" class="header">
       <div class="head-inner-box">
         <h1>
-          <a href="index.html">
-            <img alt="세종복지다옴" src="asset/head_logo.png" />
-          </a>
+          <a href="index.html" title="세종복지다옴 로고"></a>
         </h1>
         <nav id="gnb">
           <ul class="big-menu">
@@ -107,7 +106,7 @@
           <li><a href="javascript:;" onclick="go_scroll('news')">NEWS</a></li>
         </ul>
       </div>
-      <section class="main-visual" id="intro">
+      <section class="page main-visual" id="intro">
         <div class="txt-cont">
           <h3>Sejong Welfare</h3>
           <p>세종복지다옴</p>
@@ -115,7 +114,7 @@
         </div>
         <div class="scroll-down" id="scroll-down"></div>
       </section>
-      <section class="main-work" id="work">
+      <section class="page main-work" id="work">
         <div class="txt-cont">
           <div class="content-box">
             <h3>복지사업(Welfare Work)</h3>
@@ -193,7 +192,7 @@
           </p>
         </div>
       </section>
-      <section class="main-facility" id="facility">
+      <section class="page main-facility" id="facility">
         <div class="content-box">
           <div class="txt-cont">
             <h3>복지시설(Welfare Facility)</h3>
@@ -236,7 +235,7 @@
           </div>
         </div>
       </section>
-      <section class="main-program" id="program">
+      <section class="page main-program" id="program">
         <div class="txt-cont">
           <div class="content-box">
             <h3>복지프로그램(Welfare Program)</h3>
@@ -295,10 +294,66 @@
                 <span class="day">2999.01.13~2999.01.28</span>
               </a>
             </li>
+            <li>
+              <a href="#">
+                <span class="round grn">프로그램<br />이용자<br />모집</span>
+                <em>2022 겨울방학 프로그램을 소개합니다.</em>
+                <p>[2022 겨울방학 프로그램 참여자를 모집합니다]</p>
+                <span class="day">2999.01.13~2999.01.28</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="round grn">프로그램<br />이용자<br />모집</span>
+                <em>2022 겨울방학 프로그램을 소개합니다.</em>
+                <p>[2022 겨울방학 프로그램 참여자를 모집합니다]</p>
+                <span class="day">2999.01.13~2999.01.28</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="round grn">프로그램<br />이용자<br />모집</span>
+                <em>2022 겨울방학 프로그램을 소개합니다.</em>
+                <p>[2022 겨울방학 프로그램 참여자를 모집합니다]</p>
+                <span class="day">2999.01.13~2999.01.28</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="round grn">프로그램<br />이용자<br />모집</span>
+                <em>2022 겨울방학 프로그램을 소개합니다.</em>
+                <p>[2022 겨울방학 프로그램 참여자를 모집합니다]</p>
+                <span class="day">2999.01.13~2999.01.28</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="round grn">프로그램<br />이용자<br />모집</span>
+                <em>2022 겨울방학 프로그램을 소개합니다.</em>
+                <p>[2022 겨울방학 프로그램 참여자를 모집합니다]</p>
+                <span class="day">2999.01.13~2999.01.28</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="round grn">프로그램<br />이용자<br />모집</span>
+                <em>2022 겨울방학 프로그램을 소개합니다.</em>
+                <p>[2022 겨울방학 프로그램 참여자를 모집합니다]</p>
+                <span class="day">2999.01.13~2999.01.28</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="round grn">프로그램<br />이용자<br />모집</span>
+                <em>2022 겨울방학 프로그램을 소개합니다.</em>
+                <p>[2022 겨울방학 프로그램 참여자를 모집합니다]</p>
+                <span class="day">2999.01.13~2999.01.28</span>
+              </a>
+            </li>
           </ul>
         </div>
       </section>
-      <section class="main-people" id="people">
+      <section class="page main-people" id="people">
         <div class="content-box">
           <div class="txt-cont">
             <h3>Citizen Help Service</h3>
@@ -325,7 +380,7 @@
           </div>
         </div>
       </section>
-      <section class="main-news" id="news">
+      <section class="page main-news" id="news">
         <div class="content-box">
           <div class="txt-cont">
             <h3>News & Questions</h3>
@@ -384,7 +439,7 @@
       </section>
     </main>
     <footer id="footer">
-      <div class="footer-inner">
+      <section class="page footer-inner">
         <div class="footer-list">
           <a href="#" class="personal">개인정보처리방침</a>
           <a href="#">오류/문의 제보</a>
@@ -396,11 +451,11 @@
             <a href="https://doitlock.github.io/">이 곳을 누르시면 PRONTEND DEVELOPER SOO KI HONG PORTFOLIO 사이트로 이동할 수 있습니다. 바로가기 ></a>
           </address>
         </div>
-        <div class="footer-logo">
+        <div class="footer-logo" style="display:none">
           <img src="" alt="세종특별자치시">
           <img src="" alt="세종시사회서비스원">
         </div>
-      </div>
+      </section>
     </footer>
   </div>
 

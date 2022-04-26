@@ -37,7 +37,7 @@ const splitHeadText = strHeadText.split(""); //글자 조각
 headText.textContent = "";
 
 let char = 0;
-let timer = setInterval(onTik, 50);
+let timer = setInterval(onTik, 40);
 
 for (let i = 0; i < splitHeadText.length; i++) {
 	headText.innerHTML += `<span>${splitHeadText[i]}</span>`	

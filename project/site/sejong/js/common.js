@@ -3,7 +3,6 @@
 
 const header = $('#header');
 
-
 $(document).scroll(function(){		
 	if($(document).scrollTop() > 50) {	
 		$(header).addClass('on');

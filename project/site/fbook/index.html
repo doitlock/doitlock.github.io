@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 	<script src="script.js" defer></script>
+	<script src="random-cat.js" defer></script>
 </head>
 <body>
 	<div id="wrapper">
@@ -25,7 +26,7 @@
 				<div class="nav-right">
 					<div class="search-box">
 						<img src="images/search.png" alt="찾기 아이콘">
-						<input type="text" placeholder="Looks like facebook 검색">
+						<input type="text" placeholder="Search">
 					</div>
 					<div class="nav-user-icon online" onclick="settingsMenuToggle()">
 						<img src="images/profile-pic.png" alt="프로필 아이콘">
@@ -41,17 +42,16 @@
 							<img src="images/profile-pic.png" alt="" />
 							<div>
 								<p>Hongsuki0101</p>
-								<a href="profile.html">내 프로필 보기</a>
+								<a href="profile.html">내 프로필 보기 <span>Click!</span></a>
 							</div>
 						</div>
-						<hr />
-						<div class="user-profile">
+						<!-- <div class="user-profile">
 							<img src="images/feedback.png" alt="" />
 							<div>
 								<p>의견보내기</p>
 								<a href="#">Looks like book을 개선할 수 있도록 도와주세요</a>
 							</div>
-						</div>
+						</div> -->
 						<hr />
 						<div class="setting-links">
 							<img class="settings-icon" src="images/setting.png" alt="" />
@@ -78,24 +78,24 @@
 				<!--left sidebar-->
 				<div class="left-sidebar"> 
 					<div class="imp-links">
-						<a href="#"><img src="images/news.png" alt="뉴스"> 친구 찾기 </a>
-						<a href="#"><img src="images/group.png" alt="뉴스"> 그룹 맺기 </a>
-						<a href="#"><img src="images/watch.png" alt="뉴스"> Watch </a>
-						<a href="#"><img src="images/remember.png" alt="뉴스"> 과거의 오늘 </a>
-						<a href="#"><img src="images/save.png" alt="뉴스"> 저장됨 </a>
-						<a href="#"><img src="images/page.png" alt="뉴스"> 페이지 </a>
-						<a href="#"><img src="images/event.png" alt="뉴스"> 이벤트 </a>
-						<a href="#"><img src="images/news.png" alt="뉴스"> 최신 </a>
-						<a href="#"><img src="images/wish.png" alt="뉴스"> 즐겨찾기 </a>
-						<a href="#"><img src="images/webadd.png" alt="뉴스"> 광고 </a>
+						<a href="#"><img src="images/news.png" alt="아이콘"> 친구 찾기 </a>
+						<a href="#"><img src="images/group.png" alt="아이콘"> 그룹 맺기 </a>
+						<a href="#"><img src="images/watch.png" alt="아이콘"> Watch </a>
+						<a href="#"><img src="images/remember.png" alt="아이콘"> 과거의 오늘 </a>
+						<a href="#"><img src="images/save.png" alt="아이콘"> 저장됨 </a>
+						<a href="#"><img src="images/page.png" alt="아이콘"> 페이지 </a>
+						<a href="#"><img src="images/event.png" alt="아이콘"> 이벤트 </a>
+						<a href="#"><img src="images/news.png" alt="아이콘"> 최신 </a>
+						<a href="#"><img src="images/wish.png" alt="아이콘"> 즐겨찾기 </a>
+						<a href="#"><img src="images/webadd.png" alt="아이콘"> 광고 </a>
 						<a href="#">더 보기</a>
 					</div>
 					<div class="shortcut-links">
 						<p>바로가기</p>
-						<a href="#"><img src="images/shortcut-1.png" alt="">PORTFOLIO 포트폴리오 웹사이트</a>
-						<a href="#"><img src="images/shortcut-2.png" alt="">GALLERY Ansik 웹 갤러리 사이트</a>
-						<a href="#"><img src="images/shortcut-3.png" alt="">세종복지다옴 클론 사이트</a>
-						<a href="#"><img src="images/shortcut-4.png" alt="">메가박스 + API 프로젝트</a>
+						<a href="#"><span>😊</span> Portfolio 포트폴리오 사이트로 이동 <i class="xi-angle-right-min"></i></a>
+						<a href="#"><span>😁</span> Gallery Ansik 사이트로 이동 <i class="xi-angle-right-min"></i></a>
+						<a href="#"><span>🙂</span> 세종복지다옴 클론 사이트로 이동 <i class="xi-angle-right-min"></i></a>
+						<a href="#"><span>😙</span> 메가박스 + API 프로젝트 사이트로 이동 <i class="xi-angle-right-min"></i></a>
 					</div>
 				</div>
 		
@@ -151,7 +151,7 @@
 							</div>
 							<a href="#"><i class="xi-ellipsis-v"></i></a>
 						</div>
-						<p class="post-text">HELLO WORLD! 안녕하세요 세상 여러분! 저는<span> 홍수기</span>입니다. 웹프론트엔드 개발자가 되기 위해 열공중입니다. 인강을 보면서 React를 공부하는 중인데 쉽지 않습니다. 암튼 모두 좋은 하루 보내세요. <a href="#">#취업할수있을것인가</a> <a href="#">#열공</a> <a href="#">#포트폴리오</a></p>
+						<p class="post-text">HELLO WORLD! 이 페이지에서는 <span>현재 시간과 오늘 날짜</span> 를 확인 할 수 있습니다. 그리고 랜덤 이미지 오른쪽의 refresh 버튼을 누르면 <span>강아지 사진을 랜덤</span>으로 볼 수 있습니다. github.com/public-apis/public-apis 이 사이트에 정말 다양한 api들이 있더라고요. 이 곳에서 하나를 골라 fetch api를 사용했습니다. <a href="#">#취업할수있을것인가</a> <a href="#">#열공</a> <a href="#">#포트폴리오</a></p>
 						<img src="images/feed-image-1.png" alt="" class="post-img" />
 						<div class="post-row">
 							<div class="activity-icons">
@@ -313,11 +313,13 @@
             <span id="today-date"></span>
 					</div>
           <hr />
-          <div class="sidebar-title cat-img">
-						<h4>귀여운 고양이</h4>
-						<a href=""><i class="xi-refresh"><span>다른 사진으로</span></i></a>
+          <div class="sidebar-title dog-img">
+						<h4>랜덤 이미지🐕</h4>
+						<button href="" id="cat-btn"><i class="xi-refresh"><span>다른 사진으로</span></i></button>
 					</div>
-          <img src="images/feed-image-1.png" alt="" class="sidebar-ads" /> 
+          <div id="dog-img">
+            <img src="images/feed-image-2.png" alt="" class="sidebar-ads" />
+          </div> 
           <hr />
 					<div class="sidebar-title">
 						<h4>친구들과 대화</h4>
