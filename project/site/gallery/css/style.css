@@ -55,15 +55,14 @@ body.change02 {background-color: var(--main04-color); color: #fff;}
 #footer .btm-copy-txt {text-align: center; display: block; font-size: 12px; margin: 3rem auto 0; color: #999;}
 
 section.intro {margin-bottom: 15rem; position: relative;}
-section.intro .intro-flex-box {display: flex; justify-content: space-between;}
-section.intro .image-slide {width: calc(60% - 5px); height: 55vh;}
+section.intro .intro-flex-box {display: flex; justify-content: space-between; align-items: stretch;}
+section.intro .image-slide {width: calc(60% - 2.5px);}
 section.intro .image-slide .slide li {overflow: hidden;}
 section.intro .image-slide .box img {transition: all .5s ease;}
 section.intro .image-slide .box img:hover {transform: scale(1.1);}
 section.intro .intro-frame {width: 40%;}
-section.intro .intro-frame ul {display: flex; justify-content: space-between; align-items: center;}
-section.intro .intro-frame ul li {width: calc(50% - 2.5px); border: 1px solid #e4e4e4; overflow: hidden;}
-section.intro .intro-frame ul li:last-child {margin-left: 5px;}
+section.intro .intro-frame ul {display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;}
+section.intro .intro-frame ul li {width: 50%; border: 1px solid #e4e4e4; overflow: hidden; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);}
 section.intro .intro-frame ul li img {object-fit: cover; transition: all .5s ease;}
 section.intro .intro-frame ul li img:hover {transform: scale(1.5);}
 section.intro .intro-bg-txt {width: 210%; margin-top: 5rem; animation: text-move 20s linear infinite;}
@@ -106,9 +105,10 @@ section.img-part.part2 .content-box-flex p:nth-of-type(3) {margin-top: 16%;}
 section.img-part.part2 .content-box-flex p:nth-of-type(4) {margin-top: 5%;}
 section.img-part.part2 .content-box-flex p:nth-of-type(5) {margin-top: 13%;}
 
-section.img-part.part2 .pop-img > a {display: block; width: 10rem; transition: all .7s ease; transform: rotate(-20deg); position: absolute; left: -2rem; top: 55%;}
-section.img-part.part2 .pop-img > a:hover {transform: rotate(360deg); left: 5rem;}
-section.img-part.part2 .pop-img a img {box-shadow: none;}
+section.img-part.part2 .pop-img {transition: all .7s ease; transform: rotate(-20deg); position: absolute; left: -2rem; top: 55%;}
+section.img-part.part2 .pop-img:hover {transform: rotate(360deg); left: 5rem;}
+section.img-part.part2 .pop-img > a {display: block; width: 10rem;}
+section.img-part.part2 .pop-img > a img {box-shadow: none;}
 section.img-part.part2::after {content: ''; background: url(../assets/m01.png) no-repeat; width: 413px; height: auto; padding-bottom: 100%; position: absolute; top: 4%; right: 3%; z-index: -1; background-size: contain; animation: swing 4s ease-in infinite;}
 section.img-part.part1::after {content: ''; background: url(../assets/tree02.png) no-repeat; width: 579px; height: 502px; position: absolute; bottom: -2%; left: 3%; z-index: -1; background-size: contain; animation: swing 4s ease-in infinite;}
 
@@ -151,7 +151,7 @@ section.img-tab ul li.active {background-color: var(--main04-color); color: #fff
 section.img-tab .product {display: flex; justify-content: center; align-items: center; flex-wrap: wrap;}
 section.img-tab ul li:hover {transform: translateY(-12px);}
 section.img-tab .product .itembox {position: relative; width: calc(15% - 8px); margin: 2rem; display: block;}
-section.img-tab .product .itembox::before {content: ''; width: 10rem; height: 10rem; background-color: #fff; border-radius: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -1; opacity: .5;}
+section.img-tab .product .itembox::before {content: ''; width: 72%; height: auto; padding-bottom: 72%; background-color: #fff; border-radius: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -1; opacity: .5;}
 section.img-tab .product .itembox.hide {display: none;}
 section.img-tab .product .itembox img {width: 100%;}
 
@@ -195,11 +195,11 @@ section.img-tab .product .itembox img {width: 100%;}
 
 
 /* sub module */
-
 body.works .intro, body.story .intro, body.about .intro {color: #161a14;}
 body.works .intro h1, body.story .intro h1, body.about .intro h1 {font-size: 1.7rem; font-weight: 700; letter-spacing: 1rem;}
 body.works .intro em, body.story .intro em, body.about .intro em {font-size: 8rem; font-weight: 700; display: inline-block; margin: 2.5rem 0 1rem; transition: all .7s ease;}
 body.works .intro span, body.story .intro span, body.about .intro span {display: block;}
+body.works .intro .top {display: flex;}
 
 /* sub about */
 body.about .drag-box-wrap {margin-bottom: 10rem; text-align: center;}
@@ -244,7 +244,8 @@ body.works .ansik-works .work-filter ul li:hover {border-radius: 0; padding: .5r
 .eng-head {font-family: 'Archivo Black', sans-serif; letter-spacing: -2px; line-height: 1;}
 .eng-text {font-family: 'Poppins', sans-serif; letter-spacing: 1px;}
 .content-box {width: 90%; max-width: 1500px; margin: 0 auto; position: relative;}
-.content-box .sub-text {font-size: 1.1rem; line-height: 1.7; padding: 2rem 0; font-family: 'Poppins', sans-serif;}
+.content-box .sub-text {font-size: 1.1rem; line-height: 1.7; padding: 2rem 0; font-family: 'Poppins', sans-serif; position: relative;}
+.content-box .sub-text::before {}
 .content-box .top-sub-text {display: block; padding-left: 1rem; margin-bottom: 1.5rem; font-weight: 300;}
 .content-box .top-sub-text::after {content: ''; width: 15rem; height: 1px; background-color: #ddd; display: inline-block; margin-left: 10px;}
 .content-box-flex {display: flex; justify-content: center; align-items: center; flex-wrap: wrap;}
@@ -285,8 +286,8 @@ body.works .ansik-works .work-filter ul li:hover {border-radius: 0; padding: .5r
 
 /* image-slide */
 .image-slide {position: relative;}
-.image-slide .box {position: relative; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden;}
-.image-slide .box img {width: 100%;}
+.image-slide .box {position: relative; left: 0; top: 0; width: 100%; height: 100%; overflow: hidden; box-shadow: 0 0 10px rgb(0 0 0 / 20%);}
+.image-slide .box img {width: 100%; height: 100%; object-fit: cover;}
 .image-slide .dummy {opacity: 0;}
 .image-slide ul.slide {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
 .image-slide ul.slide > li {position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: none;}
