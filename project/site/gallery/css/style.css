@@ -31,7 +31,7 @@ i[class^="xi"] span {position: absolute; left: -9999px;}
 
 /* common */
 body {font-family: 'NotoSansKR', sans-serif; color: #161a14; background: var(--body-color); font-weight: 400; word-break: keep-all; -ms-overflow-style: none; transition: background-color .3s ease;}
-body.change {background-color: var(--main02-color); color: #161a14;}
+body.change {background-color: lightsalmon; color: #161a14;}
 body.change02 {background-color: var(--main04-color); color: #fff;}
 #wrapper {overflow: hidden;}
 #skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.8); color: #ffffff; font-size: 1rem; transition: top 0.3s; z-index: 100000;}
@@ -151,7 +151,7 @@ section.img-tab ul li.active {background-color: var(--main04-color); color: #fff
 section.img-tab .product {display: flex; justify-content: center; align-items: center; flex-wrap: wrap;}
 section.img-tab ul li:hover {transform: translateY(-12px);}
 section.img-tab .product .itembox {position: relative; width: calc(15% - 8px); margin: 2rem; display: block;}
-section.img-tab .product .itembox::before {content: ''; width: 72%; height: auto; padding-bottom: 72%; background-color: #fff; border-radius: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -1; opacity: .5;}
+section.img-tab .product .itembox::before {content: ''; width: 72%; height: auto; padding-bottom: 72%; background-color: #fff; border-radius: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -1; opacity: .9;}
 section.img-tab .product .itembox.hide {display: none;}
 section.img-tab .product .itembox img {width: 100%;}
 

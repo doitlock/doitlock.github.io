@@ -154,11 +154,11 @@
   .project-top3 ul {display: flex; flex-direction: column;}
   .project-top3 ul li {display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap;}
   .project-top3 ul li + li {margin-top: 3rem;}
-  .project-top3 ul li .top3-thum {width: 50%; height: 310px; border-radius: 5px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: 0 5px 10px rgb(0 0 0 / 10%); transition: transform .5s ease-in;}
+  .project-top3 ul li .top3-thum {width: 50%; height: 310px; border-radius: 5px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: 0 5px 10px rgb(0 0 0 / 10%); transition: transform .4s ease-in;}
   .project-top3 ul li .top3-thum img {width: 100%; height: 100%; object-fit: cover;}
-  .project-top3 ul li:nth-of-type(1) .top3-thum:hover {transform: rotate(5deg);}
+  .project-top3 ul li:nth-of-type(1) .top3-thum:hover {transform: rotate(3deg);}
   .project-top3 ul li:nth-of-type(2) .top3-thum:hover {transform: scale(1.1);}
-  .project-top3 ul li:nth-of-type(3) .top3-thum:hover {transform: rotate(-5deg);}
+  .project-top3 ul li:nth-of-type(3) .top3-thum:hover {transform: rotate(-3deg);}
   .project-top3 ul li .top3-cont {text-align: left; width: 50%; height: 100%; color: var(--main04-color); padding: 2rem 3rem; border-radius: 5px;}
   .project-top3 ul li .top3-cont span {display: block; margin-bottom: 1rem;}
   .project-top3 ul li .top3-cont > span:nth-of-type(1)::after {content: ''; width: 40%; height: 1px; display: inline-block; margin-left: .7rem; background-color: var(--main04-color);} 
@@ -186,16 +186,21 @@
   footer .fix-foot {position: fixed; left: 0; bottom: 0; width: 100%; height: 40px; line-height: 40px; background-color: rgba(255,255,255,0.1); border-top: 1px solid #7474748f;}
   footer .fix-foot .fix-foot-area {width: 95%; margin: 0 auto;}
   footer .fix-foot p {font-size: 13px; color: var(--main04-color); font-weight: 400; opacity: .7;}
-
+ 
   /*sub*/
   #progect-page #main section h2.tit {font-weight: 800; font-size: 60px; margin-bottom: 45px; position: relative; color: var(--main07-color);}
   #progect-page #main .project-link {text-align: center; margin-bottom: 70px;}
   #progect-page #main .project-link ul li {display: inline-block;}
   #progect-page #main .project-link ul li + li {margin-left: 10px;}
-  #progect-page #main .project-link ul li a {font-size: 13px; color: var(--main04-color); padding: 6px 12px; border: 1px solid var(--main04-color); border-radius: 50px; display: block; transition: all .2s linear;}
+  #progect-page #main .project-link ul li a {font-size: 13px; color: var(--main04-color); padding: 6px 12px; border: 1px solid var(--main04-color); border-radius: 5px; display: block; transition: all .2s linear;}
   #progect-page #main .project-link ul li a:hover {color: #fff; background-color: var(--main02-color); border-color: var(--main02-color); transform: rotate(0.02turn);}
-  #progect-page #main #say-goodbye {padding: 80px 0;}
-  #progect-page #main #say-goodbye h3 {font-size: 14px; font-weight: 400; color: var(--main04-color);}
+  #progect-page .project-wrap .project-cont li {width: calc(50% - 5px); display: flex; justify-content: flex-start; align-items: center;}
+  #progect-page .project-wrap .project-cont li .live-btn a {width: 30%;}
+  #progect-page #say-goodbye {padding: 80px 0;}
+  #progect-page .project-wrap .project-cont li .thum-img {width: 35%; height: 100%;}
+  #progect-page .project-wrap .project-cont li .txt-cont {width: 65%; padding: 1.5rem;}
+  #progect-page .project-wrap .project-cont li .txt-cont > span {display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+  #progect-page #say-goodbye h3 {font-size: 14px; font-weight: 400; color: var(--main04-color);}
 
   /*module*/
   .btn {display: inline-block;}
@@ -210,3 +215,10 @@
     50% {transform: translateY(0);}
     100% {transform: translateY(40px);}
   }
+
+
+  /*media query*/
+  @media screen and (max-width: 1200px) {
+    html {font-size: 13px;}
+  }
+  

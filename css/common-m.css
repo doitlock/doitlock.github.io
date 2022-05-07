@@ -161,12 +161,18 @@ footer .fix-foot p {font-size: .6rem; color: #999; font-weight: 400;}
 /*sub*/
 #progect-page #main section h2.tit {font-weight: 800; font-size: 60px; margin-bottom: 45px; position: relative; color: var(--main07-color);}
 #progect-page #main .project-link {text-align: center; margin-bottom: 70px;}
+#progect-page #main .project-link ul {white-space: nowrap; overflow: auto;}
 #progect-page #main .project-link ul li {display: inline-block;}
 #progect-page #main .project-link ul li + li {margin-left: 10px;}
-#progect-page #main .project-link ul li a {font-size: 13px; color: var(--main04-color); padding: 6px 12px; border: 1px solid var(--main04-color); border-radius: 50px; display: block; transition: all .2s linear;}
+#progect-page #main .project-link ul li a {font-size: 13px; color: var(--main04-color); padding: 6px 12px; border: 1px solid var(--main04-color); border-radius: 5px; display: block; transition: all .2s linear;}
 #progect-page #main .project-link ul li a:hover {color: #fff; background-color: var(--main02-color); border-color: var(--main02-color); transform: rotate(0.02turn);}
-#progect-page #main #say-goodbye {padding: 80px 0;}
-#progect-page #main #say-goodbye h3 {font-size: 14px; font-weight: 400; color: var(--main04-color);}
+#progect-page .project-wrap .project-cont li {width: calc(50% - 5px); display: flex; justify-content: flex-start; align-items: center;}
+#progect-page .project-wrap .project-cont li .live-btn a {width: 45%;}
+#progect-page #say-goodbye {padding: 80px 0;}
+#progect-page .project-wrap .project-cont li .thum-img {width: 40%; height: 100%;}
+#progect-page .project-wrap .project-cont li .txt-cont {width: 60%; padding: 1.5rem;}
+#progect-page .project-wrap .project-cont li .txt-cont > span {display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+#progect-page #say-goodbye h3 {font-size: 14px; font-weight: 400; color: var(--main04-color);}
 
 /*module*/
 .btn {display: inline-block;}
@@ -192,10 +198,13 @@ footer .fix-foot p {font-size: .6rem; color: #999; font-weight: 400;}
   .project-top3 ul li .top3-thum {width: 100%; height: auto;}
   .project-top3 ul li .top3-cont {width: 100%;}
   
+  #progect-page .project-wrap .project-cont li {width: 100%;}
+  #progect-page .project-wrap .project-cont li .live-btn a {width: 35%;}
+  
 }
 
 @media screen and (max-width: 480px) {
-
+  #progect-page .project-wrap .project-cont li .live-btn a {width: 50%;}
 }
 
 
