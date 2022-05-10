@@ -135,7 +135,7 @@
   /*project*/
   #main .project .project-wrap + .project-wrap {padding-top: 80px;}
   #main .project .project-cont {display: flex; justify-content: space-between; text-align: left; flex-wrap: wrap; margin-bottom: 20px;}
-  #main .project .project-cont li {width: calc(100% / 3 - 5px); height: auto; background-color:#f5f5f5; border: 1px solid var(--main08-color); border-radius: 6px; overflow: hidden; box-shadow: 2px 3px 10px rgb(0 0 0 / 3%); transition: all .3s linear; margin-bottom: 10px;}
+  #main .project .project-cont li {width: calc(100% / 3 - 5px); height: auto; background-color:#fefefe; border: 1px solid var(--main08-color); border-radius: 6px; overflow: hidden; box-shadow: 2px 3px 10px rgb(0 0 0 / 3%); transition: all .3s linear; margin-bottom: 10px;}
   #main .project .project-cont li:hover {transform: translateY(-3px);}
   #main .project .project-cont li .thum-img {width: 100%; height: 240px; overflow: hidden;}
   #main .project .project-cont li .thum-img img {width: 100%; height: 100%; object-fit: cover; object-position: top;}
@@ -146,15 +146,15 @@
   #main .project .project-cont li p i {font-weight: 400; font-size: 1rem;}
   #main .project .project-cont li span {font-size: 14px; color: #777; line-height: 2;}
   #main .project .live-btn {display: flex; justify-content: flex-start; align-items: center; text-align: center; margin-top: 1.7rem;}
-  #main .project .live-btn a {display: block; width: calc(100% / 3.5); margin-right: 3px; background-color: #2c3333; color: #fff; font-size: .8rem; font-weight: 400; height: 2.5rem; line-height: 2.3rem; letter-spacing: 1px; transition: all .2s linear; border: 1px solid var(--bg-color); border-radius: 4px;}
+  #main .project .live-btn a {display: block; width: calc(100% / 3.5); margin-right: 3px; background-color: #fff; color: #2C3333; font-size: .8rem; font-weight: 400; height: 2.5rem; line-height: 2.3rem; letter-spacing: 1px; transition: all .2s linear; border: 1px solid #ddd; border-radius: 4px;}
   #main .project .live-btn a span {display: inline-block; font-size: inherit; color: inherit; font-weight: 700; margin-bottom: 0;}
-  #main .project .live-btn a:hover {background-color: var(--main02-color); border-color: var(--main02-color);}
+  #main .project .live-btn a:hover {background-color: var(--main02-color); color: #fff; border-color: var(--main02-color);}
 
   .project-top3 ul {margin-bottom: 10rem;}
   .project-top3 ul {display: flex; flex-direction: column;}
   .project-top3 ul li {display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap;}
   .project-top3 ul li + li {margin-top: 3rem;}
-  .project-top3 ul li .top3-thum {width: 50%; height: 310px; border-radius: 5px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: 0 5px 10px rgb(0 0 0 / 10%); transition: transform .4s ease-in;}
+  .project-top3 ul li .top3-thum {width: 50%; height: 310px; border-radius: 5px; overflow: hidden; border: 1px solid rgba(0, 0, 0, 0.1); box-shadow: 0 5px 10px rgb(0 0 0 / 20%); transition: transform .4s ease-in;}
   .project-top3 ul li .top3-thum img {width: 100%; height: 100%; object-fit: cover;}
   .project-top3 ul li:nth-of-type(1) .top3-thum:hover {transform: rotate(3deg);}
   .project-top3 ul li:nth-of-type(2) .top3-thum:hover {transform: scale(1.1);}
@@ -165,8 +165,6 @@
   .project-top3 ul li .top3-cont em {font-size: 2.5rem; font-weight: 700; margin-bottom: 1.2rem; display: block;}
   .project-top3 ul li .top3-cont .sub-tit {margin-bottom: 1rem; color: var(--main06-color);}
   .project-top3 ul li .top3-cont .cont-txt {line-height: 1.5; margin-bottom: 2rem;}
-  .project-top3 ul li .top3-cont .live-btn a {border-color: var(--main06-color) !important}
-
 
   .contact {margin-bottom: 80px;}
   .contact .contact-box p {font-size: 1.2rem; margin-bottom: 4rem;}

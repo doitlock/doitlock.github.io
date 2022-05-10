@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>Form | Design | Sample | 디노웍스 관리시스템</title>
+    <meta name="description" content="디노웍스 관리시스템 샘플 Form" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=1400" />
+    <meta name="apple-mobile-web-app-title" content="디노웍스" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico" />
+    <link rel="stylesheet" href="../../lib/fa/css/all.min.css" />
+    <link rel="stylesheet" href="../../css/web-font.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script src="../../js/dino-common.js"></script>
+  </head>
+  <body class="sub sample design form">
+    <div id="wrapper">
+      <a href="#main" id="skip-nav">본문 바로가기</a>
+      <header id="header">
+        <div class="logo">
+          <h1>
+            <a href="#" class="default"><img alt="DinoWorks" src="../../img/logo.png" /></a>
+            <a href="#" class="circle">DinoWorks</a>
+          </h1>
+          <a href="#" class="toggle"><i class="fa-solid fa-angle-left"><span>네비게이션 열기/닫기</span></i></a>
+        </div>
+        <div class="user">
+          <span class="photo" style="background-image: url(../../img/common/sample-face.jpg);">사용자 사진</span>
+          <em class="name">김정민<span>(전체관리자)</span></em>
+          <a href="#" class="toggle"><i class="fa-solid fa-angle-down"><span>사용자 상세정보 열기/닫기</span></i></a>
+          <div class="layer-info">
+
+          </div>
+        </div>
+        <ul id="header-link">
+          <li><a href="#" title="로그아웃"><i class="fa-solid fa-arrow-right-from-bracket"><span>로그아웃</span></i></a></li>
+          <li><a href="#" target="_black" title="홈페이지 열기"><i class="fa-solid fa-desktop"><span>홈페이지 열기</span></i></a></li>
+          <li><a href="#" title="개인정보설정"><i class="fa-solid fa-user-gear"><span>개인정보설정</span></i></a></li>
+          <li><a href="#" title="비밀번호변경"><i class="fa-solid fa-lock"><span>비밀번호변경</span></i></a></li>
+          <li><a href="#" title="알람"><i class="fa-regular fa-bell"><span>알람</span></i></a></li>
+        </ul>
+      </header>
+
+      <section id="gnb" class="custom-scroll">
+        <h2 class="ir-hidden">네비게이션</h2>
+        <nav>
+          <h3>OVERIVEW</h3>
+          <ul>
+            <li><a href="../overview/dashboard.html" title="Dashboard Dashboard Dashboard"><i class="fa-solid fa-gauge"></i><em>Dashboard Dashboard Dashboard</em><i class="fa-solid fa-angle-right"><span>서브메뉴있음</span></i></a></li>
+            <li>
+              <a href="#"><i class="fa-solid fa-user-gear"></i><em>My Page</em></a>
+              <ul>
+                <li><a href="#">개인정보관리</a></li>
+                <li><a href="#">비밀번호수정</a></li>
+              </ul>
+            </li>
+          </ul>
+          <h3>Sample</h3>
+          <ul>
+            <li>
+              <a href="#"><i class="fa-solid fa-palette"></i><em>Design</em></a>
+              <ul>
+                <li><a href="../sample/design-layout.html">Layout</a></li>
+                <li><a href="../sample/design-button.html">Button</a></li>
+                <li><a href="../sample/design-form.html">Form</a></li>
+                <li><a href="../sample/design-list.html">List Page</a></li>
+                <li><a href="../sample/design-view.html">View Page</a></li>
+                <li><a href="../sample/design-edit.html">Edit Page</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-cubes"></i><em>Module</em></a>
+              <ul>
+                <li><a href="#">Chart</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Editor</a></li>
+                <li><a href="#">...</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <main id="main">
+        <h2>Form 샘플</h2>
+        <p>폼 샘플 : The most complete user interface framework that can be used to create stunning admin dashboards and presentation websites.</p>
+
+        <section class="container type-1">
+          <section>
+            <h3>기본 폼</h3>
+            <ul class="form-box">
+              <li><input type="text" name="" id="" class="text" placeholder="아이디 입력" value="" /></li>
+              <li><input type="text" name="" id="" class="text error" placeholder="error" value="" /></li>
+              <li><input type="text" name="" id="" class="text" placeholder="readonly" value="2022-03-15" readonly="readonly" /></li>
+              <li><input type="text" name="" id="" class="text" placeholder="disabled" value="" disabled="disabled" /></li>
+              <li>
+                <select name="" id="">
+                  <option value="">-옵션선택-</option>
+                  <option value="c1">선택1</option>
+                  <option value="c2" selected="selected">선택2</option>
+                  <option value="c3">선택3</option>
+                  <option value="c4">선택선택선택4</option>
+                </select>
+              </li>
+              <li><textarea name="" id="" placeholder="기타사항 입력"></textarea></li>
+              <li>
+                <ul class="input-list">
+                  <li><input type="radio" name="user_type" id="user-type-1" value="user-1" /><label for="user-type-1">회원구분1</label></li>
+                  <li><input type="radio" name="user_type" id="user-type-2" value="user-2" /><label for="user-type-2">회원구분2</label></li>
+                  <li><input type="radio" name="user_type" id="user-type-3" value="user-3" checked="checked" /><label for="user-type-3">회원구분3</label></li>
+                  <li><input type="radio" name="user_type" id="user-type-4" value="user-4" /><label for="user-type-4">회원구분4</label></li>
+                  <li><input type="radio" name="user_type" id="user-type-5" value="user-5" /><label for="user-type-5">회원구분5</label></li>
+                  <li><input type="radio" name="user_type" id="user-type-6" value="user-6" /><label for="user-type-6">회원구분6</label></li>
+                  <li><input type="radio" name="user_type" id="user-type-7" value="user-7" /><label for="user-type-7">회원구분7</label></li>
+                  <li><input type="radio" name="user_type" id="user-type-8" value="user-8" /><label for="user-type-8">회원구분8</label></li>
+                  <li><input type="radio" name="user_type" id="user-type-9" value="user-9" /><label for="user-type-9">회원구분9</label></li>
+                  <li><input type="radio" name="user_type" id="user-type-10" value="user-10" /><label for="user-type-10">회원구분10</label></li>
+                  <li><input type="radio" name="user_type" id="user-type-11" value="user-11" /><label for="user-type-11">회원구분11</label></li>
+                  <li><input type="radio" name="user_type" id="user-type-12" value="user-12" /><label for="user-type-12">회원구분12</label></li>
+                  <li><input type="radio" name="user_type" id="user-type-13" value="user-13" /><label for="user-type-13">회원구분13</label></li>
+                  <li><input type="radio" name="user_type" id="user-type-14" value="user-14" /><label for="user-type-14">회원구분14</label></li>
+                  <li><input type="radio" name="user_type" id="user-type-15" value="user-15" /><label for="user-type-15">회원구분15</label></li>
+                  <li><input type="radio" name="user_type" id="user-type-16" value="user-16" /><label for="user-type-16">회원구분16</label></li>
+                  <li><input type="radio" name="user_type" id="user-type-17" value="user-17" /><label for="user-type-17">회원구분17</label></li>
+                  <li><input type="radio" name="user_type" id="user-type-18" value="user-18" /><label for="user-type-18">회원구분18</label></li>
+                  <li><input type="radio" name="user_type" id="user-type-19" value="user-19" /><label for="user-type-19">회원구분19</label></li>
+                </ul>
+              </li>
+              <li>
+                <ul class="input-list">
+                  <li><input type="checkbox" name="interest[]" id="interest-1" value="int-1" /><label for="interest-1">관심분야1</label></li>
+                  <li><input type="checkbox" name="interest[]" id="interest-2" value="int-2" /><label for="interest-2">관심분야2</label></li>
+                  <li><input type="checkbox" name="interest[]" id="interest-3" value="int-3" checked="checked" /><label for="interest-3">관심분야3</label></li>
+                  <li><input type="checkbox" name="interest[]" id="interest-4" value="int-4" /><label for="interest-4">관심분야4</label></li>
+                </ul>
+              </li>
+              <li>
+                <input type="text" name="" id="" class="text" />
+                <ul class="input-list">
+                  <li><input type="radio" name="unit" id="unit-1" value="won" /><label for="unit-1">원</label></li>
+                  <li><input type="radio" name="unit" id="unit-2" value="dollar" /><label for="unit-2">달러</label></li>
+                  <li><input type="radio" name="unit" id="unit-3" value="euro" /><label for="unit-3">유로</label></li>
+                  <li><input type="radio" name="unit" id="unit-4" value="yen" /><label for="unit-4">엔</label></li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section class="container type-2">
+          <section>
+            <h3>예제1</h3>
+            <ul class="form-box">
+              <li>
+                <div class="input-group">
+                  <label for="user-id"><i class="fa-solid fa-user"><span>아이디</span></i></label>
+                  <input type="text" name="user_id" id="user-id" class="text" />
+                </div>
+              </li>
+              <li>
+                <div class="input-group">
+                  <label for="user-id">아이디</label>
+                  <input type="text" name="user_id" id="user-id" class="text" />
+                </div>
+              </li>
+              <li>
+                <div class="input-group">
+                  <input type="text" name="user_id" id="user-id" class="text" />
+                  <a href="#" class="btn regular blue icon"><i class="fa-solid fa-search"><span>검색</span></i></a>
+                </div>
+              </li>
+              <li>
+                <div class="input-group">
+                  <input type="text" name="user_id" id="user-id" class="text" />
+                  <a href="#" class="btn regular blue">중복확인</a>
+                </div>
+              </li>
+              <li>
+                <div class="input-group">
+                  <label for="">통합검색</label>
+                  <select name="" id="">
+                    <option value="">-검색구분-</option>
+                    <option value="">제목</option>
+                    <option value="">내용</option>
+                    <option value="">제목+내용</option>
+                  </select>
+                  <input type="text" name="user_id" id="user-id" class="text" />
+                  <a href="#" class="btn regular blue">검색</a>
+                </div>
+              </li>
+              <li>
+                <div class="input-group">
+                  <input type="text" name="user_id" id="user-id" class="text" />
+                  <span class="label">달러</span>
+                </div>
+              </li>
+              <li>
+                <div class="input-group">
+                  <label for=""><i class="fa-regular fa-clock"><span>예약시간</span></i></label>
+                  <input type="text" name="" id="" class="text" />
+                  <a href="#" class="btn regular blue icon"><i class="fa-regular fa-calendar"><span>검색</span></i></a>
+                  <select name="" id="">
+                    <option value="00">00</option>
+                    <option value="00">00</option>
+                    <option value="00">00</option>
+                    <option value="00">00</option>
+                    <option value="00">00</option>
+                  </select>
+                  <span class="label">시</span>
+                  <select name="" id="">
+                    <option value="00">00</option>
+                    <option value="00">00</option>
+                    <option value="00">00</option>
+                    <option value="00">00</option>
+                    <option value="00">00</option>
+                  </select>
+                  <span class="label">분</span>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>박스2</h3>
+
+          </section>
+        </section>
+
+        <section class="container type-1">
+          <section>
+            <h3>폼 테이블</h3>
+
+            <table class="form-box">
+              <tbody>
+                <tr>
+                  <td class="th"><label for="user-id"><em>*</em>아이디</label></td>
+                  <td><input type="text" name="" id="user-id" class="text" value="" /></td>
+                  <td class="th"><label for="user-pw">비밀번호</label></td>
+                  <td><input type="password" name="" id="user-pw" class="text" value="" /></td>
+                </tr>
+                <tr>
+                  <td class="th"><label for="user-id">아이디</label></td>
+                  <td><input type="text" name="" id="user-id" class="text" value="" /></td>
+                  <td class="th"><label for="user-pw">비밀번호</label></td>
+                  <td><input type="password" name="" id="user-pw" class="text" value="" /></td>
+                </tr>
+                <tr>
+                  <td class="th"><label for="user-id">아이디</label></td>
+                  <td><input type="text" name="" id="user-id" class="text" value="" /></td>
+                  <td class="th"><label for="user-pw">비밀번호</label></td>
+                  <td><input type="password" name="" id="user-pw" class="text" value="" /></td>
+                </tr>
+                <tr>
+                  <td class="th"><label for="user-id">아이디</label></td>
+                  <td><input type="text" name="" id="user-id" class="text" value="" /></td>
+                  <td class="th"><label for="user-pw">비밀번호</label></td>
+                  <td><input type="password" name="" id="user-pw" class="text" value="" /></td>
+                </tr>
+              </tbody>
+            </table>
+
+
+          </section>
+        </section>
+
+
+
+
+      </main>
+
+      <footer id="footer">
+        <p>© Copyright 2022 DinoWorks Inc. All Rights Reserved.</p>
+      </footer>
+    </div> <!-- #wrapper -->
+
+<script>
+'use strict';
+
+
+
+</script>
+  </body>
+</html>

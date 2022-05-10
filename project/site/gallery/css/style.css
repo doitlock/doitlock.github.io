@@ -105,9 +105,8 @@ section.img-part.part2 .content-box-flex p:nth-of-type(3) {margin-top: 16%;}
 section.img-part.part2 .content-box-flex p:nth-of-type(4) {margin-top: 5%;}
 section.img-part.part2 .content-box-flex p:nth-of-type(5) {margin-top: 13%;}
 
-section.img-part.part2 .pop-img {transition: all .7s ease; transform: rotate(-20deg); position: absolute; left: -2rem; top: 55%;}
-section.img-part.part2 .pop-img:hover {transform: rotate(360deg); left: 5rem;}
-section.img-part.part2 .pop-img > a {display: block; width: 10rem;}
+section.img-part.part2 .pop-img > a{transition: all .7s ease; transform: rotate(-20deg); position: absolute; left: -2rem; top: 55%; display: block; width: 10rem;}
+section.img-part.part2 .pop-img > a:hover {transform: rotate(360deg); left: 5rem;}
 section.img-part.part2 .pop-img > a img {box-shadow: none;}
 section.img-part.part2::after {content: ''; background: url(../assets/m01.png) no-repeat; width: 413px; height: auto; padding-bottom: 100%; position: absolute; top: 4%; right: 3%; z-index: -1; background-size: contain; animation: swing 4s ease-in infinite;}
 section.img-part.part1::after {content: ''; background: url(../assets/tree02.png) no-repeat; width: 579px; height: 502px; position: absolute; bottom: -2%; left: 3%; z-index: -1; background-size: contain; animation: swing 4s ease-in infinite;}

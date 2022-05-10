@@ -40,9 +40,9 @@ i[class^="xi"] span {position: absolute; left: -9999px;}
 #skip-nav:focus {top: 0;}
 #wrapper {position: relative;}
 
-header { position: sticky; top: 0; z-index: 100;  width: 100%;}
+header { position: sticky; top: 0; z-index: 100;  width: 100%; min-width: 1200px;}
 nav { display: flex; align-items: center; justify-content: space-between; background: var(--nav-color); padding: 10px 3%;}
-.container {display: flex; justify-content: space-between; padding: 13px 3%;}
+.container {display: flex; justify-content: space-between; padding: 13px 3%; min-width: 1200px;}
 .logo {width: 160px; margin-right: 45px;}
 .nav-left, .nav-right {display: flex; align-items: center;}
 .nav-left ul li {display: inline-block;}
