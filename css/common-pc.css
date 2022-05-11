@@ -116,8 +116,8 @@
   #main .aboutme .abt-wrap > div.edu ul li p span {padding-left: 15px;}
   #main .aboutme .abt-wrap > div.career ul li em {display: inline-block;width: 34%;vertical-align: top;font-weight: 500;font-size: 16px;}
   #main .aboutme .abt-wrap > div.career ul li p {width: 50%;}
-  #main .aboutme .abt-wrap > div.skill ul.skill-list.sub {display: flex; justify-content: space-between; align-items: center; }
-  #main .aboutme .abt-wrap > div.skill ul.skill-list.sub li {border-bottom: none; text-align: center;}
+
+  #main .aboutme .abt-wrap > div.skill ul.skill-list li em {width: 20%; display: inline-block; font-weight: 500;}
   #main .aboutme .about-me-top {margin-bottom: 10rem;}
   #main .aboutme .about-me-top .img-me {width: 600px; height: auto; margin: 0 auto 3rem; }
   #main .aboutme .about-me-top .about-txt {margin-bottom: 7rem;}
@@ -194,7 +194,7 @@
   #progect-page #main .project-link ul li a:hover {color: #fff; background-color: var(--main02-color); border-color: var(--main02-color); transform: rotate(0.02turn);}
   #progect-page .project-wrap .project-cont li {width: calc(50% - 5px); display: flex; justify-content: flex-start; align-items: center;}
   #progect-page .project-wrap .project-cont li .live-btn a {width: 30%;}
-  #progect-page #say-goodbye {padding: 80px 0;}
+  #progect-page #say-goodbye {padding: 180px 0;}
   #progect-page .project-wrap .project-cont li .thum-img {width: 35%; height: 100%;}
   #progect-page .project-wrap .project-cont li .txt-cont {width: 65%; padding: 1.5rem;}
   #progect-page .project-wrap .project-cont li .txt-cont > span {display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
