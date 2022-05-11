@@ -3,12 +3,15 @@
 /* root */
 :root {
   --main-green : #1ab394;
+  --main-green02 : #62cb31;
   --main-blue: #007bff;
+  --main-white : #fefefe;
   --main-font : #676a6c;
-  --bg-color : #f3f3f4;
+  --bg-color : #f1f3f6;
 }
 
 /* reset */
+*, *::before, *::after {box-sizing: border-box;}
 html {-webkit-text-size-adjust: none; text-size-adjust: none;}
 body {margin: 0;}
 h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p {margin: 0; padding: 0;}
@@ -26,7 +29,7 @@ i[class^="fa"] span {position: absolute; left: -9999px;}
 
 /* common */
 body {font-family: 'NotoSansKR', 'Apple SD Gothic Neo', '맑은 고딕', Malgun Gothic, '돋움', Dotum, Helvetica, AppleGothic, sans-serif; font-size: 13px; font-weight: 400; color: var(--main-font); background-color: var(--bg-color);}
-#wrapper {position:relative; padding: 70px 0 0 240px; box-sizing: border-box; overflow: hidden;}
+#wrapper {position:relative; padding: 70px 0 0 240px;  overflow: hidden;}
 #skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.5); color: #ffffff; font-size: 16px; transition: top 0.3s; z-index: 100000;}
 #skip-nav:focus {top: 0;}
 
@@ -36,7 +39,7 @@ body {font-family: 'NotoSansKR', 'Apple SD Gothic Neo', '맑은 고딕', Malgun 
 #header h1 a {display: block;}
 #header h1 a.default {position: relative; z-index: 10; transition: opacity 0.3s;}
 #header h1 a.default img {width: 100%;}
-#header h1 a.circle {position: absolute; left: 0; top: 50%; transform: translate(0, -50%); width: 50px; height: 50px; border-radius: 100px; border: 1px solid rgba(255, 255, 255, 0.3); box-sizing: border-box; overflow: hidden; text-indent: -999px; background: url(../img/logo-square.png) center center no-repeat; background-size: contain; opacity: 0; transition: opacity 0.3s;}
+#header h1 a.circle {position: absolute; left: 0; top: 50%; transform: translate(0, -50%); width: 50px; height: 50px; border-radius: 100px; border: 1px solid rgba(255, 255, 255, 0.3);  overflow: hidden; text-indent: -999px; background: url(../img/logo-square.png) center center no-repeat; background-size: contain; opacity: 0; transition: opacity 0.3s;}
 #header h1.circle {width: 50px;}
 #header h1.circle a.default {opacity: 0; z-index: 0;}
 #header h1.circle a.circle {opacity: 1; z-index: 10;}
@@ -56,11 +59,11 @@ body {font-family: 'NotoSansKR', 'Apple SD Gothic Neo', '맑은 고딕', Malgun 
 #header-link {position: absolute; right: 30px; top: 50%; transform: translate(0, -50%);}
 #header-link > li {float: left;}
 #header-link > li + li {margin-left: 6px;}
-#header-link > li > a {display: block; position: relative; width: 44px; height: 44px; border: 2px solid rgba(255, 255, 255, 0.3); border-radius: 4px; box-sizing: border-box; font-size: 18px; color: rgba(255, 255, 255, 0.7); transition: all 0.3s;}
+#header-link > li > a {display: block; position: relative; width: 44px; height: 44px; border: 2px solid rgba(255, 255, 255, 0.3); border-radius: 4px;  font-size: 18px; color: rgba(255, 255, 255, 0.7); transition: all 0.3s;}
 #header-link > li > a:hover {border-color: rgba(255, 255, 255, 0.5); color: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.1);}
 #header-link > li > a i {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
 
-#gnb {position: fixed; left: 0; top: 70px; width: 240px; height: calc(100% - 70px); box-sizing: border-box; overflow: auto; background: #ffffff;}
+#gnb {position: fixed; left: 0; top: 70px; width: 240px; height: calc(100% - 70px);  overflow: auto; background: #ffffff;}
 #gnb nav {padding: 20px 15px 100px 15px;}
 #gnb nav h3 {font-size: 14px; font-weight: 500; color: #000000; margin: 20px 0 5px 0;}
 #gnb nav h3:first-child {margin-top: 0;}
@@ -89,19 +92,23 @@ body {font-family: 'NotoSansKR', 'Apple SD Gothic Neo', '맑은 고딕', Malgun 
 
 
 /* 로그인 페이지 */
-body.login {background-image: linear-gradient(154deg, #008fe2 0, #00b29c 100%);}
-body.login #login-box {position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 500px; min-height: 300px; box-sizing: border-box; padding-left: 160px; background-color: #ffffff; border-radius: 4px; box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.2); overflow: hidden;}
-body.login #login-box div.left {position: absolute; left: 0; top: 0; width: 160px; height: 100%; background-color: #00b29c; box-sizing: border-box; padding: 30px 15px; color: #ffffff;}
-body.login #login-box h1 {width: 120px;}
-body.login #login-box p.title {font-size: 12px; margin-top: 10px; line-height: 1.3em;}
-body.login #login-box div.right {padding: 40px 30px;}
-body.login #login-box h2 {text-align: center; font-size: 26px; font-weight: 400; margin-bottom: 20px;}
-
+body.login {background-color: var(--bg-color);}
+body.login #login-box {position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 500px; height: auto; padding: 2rem 1rem; background-color: #ffffff; border-radius: 4px; box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.2); overflow: hidden;}
+body.login #login-box div.top {color: var(--main-font); text-align: center;}
+body.login #login-box div.top h1 {font-size: 2rem; font-weight: 300;}
+body.login #login-box div.top p.title {font-size: 12px; margin-top: 10px; line-height: 2; font-weight: 100;}
+body.login #login-box div.btm {padding: 40px 30px;}
+body.login #login-box div.btm ul li {margin-bottom: 1rem;}
+body.login #login-box div.btm ul li label {font-weight: 500;}
+body.login #login-box div.btm .login-txt {width: 100%; display: block;}
+body.login #login-box .button-box a {width: 100%; display: block; text-align: center; padding: .8rem 0; background-color: var(--main-green02); color: var(--main-white); border-radius: 5px;}
+body.login #login-box .button-box a + a {margin-top: .3rem;}
+body.login #login-box span.login-smtxt {font-size: .5rem; display: block; color: var(--main-font); font-weight: 100;}
 
 
 /* 서브페이지 공통 */
 body.sub {background-color: #fafcfe;}
-body.sub #main {position: relative; min-height: calc(100vh - 100px); padding: 20px 30px 100px 30px; box-sizing: border-box;}
+body.sub #main {position: relative; min-height: calc(100vh - 100px); padding: 20px 30px 100px 30px; }
 body.sub #main > h2 {font-size: 26px; font-weight: 400; margin-bottom: 5px;}
 body.sub #main > h2 + p {font-size: 12px; opacity: 0.6; margin-bottom: 30px;}
 
@@ -111,7 +118,7 @@ section.container {position: relative;}
 h2 + section.container {margin-top: 30px;}
 section.container::after {content: ''; display: block; clear: both;}
 section.container + section.container {margin-top: 20px;}
-section.container > section {float: left; position: relative; min-height: 100px; padding: 10px 15px; box-sizing: border-box; border: 1px solid #dfe8f1; border-radius: 4px; background-color: #ffffff;}
+section.container > section {float: left; position: relative; min-height: 100px; padding: 10px 15px;  border: 1px solid #dfe8f1; border-radius: 4px; background-color: #ffffff;}
 section.container > section.card {padding: 0;}
 section.container > section + section {margin-left: 20px;}
 section.container.type-1 > section {width: 100%;}
@@ -147,7 +154,7 @@ section.container > section h3 {font-size: 15px; font-weight: 400; opacity: 0.7;
 
 
 /* 버튼 */
-.btn {position: relative; display: inline-block; min-width: 100px; height: 30px; box-sizing: border-box; border: 1px solid rgba(0, 0, 0, 0.2); background: pink; vertical-align: middle; text-align: center; line-height: 28px; cursor: pointer; padding: 0 0.8em; font-family: inherit; font-size: 13px; font-weight: 400; border-radius: 4px; color: #000000; overflow: hidden; transition: all 0.3s; appearance: none; -webkit-appearance: none;}
+.btn {position: relative; display: inline-block; min-width: 100px; height: 30px;  border: 1px solid rgba(0, 0, 0, 0.2); background: pink; vertical-align: middle; text-align: center; line-height: 28px; cursor: pointer; padding: 0 0.8em; font-family: inherit; font-size: 13px; font-weight: 400; border-radius: 4px; color: #000000; overflow: hidden; transition: all 0.3s; appearance: none; -webkit-appearance: none;}
 .btn:hover {border-color: rgba(0, 0, 0, 0.5);}
 .btn.round {border-radius: 100px;}
 .btn.left {float: left;}
@@ -199,7 +206,7 @@ body.form ul.form-box > li {margin-bottom: 10px;}
 /* form design */
 .form-box input.text,
 .form-box select,
-.form-box textarea {display: inline-block; margin: 0; padding: 0; border: 1px solid #dfe8f1; border-radius: 3px; height: 30px; box-sizing: border-box; vertical-align: middle; outline: 0; background-color: #ffffff; color: #2b2f33; font-family: inherit; font-size: 13px; transition: all 0.3s; appearance: none; -webkit-appearance: none;}
+.form-box textarea {display: inline-block; margin: 0; padding: 0; border: 1px solid #dfe8f1; border-radius: 3px; height: 30px;  vertical-align: middle; outline: 0; background-color: #ffffff; color: #2b2f33; font-family: inherit; font-size: 13px; transition: all 0.3s; appearance: none; -webkit-appearance: none;}
 .form-box input.text:focus,
 .form-box select:focus,
 .form-box textarea:focus {border-color: #3da6ff; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08%), 0 0 8px rgba(102, 175, 233, 0.6); -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08%), 0 0 8px rgba(102, 175, 233, 0.6);}
@@ -237,10 +244,10 @@ div.input-group > * + *:not(.btn) {border-left-color: transparent !important;}
 div.input-group > * + *:not(.btn):focus {border-left-color: #3da6ff !important;}
 div.input-group > .btn {min-width: 30px;}
 div.input-group label,
-div.input-group span.label {min-width: 30px; height: 30px; line-height: 28px; box-sizing: border-box; border: 1px solid #dfe8f1; background-color: #f9f9f9; text-align: center; padding: 0 8px;}
+div.input-group span.label {min-width: 30px; height: 30px; line-height: 28px;  border: 1px solid #dfe8f1; background-color: #f9f9f9; text-align: center; padding: 0 8px;}
 
-a.btn-toggle {display: inline-block; position: relative; height: 26px; width: 60px; border: 2px solid #dfe8f1; border-radius: 100px; box-sizing: border-box; background-color: #fafcfe; vertical-align: middle; transition: background-color 0.3s;}
-a.btn-toggle label {position: absolute; left: 1px; top: 1px; width: 20px; height: 20px; box-sizing: border-box; border: 1px solid #dfe8f1; border-radius: 100px; background-color: #ffffff; overflow: hidden; text-indent: -999px; transition: transform 0.3s;}
+a.btn-toggle {display: inline-block; position: relative; height: 26px; width: 60px; border: 2px solid #dfe8f1; border-radius: 100px;  background-color: #fafcfe; vertical-align: middle; transition: background-color 0.3s;}
+a.btn-toggle label {position: absolute; left: 1px; top: 1px; width: 20px; height: 20px;  border: 1px solid #dfe8f1; border-radius: 100px; background-color: #ffffff; overflow: hidden; text-indent: -999px; transition: transform 0.3s;}
 a.btn-toggle.on {background-color: #fdde5c;}
 a.btn-toggle.on label {transform: translate(35px, 0);}
 
@@ -248,7 +255,7 @@ a.btn-toggle.on label {transform: translate(35px, 0);}
 
 
 
-table.form-box {width: 100%; font-size: 13px; border-top: 1px dashed #dfe8f1; table-layout: fixed; box-sizing: border-box;}
+table.form-box {width: 100%; font-size: 13px; border-top: 1px dashed #dfe8f1; table-layout: fixed; }
 table.form-box td {border-bottom: 1px dashed #dfe8f1; padding: 5px 10px;}
 table.form-box td.th {width: 120px; text-align: right; font-weight: 700; color: #000000;}
 table.form-box td.th label em {color: #f56a62; margin-right: 8px;}

@@ -18,20 +18,32 @@
     <div id="wrapper">
       <main id="main">
         <section id="login-box">
-          <div class="left">
-            <h1><img alt="Dinoworks" src="img/logo.png" /></h1>
+          <div class="top">
+            <h1>PLEASE LOGIN TO APP</h1>
             <p class="title">Welcome to IN+</p>
           </div>
-          <div class="right">
-            <h2>LOGIN</h2>
-            <ul class="form">
-              <li><input type="text" /></li>
-              <li><input type="password" /></li>
+          <div class="btm">
+            <ul class="form-box">
+              <li>
+                <label for="login-id">Username</label>
+                <input type="txt" class="text login-txt" id="login-id" placeholder="example@gmail.com" />
+                <span class="login-smtxt">Your unique username to app</span>
+              </li>
+              <li>
+                <label for="login-pw">Password</label>
+                <input type="password" class="text login-txt" id="login-pw" placeholder="*******" />
+                <span class="login-smtxt">Yur strong password</span>
+              </li>
+              <li>
+                <input type="checkbox" id="login-check" />
+                <label for="login-check">Remember login</label>
+                <span class="login-smtxt">(if this is a private computer)</span>
+              </li>
             </ul>
             <div class="button-box">
-              <a href="page/overview/dashboard.html">로그인</a>
-              <a href="page/overview/dashboard.html">회원가입</a>
-              <a href="page/overview/dashboard.html">그냥입장</a>
+              <a href="page/overview/dashboard.html">Login</a>
+              <a href="page/overview/dashboard.html">Join</a>
+              <a href="page/overview/dashboard.html">Go Dashboard</a>
             </div>
           </div>
         </section>
