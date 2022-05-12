@@ -2,12 +2,13 @@
 
 /* root */
 :root {
-  --main-green : #1ab394;
-  --main-green02 : #62cb31;
+  --main-green : #62cb31;
   --main-blue: #007bff;
   --main-white : #fefefe;
   --main-font : #676a6c;
   --bg-color : #f1f3f6;
+  --bg-color02 : #f7f9fa;
+  --line-color : #eaeaea;
 }
 
 /* reset */
@@ -26,53 +27,34 @@ i[class^="fa"] {position: relative; vertical-align: middle;}
 i[class^="fa"] span {position: absolute; left: -9999px;}
 .ir-hidden {position: absolute; left: -9999px;}
 
-
 /* common */
 body {font-family: 'NotoSansKR', 'Apple SD Gothic Neo', '맑은 고딕', Malgun Gothic, '돋움', Dotum, Helvetica, AppleGothic, sans-serif; font-size: 13px; font-weight: 400; color: var(--main-font); background-color: var(--bg-color);}
-#wrapper {position:relative; padding: 70px 0 0 240px;  overflow: hidden;}
+#wrapper {position:relative; padding: 70px 0 0 200px; overflow: hidden;}
 #skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.5); color: #ffffff; font-size: 16px; transition: top 0.3s; z-index: 100000;}
 #skip-nav:focus {top: 0;}
 
-#header {position: fixed; left: 0; top: 0; width: 100%; height: 70px; background-image: linear-gradient(154deg, #008fe2 0, #00b29c 100%); z-index: 10000;}
-#header div.logo {position: absolute; left: 0; top: 0; width: 240px; height: 100%; background-color: rgba(255, 255, 255, 0.1);}
-#header h1 {position: absolute; left: 20px; top: 50%; transform: translate(0, -50%); width: 130px;}
-#header h1 a {display: block;}
-#header h1 a.default {position: relative; z-index: 10; transition: opacity 0.3s;}
-#header h1 a.default img {width: 100%;}
-#header h1 a.circle {position: absolute; left: 0; top: 50%; transform: translate(0, -50%); width: 50px; height: 50px; border-radius: 100px; border: 1px solid rgba(255, 255, 255, 0.3);  overflow: hidden; text-indent: -999px; background: url(../img/logo-square.png) center center no-repeat; background-size: contain; opacity: 0; transition: opacity 0.3s;}
-#header h1.circle {width: 50px;}
-#header h1.circle a.default {opacity: 0; z-index: 0;}
-#header h1.circle a.circle {opacity: 1; z-index: 10;}
-#header div.logo a.toggle {position: absolute; right: 10px; top: 50%; transform: translate(0, -50%); width: 24px; height: 24px; color: rgba(255, 255, 255, 0.5); font-size: 12px; border-radius: 4px; transition: all 0.3s;}
-#header div.logo a.toggle:hover {background-color: rgba(255, 255, 255, 0.2); color: rgba(255, 255, 255, 0.8);}
-#header div.logo a.toggle i {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); transition: transform 0.3s;}
-#header div.logo a.toggle.close i {transform: translate(-50%, -50%) rotate(180deg);}
-#header div.user {position: absolute; left: 270px; top: 50%; transform: translate(0, -50%);}
-#header div.user > * {vertical-align: middle; display: inline-block;}
-#header div.user span.photo {width: 36px; height: 36px; border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 100px; overflow: hidden; background: #ffffff url(../img/common/icon-face.png) center center no-repeat; background-size: cover; background-origin: border-box; text-indent: -999px;}
-#header div.user em.name {font-size: 15px; color: #ffffff; margin: 0 15px 0 6px;}
-#header div.user em.name span {font-size: 13px; margin-left: 6px;}
-#header div.user a.toggle {position: relative; width: 24px; height: 24px; color: rgba(255, 255, 255, 0.5); background-color: rgba(255, 255, 255, 0.1); font-size: 12px; border-radius: 4px; transition: all 0.3s;}
-#header div.user a.toggle:hover {background-color: rgba(255, 255, 255, 0.2); color: rgba(255, 255, 255, 0.8);}
-#header div.user a.toggle i {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); transition: transform 0.3s;}
-#header div.user a.toggle.close i {transform: translate(-50%, -50%) rotate(180deg);}
-#header-link {position: absolute; right: 30px; top: 50%; transform: translate(0, -50%);}
-#header-link > li {float: left;}
-#header-link > li + li {margin-left: 6px;}
-#header-link > li > a {display: block; position: relative; width: 44px; height: 44px; border: 2px solid rgba(255, 255, 255, 0.3); border-radius: 4px;  font-size: 18px; color: rgba(255, 255, 255, 0.7); transition: all 0.3s;}
-#header-link > li > a:hover {border-color: rgba(255, 255, 255, 0.5); color: rgba(255, 255, 255, 0.9); background-color: rgba(255, 255, 255, 0.1);}
+#header {position: fixed; left: 0; top: 0; width: 100%; height: 70px; background-color: var(--bg-color02); border-bottom: 1px solid #eaeaea; z-index: 10000;}
+#header div.logo {position: absolute; left: 0; top: 0; width: 200px; height: 100%; background-color: rgba(255, 255, 255, 0.1); border-right: 1px solid var(--line-color);}
+#header h1 {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%;}
+#header h1 a.default {font-size: .9rem; display: block; text-align: center;}
+#header-link {position: absolute; right: 30px; top: 50%; transform: translate(0, -50%); display: flex; height: 100%;}
+#header-link > li {height: 100%;}
+#header-link > li + li {margin-left: 1px;}
+#header-link > li > a {display: block; position: relative; width: 68px; height: 100%; font-size: 18px; color: var(--main-font); transition: all 0.1s;}
+#header-link > li > a:hover {background-color: var(--line-color);}
 #header-link > li > a i {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
 
-#gnb {position: fixed; left: 0; top: 70px; width: 240px; height: calc(100% - 70px);  overflow: auto; background: #ffffff;}
-#gnb nav {padding: 20px 15px 100px 15px;}
-#gnb nav h3 {font-size: 14px; font-weight: 500; color: #000000; margin: 20px 0 5px 0;}
+#gnb {position: fixed; left: 0; top: 70px; width: 200px; height: calc(100% - 70px); overflow: auto; background: #ffffff; border-right: 1px solid var(--line-color);}
+#gnb nav {padding: 20px 0; text-transform: uppercase;}
+#gnb nav h3 {font-size: 14px; font-weight: 500; color: #000000; margin: 20px 0 5px 0; padding-left: 15px;}
 #gnb nav h3:first-child {margin-top: 0;}
 #gnb nav > ul > li + li {margin-top: 3px;}
-#gnb nav > ul > li > a {display: block; position: relative; font-size: 13px; color: #8da0aa; line-height: 32px; border: 1px solid transparent; border-radius: 4px; padding-left: 28px; padding-right: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: all 0.3s;}
-#gnb nav > ul > li > a i:first-child {position: absolute; left: 5px; top: 50%; transform: translate(0, -50%); color: #0093d9; opacity: 0.6;}
+#gnb nav > ul > li > a {display: block; position: relative; font-size: 13px; color: #8da0aa; line-height: 32px; border: 1px solid transparent; border-radius: 4px; padding-left: 15px; padding-right: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: all 0.3s;}
+#gnb nav > ul > li > a i:first-child {position: absolute; left: 5px; top: 50%; transform: translate(0, -50%); color: var(--main-green);}
 #gnb nav > ul > li > a i:last-child {position: absolute; right: 8px; top: 50%; transform: translate(0, -50%); font-size: 10px;}
-#gnb nav > ul > li > a:hover {border-color: #dfe8f1; color: #1c82e1; text-decoration: underline;}
-#gnb nav > ul > li > ul {overflow: hidden; transition: height 0.3s;}
+#gnb nav > ul > li > a:hover {background-color: var(--bg-color02);}
+#gnb nav > ul > li > ul {overflow: hidden; transition: height 0.3s; height: 0;}
+#gnb nav > ul > li > ul.show {height: auto;}
 #gnb nav > ul > li > ul > li {border: 1px solid #dfe8f1; overflow: hidden;}
 #gnb nav > ul > li > ul > li + li {border-top: none;}
 #gnb nav > ul > li > ul > li:first-child {border-top-left-radius: 4px; border-top-right-radius: 4px; margin-top: 5px;}
@@ -82,13 +64,17 @@ body {font-family: 'NotoSansKR', 'Apple SD Gothic Neo', '맑은 고딕', Malgun 
 #gnb nav > ul > li > ul > li > a:hover {color: #1c82e1; background-color: #fcfdfe;}
 #gnb nav > ul > li > ul > li > a:hover::before {opacity: 0.6;}
 
+#gnb nav div.user {text-align: center; border-bottom: 1px solid var(--line-color);}
+#gnb nav div.user > * {vertical-align: middle; display: inline-block;}
+#gnb nav div.user span.photo {width: 50px; height: 50px; border: 1px solid var(--line-color); border-radius: 100%; overflow: hidden; background: #ffffff url(../img/common/icon-face.png) center center no-repeat; background-size: cover; background-origin: border-box; text-indent: -999px; display: block; margin: 0 auto;}
+#gnb nav div.user em.name {font-size: 15px; color: var(--main-font); margin: 0 15px 0 6px;}
+#gnb nav div.user em.name span {font-size: 13px; margin-left: 6px;}
+#gnb nav div.user a.toggle {position: relative; width: 24px; height: 24px; color: var(--main-font); background-color: rgba(255, 255, 255, 0.1); font-size: 12px; border-radius: 4px; transition: all 0.3s;}
+#gnb nav div.user a.toggle i {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); transition: transform 0.3s;}
+#gnb nav div.user a.toggle.close i {transform: translate(-50%, -50%) rotate(180deg);}
 
 
-
-
-#footer {height: 30px; background-image: linear-gradient(154deg, #008fe2 0, #00b29c 100%); color: #ffffff; font-size: 12px; line-height: 30px; text-align: center;}
-
-
+#footer {height: 40px; background-color: var(--main-white); color: var(--main-font); font-size: 12px; line-height: 40px; text-align: left; padding-left: 20px;}
 
 
 /* 로그인 페이지 */
@@ -97,20 +83,21 @@ body.login #login-box {position: fixed; left: 50%; top: 50%; transform: translat
 body.login #login-box div.top {color: var(--main-font); text-align: center;}
 body.login #login-box div.top h1 {font-size: 2rem; font-weight: 300;}
 body.login #login-box div.top p.title {font-size: 12px; margin-top: 10px; line-height: 2; font-weight: 100;}
-body.login #login-box div.btm {padding: 40px 30px;}
+body.login #login-box div.btm {padding: 40px 30px 0;}
 body.login #login-box div.btm ul li {margin-bottom: 1rem;}
 body.login #login-box div.btm ul li label {font-weight: 500;}
 body.login #login-box div.btm .login-txt {width: 100%; display: block;}
-body.login #login-box .button-box a {width: 100%; display: block; text-align: center; padding: .8rem 0; background-color: var(--main-green02); color: var(--main-white); border-radius: 5px;}
+body.login #login-box .button-box a {width: 100%; display: block; text-align: center; padding: .8rem 0; background-color: var(--main-green); color: var(--main-white); border-radius: 5px;}
 body.login #login-box .button-box a + a {margin-top: .3rem;}
+body.login #login-box .button-box a:nth-of-type(3) {background-color: #fff; border: 1px solid #ddd; color: var(--main-font);}
 body.login #login-box span.login-smtxt {font-size: .5rem; display: block; color: var(--main-font); font-weight: 100;}
 
 
 /* 서브페이지 공통 */
-body.sub {background-color: #fafcfe;}
+body.sub {background-color: var(--bg-color);}
 body.sub #main {position: relative; min-height: calc(100vh - 100px); padding: 20px 30px 100px 30px; }
-body.sub #main > h2 {font-size: 26px; font-weight: 400; margin-bottom: 5px;}
-body.sub #main > h2 + p {font-size: 12px; opacity: 0.6; margin-bottom: 30px;}
+body.sub #main > h2 {font-size: 1.8rem; font-weight: 100; margin-bottom: 5px; text-align: center;}
+body.sub #main > h2 + p {font-size: .7rem; margin-bottom: 30px; text-align: center;}
 
 
 /* 콘텐츠 레이아웃 박스 */
@@ -118,9 +105,11 @@ section.container {position: relative;}
 h2 + section.container {margin-top: 30px;}
 section.container::after {content: ''; display: block; clear: both;}
 section.container + section.container {margin-top: 20px;}
-section.container > section {float: left; position: relative; min-height: 100px; padding: 10px 15px;  border: 1px solid #dfe8f1; border-radius: 4px; background-color: #ffffff;}
+section.container > section {float: left; position: relative; min-height: 100px; padding: 10px 15px;  border: 1px solid var(--line-color); border-radius: 3px; background-color: #ffffff;}
 section.container > section.card {padding: 0;}
 section.container > section + section {margin-left: 20px;}
+section.container .panel-footer {position: absolute; left: 0; right: 0; bottom: 0; width: 100%; padding: 10px 15px; text-align: left; background-color: var(--bg-color02); border-top: 1px solid var(--line-color);}
+section.container .panel-footer p {font-size: 90%;}
 section.container.type-1 > section {width: 100%;}
 section.container.type-2 > section {width: calc(50% - 10px);}
 section.container.type-3 > section {width: calc(33.33% - 13.33px);}
@@ -137,7 +126,9 @@ section.container.type-1-1-2 > section {width: calc(25% - 15px);}
 section.container.type-1-1-2 > section:nth-child(3) {width: calc(50% - 10px);}
 section.container.type-2-1-1 > section {width: calc(25% - 15px);}
 section.container.type-2-1-1 > section:nth-child(1) {width: calc(50% - 10px);}
-section.container > section h3 {font-size: 15px; font-weight: 400; opacity: 0.7; margin-bottom: 10px;}
+section.container h3.cont-tit {font-size: .8rem; margin-bottom: .8rem; font-weight: 500; padding-left: 5px;}
+section.container > section h4 {font-size: 15px; font-weight: 400; opacity: 0.7; margin-bottom: 10px;}
+
 
 /* 모바일용 레이아웃 */
 @media only screen and (max-width: 1000px) {
