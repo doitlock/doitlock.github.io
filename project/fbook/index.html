@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Social Book 메인화면 | 포트폴리오 | 홍수기</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.svg" />
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+	<script src="script.js" defer></script>
+	<script src="random-cat.js" defer></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<nav>
+				<div class="nav-left">
+					<a href="index.html"><img src="images/logo-wh.svg" alt="로고이미지" class="logo"></a>
+					<ul>
+						<li><img src="images/notification.png" alt=""></li>
+						<li><img src="images/inbox.png" alt=""></li>
+						<li><img src="images/video.png" alt=""></li>
+					</ul>
+				</div>
+				<div class="nav-right">
+					<div class="search-box">
+						<img src="images/search.png" alt="찾기 아이콘">
+						<input type="text" placeholder="Search">
+					</div>
+					<div class="nav-user-icon online" onclick="settingsMenuToggle()">
+						<img src="images/profile-pic.png" alt="프로필 아이콘">
+					</div>
+				</div>
+				<!--settings menu-->
+				<div class="settings-menu">
+					<div id="dark-btn">
+						<span></span>
+					</div>
+					<div class="seetings-menu-inner">
+						<div class="user-profile">
+							<img src="images/profile-pic.png" alt="" />
+							<div>
+								<p>Hongsuki0101</p>
+								<a href="profile.html">내 프로필 보기 <span>Click!</span></a>
+							</div>
+						</div>
+						<!-- <div class="user-profile">
+							<img src="images/feedback.png" alt="" />
+							<div>
+								<p>의견보내기</p>
+								<a href="#">Looks like book을 개선할 수 있도록 도와주세요</a>
+							</div>
+						</div> -->
+						<hr />
+						<div class="setting-links">
+							<img class="settings-icon" src="images/setting.png" alt="" />
+							<a href="#">설정 및 개인정보 <img src="images/arrow.png" alt="" width="10px" /></a>
+						</div>
+						<div class="setting-links">
+							<img class="settings-icon" src="images/help.png" alt="" />
+							<a href="#">도움말 및 지원 <img src="images/arrow.png" alt="" width="10px" /></a>
+						</div>
+						<div class="setting-links">
+							<img class="settings-icon" src="images/display.png" alt="" />
+							<a href="#">디스플레이 및 접근성 <img src="images/arrow.png" alt="" width="10px" /></a>
+						</div>
+						<div class="setting-links">
+							<img class="settings-icon" src="images/logout.png" alt="" />
+							<a href="#">로그아웃 <img src="images/arrow.png" alt="" width="10px" /></a>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main id="main">
+			<div class="container">
+				<!--left sidebar-->
+				<div class="left-sidebar"> 
+					<div class="imp-links">
+						<a href="#"><img src="images/news.png" alt="아이콘"> 친구 찾기 </a>
+						<a href="#"><img src="images/group.png" alt="아이콘"> 그룹 맺기 </a>
+						<a href="#"><img src="images/watch.png" alt="아이콘"> Watch </a>
+						<a href="#"><img src="images/remember.png" alt="아이콘"> 과거의 오늘 </a>
+						<a href="#"><img src="images/save.png" alt="아이콘"> 저장됨 </a>
+						<a href="#"><img src="images/page.png" alt="아이콘"> 페이지 </a>
+						<a href="#"><img src="images/event.png" alt="아이콘"> 이벤트 </a>
+						<a href="#"><img src="images/news.png" alt="아이콘"> 최신 </a>
+						<a href="#"><img src="images/wish.png" alt="아이콘"> 즐겨찾기 </a>
+						<a href="#"><img src="images/webadd.png" alt="아이콘"> 광고 </a>
+						<a href="#">더 보기</a>
+					</div>
+					<div class="shortcut-links">
+						<p>바로가기</p>
+						<a href="#"><span>😊</span> Portfolio 포트폴리오 사이트로 이동 <i class="xi-angle-right-min"></i></a>
+						<a href="#"><span>😁</span> Gallery Ansik 사이트로 이동 <i class="xi-angle-right-min"></i></a>
+						<a href="#"><span>🙂</span> 세종복지다옴 클론 사이트로 이동 <i class="xi-angle-right-min"></i></a>
+						<a href="#"><span>😙</span> 메가박스 + API 프로젝트 사이트로 이동 <i class="xi-angle-right-min"></i></a>
+					</div>
+				</div>
+		
+				<!--main content-->
+				<div class="main-content"> 
+					<div class="story-gallery">
+						<div class="story story1">
+							<img src="images/upload.png" alt="" />
+							<p>Post Story</p>
+						</div>
+						<div class="story story2">
+							<img src="images/member-1.png" alt="" />
+							<p>Post Story</p>
+						</div>
+						<div class="story story3">
+							<img src="images/member-2.png" alt="" />
+							<p>Post Story</p>
+						</div>
+						<div class="story story4">
+							<img src="images/member-3.png" alt="" />
+							<p>Post Story</p>
+						</div>
+						<div class="story story5">
+							<img src="images/member-4.png" alt="" />
+							<p>Post Story</p>
+						</div>
+					</div>
+					<div class="write-post-container">
+						<div class="user-profile">
+							<img src="images/profile-pic.png" alt="" />
+							<div>
+								<p>Hongsuki0101</p>
+								<small>전체 공개 <i class="xi-caret-down-min"></i></small>
+							</div>
+						</div>
+						<div class="post-input-container">
+							<textarea rows="3" placeholder="Hongsuki0101님, 무슨 생각을 하고 계신가요?"></textarea>
+							<div class="add-post-links">
+								<a href="#"><img src="images/live-video.png" alt="">라이브 비디오</a>
+								<a href="#"><img src="images/photo.png" alt="">사진/동영상</a>
+								<a href="#"><img src="images/feeling.png" alt="">기분/활동</a>
+							</div>
+						</div>
+					</div>
+					<div class="post-container">
+						<div class="post-row">
+							<div class="user-profile">
+								<img src="images/profile-pic.png" alt="" />
+								<div>
+									<p>Hongsuki0101</p>
+									<span>2022년 12월 32일, 03:08 am</span>
+								</div>
+							</div>
+							<a href="#"><i class="xi-ellipsis-v"></i></a>
+						</div>
+						<p class="post-text">HELLO WORLD! 이 페이지에서는 <span>현재 시간과 오늘 날짜</span> 를 확인 할 수 있습니다. 그리고 랜덤 이미지 오른쪽의 refresh 버튼을 누르면 <span>강아지 사진을 랜덤</span>으로 볼 수 있습니다. github.com/public-apis/public-apis 이 사이트에 정말 다양한 api들이 있더라고요. 이 곳에서 하나를 골라 fetch api를 사용했습니다. <a href="#">#취업할수있을것인가</a> <a href="#">#열공</a> <a href="#">#포트폴리오</a></p>
+						<img src="images/feed-image-1.png" alt="" class="post-img" />
+						<div class="post-row">
+							<div class="activity-icons">
+								<div><img src="images/like-blue.png" alt="" /> 120</div>
+								<div><img src="images/comments.png" alt="" /> 45</div>
+								<div><img src="images/share.png" alt="" /> 20</div>
+							</div>
+							<div class="post-profile-icon">
+								<img src="images/profile-pic.png" alt="" /> <i class="xi-caret-down-min"></i>
+							</div>
+						</div>
+					</div>
+		
+					<div class="post-container">
+						<div class="post-row">
+							<div class="user-profile">
+								<img src="images/profile-pic.png" alt="" />
+								<div>
+									<p>Hongsuki0101</p>
+									<span>2022년 12월 32일, 03:08 am</span>
+								</div>
+							</div>
+							<a href="#"><i class="xi-ellipsis-v"></i></a>
+						</div>
+						<p class="post-text">다만 꺼지지 않는 작은 불빛이 여기 반짝 살아있어요 세상 모든 게 죽고 새로 태어나 <span>다시 늙어갈 때에도</span> 감히 이 마음만은 주름도 없이 여기 반짝 살아있어요 영영 살아있어요 <a href="#">#아이유마음가사</a> <a href="#">#포트폴리오작업중</a></p>
+						<img src="images/feed-image-2.png" alt="" class="post-img" />
+						<div class="post-row">
+							<div class="activity-icons">
+								<div><img src="images/like-blue.png" alt="" /> 452</div>
+								<div><img src="images/comments.png" alt="" /> 1523</div>
+								<div><img src="images/share.png" alt="" /> 57</div>
+							</div>
+							<div class="post-profile-icon">
+								<img src="images/profile-pic.png" alt="" /> <i class="xi-caret-down-min"></i>
+							</div>
+						</div>
+					</div>
+		
+					<div class="post-container">
+						<div class="post-row">
+							<div class="user-profile">
+								<img src="images/profile-pic.png" alt="" />
+								<div>
+									<p>Hongsuki0101</p>
+									<span>2022년 12월 32일, 03:08 am</span>
+								</div>
+							</div>
+							<a href="#"><i class="xi-ellipsis-v"></i></a>
+						</div>
+						<p class="post-text">다만 꺼지지 않는 작은 불빛이 여기 반짝 살아있어요 세상 모든 게 죽고 새로 태어나 <span>다시 늙어갈 때에도</span> 감히 이 마음만은 주름도 없이 여기 반짝 살아있어요 영영 살아있어요 <a href="#">#아이유마음가사</a> <a href="#">#포트폴리오작업중</a></p>
+						<img src="images/feed-image-3.png" alt="" class="post-img" />
+						<div class="post-row">
+							<div class="activity-icons">
+								<div><img src="images/like-blue.png" alt="" /> 560</div>
+								<div><img src="images/comments.png" alt="" /> 92</div>
+								<div><img src="images/share.png" alt="" /> 36</div>
+							</div>
+							<div class="post-profile-icon">
+								<img src="images/profile-pic.png" alt="" /> <i class="xi-caret-down-min"></i>
+							</div>
+						</div>
+					</div>
+		
+					<div class="post-container">
+						<div class="post-row">
+							<div class="user-profile">
+								<img src="images/profile-pic.png" alt="" />
+								<div>
+									<p>Hongsuki0101</p>
+									<span>2022년 12월 32일, 03:08 am</span>
+								</div>
+							</div>
+							<a href="#"><i class="xi-ellipsis-v"></i></a>
+						</div>
+						<p class="post-text">다만 꺼지지 않는 작은 불빛이 여기 반짝 살아있어요 세상 모든 게 죽고 새로 태어나 <span>다시 늙어갈 때에도</span> 감히 이 마음만은 주름도 없이 여기 반짝 살아있어요 영영 살아있어요 <a href="#">#아이유마음가사</a> <a href="#">#포트폴리오작업중</a></p>
+						<img src="images/feed-image-4.png" alt="" class="post-img" />
+						<div class="post-row">
+							<div class="activity-icons">
+								<div><img src="images/like-blue.png" alt="" /> 286</div>
+								<div><img src="images/comments.png" alt="" /> 56</div>
+								<div><img src="images/share.png" alt="" /> 74</div>
+							</div>
+							<div class="post-profile-icon">
+								<img src="images/profile-pic.png" alt="" /> <i class="xi-caret-down-min"></i>
+							</div>
+						</div>
+					</div>
+		
+					<div class="post-container">
+						<div class="post-row">
+							<div class="user-profile">
+								<img src="images/profile-pic.png" alt="" />
+								<div>
+									<p>Hongsuki0101</p>
+									<span>2022년 12월 32일, 03:08 am</span>
+								</div>
+							</div>
+							<a href="#"><i class="xi-ellipsis-v"></i></a>
+						</div>
+						<p class="post-text">다만 꺼지지 않는 작은 불빛이 여기 반짝 살아있어요 세상 모든 게 죽고 새로 태어나 <span>다시 늙어갈 때에도</span> 감히 이 마음만은 주름도 없이 여기 반짝 살아있어요 영영 살아있어요 <a href="#">#아이유마음가사</a> <a href="#">#포트폴리오작업중</a></p>
+						<img src="images/feed-image-5.png" alt="" class="post-img" />
+						<div class="post-row">
+							<div class="activity-icons">
+								<div><img src="images/like-blue.png" alt="" /> 2405</div>
+								<div><img src="images/comments.png" alt="" /> 154</div>
+								<div><img src="images/share.png" alt="" /> 78</div>
+							</div>
+							<div class="post-profile-icon">
+								<img src="images/profile-pic.png" alt="" /> <i class="xi-caret-down-min"></i>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="load-more-btn">더 보기</button>
+				</div>
+				
+				<!--right sidebar-->
+				<div class="right-sidebar"> 
+					<div class="sidebar-title">
+						<h4>이벤트📌</h4>
+						<a href="#">모두 보기</a>
+					</div>
+					<div class="event">
+						<div class="left-event">
+							<h3>11</h3>
+							<span>1월</span>
+						</div>
+						<div class="right-event">
+							<h4>프론트엔드개발 아카데미 시작</h4>
+							<p><i class="xi-maker"></i> 아카데미 정글</p>
+							<a href="#">더 알아보기</a>
+						</div>
+					</div>
+					<div class="event">
+						<div class="left-event">
+							<h3>15</h3>
+							<span>3월</span>
+						</div>
+						<div class="right-event">
+							<h4>포트폴리오 2차 발표</h4>
+							<p><i class="xi-maker"></i> 아카데미 정글</p>
+							<a href="#">더 알아보기</a>
+						</div>
+					</div>
+					<div class="event">
+						<div class="left-event">
+							<h3>27</h3>
+							<span>4월</span>
+						</div>
+						<div class="right-event">
+							<h4>웹프론트엔드개발 아카데미 과정 종강</h4>
+							<p><i class="xi-maker"></i> 신사역 5번 출구 근처</p>
+							<a href="#">더 알아보기</a>
+						</div>
+					</div>
+          <hr />
+					<div class="sidebar-title clock">
+						<h4>몇시죠⌚🗓️</h4>
+						<p id="clock"></p>
+            <span id="today-date"></span>
+					</div>
+          <hr />
+          <div class="sidebar-title dog-img">
+						<h4>랜덤 이미지🐕</h4>
+						<button href="" id="cat-btn"><i class="xi-refresh"><span>다른 사진으로</span></i></button>
+					</div>
+          <div id="dog-img">
+            <img src="images/feed-image-2.png" alt="" class="sidebar-ads" />
+          </div> 
+          <hr />
+					<div class="sidebar-title">
+						<h4>친구들과 대화</h4>
+						<a href="">대화창 닫기</a>
+					</div>
+					<div class="online-list">
+						<div class="online">
+							<img src="images/member-1.png" alt="" />
+						</div>
+						<p>Samwise Gamgee</p>
+					</div>
+					<div class="online-list">
+						<div class="online">
+							<img src="images/member-2.png" alt="" />
+						</div>
+						<p>Luna Elizabeth Lovegood</p>
+					</div>
+					<div class="online-list">
+						<div class="online">
+							<img src="images/member-3.png" alt="" />
+						</div>
+						<p>Aragorn</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<p>HELLO WORLD! 안녕하세요. 홍수기의 포트폴리오 웹사이트입니다.<br />HTML, CSS, JavaScript를 사용하여 페이스북 PC페이지를 클론 코딩하여 작업했습니다.<br />프로필 이미지를 누르면 토글버튼을 사용해 사이트의 light, dark 버전을 확인 할 수 있습니다.<br />또 내 프로필 보기 버튼을 누르면 프로필 페이지로 이동할 수 있습니다.<br /><br /><br /><a href="https://doitlock.github.io">copyrightⓒ 2022 All rights reserved by SUKI HONG</a></p>
+		</footer>
+	</div>
+</body>
+</html>

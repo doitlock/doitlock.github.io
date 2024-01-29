@@ -48,7 +48,7 @@ input, textarea {font-family: inherit;}
 .pc {display: none !important;}
 
 /******common******/
-body {color:var(--main01-color); font-family: 'NotoSansKR', sans-serif; font-weight: 400; line-height: 1.4; background-color: var(--bg-color);}
+body {color:var(--main01-color); font-family: 'Pretendard', sans-serif; font-weight: 400; line-height: 1.4; background-color: var(--bg-color);}
 #wrapper {overflow: hidden;}
 #skip-nav {position: fixed; left: 0; top: -40px; width: 100%; line-height: 40px; text-align: center; background-color: rgba(0, 0, 0, 0.8); color: var(--main04-color); font-size: 16px; transition: top 0.3s; z-index: 100000;}
 #skip-nav:focus {top: 0;}
@@ -67,16 +67,10 @@ header nav .left em {display: block; font-weight: 300;}
 header nav .left em b {color: var(--main02-color);}
 header nav .right {display: flex; justify-content: end; align-items: center; margin-top: 1rem;}
 header nav .right a {padding-left: 20px; transition: all ease .2s; font-size: 1rem;}
-header .flt-nav {position: fixed; right: 0; top: 50%; transform: translate(0,-50%);}
-header .flt-nav a {display: block; writing-mode: vertical-rl;margin: 1.5rem; font-size: .8rem; color: var(--main01-color); transition: all .2s ease;}
 header .flt-nav-left {position: fixed; left: 0; top: 50%; transform: translate(0,-50%); text-align: center;}
 header .flt-nav-left a {display: block; margin: 1.5rem; color: var(--main01-color); font-size: 1.4rem; transition: all .2s ease;}
 header h1,
 footer h1 {font-family: 'Montserrat', sans-serif;}
-
-#light-btn {background: #0a0a0a; width: 45px; height: 23px; border-radius: 15px; padding: 2px 3px; cursor: pointer; display: flex; transition: padding-left .5s ease, background .5s ease; margin-left: 20px;}
-#light-btn span {width: 18px; height: 18px; background: var(--main04-color); border-radius: 50%; display: inline-block;}
-#light-btn.light-btn-on {padding-left: 23px; background: #ddd;} 
 
 /*main*/
 #main .last-part {text-align: center;padding: 150px 0 170px;}
@@ -154,9 +148,6 @@ footer nav {width: 100%;height: 75px;line-height: 75px;}
 footer nav .content-box {display: flex;justify-content: space-between;}
 footer nav .left em {font-weight: 500; font-size: 1.5rem; color: var(--main02-color);}
 footer nav .right select {padding: 10px 20px;}
-footer .fix-foot {position: fixed; left: 0; bottom: 0; width: 100%; padding: 0.5rem 0; background-color: rgba(44,51,51,0.8); border-top: 1px solid #7474748f;}
-footer .fix-foot .fix-foot-area {width: 95%; margin: 0 auto;}
-footer .fix-foot p {font-size: .6rem; color: #999; font-weight: 400;}
 
 /*sub*/
 #progect-page #main section h2.tit {font-weight: 800; font-size: 60px; margin-bottom: 45px; position: relative; color: var(--main07-color);}
