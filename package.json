@@ -30,20 +30,23 @@
   "description": "홍수기의 포트폴리오.",
   "main": "gulpfile.babel.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp",
+    "dev": "gulp dev",
     "build": "gulp build",
     "deploy": "gulp deploy"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/doitlock/doitlock.github.io.git"
+    "url": "https://github.com/doitlock/doitlock.github.io.git"
   },
-  "author": "",
+  "author": {
+    "name": "Hong Su Ki",
+    "email": "doitlock@gmail.com",
+    "url": "https://doitlock.github.io"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/doitlock/doitlock.github.io/issues"
   },
-  "homepage": "https://github.com/doitlock/doitlock.github.io#readme",
+  "homepage": "https://doitlock.github.io",
   "keywords": []
 }

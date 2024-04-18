@@ -39,7 +39,7 @@ const SRC_PATH = {
     indentType: "space",
     indentWidth: 4,
     precision: 8,
-  };
+};
 
 gulp.task("clean", function() {
   return del(["dist"]);
@@ -47,11 +47,6 @@ gulp.task("clean", function() {
 
 gulp.task("cleanDeploy", function() {
   return del([".publish"]);
-});
-
-gulp.task('deploy', function() {
-  return gulp.src(DIST_FOLDER + '/**/*')
-    .pipe(ghPages());
 });
 
 gulp.task('html', () => {
@@ -139,6 +134,11 @@ gulp.task("browserSync", function () {
   });
 });
 
+gulp.task("gh", () => {
+  return gulp.src(DIST_FOLDER + "/**/*")
+  .pipe(ghPages());
+});
+
 gulp.task(
   "build",
   gulp.series('html',"ejs","scss:compile","js","images","svg","font", gulp.parallel("browserSync", "watch"))
@@ -147,4 +147,14 @@ gulp.task(
 gulp.task(
   "default",
   gulp.series("clean", "build", gulp.parallel("browserSync", "watch"))
+);
+
+gulp.task(
+  "dev", 
+  gulp.series("build")
+);
+
+gulp.task(
+  "deploy", 
+  gulp.series("gh", "cleanDeploy")
 );
