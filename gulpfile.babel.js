@@ -11,6 +11,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 const browserSync = require("browser-sync").create();
 const del = require("del");
+const ghPages = require("gulp-gh-pages");
 
 const SRC_FOLDER = "./src/";
 const DIST_FOLDER = "./dist";
@@ -42,6 +43,15 @@ const SRC_PATH = {
 
 gulp.task("clean", function() {
   return del(["dist"]);
+});
+
+gulp.task("cleanDeploy", function() {
+  return del([".publish"]);
+});
+
+gulp.task('deploy', function() {
+  return gulp.src(DIST_FOLDER + '/**/*')
+    .pipe(ghPages());
 });
 
 gulp.task('html', () => {
