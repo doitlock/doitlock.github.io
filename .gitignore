@@ -66,6 +66,7 @@ desktop.ini
 .history
 node_modules
 package-lock.json
+.publish
 
 # svn #
 #######
