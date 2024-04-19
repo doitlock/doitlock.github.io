@@ -1,1 +1,0 @@
-"use strict";function go_scroll(o){o=$("#"+o).offset().top;$("html, body").stop().animate({scrollTop:o})}
