@@ -16,145 +16,130 @@ const ghPages = require("gulp-gh-pages");
 const SRC_FOLDER = "./src/";
 const DIST_FOLDER = "./dist";
 
-const SRC_PATH = {
-    ASSETS: {
-      FONTS: "./src/assets/font",
-      IMAGES: "./src/assets/images",
-      SCSS: "./src/assets/scss",
-      JS: "./src/assets/js",
-    },
-    EJS: "./src/ejs",
-  },
-  DEST_PATH = {
-    ASSETS: {
-      FONTS: "./dist/assets/font",
-      IMAGES: "./dist/assets/images",
-      CSS: "./dist/assets/css",
-      JS: "./dist/assets/js",
-    },
-  },
-  // 옵션
-  OPTIONS = {
-    outputStyle: "expanded",
-    indentType: "space",
-    indentWidth: 4,
-    precision: 8,
+const clean = () => del([DIST_FOLDER]);
+
+const gh = () => {
+  return gulp.src(DIST_FOLDER + "/**/*")
+    .pipe(ghPages());
 };
 
-gulp.task("clean", function() {
-  return del(["dist"]);
-});
+const SRC_PATH = {
+  ASSETS: {
+    FONTS: "./src/assets/font",
+    IMAGES: "./src/assets/images",
+    SCSS: "./src/assets/scss",
+    JS: "./src/assets/js",
+  },
+  EJS: "./src/ejs",
+};
 
-gulp.task("cleanDeploy", function() {
-  return del([".publish"]);
-});
+const DEST_PATH = {
+  ASSETS: {
+    FONTS: "./dist/assets/font",
+    IMAGES: "./dist/assets/images",
+    CSS: "./dist/assets/css",
+    JS: "./dist/assets/js",
+  },
+};
 
-gulp.task('html', () => {
-  return gulp.src([ SRC_FOLDER + '**/*.html' ], {
-    base: SRC_FOLDER,
-    since: gulp.lastRun('html')
-  })
+// 옵션
+const OPTIONS = {
+  outputStyle: "expanded",
+  indentType: "space",
+  indentWidth: 4,
+  precision: 8,
+};
+
+function html() {
+  return gulp.src([SRC_FOLDER + '**/*.html'], {
+      base: SRC_FOLDER,
+      since: gulp.lastRun(html)
+    })
     .pipe(gulp.dest(DIST_FOLDER))
     .pipe(browserSync.stream());
-});
+}
 
-gulp.task("ejs", function () {
+function ejsCompile() {
   return gulp
     .src([SRC_FOLDER + "/ejs/**/!(_)*.ejs", SRC_FOLDER + "/*.ejs"])
     .pipe(ejs())
     .pipe(rename({ extname: ".html" }))
     .pipe(fileinclude({
-      prefix: '@@', //사용할땐 앞에@@ 를 붙이면됨
+      prefix: '@@', // 사용할땐 앞에@@ 를 붙이면됨
       basepath: '@file',
     }))
-    .pipe(htmlbeautify({indentSize: 2}))
+    .pipe(htmlbeautify({ indentSize: 2 }))
     .pipe(gulp.dest(DIST_FOLDER))
     .pipe(browserSync.stream());
-});
+}
 
-gulp.task("scss:compile", function () {
+function scssCompile() {
   return gulp
     .src(SRC_PATH.ASSETS.SCSS + "/*.scss")
     .pipe(sourcemaps.init())
     .pipe(scss(OPTIONS))
-    .pipe(autoprefixer()) //최신 css를 구형 브라우저에서 이해할 수 있게 prefix를 만들어줌
+    .pipe(autoprefixer()) // 최신 css를 구형 브라우저에서 이해할 수 있게 prefix를 만들어줌
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(DEST_PATH.ASSETS.CSS))
     .pipe(browserSync.stream());
-});
+}
 
-gulp.task("js", () => {
+function jsCompile() {
   return gulp
     .src(SRC_PATH.ASSETS.JS + "/**/*.js")
     .pipe(babel())
-    .pipe(uglify()) //자바스크립트 코드를 압축해 용량을 줄임
+    .pipe(uglify()) // 자바스크립트 코드를 압축해 용량을 줄임
     .pipe(gulp.dest(DEST_PATH.ASSETS.JS))
     .pipe(browserSync.stream());
-});
+}
 
-
-gulp.task("images", () => {
+function images() {
   return gulp
     .src(SRC_PATH.ASSETS.IMAGES + "/**/*.+(png|jpg|jpeg|gif|ico)")
     .pipe(gulp.dest(DEST_PATH.ASSETS.IMAGES))
     .pipe(browserSync.stream());
-});
+}
 
-gulp.task("svg", () => {
+function svg() {
   return gulp
     .src(SRC_PATH.ASSETS.IMAGES + "/**/*.svg")
     .pipe(gulp.dest(DEST_PATH.ASSETS.IMAGES))
     .pipe(browserSync.stream());
-});
+}
 
-gulp.task("font", () => {
+function font() {
   return gulp
     .src(SRC_PATH.ASSETS.FONTS + "/**/*.+(eot|otf|svg|ttf|woff|woff2)")
     .pipe(gulp.dest(DEST_PATH.ASSETS.FONTS))
     .pipe(browserSync.stream());
-});
+}
 
-gulp.task("watch", function () {
-  gulp.watch(SRC_PATH.EJS + "/**/*.ejs", gulp.series("ejs"));
-  gulp.watch(SRC_PATH.ASSETS.SCSS + "/**/*.scss", gulp.series("scss:compile"));
-  gulp.watch(SRC_PATH.ASSETS.JS + "/**/*.js", gulp.series("js"));
-  gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.+(png|jpg|jpeg|gif|ico)",gulp.series("images"));
-  gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.svg", gulp.series("svg"));
-  gulp.watch(SRC_PATH.ASSETS.FONTS + "/**/*.+(eot|otf|svg|ttf|woff|woff2)",gulp.series("font"));
-});
+function watchFiles() {
+  gulp.watch(SRC_PATH.EJS + "/**/*.ejs", ejsCompile);
+  gulp.watch(SRC_PATH.ASSETS.SCSS + "/**/*.scss", scssCompile);
+  gulp.watch(SRC_PATH.ASSETS.JS + "/**/*.js", jsCompile);
+  gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.+(png|jpg|jpeg|gif|ico)", images);
+  gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.svg", svg);
+  gulp.watch(SRC_PATH.ASSETS.FONTS + "/**/*.+(eot|otf|svg|ttf|woff|woff2)", font);
+}
 
-gulp.task("browserSync", function () {
+function browserSyncInit() {
   browserSync.init({
     port: 8080,
     server: {
       baseDir: ["dist"],
-      // index: "./html/guide/intro/index.html",
       open: true,
     },
   });
-});
+}
 
-gulp.task("gh", () => {
-  return gulp.src(DIST_FOLDER + "/**/*")
-  .pipe(ghPages());
-});
+const prepare = gulp.series(clean);
+const build = gulp.series(prepare, gulp.parallel(html, ejsCompile, scssCompile, jsCompile, images, svg, font));
+const watch = gulp.parallel(watchFiles, browserSyncInit);
 
-gulp.task(
-  "build",
-  gulp.series('html',"ejs","scss:compile","js","images","svg","font", gulp.parallel("browserSync", "watch"))
-);
-
-gulp.task(
-  "default",
-  gulp.series("clean", "build", gulp.parallel("browserSync", "watch"))
-);
-
-gulp.task(
-  "dev", 
-  gulp.series("build")
-);
-
-gulp.task(
-  "deploy", 
-  gulp.series("gh", "cleanDeploy")
-);
+exports.clean = clean;
+exports.prepare = prepare;
+exports.build = build;
+exports.default = gulp.series(build, watch);
+exports.dev = gulp.series(build, watch);
+exports.deploy = gulp.series(build, gh);
