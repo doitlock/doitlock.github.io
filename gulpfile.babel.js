@@ -1,3 +1,5 @@
+// Gulp의 기본 모듈. Gulp는 파일을 읽고 변환하며 특정 작업을 수행할 수 있는 스트림 기반 빌드 시스템
+
 const gulp = require("gulp");
 const scss = require("gulp-sass")(require("sass"));
 const babel = require("gulp-babel");
@@ -12,33 +14,37 @@ const rename = require("gulp-rename");
 const browserSync = require("browser-sync").create();
 const del = require("del");
 const ghPages = require("gulp-gh-pages");
+const path = require("path");
 
 const SRC_FOLDER = "./src/";
 const DIST_FOLDER = "./dist";
 
 const clean = () => del([DIST_FOLDER]);
+const cleanDeploy = () => del([".publish"]);
 
 const gh = () => {
-  return gulp.src(DIST_FOLDER + "/**/*")
-    .pipe(ghPages());
+  return gulp.src(path.join(DIST_FOLDER, "/**/*"))
+    .pipe(ghPages({
+      branch: 'gh-pages'
+    }));
 };
 
 const SRC_PATH = {
   ASSETS: {
-    FONTS: "./src/assets/font",
-    IMAGES: "./src/assets/images",
-    SCSS: "./src/assets/scss",
-    JS: "./src/assets/js",
+    FONTS: path.join(SRC_FOLDER, "assets/font"),
+    IMAGES: path.join(SRC_FOLDER, "assets/images"),
+    SCSS: path.join(SRC_FOLDER, "assets/scss"),
+    JS: path.join(SRC_FOLDER, "assets/js"),
   },
-  EJS: "./src/ejs",
+  EJS: path.join(SRC_FOLDER, "ejs"),
 };
 
 const DEST_PATH = {
   ASSETS: {
-    FONTS: "./dist/assets/font",
-    IMAGES: "./dist/assets/images",
-    CSS: "./dist/assets/css",
-    JS: "./dist/assets/js",
+    FONTS: path.join(DIST_FOLDER, "assets/font"),
+    IMAGES: path.join(DIST_FOLDER, "assets/images"),
+    CSS: path.join(DIST_FOLDER, "assets/css"),
+    JS: path.join(DIST_FOLDER, "assets/js"),
   },
 };
 
@@ -61,7 +67,7 @@ function html() {
 
 function ejsCompile() {
   return gulp
-    .src([SRC_FOLDER + "/ejs/**/!(_)*.ejs", SRC_FOLDER + "/*.ejs"])
+    .src([SRC_PATH.EJS + "/**/!(_)*.ejs", SRC_FOLDER + "/*.ejs"])
     .pipe(ejs())
     .pipe(rename({ extname: ".html" }))
     .pipe(fileinclude({
@@ -138,8 +144,9 @@ const build = gulp.series(prepare, gulp.parallel(html, ejsCompile, scssCompile, 
 const watch = gulp.parallel(watchFiles, browserSyncInit);
 
 exports.clean = clean;
+exports.cleanDeploy = cleanDeploy;
 exports.prepare = prepare;
 exports.build = build;
 exports.default = gulp.series(build, watch);
 exports.dev = gulp.series(build, watch);
-exports.deploy = gulp.series(build, gh);
+exports.deploy = gulp.series(build, gh, cleanDeploy);

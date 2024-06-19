@@ -41,13 +41,9 @@
     "url": "https://github.com/doitlock/doitlock.github.io.git"
   },
   "author": {
-    "name": "Hong Su Ki",
+    "name": "Hong Su Gi",
     "email": "doitlock@gmail.com",
     "url": "https://doitlock.github.io"
-  },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/doitlock/doitlock.github.io/issues"
   },
   "homepage": "https://doitlock.github.io",
   "keywords": []
