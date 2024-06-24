@@ -31,7 +31,7 @@ const gh = () => {
 
 const SRC_PATH = {
   ASSETS: {
-    FONTS: path.join(SRC_FOLDER, "assets/font"),
+    FONTS: path.join(SRC_FOLDER, "assets/fonts"),
     IMAGES: path.join(SRC_FOLDER, "assets/images"),
     SCSS: path.join(SRC_FOLDER, "assets/scss"),
     JS: path.join(SRC_FOLDER, "assets/js"),
@@ -41,7 +41,7 @@ const SRC_PATH = {
 
 const DEST_PATH = {
   ASSETS: {
-    FONTS: path.join(DIST_FOLDER, "assets/font"),
+    FONTS: path.join(DIST_FOLDER, "assets/fonts"),
     IMAGES: path.join(DIST_FOLDER, "assets/images"),
     CSS: path.join(DIST_FOLDER, "assets/css"),
     JS: path.join(DIST_FOLDER, "assets/js"),
@@ -74,7 +74,7 @@ function ejsCompile() {
       prefix: '@@', // 사용할땐 앞에@@ 를 붙이면됨
       basepath: '@file',
     }))
-    .pipe(htmlbeautify({ indentSize: 2 }))
+    .pipe(htmlbeautify({ indentSize: 4 }))
     .pipe(gulp.dest(DIST_FOLDER))
     .pipe(browserSync.stream());
 }

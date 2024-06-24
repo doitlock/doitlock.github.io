@@ -1,30 +1,32 @@
 @charset "utf-8";
 
 // IR
-@mixin hide {
-	display: block;
-	position: absolute;
-	overflow: hidden;
-	visibility: hidden;
-	margin: -1px;
-	padding: 0;
-	width: 1px;
-	height: 1px;
-	line-height: 1px;
-	font-size: 1px;
-	border: 0;
-	clip: rect(0 0 0 0);
-	clip: rect(0,0,0,0);
-	pointer-events: none;
+@mixin blind {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    visibility: hidden;
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    line-height: 1px;
+    font-size: 1px;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
 }
 
 // ellipsis
-@mixin ellipsis($line:1) {
-    @if $line == 1 {
+@mixin ellipsis($line: 1) {
+    @if $line ==1 {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-    }@else{
+    }
+
+    @else {
         display: -webkit-box;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -34,30 +36,62 @@
 }
 
 // 반응형
+@mixin mobile2 {
+    @media (max-width:#{$mobile-large - 1}) {
+        @content;
+    }
+}
+
 @mixin mobile {
-    @media (min-width:#{$mobile}) and (max-width:#{$tablet - 1}){
+    @media (max-width:#{$tablet - 1}) {
         @content;
     }
 }
-@mixin tablet {
-    @media (min-width:#{$tablet}) and (max-width:#{$web - 1}){
+
+@mixin web2 {
+    @media (max-width:#{$web-small - 1}) {
         @content;
     }
 }
+
 @mixin web {
-    @media (min-width:#{$web}) {
+    @media (min-width:#{$tablet}) {
         @content;
     }
 }
 
-//scroll hidden
-@mixin scroll-hidden {
-    scrollbar-width: none;
+// scroll-x
+@mixin scroll-x {
+    width: calc(100% + 3.6rem);
+    max-width: unset;
+    overflow: auto;
+    padding-bottom: 1.6rem;
+    padding-right: 1.8rem;
+    padding-left: 1.8rem;
+    margin-left: -1.8rem;
     &::-webkit-scrollbar {
-        display: none;
+        height: 0.5rem;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #D5D4D9;
+        border-radius: 5rem;
+    }
+    &::-webkit-scrollbar-track {
+        margin-left: 1.8rem;
+        margin-right: 1.8rem;
+        border-radius: 5rem;
     }
 }
 
-@include mobile {
-
+// scroll-y
+@mixin scroll-y {
+    overflow-x: hidden;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: #D5D4D9;
+        border-radius: 5rem;
+    }
 }
