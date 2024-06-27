@@ -20,6 +20,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "del": "^6.0.0",
+    "gift": "^0.10.2",
     "gulp-concat": "^2.6.1",
     "gulp-html-beautify": "^1.0.1",
     "gulp-sourcemaps": "^3.0.0",

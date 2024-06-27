@@ -31,7 +31,6 @@ const gh = () => {
 
 const SRC_PATH = {
   ASSETS: {
-    FONTS: path.join(SRC_FOLDER, "assets/fonts"),
     IMAGES: path.join(SRC_FOLDER, "assets/images"),
     SCSS: path.join(SRC_FOLDER, "assets/scss"),
     JS: path.join(SRC_FOLDER, "assets/js"),
@@ -41,7 +40,6 @@ const SRC_PATH = {
 
 const DEST_PATH = {
   ASSETS: {
-    FONTS: path.join(DIST_FOLDER, "assets/fonts"),
     IMAGES: path.join(DIST_FOLDER, "assets/images"),
     CSS: path.join(DIST_FOLDER, "assets/css"),
     JS: path.join(DIST_FOLDER, "assets/js"),
@@ -113,20 +111,12 @@ function svg() {
     .pipe(browserSync.stream());
 }
 
-function font() {
-  return gulp
-    .src(SRC_PATH.ASSETS.FONTS + "/**/*.+(eot|otf|svg|ttf|woff|woff2)")
-    .pipe(gulp.dest(DEST_PATH.ASSETS.FONTS))
-    .pipe(browserSync.stream());
-}
-
 function watchFiles() {
   gulp.watch(SRC_PATH.EJS + "/**/*.ejs", ejsCompile);
   gulp.watch(SRC_PATH.ASSETS.SCSS + "/**/*.scss", scssCompile);
   gulp.watch(SRC_PATH.ASSETS.JS + "/**/*.js", jsCompile);
   gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.+(png|jpg|jpeg|gif|ico)", images);
   gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.svg", svg);
-  gulp.watch(SRC_PATH.ASSETS.FONTS + "/**/*.+(eot|otf|svg|ttf|woff|woff2)", font);
 }
 
 function browserSyncInit() {
@@ -140,7 +130,7 @@ function browserSyncInit() {
 }
 
 const prepare = gulp.series(clean);
-const build = gulp.series(prepare, gulp.parallel(html, ejsCompile, scssCompile, jsCompile, images, svg, font));
+const build = gulp.series(prepare, gulp.parallel(html, ejsCompile, scssCompile, jsCompile, images, svg));
 const watch = gulp.parallel(watchFiles, browserSyncInit);
 
 exports.clean = clean;
