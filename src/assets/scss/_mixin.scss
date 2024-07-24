@@ -95,3 +95,12 @@
         border-radius: 5rem;
     }
 }
+
+// 버튼색상
+@each $cls, $border, $bg, $c in $btncolor {
+    .btn.#{$cls} {
+        border-color:$border;
+        background-color: $bg;
+        color:$c;
+    }
+}

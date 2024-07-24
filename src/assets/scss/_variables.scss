@@ -1,8 +1,64 @@
 @charset "utf-8";
 
-/* breakpoints */
+// breakpoints
 $mobile : 320px;
 $mobile-large : 768px;
 $tablet : 1024px;
 $web-small : 1280px;
 $web : 1920px;
+
+
+// 기본색상 정의
+$white : #fff;
+$black : #000;
+$main01-color : #1D4ED8;
+$main02-color : #1876f2;
+$main03-color : #e9d649;
+$main04-color : #FF9A3C;
+
+$grey14 : #141414;
+$greydd : #dddddd;
+$grey4b : #4b4b4b;
+$grey21 : #212121;
+$grey33 : #333333;
+$grey56 : #565656;
+$grey77 : #777777;
+$grey99 : #999999;
+$greyfe : #fefefe;
+
+// 이미지 경로
+$url : '../images/';
+
+// 아이콘
+// 클래스명, 방향, 가로, 세로, 여백, 이미지
+$btnicon: 
+    1 a 16 16 8 'ico_book_white.svg',
+    2 a 16 16 8 'ico_book_black.svg',
+    3 a 16 16 8 'ico_list.svg',
+    4 a 14 16 8 'ico_category.svg',
+    5 a 15 14 8 'ico_filter.svg',
+    6 a 16 16 8 'ico_write.svg',
+    7 a 13 12 8 'ico_search.svg',
+    8 a 16 16 8 'ico_modify.svg'
+;
+
+// 버튼크기
+// 클래스명, 좌우여백, 높이, 폰트크기
+$btnsize:
+    'xxsmall' 12 28 12, 
+    'xsmall' 12 32 14, 
+    'small' 12 34 14, 
+    'regular' 20 40 16, 
+    'large' 21 48 14, 
+    'xlarge' 20 60 16 
+;
+
+// 버튼색상
+// 클래스명, 선색, 배경색, 텍스트색
+$btncolor:
+    'blue' $main01-color $main01-color $white,
+    'white' $grey77 $white $grey21,
+    'white2' $grey56 $white $grey4b,
+    'lightgrey' $grey77 $grey56 $grey4b,
+    'darkgrey' $grey56 $grey56 $white
+;

@@ -46,11 +46,11 @@ const DEST_PATH = {
   },
 };
 
-// 옵션
+// SCSS 컴파일 옵션
 const OPTIONS = {
-  outputStyle: "expanded",
+  outputStyle: "compressed",
   indentType: "space",
-  indentWidth: 4,
+  indentWidth: 0,
   precision: 8,
 };
 
@@ -121,7 +121,7 @@ function watchFiles() {
 
 function browserSyncInit() {
   browserSync.init({
-    port: 8080,
+    port: 9201,
     server: {
       baseDir: ["dist"],
       open: true,
