@@ -13,7 +13,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 const browserSync = require("browser-sync").create();
 const del = require("del");
-const ghPages = require("gulp-gh-pages");
+const ghPages = require("gh-pages");
 const path = require("path");
 
 const SRC_FOLDER = "./src/";
@@ -22,11 +22,17 @@ const DIST_FOLDER = "./dist";
 const clean = () => del([DIST_FOLDER]);
 const cleanDeploy = () => del([".publish"]);
 
-const gh = () => {
-  return gulp.src(path.join(DIST_FOLDER, "/**/*"))
-    .pipe(ghPages({
-      branch: 'gh-pages'
-    }));
+const gh = (done) => {
+  ghPages.publish(path.join(__dirname, DIST_FOLDER), {
+    branch: 'gh-pages'
+  }, (err) => {
+    if (err) {
+      console.error('Deploy failed:', err);
+    } else {
+      console.log('Deploy succeeded.');
+    }
+    done();
+  });
 };
 
 const SRC_PATH = {
