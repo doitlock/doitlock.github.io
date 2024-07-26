@@ -19,12 +19,13 @@ $main04-color : #FF9A3C;
 $grey14 : #141414;
 $greydd : #dddddd;
 $grey4b : #4b4b4b;
-$grey21 : #212121;
 $grey33 : #333333;
-$grey56 : #565656;
 $grey77 : #777777;
 $grey99 : #999999;
 $greyfe : #fefefe;
+
+// 기초 변수정의
+$web_width : rem(1200); //margin:0 auto를 위한 가로크기
 
 // 이미지 경로
 $url : '../images/';
@@ -57,8 +58,75 @@ $btnsize:
 // 클래스명, 선색, 배경색, 텍스트색
 $btncolor:
     'blue' $main01-color $main01-color $white,
-    'white' $grey77 $white $grey21,
-    'white2' $grey56 $white $grey4b,
-    'lightgrey' $grey77 $grey56 $grey4b,
-    'darkgrey' $grey56 $grey56 $white
+    'white' $grey77 $white $grey33,
+    'white2' $grey77 $white $grey4b,
+    'lightgrey' $grey77 $grey77 $grey4b,
+    'darkgrey' $grey77 $grey77 $white
 ;
+
+// 버튼아이콘
+// 클래스명, 방향, 가로, 세로, 여백, 이미지
+$btnicon:
+    1 a 16 16 8 'ico_book_white.svg',  
+    2 a 16 16 8 'ico_book_black.svg',  
+    3 a 16 16 8 'ico_list.svg',  
+    4 a 14 16 8 'ico_category.svg',  
+    5 a 15 14 8 'ico_filter.svg',  
+    6 a 16 16 8 'ico_write.svg',
+    7 a 13 12 8 'ico_search.svg',
+    8 a 16 16 8 'ico_modify.svg'
+;
+
+// 뱃지크기
+// 클래스명, 좌우여백, 높이, 폰트크기
+$badgesize:
+'small' 6 20 10, 
+'regular' 6 22 10
+;
+
+// 뱃지색상
+// 클래스명, 선색, 배경색, 텍스트색
+$badgecolor:
+'blue' $main01-color $main01-color $white,
+'grey' $greydd $greydd $white,
+'darkgrey' rgba($black, .6) rgba($black, .6) $white,
+'white' $greydd $white $greydd
+;
+
+// 모서리둥근
+$radius:4,8,16,40;
+
+// font
+$font-size: (
+    small-6x: 1.2rem,
+    small-5x: 1.4rem,
+    small-4x: 1.6rem,
+    small-3x: 1.8rem,
+    small-2x: 2rem,
+    small-1x: 2.4rem,
+    small: 2.8rem,
+    medium: 3.2rem,
+    large: 3.6rem,
+    large-1x: 4rem,
+    large-2x: 4.5rem,
+    large-3x: 4.8rem,
+    large-4x: 5.6rem,
+    large-5x: 6.4rem,
+    large-6x: 7.4rem,
+    large-7x: 8rem,
+    large-8x: 8.8rem,
+    large-9x: 9.6rem,
+    large-10x: 10.4rem,
+    large-11x: 11.2rem,
+    large-12x: 12rem,
+);
+
+$font-weight: (
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    extrabold: 800,
+    heavy: 900,
+);
