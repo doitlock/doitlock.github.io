@@ -4,20 +4,23 @@
 	position: relative;
 
 	section {
-
 		+section {
 			padding: 8rem 0;
 		}
-
+		.section-head {
+			text-align: center;
+		}
 		&.intro {
+			padding: 15rem 0;
+			background-color: $main04-color;
 			.section-head {
-				margin-bottom: 15rem;
-
 				.text {
+					display: block;
+					text-align: center;
 					&.type-01 {
 						font-weight: 800;
 						font-size: 3rem;
-						color: $main02-color;
+						color: $main01-color;
 					}
 
 					&.type-02 {}
@@ -45,24 +48,6 @@
 					&.edu {}
 
 					&.career {}
-
-					&.skill {
-						.article-body {
-							.badge-list {
-								display: flex;
-								align-items: center;
-								gap: 1rem;
-
-								.badge-item {
-									padding: 0.8rem 1.5rem;
-									border-radius: 10rem;
-									background-color: $bg1;
-									@include font(small-6x, regular);
-									white-space: nowrap;
-								}
-							}
-						}
-					}
 
 					.article-head {
 						.text {
@@ -136,6 +121,25 @@
 					width: 20%;
 					display: inline-block;
 					font-weight: 500;
+				}
+			}
+		}
+
+		&.skill {
+			background-color: $main02-color;
+			.section-body {
+				.badge-list {
+					display: flex;
+					align-items: center;
+					gap: 1rem;
+
+					.badge-item {
+						padding: 0.8rem 1.5rem;
+						border-radius: 10rem;
+						background-color: $bg1;
+						@include font(small-6x, regular);
+						white-space: nowrap;
+					}
 				}
 			}
 		}
