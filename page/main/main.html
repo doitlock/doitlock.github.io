@@ -13,13 +13,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/style.css">
-    <script src="../../assets/js/jquery-3.6.0.min.js" defer></script>
-    <script src="../../assets/js/swiper/swiper-bundle.js" defer></script>
-    <script src="../../assets/js/gsap.min.js" defer></script>
-    <script src="../../assets/js/ScrollTrigger.min.js" defer></script>
-    <script src="../../assets/js/ScrollToPlugin.min.js" defer></script>
-    <script src="../../assets/js/common.js" defer></script>
-
+    <script src="../../assets/js/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/js/swiper/swiper-bundle.js"></script>
+    <!-- <script src="../../assets/js/gsap.min.js"></script> -->
+    <script src="../../assets/js/ScrollTrigger.min.js"></script>
+    <script src="../../assets/js/ScrollToPlugin.min.js"></script>
+    <script src="../../assets/js/common.js"></script>
 </head>
 
 <body id="main-page">
@@ -51,19 +50,19 @@
                     </div>
                 </div>
             </nav>
-            <div class="flt-nav-left pc">
-                <a href="https://github.com/doitlock" target="_blank"><i class="xi-github"><span>깃허브</span></i></a>
-                <a href="https://www.notion.so/UI-UX-476905d4e5164c9fa09651513ec59077?pvs=4" target="_blank"><i class="xi-pen"><span>노션</span></i></a>
-                <a href="https://doitlock.tistory.com/category/Code" target="_blank"><i class="xi-blogger"><span>블로그</span></i></a>
-                <a href="https://www.instagram.com/great_flood_/" target="_blank"><i class="xi-instagram"><span>인스타그램</span></i></a>
+            <div class="fix-nav pc-only">
+                <a class="nav-item github" href="https://github.com/doitlock" target="_blank"><span class="blind">깃허브</span></a>
+                <a class="nav-item notion" href="https://www.notion.so/UI-UX-476905d4e5164c9fa09651513ec59077?pvs=4" target="_blank"><span class="blind">노션</span></a>
+                <a class="nav-item blog" href="https://doitlock.tistory.com/category/Code" target="_blank"><span class="blind">블로그</span></a>
+                <a class="nav-item instagram" href="https://www.instagram.com/great_flood_/" target="_blank"><span class="blind">인스타그램</span></a>
             </div>
         </header>
         <main id="main">
             <h2 class="blind">UI개발자, 웹퍼블리셔 홍수기 포트폴리오</h2>
             <section id="intro" class="intro">
-                <h3 class="section-head">
-                    <span class="text type-01">HELLO WORLD! 테스트중이다!!!!! 하하하!!!3시커밋예정이다!!</span>
-                    <span class="text type-02">I'M SU GI HONG<br /> WEB PUBLISHER</span>
+                <h3 class="section-head m0auto">
+                    <span class="text type-01">HELLO WORLD</span><br>
+                    <span class="text type-02">I'M SU GI HONG<br /> UI Developer</span>
                 </h3>
             </section>
             <section id="aboutme" class="aboutme">
@@ -132,41 +131,41 @@
                             </ul>
                         </div>
                     </article>
-                    <article class="skill">
-                        <h4 class="article-head">
-                            <span class="text">TECH STACK</span>
-                        </h4>
-                        <div class="article-body">
-                            <ul class="badge-list">
-                                <li class="badge-item">HTML5</li>
-                                <li class="badge-item">CSS3</li>
-                                <li class="badge-item">JavaScript</li>
-                                <li class="badge-item">jQuery</li>
-                                <li class="badge-item">Pigma</li>
-                                <li class="badge-item">Adobe XD</li>
-                                <li class="badge-item">SCSS</li>
-                                <li class="badge-item">GSAP</li>
-                                <li class="badge-item">GULP</li>
-                                <li class="badge-item">GIT</li>
+                </div>
+            </section>
+            <section class="skill">
+                <h4 class="section-head">
+                    <span class="text">TECH STACK</span>
+                </h4>
+                <div class="section-body m0auto">
+                    <ul class="badge-list">
+                        <li class="badge-item">HTML5</li>
+                        <li class="badge-item">CSS3</li>
+                        <li class="badge-item">JavaScript</li>
+                        <li class="badge-item">jQuery</li>
+                        <li class="badge-item">Pigma</li>
+                        <li class="badge-item">Adobe XD</li>
+                        <li class="badge-item">SCSS</li>
+                        <li class="badge-item">GSAP</li>
+                        <li class="badge-item">GULP</li>
+                        <li class="badge-item">GIT</li>
+                    </ul>
+                    <ul class="skill-list">
+                        <li>
+                            <em>Front-End</em>
+                            <ul>
+                                <li>협업</li>
+                                <li>유지보수 재사용</li>
+                                <li>페이지 구조 태그 의미 마크업 작성</li>
+                                <li>접근성</li>
+                                <li>scss</li>
                             </ul>
-                            <ul class="skill-list">
-                                <li>
-                                    <em>Front-End</em>
-                                    <ul>
-                                        <li>협업</li>
-                                        <li>유지보수 재사용</li>
-                                        <li>페이지 구조 태그 의미 마크업 작성</li>
-                                        <li>접근성</li>
-                                        <li>scss</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <em>Tools</em>
-                                    <span>vscode,git을 이용한 형상관리,걸프세팅가능,협업</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </article>
+                        </li>
+                        <li>
+                            <em>Tools</em>
+                            <span>vscode,git을 이용한 형상관리,걸프세팅가능,협업</span>
+                        </li>
+                    </ul>
                 </div>
             </section>
             <section id="project" class="project">
@@ -186,9 +185,8 @@
             </section>
         </main>
         <footer id="footer">
-            <div class="foot-abt">
+            <div class="footer-header">
                 <div class="content-box">
-                    <h1>Copyright ⓒ 2022. SU GI HONG All Rights Reserved</h1>
                 </div>
             </div>
             <nav id="footer-gnb">
