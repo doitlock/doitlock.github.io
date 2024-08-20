@@ -97,17 +97,17 @@ header {
 			}
 			&.github {
 				&::before {
-					background-image: url(../images/common/github_logo.png);
+					background-image: url(../../assets/images/common/github_logo.png);
 				}
 			}
 			&.notion {
 				&::before {
-					background-image: url(../images/common/notion_logo.png);
+					background-image: url(../../assets/images/common/notion_logo.png);
 				}
 			}
 			&.blog {
 				&::before {
-					background-image: url(../assets/images/common/tstory_logo.png);
+					background-image: url(../../assets/images/common/tstory_logo.png);
 				}
 			}
 			// &.instagram {

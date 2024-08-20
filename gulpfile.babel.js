@@ -15,9 +15,36 @@ const browserSync = require("browser-sync").create();
 const del = require("del");
 const ghPages = require("gh-pages");
 const path = require("path");
+const imagemin = require("gulp-imagemin");
+const newer = require("gulp-newer");
 
-const SRC_FOLDER = "./src/";
+const SRC_FOLDER = "./src";
 const DIST_FOLDER = "./dist";
+
+const SRC_PATH = {
+  ASSETS: {
+    IMAGES: "./src/assets/images",
+    SCSS: "./src/assets/scss",
+    JS: "./src/assets/js",
+  },
+  EJS: path.join(SRC_FOLDER, "ejs"),
+};
+
+const DEST_PATH = {
+  ASSETS: {
+    IMAGES: "./dist/assets/images",
+    CSS: "./dist/assets/css",
+    JS: "./dist/assets/js",
+  },
+};
+
+// SCSS 컴파일 옵션
+const OPTIONS = {
+  outputStyle: "compressed",
+  indentType: "space",
+  indentWidth: 0,
+  precision: 8,
+};
 
 const clean = () => del([DIST_FOLDER]);
 const cleanDeploy = () => del([".publish"]);
@@ -33,31 +60,6 @@ const gh = (done) => {
     }
     done();
   });
-};
-
-const SRC_PATH = {
-  ASSETS: {
-    IMAGES: path.join(SRC_FOLDER, "assets/images"),
-    SCSS: path.join(SRC_FOLDER, "assets/scss"),
-    JS: path.join(SRC_FOLDER, "assets/js"),
-  },
-  EJS: path.join(SRC_FOLDER, "ejs"),
-};
-
-const DEST_PATH = {
-  ASSETS: {
-    IMAGES: path.join(DIST_FOLDER, "assets/images"),
-    CSS: path.join(DIST_FOLDER, "assets/css"),
-    JS: path.join(DIST_FOLDER, "assets/js"),
-  },
-};
-
-// SCSS 컴파일 옵션
-const OPTIONS = {
-  outputStyle: "compressed",
-  indentType: "space",
-  indentWidth: 0,
-  precision: 8,
 };
 
 function html() {
@@ -106,6 +108,8 @@ function jsCompile() {
 function images() {
   return gulp
     .src(SRC_PATH.ASSETS.IMAGES + "/**/*.+(png|jpg|jpeg|gif|ico)")
+    // .pipe(newer(DEST_PATH.ASSETS.IMAGES))
+    // .pipe(imagemin({verbose:true}))
     .pipe(gulp.dest(DEST_PATH.ASSETS.IMAGES))
     .pipe(browserSync.stream());
 }
