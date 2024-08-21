@@ -15,8 +15,6 @@ const browserSync = require("browser-sync").create();
 const del = require("del");
 const ghPages = require("gh-pages");
 const path = require("path");
-const imagemin = require("gulp-imagemin");
-const newer = require("gulp-newer");
 
 const SRC_FOLDER = "./src";
 const DIST_FOLDER = "./dist";
@@ -27,7 +25,7 @@ const SRC_PATH = {
     SCSS: "./src/assets/scss",
     JS: "./src/assets/js",
   },
-  EJS: path.join(SRC_FOLDER, "ejs"),
+  EJS: "./src/ejs",
 };
 
 const DEST_PATH = {
@@ -44,22 +42,6 @@ const OPTIONS = {
   indentType: "space",
   indentWidth: 0,
   precision: 8,
-};
-
-const clean = () => del([DIST_FOLDER]);
-const cleanDeploy = () => del([".publish"]);
-
-const gh = (done) => {
-  ghPages.publish(path.join(__dirname, DIST_FOLDER), {
-    branch: 'gh-pages'
-  }, (err) => {
-    if (err) {
-      console.error('Deploy failed:', err);
-    } else {
-      console.log('Deploy succeeded.');
-    }
-    done();
-  });
 };
 
 function html() {
@@ -108,8 +90,6 @@ function jsCompile() {
 function images() {
   return gulp
     .src(SRC_PATH.ASSETS.IMAGES + "/**/*.+(png|jpg|jpeg|gif|ico)")
-    // .pipe(newer(DEST_PATH.ASSETS.IMAGES))
-    // .pipe(imagemin({verbose:true}))
     .pipe(gulp.dest(DEST_PATH.ASSETS.IMAGES))
     .pipe(browserSync.stream());
 }
@@ -139,8 +119,20 @@ function browserSyncInit() {
   });
 }
 
+const clean = () => del([DIST_FOLDER]);
+const cleanDeploy = () => del([".publish"]);
+
+const gh = (done) => {
+  ghPages.publish(path.join(__dirname, DIST_FOLDER), {
+    branch: 'gh-pages'
+  }, (err) => {
+    done();
+  });
+};
+
+
 const prepare = gulp.series(clean);
-const build = gulp.series(prepare, gulp.parallel(html, ejsCompile, scssCompile, jsCompile, images, svg));
+const build = gulp.series(prepare, gulp.parallel(html, ejsCompile, scssCompile, jsCompile, svg, images));
 const watch = gulp.parallel(watchFiles, browserSyncInit);
 
 exports.clean = clean;
