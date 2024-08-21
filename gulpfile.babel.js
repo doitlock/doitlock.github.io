@@ -89,7 +89,7 @@ function jsCompile() {
 
 function images() {
   return gulp
-    .src(SRC_PATH.ASSETS.IMAGES + "/**/*.+(png|jpg|jpeg|gif|ico)")
+    .src(SRC_PATH.ASSETS.IMAGES + "/**/*", { buffer: false })
     .pipe(gulp.dest(DEST_PATH.ASSETS.IMAGES))
     .pipe(browserSync.stream());
 }
@@ -105,7 +105,7 @@ function watchFiles() {
   gulp.watch(SRC_PATH.EJS + "/**/*.ejs", ejsCompile);
   gulp.watch(SRC_PATH.ASSETS.SCSS + "/**/*.scss", scssCompile);
   gulp.watch(SRC_PATH.ASSETS.JS + "/**/*.js", jsCompile);
-  gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.+(png|jpg|jpeg|gif|ico)", images);
+  gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*", images);
   gulp.watch(SRC_PATH.ASSETS.IMAGES + "/**/*.svg", svg);
 }
 
