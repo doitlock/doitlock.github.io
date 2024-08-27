@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <script src="../../assets/js/jquery-3.6.0.min.js"></script>
     <script src="../../assets/js/swiper/swiper-bundle.js"></script>
@@ -19,9 +20,48 @@
     <script src="../../assets/js/ScrollTrigger.min.js"></script>
     <script src="../../assets/js/ScrollToPlugin.min.js"></script>
     <script src="../../assets/js/common.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const mainSap1 = gsap.timeline();
+            mainSap1.to("#intro .text1", {
+                    xPercent: 180,
+                    duration: 2
+                }, "time1")
+                .to("#intro .text2", {
+                    xPercent: -180,
+                    duration: 2
+                }, "time1")
+                .to("#intro .text3", {
+                    xPercent: 180,
+                    duration: 2
+                }, "time1")
+                .to("#intro .text4", {
+                    xPercent: -180,
+                    duration: 2
+                }, "time1")
+                .to("#intro .section-head", {
+                    opacity: 0.5
+                }, "time2")
+                .to("#intro .section-head", {
+                    scale: 20,
+                    opacity: 1
+                }, "time2")
+
+            ScrollTrigger.create({
+                animation: mainSap1,
+                trigger: "#intro",
+                start: "top top",
+                end: "+=5000",
+                scrub: true,
+                pin: true,
+                // markers: true,
+                anticipatePin: 1
+            });
+        });
+    </script>
 </head>
 
-<body id="main-page">
+<body id="main-page" class="main">
     <div id="wrapper">
         <div class="skip-nav">
             <span class="blind">skip navigation</span>
@@ -32,42 +72,43 @@
             </ul>
         </div>
         <header id="header">
-            <div class="hd-top">
-                <div class="content-box">
-                    <h1><a href="index.html">DEVELOPER HSG</a></h1>
+            <div class="header-head">
+                <h1 class="subject"><a class="text arch" href="index.html">DEVELOPER HSG</a></h1>
+                <p class="summary blind">저는 홍수기입니다. 여기는 제 포트폴리오 사이트 입니다.</p>
+            </div>
+            <div id="gnb" class="gnb">
+                <div class="gnb-list">
+                    <a class="gnb-item" href="javascript:;" onclick="go_scroll('aboutme')">ABOUT</a>
+                    <a class="gnb-item" href="javascript:;" onclick="go_scroll('skill')">SKILL</a>
+                    <a class="gnb-item" href="javascript:;" onclick="go_scroll('project')">PROJECT</a>
+                    <a class="gnb-item" href="javascript:;" onclick="go_scroll('contact')">CONTACT</a>
                 </div>
             </div>
-            <nav id="gnb">
-                <div class="content-box">
-                    <div class="left pc">
-                        <em>홍수기의 <b>포트폴리오</b> 사이트 입니다.</em>
-                    </div>
-                    <div class="right">
-                        <a href="javascript:;" onclick="go_scroll('aboutme')">ABOUT</a>
-                        <a href="javascript:;" onclick="go_scroll('skill')">SKILL</a>
-                        <a href="javascript:;" onclick="go_scroll('project')">PROJECT</a>
-                        <a href="javascript:;" onclick="go_scroll('contact')">CONTACT</a>
-                    </div>
-                </div>
-            </nav>
-            <div class="fix-nav pc-only">
-                <a class="nav-item github" href="https://github.com/doitlock" target="_blank"><span class="blind">깃허브</span></a>
-                <a class="nav-item notion" href="https://www.notion.so/UI-UX-476905d4e5164c9fa09651513ec59077?pvs=4" target="_blank"><span class="blind">노션</span></a>
-                <a class="nav-item blog" href="https://doitlock.tistory.com/category/Code" target="_blank"><span class="blind">블로그</span></a>
-                <a class="nav-item instagram" href="https://www.instagram.com/great_flood_/" target="_blank"><span class="blind">인스타그램</span></a>
-            </div>
+            <!-- <div class="header-util">
+        <div class="util-list">
+            <a class="util-item github" href="https://github.com/doitlock" target="_blank"><span class="blind">깃허브</span></a>
+            <a class="util-item notion" href="https://www.notion.so/UI-UX-476905d4e5164c9fa09651513ec59077?pvs=4" target="_blank"><span class="blind">노션</span></a>
+            <a class="util-item blog" href="https://doitlock.tistory.com/category/Code" target="_blank"><span class="blind">블로그</span></a>
+            <a class="util-item instagram" href="https://www.instagram.com/great_flood_/" target="_blank"><span class="blind">인스타그램</span></a>
+        </div>
+    </div> -->
         </header>
         <main id="main">
-            <h2 class="blind">UI개발자, 웹퍼블리셔 홍수기 포트폴리오</h2>
+            <h2 class="blind">UI개발자 웹퍼블리셔 홍수기 포트폴리오</h2>
             <section id="intro" class="intro">
-                <h3 class="section-head m0auto">
-                    <span class="text type-01">HELLO WORLD 테스트 중입니다!!!!!!222222</span><br>
-                    <span class="text type-02">I'M SU GI HONG<br /> UI Developer</span>
+                <h3 class="section-head">
+                    <span class="text">WELCOME</span>
                 </h3>
+                <div class="section-body">
+                    <p class="text text1"><span class="arch emoji-01">HELLO WORLD</span> 잘 지내시나요</p>
+                    <p class="text text2">I AM SU GI HONG</p>
+                    <p class="text text3"><span class="arch emoji-02">HELLO WORLD</span> 전 분발하고 있습니다</p>
+                    <p class="text text4">I AM UI DEVELOPER</p>
+                </div>
             </section>
             <section id="aboutme" class="aboutme">
                 <h3 class="section-head">
-                    <span class="text">WHO AM I</span>
+                    <span class="text">ABOUT ME</span>
                 </h3>
                 <div class="section-body">
                     <article class="edu">
@@ -80,21 +121,21 @@
                                     <em class="content-head">아카데미 정글 프론트엔드 개발 취업 아카데미</em>
                                     <div class="content-body">
                                         <p class="text">UI개발, 프론트엔드 개발 실무, 전반적인 백엔드 기초</p>
-                                        <p class="date">2022.JAN ~ 2022.APR</p>
+                                        <p class="date">2022.01 ~ 2022.04</p>
                                     </div>
                                 </li>
                                 <li class="content-item">
                                     <em class="content-head">경기IT일자리센터 UI/UX 퍼블리셔 과정</em>
                                     <div class="content-body">
                                         <p class="text">HTML5, CSS3, JavaScript, jQuery</p>
-                                        <p class="date">2020.MAY ~ 2020.AUG</p>
+                                        <p class="date">2020.05 ~ 2020.08</p>
                                     </div>
                                 </li>
                                 <li class="content-item">
                                     <em class="content-head">한양여자대학교 실용미술과</em>
                                     <div class="content-body">
                                         <p class="text">Illustration, Adobe Program</p>
-                                        <p class="date">2010.FAB ~ 2012.FAB</p>
+                                        <p class="date">2010.02 ~ 2012.02</p>
                                     </div>
                                 </li>
                             </ul>
@@ -110,22 +151,22 @@
                                 <li class="content-item">
                                     <em class="content-head">펜타브리드</em>
                                     <div class="content-body">
-                                        <p class="text">Web Publisher, PIX - Frontend Team</p>
-                                        <p class="date">2022.SEP ~</p>
+                                        <p class="text">Web Publisher, Frontend Team PIX</p>
+                                        <p class="date">2022.09 ~</p>
                                     </div>
                                 </li>
                                 <li class="content-item">
                                     <em class="content-head">CTTD</em>
                                     <div class="content-body">
                                         <p class="text">Web Publisher, Frontend Team</p>
-                                        <p class="date">2022.JUN ~ 2022.SEP</p>
+                                        <p class="date">2022.06 ~ 2022.09</p>
                                     </div>
                                 </li>
                                 <li class="content-item">
                                     <em class="content-head">용감한컴퍼니</em>
                                     <div class="content-body">
                                         <p class="text">Web Publisher, Frontend Team</p>
-                                        <p class="date">2021.FEB ~ 2021.DEC</p>
+                                        <p class="date">2021.02 ~ 2021.12</p>
                                     </div>
                                 </li>
                             </ul>
@@ -134,7 +175,7 @@
                 </div>
             </section>
             <section id="skill" class="skill">
-                <h3 class="section-head">
+                <h3 class="section-head align-03">
                     <span class="text">TECH STACK</span>
                 </h3>
                 <div class="section-body m0auto">
@@ -170,7 +211,7 @@
             </section>
             <section id="project" class="project">
                 <h3 class="section-head">
-                    <span class="text">project</span>
+                    <span class="text">PROJECT</span>
                 </h3>
                 <div class="section-body m0auto">
 
