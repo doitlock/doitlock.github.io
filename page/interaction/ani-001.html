@@ -33,26 +33,19 @@
             </ul>
         </div>
         <header id="header">
-            <div class="header-head">
-                <h1 class="subject"><a class="text arch" href="index.html">DEVELOPER HSG</a></h1>
-                <p class="summary blind">저는 홍수기입니다. 여기는 제 포트폴리오 사이트 입니다.</p>
-            </div>
-            <div id="gnb" class="gnb">
-                <div class="gnb-list">
-                    <a class="gnb-item" href="javascript:;" onclick="go_scroll('aboutme')">ABOUT</a>
-                    <a class="gnb-item" href="javascript:;" onclick="go_scroll('skill')">SKILL</a>
-                    <a class="gnb-item" href="javascript:;" onclick="go_scroll('project')">PROJECT</a>
-                    <a class="gnb-item" href="javascript:;" onclick="go_scroll('contact')">CONTACT</a>
+            <div class="header-inner">
+                <h1 class="site-logo">
+                    <a class="text arch" href="index.html">DEVELOPER HSG</a>
+                </h1>
+                <div class="gnb" id="gnb">
+                    <div class="gnb-list">
+                        <a class="gnb-item" href="javascript:;" onclick="go_scroll('aboutme')">ABOUT ME</a>
+                        <a class="gnb-item" href="javascript:;" onclick="go_scroll('skill')">SKILL</a>
+                        <a class="gnb-item" href="javascript:;" onclick="go_scroll('project')">PROJECT</a>
+                        <a class="gnb-item" href="javascript:;" onclick="go_scroll('contact')">CONTACT</a>
+                    </div>
                 </div>
             </div>
-            <!-- <div class="header-util">
-        <div class="util-list">
-            <a class="util-item github" href="https://github.com/doitlock" target="_blank"><span class="blind">깃허브</span></a>
-            <a class="util-item notion" href="https://www.notion.so/UI-UX-476905d4e5164c9fa09651513ec59077?pvs=4" target="_blank"><span class="blind">노션</span></a>
-            <a class="util-item blog" href="https://doitlock.tistory.com/category/Code" target="_blank"><span class="blind">블로그</span></a>
-            <a class="util-item instagram" href="https://www.instagram.com/great_flood_/" target="_blank"><span class="blind">인스타그램</span></a>
-        </div>
-    </div> -->
         </header>
         <main class="main">
             <h2 class="blind">인터랙션 구현 페이지</h2>
@@ -64,18 +57,25 @@
             </section>
         </main>
         <footer id="footer">
-            <div class="footer-header">
-                <div class="content-box">
+            <div class="footer-inner">
+                <div class="footer-header">
+                    <div class="content-box">
+                    </div>
+                </div>
+                <div class="footer-body">
+                    <ul class="gnb-list">
+                        <li class="gnb-item"></li>
+                        <li class="gnb-item"></li>
+                        <li class="gnb-item"></li>
+                        <li class="gnb-item"></li>
+                    </ul>
+                </div>
+                <div class="btn-to-top">
+                    <button type="button" id="topBtn" class="top-btn">
+                        <span class="btn-text">Top</span>
+                    </button>
                 </div>
             </div>
-            <nav id="footer-gnb">
-                <ul class="gnb-list">
-                    <li class="gnb-item"></li>
-                    <li class="gnb-item"></li>
-                    <li class="gnb-item"></li>
-                    <li class="gnb-item"></li>
-                </ul>
-            </nav>
         </footer>
     </div>
 </body>
