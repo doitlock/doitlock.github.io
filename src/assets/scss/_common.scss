@@ -2,7 +2,44 @@
 
 // HEADER 공통
 header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding: 2rem;
+	
+	z-index: 99;
 
+	.header-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.site-logo {
+		border: 4px solid $black;
+		animation: rotating-03 10s linear infinite;
+		transform-style: preserve-3d;
+		display: flex;
+		justify-content: center;
+		.text {
+			font-size: 2rem;
+			font-weight: 700;
+			transform: translateZ(3rem);
+		}
+	}
+	.gnb {
+		.gnb-list {
+			.gnb-item {
+
+			}
+		}
+	}
+	.header-util {
+		.util-list {
+			.util-item {
+
+			}
+		}
+	}
 }
 
 .main {
@@ -11,7 +48,71 @@ header {
 
 // FOOTER 공통
 footer {
+	position: relative;
+    width: 100%;
+    padding: 6rem 6rem 4rem 6rem;
+	z-index: 99;
+	.footer-header {
 
+	}
+	.footer-body {
+
+	}
+	.btn-to-top {
+        position: fixed;
+        bottom: 1.6rem;
+        right: 6rem;
+        z-index: 1;
+        transition: 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+
+        .top-btn {
+            .btn-text {
+                display: block;
+                text-align: center;
+				font-size: 1.4rem;
+				font-weight: 700;
+                color: red;
+            }
+        }
+    
+        &.active {
+            visibility: visible;
+            opacity: 100%;
+        }
+        &.fixed {
+            position: absolute;
+            top: -6rem;
+            bottom: unset;
+        }
+        @include mobile {
+            right: 1.7rem;
+        }
+    }
+}
+
+aside {
+	position: fixed;
+	top: 50%;
+	right: 2rem;
+	transform: translateY(-50%);
+	.aside-util {
+		display: flex;
+		flex-direction: column;
+
+		.util-item {
+			font-size: 1.3rem;
+			font-weight: 700;
+			color: $black;
+			text-align: right;
+		}
+	}
+}
+
+// Archivo font
+.arch {
+	font-family: "Archivo Black", sans-serif;
 }
 
 // IR기법
@@ -81,3 +182,47 @@ footer {
     width: $web_width;
     margin: 0 auto;
 }
+
+// animation
+@keyframes rotating {
+	from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotating-02 {
+	from{
+        transform: translateY(-50%) rotate(0deg);
+    }
+    to{
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+@keyframes rotating-03 {
+    from {
+        transform: perspective(500px) rotateY(0deg);
+    }
+    to {
+        transform: perspective(500px) rotateY(360deg);
+    }
+}
+
+@keyframes swing { 
+	20% {transform: rotate(15deg); }
+	40% {transform: rotate(-10deg); }
+	60% {transform: rotate(5deg); }
+	80% {transform: rotate(-5deg); }
+	100% {transform: rotate(0deg); }
+} 
+
+@keyframes swing-02 { 
+	20% {transform: translateY(-50%) rotate(15deg); }
+	40% {transform: translateY(-50%) rotate(-10deg); }
+	60% {transform: translateY(-50%) rotate(5deg); }
+	80% {transform: translateY(-50%) rotate(-5deg); }
+	100% {transform: translateY(-50%) rotate(0deg); }
+} 

@@ -11,21 +11,22 @@ $web : 1920px;
 // 기본색상 정의
 $white : #fff;
 $black : #000;
-$main01-color : #16354D;
-$main02-color : #6B99C3;
-$main03-color : #D2D2D4;
-$main04-color : #E4E5EA;
-$main05-color : #0C151C;
+$main01-color : #1dc078;
+$main02-color : #169F5C;
+$main03-color : #0CE580;
+$main04-color : #E04A42;
+$main05-color : #2F3339;
+$main06-color : #82919F;
 
 $grey14 : #141414;
 $greydd : #dddddd;
 $grey4b : #4b4b4b;
 $grey33 : #333333;
 $grey77 : #777777;
-$grey99 : #999999;
-$greyf1 : #f1f1f1;
+$greyle : #1e1e1e;
 
-$bg1 : #E3EFFF;
+
+$bg1 : #D0D0CD;
 
 // 기초 변수정의
 $web_width : rem(1200); //margin:0 auto를 위한 가로크기
@@ -98,38 +99,3 @@ $badgecolor:
 
 // 모서리둥근
 $radius:4,8,16,40;
-
-// font
-$font-size: (
-    small-6x: 1.2rem,
-    small-5x: 1.4rem,
-    small-4x: 1.6rem,
-    small-3x: 1.8rem,
-    small-2x: 2rem,
-    small-1x: 2.4rem,
-    small: 2.8rem,
-    medium: 3.2rem,
-    large: 3.6rem,
-    large-1x: 4rem,
-    large-2x: 4.5rem,
-    large-3x: 4.8rem,
-    large-4x: 5.6rem,
-    large-5x: 6.4rem,
-    large-6x: 7.4rem,
-    large-7x: 8rem,
-    large-8x: 8.8rem,
-    large-9x: 9.6rem,
-    large-10x: 10.4rem,
-    large-11x: 11.2rem,
-    large-12x: 12rem,
-);
-
-$font-weight: (
-    light: 300,
-    regular: 400,
-    medium: 500,
-    semibold: 600,
-    bold: 700,
-    extrabold: 800,
-    heavy: 900,
-);
