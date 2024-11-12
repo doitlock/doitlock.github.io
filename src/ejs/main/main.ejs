@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <%-include('../_templates/_head.ejs')%>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const mainSap1 = gsap.timeline();
+            mainSap1.to("#intro .text1", {xPercent: 130, duration: 2}, "time1")
+                .to("#intro .text2", {xPercent: -130, duration: 2}, "time1")
+                .to("#intro .text3", {xPercent: 130, duration: 2}, "time1")
+                .to("#intro .text4", {xPercent: -130, duration: 2}, "time1")
+                .to("#intro .section-head", {opacity: 0.8, duration: 0.2})
+                .to("#intro .section-head", {scale: 20, opacity: 1, duration: 3})
+
+            ScrollTrigger.create({
+                animation: mainSap1,
+                trigger: "#intro",
+                start: "top top",
+                end: "+=3700",
+                scrub: true,
+                pin: true,
+                markers: true,
+                anticipatePin: 1
+            });
+        });
+    </script>
+</head>
+
+<body id="main-page" class="main">
+    <div id="wrap">
+        <%-include('../_templates/_header.ejs')%>
+        <main id="main">
+            <h2 class="blind">UI개발자 웹퍼블리셔 홍수기 포트폴리오</h2>
+            <section id="intro" class="intro">
+                <div class="section-inner">
+                    <h3 class="section-head">
+                        <span class="text">WELCOME</span>
+                    </h3>
+                    <div class="section-body">
+                        <p class="text text1"><span class="arch emoji-01">HELLO WORLD</span> 잘 지내시나요</p>
+                        <p class="text text2">I AM SU GI HONG</p>
+                        <p class="text text3"><span class="arch emoji-02">HELLO WORLD</span> 전 분발하고 있습니다</p>
+                        <p class="text text4">I AM UI DEVELOPER</p>
+                    </div>
+                </div>
+            </section>
+            <section id="aboutme" class="section aboutme">
+                <div class="section-inner">
+                    <h3 class="section-head">
+                        <span class="text">ABOUT ME</span>
+                    </h3>
+                    <div class="section-body">
+                        <article class="edu">
+                            <h4 class="article-head">
+                                <span class="text">EDUCATION</span>
+                            </h4>
+                            <div class="article-body">
+                                <ul class="content-list">
+                                    <li class="content-item">
+                                        <em class="content-head">아카데미 정글 프론트엔드 개발 취업 아카데미</em>
+                                        <div class="content-body">
+                                            <p class="text">UI개발, 프론트엔드 개발 실무, 전반적인 백엔드 기초</p>
+                                            <p class="date">2022.01 ~ 2022.04</p>
+                                        </div>
+                                    </li>
+                                    <li class="content-item">
+                                        <em class="content-head">경기IT일자리센터 UI/UX 퍼블리셔 과정</em>
+                                        <div class="content-body">
+                                            <p class="text">HTML5, CSS3, JavaScript, jQuery</p>
+                                            <p class="date">2020.05 ~ 2020.08</p>
+                                        </div>
+                                    </li>
+                                    <li class="content-item">
+                                        <em class="content-head">한양여자대학교 실용미술과</em>
+                                        <div class="content-body">
+                                            <p class="text">Illustration, Adobe Program</p>
+                                            <p class="date">2010.02 ~ 2012.02</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article></ㅁ>
+                        <article class="career">
+                            <h4 class="article-head">
+                                <span class="text">CAREER</span>
+                            </h4>
+                            <div class="article-body">
+                                <ul class="content-list">
+                                    <li class="content-item">
+                                        <em class="content-head">펜타브리드</em>
+                                        <div class="content-body">
+                                            <p class="text">Web Publisher, Frontend Team PIX</p>
+                                            <p class="date">2022.09 ~</p>
+                                        </div>
+                                    </li>
+                                    <li class="content-item">
+                                        <em class="content-head">CTTD</em>
+                                        <div class="content-body">
+                                            <p class="text">Web Publisher, Frontend Team</p>
+                                            <p class="date">2022.06 ~ 2022.09</p>
+                                        </div>
+                                    </li>
+                                    <li class="content-item">
+                                        <em class="content-head">용감한컴퍼니</em>
+                                        <div class="content-body">
+                                            <p class="text">Web Publisher, Frontend Team</p>
+                                            <p class="date">2021.02 ~ 2021.12</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section id="skill" class="section skill">
+                <div class="section-inner">
+                    <h3 class="section-head align-03">
+                        <span class="text">TECH STACK</span>
+                    </h3>
+                    <div class="section-body m0auto">
+                        <ul class="badge-list">
+                            <li class="badge-item">HTML5</li>
+                            <li class="badge-item">CSS3</li>
+                            <li class="badge-item">JavaScript</li>
+                            <li class="badge-item">jQuery</li>
+                            <li class="badge-item">Figma</li>
+                            <li class="badge-item">Adobe XD</li>
+                            <li class="badge-item">SCSS</li>
+                            <li class="badge-item">gsap</li>
+                            <li class="badge-item">gulp</li>
+                            <li class="badge-item">git</li>
+                        </ul>
+                        <ul class="skill-list">
+                            <li>
+                                <em>Front-End</em>
+                                <ul>
+                                    <li>협업</li>
+                                    <li>유지보수 재사용</li>
+                                    <li>페이지 구조 태그 의미 마크업 작성</li>
+                                    <li>접근성</li>
+                                    <li>scss</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <em>Tools</em>
+                                <span>vscode,git을 이용한 형상관리,걸프세팅가능,협업</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="project" class="section project">
+                <div class="section-inner">
+                    <h3 class="section-head">
+                        <span class="text">PROJECT</span>
+                    </h3>
+                    <div class="section-body m0auto">
+                        .datfmtpfldl
+                    </div>
+                </div>
+            </section>
+            <section id="contact" class="section contact">
+                <div class="section-inner">
+                    <h3 class="section-head">
+                        <span class="text">CONTACT ME</span>
+                    </h3>
+                    <div class="section-body m0auto">
+                        
+                    </div>
+                </div>
+            </section>
+        </main>
+        <%-include('../_templates/_aside.ejs')%>
+        <%-include('../_templates/_footer.ejs')%>
+    </div>
+</body>
+
+</html>

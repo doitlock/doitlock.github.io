@@ -1,4 +1,5 @@
-{
+{ "name": "doitlock",
+  "description": "doitlock portfolio",
   "devDependencies": {
     "@babel/core": "^7.19.6",
     "@babel/preset-env": "^7.19.4",
@@ -37,5 +38,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/doitlock/doitlock.github.io.git"
-  }
+  },
+  "homepage": "https://doitlock.github.io/page/main/main.html"
 }
