@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+@use "sass:map";
+@use "sass:color";
+@use "sass:math";
+
+// breakpoints
+$mobile : 320px;
+$mobile-medium : 375px;
+$mobile-large : 768px;
+$tablet : 1024px;
+$tablet-large : 1080px;
+$web-small : 1280px;
+$web-medium : 1440px;
+$web : 1920px;
+$iframe: 1040px;
+
+// transition
+$transition1: 0.3s ease-out;
+$transition2: 0.5s ease-out;
+$transition3: 0.6s ease-out;
+$transition4: 0.8s ease-out;
+
+
+// 기본색상 정의
+$white : #fff;
+$black : #000;
+$main01-color : #1dc078;
+$main02-color : #169F5C;
+$main03-color : #0CE580;
+$main04-color : #E04A42;
+$main05-color : #2F3339;
+$main06-color : #82919F;
+
+$grey14 : #141414;
+$greydd : #dddddd;
+$grey4b : #4b4b4b;
+$grey33 : #333333;
+$grey77 : #777777;
+$greyle : #1e1e1e;
+$bg1 : #D0D0CD;

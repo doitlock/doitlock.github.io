@@ -1,0 +1,20 @@
+#wrap {
+    .local-body {
+        min-height: 100vh;
+        margin-inline: auto;
+        @include web {
+            min-height: calc(100vh - 22.9rem);
+        }
+        @include mobile {
+            min-height: calc(100vh - 40.4rem);
+        }
+        section {
+            &.case1 {
+                &.full {
+                    max-width: unset;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
