@@ -19,7 +19,7 @@ HTML/CSS 기반의 마크업은 물론, JavaScript와 GSAP를 활용한 인터�
 ## 💻 Tech Stack
 
 - **Languages & Markup** : HTML5, CSS3, SCSS, JavaScript, jQuery
-- **Animation Libraries** : GSAP
+- **Animation Libraries** : GSAP, Lenis
 - **Build Tools** : Gulp
 - **Version Control** : Git (GitHub, GitLab)
 - **Design Tools** : Figma, Adobe XD, PhotoShop
@@ -27,6 +27,16 @@ HTML/CSS 기반의 마크업은 물론, JavaScript와 GSAP를 활용한 인터�
 - **Other** : Node.js
 
 ---
+
+## 🗂 Projects
+
+| 프로젝트명 | 설명 | 역할 |
+|------------|------|------|
+| 캐논코리아 마이크로사이트 | 브랜드 마이크로사이트 구축 | 퍼블리싱 90% 단독 |
+| SK네트웍스 기업사이트 | 반응형 웹 구축 | 인터랙션 중심 퍼블 |
+| 안랩닷컴 전면 개편 | React/TS 기반 페이지 퍼블 | 협업 중심 |
+| 효성그룹/첨단 | 그룹사 웹사이트 구축 | 공통 컴포넌트 및 반응형 |
+| 현대어린이미술관 운영 | VPN 환경 유지보수 | 퍼블리싱 100% 담당 |
 
 👉 [🔗 포트폴리오 바로가기](https://doitlock.github.io/)
 
