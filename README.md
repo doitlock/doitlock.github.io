@@ -12,7 +12,7 @@ HTML/CSS 기반의 마크업은 물론, JavaScript와 GSAP을 활용한 인터�
 - 💡 UI/UX 중심의 마크업 및 인터랙션 구현
 - 🚀 GSAP, Swiper, Lenis 등 모션 중심 개발 경험
 - 🛠 HTML5 / SCSS / JavaScript / jQuery
-- 🧠 협업 툴: Slack, Jira, Trello, Notion, Redmine 등
+- 🤝 협업 툴: Slack, Jira, Trello, Notion, Redmine 등
 - 🧠 개발 환경: VS Code, IntelliJ, Git, Node.js, Gulp 등 셋업 경험 보유
 
 
