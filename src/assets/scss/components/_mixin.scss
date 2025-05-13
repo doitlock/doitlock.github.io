@@ -110,3 +110,18 @@
         margin-bottom: 1.2rem;
     }
 }
+
+// before, after
+@mixin content($dir) {
+    @if $dir == 'b' or $dir == 'before' {
+        &::before {
+            content: '';
+            @content;
+        }
+    }@else if $dir == 'a' or $dir == 'after' {
+        &::after {
+            content: '';
+            @content;
+        }
+    }
+}
