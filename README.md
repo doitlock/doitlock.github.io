@@ -57,10 +57,11 @@ HTML/CSS 기반의 마크업은 물론, JavaScript와 GSAP을 활용한 인터�
 
 ## 🔗 Blog & Git
 
-- 📚 [기술 블로그](https://your-blog-link.com)  
+- 📚 [기술 블로그](https://doitlock.tistory.com)  
 - 🧑‍💻 [GitHub](https://github.com/doitlock)
 
 ---
 
 📬 연락처: doitlock@gmail.com  
+
 감사합니다 🙌
