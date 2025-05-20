@@ -1,4 +1,4 @@
-# 👋 Hello, I'm Hong Su Gi (홍수기)
+# 👋 Hello, I'm Hong Su Gi
 
 4년차 웹 퍼블리셔이자 UI 개발자입니다.  
 HTML/CSS 기반의 마크업은 물론, JavaScript와 GSAP을 활용한 인터랙션 구현까지 폭넓게 다룹니다.  
