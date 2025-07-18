@@ -5,24 +5,7 @@
     <%-include('../_templates/_head.ejs')%>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const mainSap1 = gsap.timeline();
-            mainSap1.to("#intro .text1", {xPercent: 130, duration: 2}, "time1")
-                .to("#intro .text2", {xPercent: -130, duration: 2}, "time1")
-                .to("#intro .text3", {xPercent: 130, duration: 2}, "time1")
-                .to("#intro .text4", {xPercent: -130, duration: 2}, "time1")
-                .to("#intro .section-head", {opacity: 0.8, duration: 0.2})
-                .to("#intro .section-head", {scale: 20, opacity: 1, duration: 3})
-
-            ScrollTrigger.create({
-                animation: mainSap1,
-                trigger: "#intro",
-                start: "top top",
-                end: "+=3700",
-                scrub: true,
-                pin: true,
-                markers: true,
-                anticipatePin: 1
-            });
+            
         });
     </script>
 </head>
@@ -31,156 +14,224 @@
     <div id="wrap" class="pf-main">
         <%-include('../_templates/_header.ejs')%>
         <div class="local-body" id="content">
-            <h2 class="blind">UI개발자 웹퍼블리셔 홍수기 포트폴리오</h2>
+            <h2 class="blind">홍수기 소개 페이지</h2>
+            <!-- 인사말 -->
             <section id="intro" class="intro">
                 <div class="section-inner">
                     <div class="section-wrap">
-                        <h3 class="section-head">
-                            <span class="text">WELCOME</span>
-                        </h3>
-                        <div class="section-body">
-                            <p class="text text1"><span class="arch emoji-01">HELLO WORLD</span> 안녕하세요</p>
-                            <p class="text text2">I AM SU GI HONG</p>
-                            <p class="text text3"><span class="arch emoji-02">HELLO WORLD</span> 홍수기입니다</p>
-                            <p class="text text4">I AM UI DEVELOPER</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="aboutme" class="section aboutme">
-                <div class="section-inner">
-                    <div class="section-wrap">
-                        <h3 class="section-head">
-                            <span class="text">ABOUT ME</span>
-                        </h3>
-                        <div class="section-body">
-                            <article class="edu">
-                                <h4 class="article-head">
-                                    <span class="text">EDUCATION</span>
-                                </h4>
-                                <div class="article-body">
-                                    <ul class="content-list">
-                                        <li class="content-item">
-                                            <em class="content-head">아카데미 정글 프론트엔드 개발 취업 아카데미</em>
-                                            <div class="content-body">
-                                                <p class="text">UI개발, 프론트엔드 개발 실무, 전반적인 백엔드 기초</p>
-                                                <p class="date">2022.01 ~ 2022.04</p>
-                                            </div>
-                                        </li>
-                                        <li class="content-item">
-                                            <em class="content-head">경기IT일자리센터 UI/UX 퍼블리셔 과정</em>
-                                            <div class="content-body">
-                                                <p class="text">HTML5, CSS3, JavaScript, jQuery</p>
-                                                <p class="date">2020.05 ~ 2020.08</p>
-                                            </div>
-                                        </li>
-                                        <li class="content-item">
-                                            <em class="content-head">한양여자대학교 실용미술과</em>
-                                            <div class="content-body">
-                                                <p class="text">Illustration, Adobe Program</p>
-                                                <p class="date">2010.02 ~ 2012.02</p>
-                                            </div>
-                                        </li>
-                                    </ul>
+                        <div class="section-info">
+                            <div class="section-head">
+                                <h3 class="subject">안녕하세요 반갑습니다.</h3>
+                                <span class="summary"></span>
+                            </div>
+                            <div class="section-body">
+                                <p class="para">제 이름은 홍수기입니다. 이 웹페이지는 저를 소개하는 공간입니다. 직업 경력을 소개하는 포트폴리오가 아닌 제가 어떤 사람인지를 표현하고자 만들게 되었습니다. 홍수기는 어떤 사람이고 무엇을 하고 있고, 추후 인생 목표는 무엇인지를 남기고 싶습니다. 처음에는 누군가에게 보여주기 위해 만들기 시작했는데, 만들면서 보니 저 스스로의 생각들과 지나온 날들을 정리하게 되네요. 저는 매일 생각이 바뀌고 있고, 예상치 못한 일들을 마주하고 있습니다. 따라서 이 페이지에 기재된 내용들은 수시로 바뀔 예정이니 참고부탁드립니다. 아 밑으로 스크롤해서 보시면 사회인으로 경력 기술서 페이지 링크도 있습니다.</p>
+                                <div class="pf-logo">
+                                    <img src="" alt="">
                                 </div>
-                            </article></ㅁ>
-                            <article class="career">
-                                <h4 class="article-head">
-                                    <span class="text">CAREER</span>
-                                </h4>
-                                <div class="article-body">
-                                    <ul class="content-list">
-                                        <li class="content-item">
-                                            <em class="content-head">펜타브리드</em>
-                                            <div class="content-body">
-                                                <p class="text">Web Publisher, Frontend Team PIX</p>
-                                                <p class="date">2022.09 ~</p>
-                                            </div>
-                                        </li>
-                                        <li class="content-item">
-                                            <em class="content-head">CTTD</em>
-                                            <div class="content-body">
-                                                <p class="text">Web Publisher, Frontend Team</p>
-                                                <p class="date">2022.06 ~ 2022.09</p>
-                                            </div>
-                                        </li>
-                                        <li class="content-item">
-                                            <em class="content-head">용감한컴퍼니</em>
-                                            <div class="content-body">
-                                                <p class="text">Web Publisher, Frontend Team</p>
-                                                <p class="date">2021.02 ~ 2021.12</p>
-                                            </div>
-                                        </li>
-                                    </ul>
+                            </div>
+                            <div class="section-foot">
+                                <div class="data-list module-1">
+                                    <!-- 오늘하루보지않기기능 -->
+                                    <div class="data-item">
+                                        <em class="data-head">여기 어디에요?</em>
+                                        <p class="data-body">나는 당신에게 관심이 없어요. 잘못 들어온 것 같아요.</p>
+                                    </div>
+                                    <!-- //오늘하루보지않기기능 -->
+                                    <div class="data-item">
+                                        <em class="data-head">오 뭐 이런걸 만들지?</em>
+                                        <p class="data-body">다음 이야기가 궁금하군.</p>
+                                    </div>
                                 </div>
-                            </article>
+                            </div>
+                        </div>
+                        <div class="section-figure">
+                            <img src="" alt="">
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="skill" class="section skill">
+            <!-- //인사말 -->
+            <!-- 나는 이런 사람입니다 -->
+            <section id="aboutme" class="about-me">
                 <div class="section-inner">
                     <div class="section-wrap">
-                        <h3 class="section-head align-03">
-                            <span class="text">TECH STACK</span>
-                        </h3>
-                        <div class="section-body m0auto">
-                            <ul class="badge-list">
-                                <li class="badge-item">HTML5</li>
-                                <li class="badge-item">CSS3</li>
-                                <li class="badge-item">JavaScript</li>
-                                <li class="badge-item">jQuery</li>
-                                <li class="badge-item">Figma</li>
-                                <li class="badge-item">Adobe XD</li>
-                                <li class="badge-item">SCSS</li>
-                                <li class="badge-item">gsap</li>
-                                <li class="badge-item">gulp</li>
-                                <li class="badge-item">git</li>
-                            </ul>
-                            <ul class="skill-list">
-                                <li>
-                                    <em>Front-End</em>
-                                    <ul>
-                                        <li>협업</li>
-                                        <li>유지보수 재사용</li>
-                                        <li>페이지 구조 태그 의미 마크업 작성</li>
-                                        <li>접근성</li>
-                                        <li>scss</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <em>Tools</em>
-                                    <span>vscode,git을 이용한 형상관리,걸프세팅가능,협업</span>
-                                </li>
-                            </ul>
+                        <div class="section-head">
+                            <h3 class="subject"></h3>
+                        </div>
+                        <div class="section-body">
+                            <div class="data-list module-2">
+                                <div class="data-item">
+                                    <div class="data-wrap">
+                                        <span class="num">01.</span>
+                                        <em class="title">비오는 날 지렁이 풀밭으로 옮기기 <span class="small">건물에 갇힌 벌레, 새 내보내기</span></em>
+                                    </div>
+                                </div>
+                                <div class="data-item">
+                                    <div class="data-wrap">
+                                        <span class="num">02.</span>
+                                        <em class="title">아침에 하늘보기 <span class="small">눈으로 새 쫒아다니기</span></em>
+                                    </div>
+                                </div>
+                                <div class="data-item">
+                                    <div class="data-wrap">
+                                        <span class="num">03.</span>
+                                        <em class="title">펜들면 끊임없이 낙서하기 <span class="small">아이디어 생산</span></em>
+                                    </div>
+                                </div>
+                                <div class="data-item">
+                                    <div class="data-wrap">
+                                        <span class="num">04.</span>
+                                        <em class="title">블로그에 일기, 후기 작성하기 <span class="small">아이디어 생산</span></em>
+                                    </div>
+                                </div>
+                                <div class="data-item">
+                                    <div class="data-wrap">
+                                        <span class="num">05.</span>
+                                        <em class="title">쿨타임차면 반삭하기 <span class="small">12mm</span></em>
+                                    </div>
+                                </div>
+                                <div class="data-item">
+                                    <div class="data-wrap">
+                                        <span class="num">06.</span>
+                                        <em class="title">쿨타임차면 타투하기 <span class="small">고통을 이겨내라</span></em>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="project" class="section project">
+            <!-- //나는 이런 사람입니다 -->
+            <!-- 사회생활 경력 -->
+            <section id="history" class="history">
                 <div class="section-inner">
                     <div class="section-wrap">
-                        <h3 class="section-head">
-                            <span class="text">PROJECT</span>
-                        </h3>
-                        <div class="section-body m0auto">
-                            
+                        <div class="section-head">
+                            <h3 class="subject"></h3>
+                        </div>
+                        <div class="section-body">
+                            <div class="data-list module-3">
+                                <div class="data-item">
+                                    <div class="data-wrap">
+                                        <div class="data-head">
+                                            <span class="date">0000.00.~0000.00</span>
+                                            <span class="">장소</span>
+                                        </div>
+                                        <div class="data-body">
+                                            <p class="para">인쇄 디자이너</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data-item">
+                                    <div class="data-wrap">
+                                        <div class="data-head">
+                                            <span class="date">0000.00.~0000.00</span>
+                                            <span class="">장소</span>
+                                        </div>
+                                        <div class="data-body">
+                                            <p class="para">웹 디자이너</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data-item">
+                                    <div class="data-wrap">
+                                        <div class="data-head">
+                                            <span class="date">0000.00.~0000.00</span>
+                                            <span class="">장소</span>
+                                        </div>
+                                        <div class="data-body">
+                                            <p class="para">웹 퍼블리셔</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="contact" class="section contact">
+            <!-- //사회생활 경력 -->
+            <!-- 뭘하고있나 -->
+            <section id="work" class="work">
                 <div class="section-inner">
                     <div class="section-wrap">
-                        <h3 class="section-head">
-                            <span class="text">CONTACT ME</span>
-                        </h3>
-                        <div class="section-body m0auto">
-                            
+                        <div class="section-head">
+                            <h3 class="subject">사회인 홍수기</h3>
+                        </div>
+                        <div class="section-body">
+                            <div class="data-list module-4">
+                                <div class="data-item">
+                                    <div class="data-wrap">
+                                        <div class="data-head">
+                                            <em class="subject">웹퍼블리셔 & UI개발자</em>
+                                        </div>
+                                        <div class="data-body">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data-item">
+                                    <div class="data-wrap">
+                                        <div class="data-head">
+                                            <em class="subject">일러스트 갤러리</em>
+                                        </div>
+                                        <div class="data-body">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <!-- //뭘하고있나 -->
+            <!-- 인생목표 -->
+            <section id="goal" class="goal">
+                <div class="section-inner">
+                    <div class="section-wrap">
+                        <div class="section-head">
+                            <h3 class="subject">사는 기간 목표</h3>
+                        </div>
+                        <div class="section-body">
+                            <div class="data-list module-5">
+                                <div class="data-item">
+                                    <div class="data-wrap">
+                                        <div class="data-head">
+                                            <em class="subject">동화책 내기</em>
+                                        </div>
+                                        <div class="data-body">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data-item">
+                                    <div class="data-wrap">
+                                        <div class="data-head">
+                                            <em class="subject">영화 찍기, 영화 출연하기</em>
+                                        </div>
+                                        <div class="data-body">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="data-item">
+                                    <div class="data-wrap">
+                                        <div class="data-head">
+                                            <em class="subject">노래 직접 만들어서 음반내기</em>
+                                        </div>
+                                        <div class="data-body">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- //인생목표 -->
+            
         </div>
         <%-include('../_templates/_aside.ejs')%>
         <%-include('../_templates/_footer.ejs')%>
