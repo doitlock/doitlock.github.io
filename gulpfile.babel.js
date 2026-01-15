@@ -12,7 +12,7 @@ const uglify = require("gulp-uglify");
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
 const browserSync = require("browser-sync").create();
-const del = require("del");
+const del = require('del');
 const ghPages = require("gh-pages");
 const path = require("path");
 
@@ -67,13 +67,17 @@ function ejsCompile() {
     .pipe(browserSync.stream());
 }
 
+function handleError(err) {
+  console.log(err.toString());
+  this.emit('end');
+}
+
 function scssCompile() {
-  return gulp
-    .src(SRC_PATH.ASSETS.SCSS + "/*.scss")
+  return gulp.src(SRC_PATH.ASSETS.SCSS + "/*.scss")
     .pipe(sourcemaps.init())
-    .pipe(scss(OPTIONS))
-    .pipe(autoprefixer()) // 최신 css를 구형 브라우저에서 이해할 수 있게 prefix를 만들어줌
-    .pipe(sourcemaps.write())
+    .pipe(scss(OPTIONS).on('error', handleError))
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(DEST_PATH.ASSETS.CSS))
     .pipe(browserSync.stream());
 }
@@ -89,7 +93,7 @@ function jsCompile() {
 
 function images() {
   return gulp
-    .src(SRC_PATH.ASSETS.IMAGES + "/**/*", { buffer: false })
+    .src(SRC_PATH.ASSETS.IMAGES + "/**/*")
     .pipe(gulp.dest(DEST_PATH.ASSETS.IMAGES))
     .pipe(browserSync.stream());
 }
@@ -132,13 +136,14 @@ const gh = (done) => {
 
 
 const prepare = gulp.series(clean);
-const build = gulp.series(prepare, gulp.parallel(html, ejsCompile, scssCompile, jsCompile, svg, images));
+const build = gulp.series(clean, gulp.parallel(ejsCompile, scssCompile, jsCompile, images, svg));
+const dev = gulp.series(build, gulp.parallel(watchFiles, browserSyncInit));
 const watch = gulp.parallel(watchFiles, browserSyncInit);
 
 exports.clean = clean;
 exports.cleanDeploy = cleanDeploy;
 exports.prepare = prepare;
 exports.build = build;
-exports.default = gulp.series(build, watch);
+exports.default = dev;
 exports.dev = gulp.series(build, watch);
 exports.deploy = gulp.series(build, gh, cleanDeploy);

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "p1",
+    "title": "Personal Portfolio",
+    "description": "This website built with Gulp + EJS + SCSS.",
+    "url": "/",
+    "tags": ["portfolio", "website"]
+  },
+  {
+    "id": "p2",
+    "title": "Gallery Page",
+    "description": "Image gallery demo",
+    "url": "/page/gallery/gallery.html",
+    "tags": ["gallery", "images"]
+  }
+]
