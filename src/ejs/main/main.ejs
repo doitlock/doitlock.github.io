@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+    @@include('../_templates/_head.ejs')
+
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__logo">HONG SU KI PORTFOLIO</div>
+        <nav>
+            <ul class="nav">
+                <li class="nav__item"><a href="#about" class="nav__link">ABOUT</a></li>
+                <li class="nav__item"><a href="#tech" class="nav__link">TECH STACK</a></li>
+                <li class="nav__item"><a href="#project" class="nav__link">PROJECT</a></li>
+                <li class="nav__item"><a href="#exhibition" class="nav__link">EXHIBITION</a></li>
+                <li class="nav__item"><a href="#event" class="nav__link">EVENT</a></li>
+                <li class="nav__item"><a href="#faq" class="nav__link">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="header__right">
+            <a href="#" class="header__login" rel="nofollow">로그인</a>
+            <div class="language">
+                <button class="language__btn" id="languageBtn" aria-haspopup="true" aria-expanded="false">KOR</button>
+                <div class="language__dropdown" id="languageDropdown">
+                    <a href="#" class="language__option" data-lang="KOR" rel="nofollow">KOR</a>
+                    <a href="#" class="language__option" data-lang="ENG" rel="nofollow">ENG</a>
+                </div>
+            </div>
+            <a href="#" class="header__register" rel="nofollow">CONTACT</a>
+        </div>
+    </header>    
+
+    <!-- Hero Section -->
+    <main>
+    <section class="hero" aria-label="행사 소개">
+        <div class="hero__bg">
+            <div class="orbit orbit--1"></div>
+            <div class="orbit orbit--2"></div>
+            <div class="orbit orbit--3"></div>
+            <div class="orbit orbit--4"></div>
+        </div>
+
+        <div class="hero__top">
+            <div class="hero__left">
+                <div class="vision">
+                    VISION ——————————→ FUTURE
+                </div>
+                <div class="ai-logo">
+                    <span class="ai-logo__text">NOW AI</span>
+                    <div class="atom">
+                        <div class="atom__core"></div>
+                        <div class="atom__orbit atom__orbit--1"></div>
+                        <div class="atom__orbit atom__orbit--2"></div>
+                        <div class="atom__orbit atom__orbit--3"></div>
+                    </div>
+                    <span class="ai-logo__text">AI NEXT</span>
+                </div>
+            </div>
+
+            <div class="hero__right">
+                <div class="welcome">
+                    <div class="welcome__title">WELCOME</div>
+                    <div class="welcome__info">
+                        Web Publisher · 2021 — 2026
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero__main">
+            <div class="hero__subtitle">UI DEVELOPER PORTFOLIO</div>
+            <h1 class="hero__title">HELLO WOLRD</h1>
+        </div>
+
+        <div class="hero__buttons">
+            <a href="#" class="btn btn--live" rel="nofollow">▶ GIT HUB</a>
+        </div>
+    </section>
+
+    <!-- about Section -->
+    <section class="about" id="about" aria-label="참가 신청">
+        <div class="about__container">
+            <div class="about__content">
+                <div class="about__left">
+                    <h2>
+                        ABOUT ME<br>
+                        <span class="about__highlight">2026</span>
+                    </h2>
+                    <p class="about__description">안녕하세요. 4년차 웹 퍼블리셔이자 UI 개발자 홍수기입니다.<br>
+                    HTML5/CSS3 기반의 시멘틱 마크업과 JavaScript를 활용한 UI 인터랙션 구현을 주력으로 하고 있습니다.</p>
+                </div>
+                <div class="about__info">
+                    <h3 class="about__info-title">경력 사항</h3>
+                    <div class="about__item">
+                        <span class="about__label">2022.09 ~ 2026.02</span>
+                        <div>펜타브리드 PIX FIX팀, 사원 (팀원)</div>
+                    </div>
+                    <div class="about__item">
+                        <span class="about__label">2022.06 ~ 2022.09</span>
+                        <div>CTTD AP팀, 사원 (팀원)</div>
+                    </div>
+                    <div class="about__item">
+                        <span class="about__label">2021.03 ~ 2021.12</span>
+                        <div>용감한 컴퍼니 그로스디자인그룹 퍼블리싱팀, 사원 (팀원)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- tech Section -->
+    <section class="tech" aria-label="행사 장소">
+        <div class="tech__container">
+            <h2 class="tech__title">TECH STACK</h2>
+            <div class="tech__grid">
+                <div class="tech__info">
+                    <div class="tech__item">
+                        <h4 class="tech__item-title">Core Markup & UI</h4>
+                        <p class="tech__item-text">
+                            HTML5, CSS3, SCSS, JavaScript / jQuery<br>
+                            - 시멘틱 마크업, 접근성 고려 구조 설계<br>
+                            - 모듈화, 공통 컴포넌트 스타일 관리<br>
+                            - UI 인터랙션 구현
+                        </p>
+                    </div>
+                    <div class="tech__item">
+                        <h4 class="tech__item-title">Animation Libraries</h4>
+                        <p class="tech__item-text">
+                            GSAP, Swiper, Lenis<br>
+                            - scrolltrigger<br>
+                            - 슬라이드 반응형, 커스텀 컨트롤<br>
+                            - 스크롤 UI
+                        </p>
+                    </div>
+                    <div class="tech__item">
+                        <h4 class="tech__item-title">Version Control & Collaboration</h4>
+                        <p class="tech__item-text">
+                            Git (GitHub, GitLab)<br>
+                            Slack, Jira, Trello, Notion<br>
+                                - 개발자 협업 환경에서 브랜치, 커밋 단위 작업<br>
+                                - 이슈 관리 및 협업 커뮤니케이션
+                        </p>
+                    </div>
+                    <div class="tech__item">
+                        <h4 class="tech__item-title">Design tools</h4>
+                        <p class="tech__item-text">
+                            Figma, Adobe XD, PhotoShop
+                        </p>
+                    </div>
+                    <div class="tech__item">
+                        <h4 class="tech__item-title">IDE / Editor</h4>
+                        <p class="tech__item-text">
+                            Visual Studio Code, IntelliJ IDEA, eclipse
+                        </p>
+                    </div>
+                    <div class="tech__item">
+                        <h4 class="tech__item-title">Build</h4>
+                        <p class="tech__item-text">
+                            gulp(세팅 경험), Node.js
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="tech__address">
+                Training & Education
+                <span>click!</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- project Section -->
+    <section class="project" id="project" aria-label="프로젝트">
+        <div class="project__container">
+            <div class="project__left">
+                <h2 class="project__title">PROJECT</h2>
+                <div class="project__filters">
+                    <button class="project__filter project__filter--active" data-filter="all">전체</button>
+                    <button class="project__filter" data-filter="development">구축</button>
+                    <button class="project__filter" data-filter="maintenance">운영</button>
+                </div>
+                <ul class="project__items" aria-label="키노트 연사 목록">
+                    <li class="project__item project__item--active" data-item="canon-main" data-type="maintenance">Canon Korea</li>
+                    <li class="project__item" data-item="chey-tae-won" data-type="development">World Vision Cross</li>
+                    <li class="project__item" data-item="jensen-huang" data-type="development">Sebang Group</li>
+                    <li class="project__item" data-item="kwark-noh-jung" data-type="maintenance">Hyundai Elivator</li>
+                    <li class="project__item" data-item="pankaj-sharma">H.point Event</li>
+                    <li class="project__item" data-item="ben-mann" data-type="development">SK networks Official</li>
+                    <li class="project__item" data-item="masayoshi-son" data-type="maintenance">Hyundai </li>
+                </ul>
+            </div>
+            <div class="project__photo">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDQwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjMzMzIiByeD0iMTAiLz4KPGNpcmNsZSBjeD0iMjAwIiBjeT0iMTgwIiByPSI2MCIgZmlsbD0iIzU1NSIvPgo8L3N2Zz4=" alt="project  : YOO YOUNG-SANG" class="project__image" id="projectImage">
+                <div class="project__name" id="projectName">YOO YOUNG-SANG</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APEC Section -->
+    <section class="apec" aria-label="APEC CEO SUMMIT KOREA 2025">
+        <div class="apec__container">
+            <div class="apec__content">
+                <h3 class="apec__title">APEC CEO SUMMIT KOREA 2025</h3>
+                <p class="apec__subtitle">FUTURE TECH FORUM AI SESSION</p>
+                <p class="apec__date">2025. 5. 26 의정부지</p>
+            </div>
+            <div class="apec__image">
+                <div class="apec__chat">💬</div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Sponsors Section -->
+    <section class="sponsors" aria-label="후원사">
+        <div class="sponsors__container">
+            <h2 class="sponsors__title">SPONSORS</h2>
+            <div class="sponsors__grid">
+                <div class="sponsors__item">
+                    <div class="sponsors__logo" aria-label="후원사 로고 1"></div>
+                </div>
+                <div class="sponsors__item">
+                    <div class="sponsors__logo" aria-label="후원사 로고 2"></div>
+                </div>
+                <div class="sponsors__item">
+                    <div class="sponsors__logo" aria-label="후원사 로고 3"></div>
+                </div>
+                <div class="sponsors__item">
+                    <div class="sponsors__logo" aria-label="후원사 로고 4"></div>
+                </div>
+                <div class="sponsors__item">
+                    <div class="sponsors__logo" aria-label="후원사 로고 5"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <button id="openInfoModalBtn" class="info-modal-btn">CONTACT ME</button>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__section" aria-label="이벤트 정보">
+                    <h2>이벤트 정보</h2>
+                    <p>일정: 2025년 11월 3일-4일</p>
+                    <p>장소: 코엑스 서울</p>
+                    <p>시간: 오전 10:00 - 오후 6:00</p>
+                </div>
+                <div class="footer__section">
+                    <h4>문의</h4>
+                    <p>이메일: info@sk-aisummit.com</p>
+                    <p>전화: 02-1234-5678</p>
+                    <a href="#">FAQ 바로가기</a>
+                </div>
+                <div class="footer__section">
+                    <h4>소셜미디어</h4>
+                    <a href="#">페이스북</a><br>
+                    <a href="#">트위터</a><br>
+                    <a href="#">링크드인</a><br>
+                    <a href="#">유튜브</a>
+                </div>
+                <div class="footer__section">
+                    <h4>파트너</h4>
+                    <a href="#">후원사</a><br>
+                    <a href="#">미디어 파트너</a><br>
+                    <a href="#">기술 파트너</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 HONG SU KI PORTFOLIO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<!-- 구조화된 데이터(JSON-LD) 추가 -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "SK AI SUMMIT 2025",
+    "description": "SK AI SUMMIT 2025 - 최고의 AI 전문가들과 함께하는 특별한 시간. 2025년 11월 3-4일, COEX SEOUL에서 개최.",
+    "startDate": "2025-11-03T10:00",
+    "endDate": "2025-11-04T18:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+    "tech": {
+        "@type": "Place",
+        "name": "COEX SEOUL",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "영동대로 513",
+            "addressLocality": "강남구",
+            "addressRegion": "서울특별시",
+            "postalCode": "06164",
+            "addressCountry": "KR"
+        }
+    },
+    "organizer": {
+        "@type": "Organization",
+        "name": "SK AI SUMMIT 조직위원회",
+        "url": "https://sk-aisummit.com"
+    },
+    "image": [
+        "/og-image.png"
+    ],
+    "offers": {
+        "@type": "Offer",
+        "url": "https://sk-aisummit.com",
+        "price": "0",
+        "priceCurrency": "KRW",
+        "availability": "https://schema.org/InStock"
+    }
+}
+</script>
+
+</html>
