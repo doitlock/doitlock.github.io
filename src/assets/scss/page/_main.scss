@@ -2,31 +2,35 @@
 
     // ── CURSOR ────────────────────────────────────────────────
     #cursor {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 0.8rem; // 8px
-        height: 0.8rem;
-        background: var(--color-primary);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-        transform: translate(-50%, -50%);
-        transition: width 0.2s, height 0.2s, background 0.25s;
+        @include web {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0.8rem; // 8px
+            height: 0.8rem;
+            background: var(--color-secondary);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s, background 0.25s;
+        }
     }
 
     #cursor-ring {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 4rem; // 40px
-        height: 4rem;
-        border: 0.15rem solid rgba(254, 176, 93, 0.4); // 1.5px
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9998;
-        transform: translate(-50%, -50%);
-        transition: width 0.35s, height 0.35s, border-color 0.35s;
+        @include web {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 4rem; // 40px
+            height: 4rem;
+            border: 0.15rem solid var(--color-secondary2); // 1.5px
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            transform: translate(-50%, -50%);
+            transition: width 0.35s, height 0.35s, border-color 0.35s;
+        }
     }
 
     &:has(a:hover),
@@ -88,13 +92,18 @@
     }
 
     .nav-logo {
-        font-size: 2rem; // 20px
+        font-size: 1.6rem;
         letter-spacing: 0.2em;
         color: var(--color-cream);
+        font-weight: 600;
         text-decoration: none;
 
         span {
             color: var(--color-primary);
+        }
+
+        @include mobile {
+            font-size: 1.2rem;
         }
     }
 
@@ -106,7 +115,7 @@
         a {
             color: var(--muted);
             text-decoration: none;
-            font-size: 1.1rem; // 11px
+            font-size: 1.2rem;
             letter-spacing: 0.14em;
             text-transform: uppercase;
             transition: color 0.3s;
@@ -140,8 +149,12 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        padding: 0 5.6rem 8.8rem; // 0 56px 88px
+        padding: 0 5.6rem 8.8rem;
         overflow: hidden;
+
+        @include mobile {
+            padding: 12rem 1.8rem;
+        }
     }
 
     .hero-grid-bg {
@@ -149,8 +162,8 @@
         inset: 0;
         pointer-events: none;
         background-image:
-            linear-gradient(rgba(255, 242, 208, 0.04) 0.1rem, transparent 0.1rem),
-            linear-gradient(90deg, rgba(255, 242, 208, 0.04) 0.1rem, transparent 0.1rem);
+            linear-gradient(rgba(208, 228, 255, 0.04) 0.1rem, transparent 0.1rem),
+            linear-gradient(90deg, rgba(208, 221, 255, 0.04) 0.1rem, transparent 0.1rem);
         background-size: 6.4rem 6.4rem; // 64px 64px
     }
 
@@ -187,13 +200,20 @@
         align-items: center;
         gap: 1.4rem; // 14px
         opacity: 0;
+
+        @include mobile {
+            font-size: 1.2rem;
+        }
     }
 
     .hero-eyebrow-line {
         display: inline-block;
-        width: 4rem; // 40px
-        height: 0.1rem; // 1px
+        width: 4rem;
+        height: 0.1rem;
         background: var(--color-secondary);
+        @include mobile {
+            width: 2rem;
+        }
     }
 
     .hero-name {
@@ -244,7 +264,7 @@
     }
 
     .hero-tag {
-        font-size: 1rem; // 10px
+        font-size: 1.1rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         border: 0.1rem solid var(--line);
@@ -278,7 +298,7 @@
         flex-direction: column;
         align-items: center;
         gap: 1rem; // 10px
-        font-size: 0.9rem; // 9px
+        font-size: 1rem;
         letter-spacing: 0.22em;
         text-transform: uppercase;
         color: var(--muted);
@@ -288,7 +308,7 @@
     .hero-scroll-track {
         width: 0.1rem; // 1px
         height: 5.6rem; // 56px
-        background: linear-gradient(to bottom, var(--color-primary), transparent);
+        background: linear-gradient(to bottom, var(--color-secondary), transparent);
         position: relative;
         overflow: hidden;
 
@@ -330,17 +350,11 @@
     .marquee-item {
         font-size: 1.2rem;
         letter-spacing: 0.12em;
-        color: var(--dark);
+        color: var(--color-dark);
         padding: 0 3.2rem; // 0 32px
         display: inline-flex;
         align-items: center;
         gap: 1.6rem; // 16px
-
-        &::after {
-            content: '✦';
-            color: rgba(43, 42, 42, 0.5);
-            font-size: 1.2rem; // 12px
-        }
     }
 
     @keyframes mRun {
@@ -368,7 +382,7 @@
     }
 
     .section-num {
-        font-size: 1.1rem; // 11px
+        font-size: 1.2rem;
         letter-spacing: 0.15em;
         color: var(--color-cream);
     }
@@ -379,18 +393,18 @@
     }
 
     .section-title {
-        font-size: clamp(4.4rem, 6vw, 8.4rem); // 44px ~ 84px
+        font-size: clamp(4rem, 6vw, 8.4rem); // 44px ~ 84px
         letter-spacing: -0.03em;
         line-height: 1;
         font-weight: 800;
         color: var(--color-cream);
-        white-space: nowrap;
+        // white-space: nowrap;
         text-transform: uppercase;
     }
 
     // ── ABOUT ─────────────────────────────────────────────────
     .about {
-        background: var(--dark2);
+        background: var(--color-dark2);
     }
 
     .about-grid {
@@ -415,8 +429,9 @@
     }
 
     .about-quote {
-        font-size: clamp(2rem, 2.2vw, 2.8rem); // 20px ~ 28px
-        line-height: 1.7;
+        font-size: clamp(2rem, 2.2vw, 2.8rem);
+        letter-spacing: -0.04rem;
+        line-height: 1.6;
         font-weight: 300;
         color: var(--color-cream);
 
@@ -443,13 +458,13 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(254, 176, 93, 0.06), transparent);
+            background: linear-gradient(135deg, rgba(93, 149, 254, 0.06), transparent);
             opacity: 0;
             transition: opacity 0.4s;
         }
 
         &:hover {
-            border-color: rgba(254, 176, 93, 0.3);
+            border-color: var(--line);
 
             &::before {
                 opacity: 1;
@@ -470,24 +485,24 @@
         font-size: 1.3rem; // 13px
         color: var(--color-cream2);
         font-weight: 300;
-        line-height: 1.9;
+        line-height: 1.6;
     }
 
     // ── SKILLS ────────────────────────────────────────────────
     .skills {
-        background: var(--dark);
+        background: var(--color-dark);
     }
 
     .skills-grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         gap: 0.1rem; // 1px
         background: var(--line);
         border: 0.1rem solid var(--line);
     }
 
     .skill-block {
-        background: var(--dark);
+        background: var(--color-dark);
         padding: 4.4rem 3.2rem; // 44px 32px
         position: relative;
         overflow: hidden;
@@ -505,7 +520,7 @@
         }
 
         &:hover {
-            background: var(--dark3);
+            background: var(--color-dark3);
 
             &::after {
                 width: 100%;
@@ -527,7 +542,7 @@
         font-size: 1.2rem;
         letter-spacing: 0.2em;
         text-transform: uppercase;
-        color: var(--color-secondary);
+        color: var(--color-primary);
         margin-bottom: 1rem;
     }
 
@@ -537,6 +552,10 @@
         font-weight: 700;
         margin-bottom: 2rem;
         color: var(--color-cream);
+
+        @include mobile {
+            font-size: 2.4rem;
+        }
     }
 
     .skill-list {
@@ -558,14 +577,14 @@
                 position: absolute;
                 left: 0;
                 color: var(--color-secondary);
-                font-size: 1rem; // 10px
+                font-size: 1.1rem;
             }
         }
     }
 
     // ── CAREER ────────────────────────────────────────────────
     .career {
-        background: var(--dark2);
+        background: var(--color-dark2);
     }
 
     .career-item {
@@ -588,7 +607,7 @@
         top: 0;
         bottom: 0;
         width: 0.3rem; // 3px
-        background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
+        background: var(--color-secondary);
         transform: scaleY(0);
         transform-origin: top;
     }
@@ -596,15 +615,13 @@
     .career-period {
         font-size: 1.3rem;
         color: var(--muted);
-        letter-spacing: 0.08em;
         padding-top: 0.6rem;
         align-content: center;
 
         strong {
             display: block;
-            font-size: 1.3rem;
-            letter-spacing: 0.18em;
-            color: var(--color-primary);
+            font-size: 1.5rem;
+            color: var(--color-secondary);
             text-transform: uppercase;
             margin-bottom: 0.6rem;
         }
@@ -613,14 +630,18 @@
     .career-company {
         font-size: 3.8rem;
         letter-spacing: 0.05em;
-        font-weight: 400;
-        margin-bottom: 0.4rem; // 4px
+        font-weight: 600;
+        margin-bottom: 1.2rem;
+
+        @include mobile {
+            font-size: 3.2rem;
+        }
     }
 
     .career-role {
-        font-size: 1.1rem; // 11px
+        font-size: 1.2rem;
         letter-spacing: 0.12em;
-        color: var(--color-secondary);
+        color: var(--color-primary);
         text-transform: uppercase;
         margin-bottom: 2rem; // 20px
     }
@@ -633,7 +654,7 @@
     }
 
     .tag {
-        font-size: 1rem; // 10px
+        font-size: 1.1rem;
         letter-spacing: 0.06em;
         color: var(--muted);
         border: 0.1rem solid var(--line);
@@ -642,26 +663,25 @@
 
     .career-desc {
         font-size: 1.3rem; // 13px
-        color: var(--muted);
+        color: var(--color-cream);
         font-weight: 300;
         line-height: 1.95;
     }
 
     // ── KEY PROJECTS ──────────────────────────────────────────
     .key-projects {
-        background: var(--dark);
+        background: var(--color-dark);
     }
 
     .kp-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 0.1rem; // 1px
-        background: var(--line);
+        gap: 0.1rem;
     }
 
     .kp-card {
-        background: var(--dark2);
-        padding: 5.6rem 4.8rem; // 56px 48px
+        background: var(--color-dark2);
+        padding: 5.6rem 4.8rem;
         position: relative;
         overflow: hidden;
         cursor: pointer;
@@ -669,20 +689,25 @@
 
     .kp-card-bg-num {
         position: absolute;
-        bottom: -2rem; // -20px
-        right: 2rem; // 20px
-        font-size: 14rem; // 140px
+        bottom: -2rem;
+        right: 2rem;
+        font-size: 13rem;
+        font-weight: 900;
         color: transparent;
         -webkit-text-stroke: 0.1rem rgba(255, 242, 208, 0.05);
         line-height: 1;
         pointer-events: none;
         user-select: none;
+
+        @include mobile {
+            font-size: 10rem;
+        }
     }
 
     .kp-card-fill {
         position: absolute;
         inset: 0;
-        background: linear-gradient(135deg, rgba(254, 176, 93, 0.07), rgba(90, 122, 205, 0.06));
+        background: linear-gradient(135deg, rgba(93, 149, 254, 0.06), transparent);
         opacity: 0;
         transition: opacity 0.5s;
     }
@@ -692,10 +717,10 @@
     }
 
     .kp-tag {
-        font-size: 1rem; // 10px
+        font-size: 1.1rem;
         letter-spacing: 0.18em;
         text-transform: uppercase;
-        color: var(--color-primary);
+        color: var(--color-secondary2);
         margin-bottom: 1.8rem; // 18px
         display: flex;
         align-items: center;
@@ -705,29 +730,34 @@
             content: '';
             width: 2.4rem; // 24px
             height: 0.1rem; // 1px
-            background: var(--color-primary);
+            background: var(--color-secondary2);
         }
     }
 
     .kp-name {
-        font-size: 4.8rem; // 48px
-        letter-spacing: 0.04em;
-        margin-bottom: 0.4rem; // 4px
+        font-size: 4.8rem;
+        letter-spacing: -0.04em;
+        font-weight: 600;
         line-height: 1.05;
+        margin-bottom: 2.4rem;
+
+        @include mobile {
+            font-size: 3.2rem;
+        }
     }
 
     .kp-period {
-        font-size: 1.1rem; // 11px
+        font-size: 1.1rem;
         color: var(--muted);
-        margin-bottom: 2.4rem; // 24px
+        margin-bottom: 0.4rem;
     }
 
     .kp-desc {
-        font-size: 1.3rem; // 13px
+        font-size: 1.3rem;
         color: var(--muted);
         font-weight: 300;
         line-height: 2;
-        margin-bottom: 2.4rem; // 24px
+        margin-bottom: 2.4rem;
     }
 
     .kp-feats {
@@ -738,23 +768,23 @@
         margin-bottom: 3.2rem; // 32px
 
         li {
-            font-size: 1.2rem; // 12px
+            font-size: 1.2rem;
             color: var(--color-cream2);
-            padding-left: 1.8rem; // 18px
+            padding-left: 1.4rem;
             position: relative;
 
             &::before {
-                content: '↗';
+                content: '-';
                 position: absolute;
                 left: 0;
                 color: var(--color-secondary);
-                font-size: 1rem; // 10px
+                font-size: 1.1rem;
             }
         }
     }
 
     .kp-result {
-        font-size: 1.1rem; // 11px
+        font-size: 1.2rem; // 11px
         letter-spacing: 0.1em;
         color: var(--color-cream);
         text-transform: uppercase;
@@ -768,7 +798,7 @@
 
     // ── PROJECT LIST ──────────────────────────────────────────
     .proj-list {
-        background: var(--dark2);
+        background: var(--color-dark2);
     }
 
     .plist-row {
@@ -794,7 +824,7 @@
     .plist-row-bg {
         position: absolute;
         inset: 0;
-        background: linear-gradient(to right, rgba(254, 176, 93, 0.07), transparent);
+        background: linear-gradient(135deg, rgba(93, 149, 254, 0.06), transparent);        
         transform: translateX(-101%);
         transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
@@ -804,7 +834,7 @@
     }
 
     .plist-idx {
-        font-size: 1.1rem; // 11px
+        font-size: 1.2rem;
         color: var(--muted);
         font-variant-numeric: tabular-nums;
         position: relative;
@@ -818,18 +848,22 @@
     }
 
     .plist-name {
-        font-size: 2.8rem; // 28px
-        letter-spacing: 0.06em;
+        font-size: 2.8rem;
         color: var(--color-cream2);
+        font-weight: 500;
         transition: color 0.3s;
+
+        @include mobile {
+            font-size: 2.4rem;
+        }
     }
 
     .plist-row:hover .plist-name {
-        color: var(--color-primary);
+        color: var(--color-secondary);
     }
 
     .plist-sub {
-        font-size: 1.1rem; // 11px
+        font-size: 1.2rem;
         color: var(--muted);
         letter-spacing: 0.06em;
     }
@@ -843,13 +877,13 @@
     }
 
     .plist-period {
-        font-size: 1.1rem; // 11px
+        font-size: 1.2rem;
         color: var(--muted);
         white-space: nowrap;
     }
 
     .plist-link {
-        font-size: 1rem; // 10px
+        font-size: 1.2rem;
         color: var(--color-secondary);
         text-decoration: none;
         letter-spacing: 0.1em;
@@ -869,10 +903,14 @@
         align-items: center;
         gap: 0.8rem; // 8px
         margin-bottom: 4rem; // 40px
+
+        @include mobile {
+            flex-wrap: wrap;
+        }
     }
 
     .filter-count {
-        font-size: 1rem; // 10px
+        font-size: 1.1rem;
         letter-spacing: 0.14em;
         color: var(--muted);
         margin-left: auto;
@@ -886,13 +924,13 @@
     }
 
     .filter-btn {
-        font-size: 1.1rem; // 11px
+        font-size: 1.3rem;
         letter-spacing: 0.14em;
         text-transform: uppercase;
         background: transparent;
         color: var(--muted);
-        border: 0.1rem solid var(--line);
-        padding: 0.8rem 2.2rem; // 8px 22px
+        border: 0.1rem solid var(--color-secondary2);
+        padding: 0.4rem 1.8rem;
         cursor: pointer;
         position: relative;
         overflow: hidden;
@@ -902,7 +940,8 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            // background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            background: var(--color-secondary);
             transform: translateX(-101%);
             transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
@@ -914,7 +953,7 @@
 
         &:hover {
             color: var(--color-cream);
-            border-color: rgba(254, 176, 93, 0.5);
+            border-color: var(--color-secondary);
 
             &::before {
                 transform: translateX(-60%);
@@ -922,8 +961,8 @@
         }
 
         &.is-active {
-            color: var(--dark);
-            border-color: var(--color-primary);
+            color: var(--color-dark);
+            border-color: var(--color-secondary);
 
             &::before {
                 transform: translateX(0);
@@ -933,7 +972,7 @@
 
     // ── EDUCATION ─────────────────────────────────────────────
     .edu {
-        background: var(--dark);
+        background: var(--color-dark);
     }
 
     .edu-item {
@@ -949,7 +988,7 @@
     }
 
     .edu-period {
-        font-size: 1.1rem; // 11px
+        font-size: 1.2rem;
         color: var(--muted);
         padding-top: 0.4rem; // 4px
         letter-spacing: 0.06em;
@@ -957,19 +996,17 @@
 
     .edu-badge {
         display: inline-block;
-        margin-top: 0.8rem; // 8px
-        font-size: 0.9rem; // 9px
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
+        margin-top: 0.8rem;
+        font-size: 1.2rem;
         background: var(--color-primary);
-        color: var(--dark);
-        padding: 0.3rem 1rem; // 3px 10px
+        color: var(--color-dark);
+        padding: 0.3rem 1rem;
     }
 
     .edu-school {
-        font-size: 3rem; // 30px
+        font-size: 3rem;
         letter-spacing: 0.05em;
-        margin-bottom: 0.4rem; // 4px
+        margin-bottom: 1.4rem;
     }
 
     .edu-major {
@@ -999,7 +1036,7 @@
         }
 
         .modal-content {
-            background: var(--dark2);
+            background: var(--color-dark2);
             border: 0.1rem solid var(--line);
             border-radius: 0;
             color: var(--color-cream);
@@ -1007,7 +1044,7 @@
 
         .modal-header {
             border-bottom: 0.1rem solid var(--line);
-            padding: 3.2rem 4rem 2.4rem; // 32px 40px 24px
+            padding: 3.2rem 4rem 2.4rem;
             position: relative;
 
             &::before {
@@ -1017,15 +1054,15 @@
                 left: 0;
                 right: 0;
                 height: 0.2rem; // 2px
-                background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+                background: var(--color-secondary);
             }
         }
 
         .modal-eyebrow {
-            font-size: 1rem; // 10px
+            font-size: 1.1rem;
             letter-spacing: 0.2em;
             text-transform: uppercase;
-            color: var(--color-primary);
+            color: var(--color-secondary2);
             margin-bottom: 1rem; // 10px
             display: flex;
             align-items: center;
@@ -1035,14 +1072,15 @@
                 content: '';
                 width: 2rem; // 20px
                 height: 0.1rem; // 1px
-                background: var(--color-primary);
+                background: var(--color-secondary2);
             }
         }
 
         .modal-title {
-            font-size: 4.2rem; // 42px
-            letter-spacing: 0.04em;
+            font-size: 4.2rem;
+            letter-spacing: -0.04em;
             line-height: 1.05;
+            font-weight: 600;
             color: var(--color-cream);
             margin: 0;
         }
@@ -1061,6 +1099,23 @@
 
         .modal-body {
             padding: 3.2rem 4rem; // 32px 40px
+            overflow-y: auto;
+            &::-webkit-scrollbar {
+                width: 1.4rem;
+            }
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: var(--color-secondary);
+                border-radius: 1.2rem;
+                border: 4px solid var(--color-dark2);
+            }
+            &::-webkit-scrollbar-track-piece {
+                margin-top: 1.2rem;
+                margin-bottom: 1.2rem;
+            }
+            
         }
 
         .modal-footer {
@@ -1088,11 +1143,10 @@
     }
 
     .modal-meta-label {
-        font-size: 0.9rem; // 9px
-        letter-spacing: 0.2em;
+        font-size: 1.2rem;
         text-transform: uppercase;
-        color: var(--color-primary);
-        margin-bottom: 0.6rem; // 6px
+        color: var(--color-secondary);
+        margin-bottom: 0.6rem;
     }
 
     .modal-meta-val {
@@ -1105,17 +1159,15 @@
 
         p {
             font-size: 1.3rem; // 13px
-            color: var(--muted);
             font-weight: 300;
             line-height: 2;
         }
     }
 
     .modal-section-title {
-        font-size: 1rem; // 10px
-        letter-spacing: 0.2em;
+        font-size: 1.1rem;
         text-transform: uppercase;
-        color: var(--color-secondary);
+        color: var(--color-cream);
         margin-bottom: 1.4rem; // 14px
         padding-bottom: 0.8rem; // 8px
         border-bottom: 0.1rem solid var(--line);
@@ -1130,15 +1182,15 @@
         li {
             font-size: 1.2rem; // 12px
             color: var(--color-cream2);
-            padding-left: 1.8rem; // 18px
+            padding-left: 1.2rem;
             position: relative;
 
             &::before {
-                content: '↗';
+                content: '-';
                 position: absolute;
                 left: 0;
                 color: var(--color-primary);
-                font-size: 1rem; // 10px
+                font-size: 1.1rem;
             }
         }
     }
@@ -1149,15 +1201,15 @@
         gap: 0.6rem; // 6px
 
         .tag {
-            font-size: 1rem; // 10px
+            font-size: 1.1rem;
         }
     }
 
     .modal-result-box {
-        background: rgba(254, 176, 93, 0.07);
+        background: rgba(29, 29, 29, 0.07);
         border: 0.1rem solid rgba(254, 176, 93, 0.2);
         padding: 1.6rem 2rem; // 16px 20px
-        font-size: 1.1rem; // 11px
+        font-size: 1.2rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
         color: var(--color-cream);
@@ -1168,28 +1220,27 @@
     }
 
     .btn-visit {
-        font-size: 1.1rem; // 11px
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
+        font-size: 1.4rem;
         background: var(--color-primary);
-        color: var(--dark);
+        color: var(--color-dark);
+        font-weight: 500;
         border: none;
         border-radius: 0;
         padding: 1rem 2.4rem; // 10px 24px
         text-decoration: none;
         display: inline-flex;
         align-items: center;
-        gap: 0.8rem; // 8px
+        gap: 0.8rem;
         transition: background 0.3s;
 
         &:hover {
             background: var(--color-cream);
-            color: var(--dark);
+            color: var(--color-dark);
         }
     }
 
     .btn-modal-close {
-        font-size: 1.1rem; // 11px
+        font-size: 1.2rem;
         letter-spacing: 0.14em;
         text-transform: uppercase;
         background: transparent;
@@ -1213,7 +1264,7 @@
         z-index: 8000;
         display: flex;
         align-items: center;
-        background: var(--dark2);
+        background: var(--color-dark2);
         border: 0.1rem solid var(--line);
         box-shadow: 0 0.8rem 4rem rgba(0, 0, 0, 0.5);
         overflow: hidden;
@@ -1223,6 +1274,10 @@
             opacity: 0;
             transform: translateY(1.2rem); // 12px
             pointer-events: none;
+        }
+
+        @include mobile {
+            display: none;
         }
     }
 
@@ -1268,7 +1323,7 @@
     }
 
     .float-label {
-        font-size: 0.9rem; // 9px
+        font-size: 1rem;
         letter-spacing: 0.18em;
         text-transform: uppercase;
         color: var(--color-primary);
@@ -1282,7 +1337,7 @@
     }
 
     .float-sub {
-        font-size: 1rem; // 10px
+        font-size: 1.1rem;
         color: var(--muted);
         letter-spacing: 0.06em;
     }
@@ -1307,7 +1362,7 @@
 
     // ── CONTACT ───────────────────────────────────────────────
     .contact {
-        background: var(--dark2);
+        background: var(--color-dark2);
         min-height: 60vh;
         display: flex;
         flex-direction: column;
@@ -1332,9 +1387,9 @@
     }
 
     .contact-eyebrow {
-        font-size: 1.1rem; // 11px
+        font-size: 1.2rem;
         letter-spacing: 0.22em;
-        color: var(--color-primary);
+        color: var(--color-secondary);
         text-transform: uppercase;
         margin-bottom: 2.8rem; // 28px
         position: relative;
@@ -1368,22 +1423,23 @@
 
     // ── FOOTER ────────────────────────────────────────────────
     footer {
-        background: var(--dark);
+        background: var(--color-dark);
         border-top: 0.1rem solid var(--line);
         padding: 2.8rem 5.6rem; // 28px 56px
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     .footer-copy {
-        font-size: 1.1rem; // 11px
+        font-size: 1.2rem;
         color: var(--muted);
         letter-spacing: 0.08em;
     }
 
     .footer-stack {
-        font-size: 1.1rem; // 11px
+        font-size: 1.2rem;
         color: var(--muted);
         letter-spacing: 0.06em;
 
@@ -1410,10 +1466,6 @@
             padding: 8rem 2.4rem; // 80px 24px
         }
 
-        .hero {
-            padding: 0 2.4rem 8rem; // 0 24px 80px
-        }
-
         .hero-sub-row {
             flex-direction: column;
             align-items: flex-start;
@@ -1426,10 +1478,6 @@
         .about-grid {
             grid-template-columns: 1fr;
             gap: 4.8rem; // 48px
-        }
-
-        .skills-grid {
-            grid-template-columns: 1fr 1fr;
         }
 
         .career-item {
@@ -1461,4 +1509,5 @@
         }
     }
 
+    overflow-x: hidden;
 }

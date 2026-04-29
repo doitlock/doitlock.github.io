@@ -116,9 +116,9 @@ document.addEventListener('DOMContentLoaded', function () {
         onLeaveBack: function () { fb.classList.add('hide'); }
     });
 
-    fbClose.addEventListener('click', function () {
-        gsap.to(fb, { opacity: 0, y: 16, duration: .4, ease: 'power2.in', onComplete: function () { fb.style.display = 'none'; } });
-    });
+    // fbClose.addEventListener('click', function () {
+    //     gsap.to(fb, { opacity: 0, y: 16, duration: .4, ease: 'power2.in', onComplete: function () { fb.style.display = 'none'; } });
+    // });
 
     // ── MODAL: prevent GSAP cursor conflict ──
     document.querySelectorAll('.pj-modal').forEach(function (el) {

@@ -9,7 +9,7 @@
     font-style: normal;
     box-sizing: border-box;
     word-wrap: break-word;
-    word-break: keep-all;
+    word-break: break-word;
     touch-action: auto;
     -webkit-tap-highlight-color: transparent !important;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
@@ -27,7 +27,7 @@ html {
 
 body {
     font-family: 'Pretendard', sans-serif;
-    background: var(--dark);
+    background: var(--color-dark);
     color: var(--color-cream);
     font-size: 1.6rem;
     overflow-x: hidden;
