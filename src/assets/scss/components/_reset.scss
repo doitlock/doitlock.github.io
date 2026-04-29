@@ -6,7 +6,6 @@
     border: 0;
     background: transparent;
     color: inherit;
-    line-height: 160%;
     font-style: normal;
     box-sizing: border-box;
     word-wrap: break-word;
@@ -27,7 +26,11 @@ html {
 }
 
 body {
-    font-size: 1rem;
+    font-family: 'Pretendard', sans-serif;
+    background: var(--dark);
+    color: var(--color-cream);
+    font-size: 1.6rem;
+    overflow-x: hidden;
 }
 
 html,

@@ -1,317 +1,1366 @@
 <!DOCTYPE html>
 <html lang="ko">
-    @@include('../_templates/_head.ejs')
+@@include('../_templates/_head.ejs')
 
 
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header__logo">HONG SU KI PORTFOLIO</div>
-        <nav>
-            <ul class="nav">
-                <li class="nav__item"><a href="#about" class="nav__link">ABOUT</a></li>
-                <li class="nav__item"><a href="#tech" class="nav__link">TECH STACK</a></li>
-                <li class="nav__item"><a href="#project" class="nav__link">PROJECT</a></li>
-                <li class="nav__item"><a href="#exhibition" class="nav__link">EXHIBITION</a></li>
-                <li class="nav__item"><a href="#event" class="nav__link">EVENT</a></li>
-                <li class="nav__item"><a href="#faq" class="nav__link">FAQ</a></li>
-            </ul>
-        </nav>
-        <div class="header__right">
-            <a href="#" class="header__login" rel="nofollow">로그인</a>
-            <div class="language">
-                <button class="language__btn" id="languageBtn" aria-haspopup="true" aria-expanded="false">KOR</button>
-                <div class="language__dropdown" id="languageDropdown">
-                    <a href="#" class="language__option" data-lang="KOR" rel="nofollow">KOR</a>
-                    <a href="#" class="language__option" data-lang="ENG" rel="nofollow">ENG</a>
+<body class="local-body main-body">
+    <div id="cursor"></div>
+    <div id="cursor-ring"></div>
+    <div id="grain"></div>
+    <div id="progress"></div>
+
+    <nav id="nav">
+        <a class="nav-logo" href="#">HS<span>K</span></a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#career">Career</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="hero-grid-bg"></div>
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <p class="hero-eyebrow"><span class="hero-eyebrow-line"></span>UI Developer &middot; Web Publisher &middot; 5
+            Years</p>
+        <div class="hero-name" id="heroName">
+            <span class="hero-name-line"><span>홍수기</span></span>
+            <span class="hero-name-line outline"><span>HONG SUKI</span></span>
+        </div>
+        <div class="hero-sub-row">
+            <div class="hero-title-block">
+                <p class="hero-title">마크업부터 인터랙션까지, 흐름을 설계하는 UI 개발자</p>
+                <div class="hero-tags">
+                    <span class="hero-tag">HTML / CSS / SCSS</span>
+                    <span class="hero-tag">JavaScript</span>
+                    <span class="hero-tag">GSAP</span>
+                    <span class="hero-tag">AI-assisted</span>
+                    <span class="hero-tag">Multi-env</span>
                 </div>
             </div>
-            <a href="#" class="header__register" rel="nofollow">CONTACT</a>
-        </div>
-    </header>    
-
-    <!-- Hero Section -->
-    <main>
-    <section class="hero" aria-label="행사 소개">
-        <div class="hero__bg">
-            <div class="orbit orbit--1"></div>
-            <div class="orbit orbit--2"></div>
-            <div class="orbit orbit--3"></div>
-            <div class="orbit orbit--4"></div>
-        </div>
-
-        <div class="hero__top">
-            <div class="hero__left">
-                <div class="vision">
-                    VISION ——————————→ FUTURE
-                </div>
-                <div class="ai-logo">
-                    <span class="ai-logo__text">NOW AI</span>
-                    <div class="atom">
-                        <div class="atom__core"></div>
-                        <div class="atom__orbit atom__orbit--1"></div>
-                        <div class="atom__orbit atom__orbit--2"></div>
-                        <div class="atom__orbit atom__orbit--3"></div>
-                    </div>
-                    <span class="ai-logo__text">AI NEXT</span>
-                </div>
-            </div>
-
-            <div class="hero__right">
-                <div class="welcome">
-                    <div class="welcome__title">WELCOME</div>
-                    <div class="welcome__info">
-                        Web Publisher · 2021 — 2026
-                    </div>
-                </div>
+            <div class="hero-desc-block">
+                <p class="hero-desc">개발 환경의 빌드 흐름과<br>프로젝트 구조를 깊이 이해하며<br><em>지속 가능한 마크업</em>을 설계합니다.</p>
             </div>
         </div>
-
-        <div class="hero__main">
-            <div class="hero__subtitle">UI DEVELOPER PORTFOLIO</div>
-            <h1 class="hero__title">HELLO WOLRD</h1>
-        </div>
-
-        <div class="hero__buttons">
-            <a href="#" class="btn btn--live" rel="nofollow">▶ GIT HUB</a>
+        <div class="hero-scroll" id="heroScroll">
+            <div class="hero-scroll-track"></div>
+            scroll
         </div>
     </section>
 
-    <!-- about Section -->
-    <section class="about" id="about" aria-label="참가 신청">
-        <div class="about__container">
-            <div class="about__content">
-                <div class="about__left">
-                    <h2>
-                        ABOUT ME<br>
-                        <span class="about__highlight">2026</span>
-                    </h2>
-                    <p class="about__description">안녕하세요. 4년차 웹 퍼블리셔이자 UI 개발자 홍수기입니다.<br>
-                    HTML5/CSS3 기반의 시멘틱 마크업과 JavaScript를 활용한 UI 인터랙션 구현을 주력으로 하고 있습니다.</p>
+    <div class="marquee-wrap">
+        <div class="marquee-inner">
+            <span class="marquee-item">HTML5</span><span class="marquee-item">CSS3 / SCSS</span><span
+                class="marquee-item">JavaScript</span><span class="marquee-item">GSAP</span><span
+                class="marquee-item">Swiper</span><span class="marquee-item">Lenis</span><span
+                class="marquee-item">Gulp</span><span class="marquee-item">Vue.js ENV</span><span
+                class="marquee-item">React ENV</span><span class="marquee-item">ScrollTrigger</span><span
+                class="marquee-item">Git</span><span class="marquee-item">Figma</span>
+            <span class="marquee-item">HTML5</span><span class="marquee-item">CSS3 / SCSS</span><span
+                class="marquee-item">JavaScript</span><span class="marquee-item">GSAP</span><span
+                class="marquee-item">Swiper</span><span class="marquee-item">Lenis</span><span
+                class="marquee-item">Gulp</span><span class="marquee-item">Vue.js ENV</span><span
+                class="marquee-item">React ENV</span><span class="marquee-item">ScrollTrigger</span><span
+                class="marquee-item">Git</span><span class="marquee-item">Figma</span>
+        </div>
+    </div>
+
+    <section class="about" id="about">
+        <div class="section-header">
+            <span class="section-num">01</span>
+            <div class="section-line-el"></div>
+            <h2 class="section-title">About</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-quote-wrap">
+                <div class="about-quote-bar" id="aboutBar"></div>
+                <p class="about-quote">단순히 화면을 구현하는 것에 그치지 않고,<br><em>빌드 흐름과 프로젝트 구조를 이해</em>하며<br>지속 가능한 마크업을
+                    설계합니다.<br><br>에이전시 기반의 다양한 대규모 프로젝트를<br>성공적으로 완수해 왔습니다.</p>
+            </div>
+            <div class="about-cards" id="aboutCards">
+                <div class="about-card">
+                    <p class="about-card-label">Core Identity</p>
+                    <p class="about-card-val">5년차 웹퍼블리셔 (에이전시 중심 실무)<br>개발 환경 기반 구축 퍼블리싱 경험<br>UI/UX 중심 시멘틱 마크업 및 인터랙션
+                        구현</p>
                 </div>
-                <div class="about__info">
-                    <h3 class="about__info-title">경력 사항</h3>
-                    <div class="about__item">
-                        <span class="about__label">2022.09 ~ 2026.02</span>
-                        <div>펜타브리드 PIX FIX팀, 사원 (팀원)</div>
-                    </div>
-                    <div class="about__item">
-                        <span class="about__label">2022.06 ~ 2022.09</span>
-                        <div>CTTD AP팀, 사원 (팀원)</div>
-                    </div>
-                    <div class="about__item">
-                        <span class="about__label">2021.03 ~ 2021.12</span>
-                        <div>용감한 컴퍼니 그로스디자인그룹 퍼블리싱팀, 사원 (팀원)</div>
-                    </div>
+                <div class="about-card">
+                    <p class="about-card-label">Animation Libraries</p>
+                    <p class="about-card-val">GSAP · ScrollTrigger<br>Swiper (커스텀 컨트롤)<br>Lenis (스무스 스크롤)</p>
+                </div>
+                <div class="about-card">
+                    <p class="about-card-label">Collaboration</p>
+                    <p class="about-card-val">Slack · Jira · Trello · Notion<br>Git (GitHub / GitLab / SVN)<br>VPN · VDI
+                        환경 배포 경험</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- tech Section -->
-    <section class="tech" aria-label="행사 장소">
-        <div class="tech__container">
-            <h2 class="tech__title">TECH STACK</h2>
-            <div class="tech__grid">
-                <div class="tech__info">
-                    <div class="tech__item">
-                        <h4 class="tech__item-title">Core Markup & UI</h4>
-                        <p class="tech__item-text">
-                            HTML5, CSS3, SCSS, JavaScript / jQuery<br>
-                            - 시멘틱 마크업, 접근성 고려 구조 설계<br>
-                            - 모듈화, 공통 컴포넌트 스타일 관리<br>
-                            - UI 인터랙션 구현
-                        </p>
-                    </div>
-                    <div class="tech__item">
-                        <h4 class="tech__item-title">Animation Libraries</h4>
-                        <p class="tech__item-text">
-                            GSAP, Swiper, Lenis<br>
-                            - scrolltrigger<br>
-                            - 슬라이드 반응형, 커스텀 컨트롤<br>
-                            - 스크롤 UI
-                        </p>
-                    </div>
-                    <div class="tech__item">
-                        <h4 class="tech__item-title">Version Control & Collaboration</h4>
-                        <p class="tech__item-text">
-                            Git (GitHub, GitLab)<br>
-                            Slack, Jira, Trello, Notion<br>
-                                - 개발자 협업 환경에서 브랜치, 커밋 단위 작업<br>
-                                - 이슈 관리 및 협업 커뮤니케이션
-                        </p>
-                    </div>
-                    <div class="tech__item">
-                        <h4 class="tech__item-title">Design tools</h4>
-                        <p class="tech__item-text">
-                            Figma, Adobe XD, PhotoShop
-                        </p>
-                    </div>
-                    <div class="tech__item">
-                        <h4 class="tech__item-title">IDE / Editor</h4>
-                        <p class="tech__item-text">
-                            Visual Studio Code, IntelliJ IDEA, eclipse
-                        </p>
-                    </div>
-                    <div class="tech__item">
-                        <h4 class="tech__item-title">Build</h4>
-                        <p class="tech__item-text">
-                            gulp(세팅 경험), Node.js
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="tech__address">
-                Training & Education
-                <span>click!</span>
-            </div>
+    <section class="skills" id="skills">
+        <div class="section-header">
+            <span class="section-num">02</span>
+            <div class="section-line-el"></div>
+            <h2 class="section-title">Tech Stack</h2>
         </div>
-    </section>
-
-    <!-- project Section -->
-    <section class="project" id="project" aria-label="프로젝트">
-        <div class="project__container">
-            <div class="project__left">
-                <h2 class="project__title">PROJECT</h2>
-                <div class="project__filters">
-                    <button class="project__filter project__filter--active" data-filter="all">전체</button>
-                    <button class="project__filter" data-filter="development">구축</button>
-                    <button class="project__filter" data-filter="maintenance">운영</button>
-                </div>
-                <ul class="project__items" aria-label="키노트 연사 목록">
-                    <li class="project__item project__item--active" data-item="canon-main" data-type="maintenance">Canon Korea</li>
-                    <li class="project__item" data-item="chey-tae-won" data-type="development">World Vision Cross</li>
-                    <li class="project__item" data-item="jensen-huang" data-type="development">Sebang Group</li>
-                    <li class="project__item" data-item="kwark-noh-jung" data-type="maintenance">Hyundai Elivator</li>
-                    <li class="project__item" data-item="pankaj-sharma">H.point Event</li>
-                    <li class="project__item" data-item="ben-mann" data-type="development">SK networks Official</li>
-                    <li class="project__item" data-item="masayoshi-son" data-type="maintenance">Hyundai </li>
+        <div class="skills-grid" id="skillsGrid">
+            <div class="skill-block"><span class="skill-num">01</span>
+                <p class="skill-cat">Markup</p>
+                <h3 class="skill-title">Core UI</h3>
+                <ul class="skill-list">
+                    <li>HTML5 / CSS3 / SCSS</li>
+                    <li>JavaScript / jQuery</li>
+                    <li>시멘틱 마크업 설계</li>
+                    <li>웹접근성 고려 구조</li>
+                    <li>모듈화 · 공통 컴포넌트</li>
+                    <li>UI 인터랙션 구현</li>
                 </ul>
             </div>
-            <div class="project__photo">
-                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDQwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjMzMzIiByeD0iMTAiLz4KPGNpcmNsZSBjeD0iMjAwIiBjeT0iMTgwIiByPSI2MCIgZmlsbD0iIzU1NSIvPgo8L3N2Zz4=" alt="project  : YOO YOUNG-SANG" class="project__image" id="projectImage">
-                <div class="project__name" id="projectName">YOO YOUNG-SANG</div>
+            <div class="skill-block"><span class="skill-num">02</span>
+                <p class="skill-cat">Motion</p>
+                <h3 class="skill-title">Animation</h3>
+                <ul class="skill-list">
+                    <li>GSAP / ScrollTrigger</li>
+                    <li>Swiper 커스텀</li>
+                    <li>Lenis 스무스 스크롤</li>
+                    <li>스크롤 기반 UI</li>
+                    <li>CSS 애니메이션</li>
+                </ul>
+            </div>
+            <div class="skill-block"><span class="skill-num">03</span>
+                <p class="skill-cat">Build</p>
+                <h3 class="skill-title">Env</h3>
+                <ul class="skill-list">
+                    <li>Gulp (세팅 경험)</li>
+                    <li>Node.js</li>
+                    <li>Vue.js 환경 퍼블리싱</li>
+                    <li>React 환경 퍼블리싱</li>
+                    <li>JSP 환경 퍼블리싱</li>
+                    <li>Jenkins / SVN</li>
+                </ul>
+            </div>
+            <div class="skill-block"><span class="skill-num">04</span>
+                <p class="skill-cat">Tools</p>
+                <h3 class="skill-title">Design &amp; Collab</h3>
+                <ul class="skill-list">
+                    <li>Figma / Adobe XD</li>
+                    <li>Photoshop</li>
+                    <li>Git / GitHub / GitLab</li>
+                    <li>Jira · Slack · Notion</li>
+                    <li>VPN / VDI 환경</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- APEC Section -->
-    <section class="apec" aria-label="APEC CEO SUMMIT KOREA 2025">
-        <div class="apec__container">
-            <div class="apec__content">
-                <h3 class="apec__title">APEC CEO SUMMIT KOREA 2025</h3>
-                <p class="apec__subtitle">FUTURE TECH FORUM AI SESSION</p>
-                <p class="apec__date">2025. 5. 26 의정부지</p>
+    <section class="career" id="career">
+        <div class="section-header">
+            <span class="section-num">03</span>
+            <div class="section-line-el"></div>
+            <h2 class="section-title">Career</h2>
+        </div>
+        <div id="careerList">
+            <div class="career-item">
+                <div class="career-item-bar"></div>
+                <div class="career-period"><strong>2022.09 — 2026.01</strong>약 3년 4개월</div>
+                <div>
+                    <h3 class="career-company">펜타브리드</h3>
+                    <p class="career-role">PIX FIX팀 · 사원</p>
+                    <div class="career-stack"><span class="tag">HTML</span><span class="tag">CSS/SCSS</span><span
+                            class="tag">JavaScript</span><span class="tag">jQuery</span><span
+                            class="tag">Gulp</span><span class="tag">Node.js</span><span class="tag">Figma</span><span
+                            class="tag">Notion</span></div>
+                    <p class="career-desc">에이전시 기반 대형 구축 및 운영 프로젝트 다수 수행. 월드비전, 세방그룹, SK네트웍스, 캐논코리아, 안랩, 효성 등 다양한 기업 사이트
+                        구축 및 UI개발 담당.</p>
+                </div>
             </div>
-            <div class="apec__image">
-                <div class="apec__chat">💬</div>
+            <div class="career-item">
+                <div class="career-item-bar"></div>
+                <div class="career-period"><strong>2022.06 — 2022.09</strong>약 3개월</div>
+                <div>
+                    <h3 class="career-company">CTTD</h3>
+                    <p class="career-role">AP팀 · 사원</p>
+                    <div class="career-stack"><span class="tag">HTML</span><span class="tag">CSS</span><span
+                            class="tag">JavaScript</span><span class="tag">Gulp</span><span
+                            class="tag">GitHub</span><span class="tag">Slack</span></div>
+                    <p class="career-desc">아모레퍼시픽 계열사 브랜드 사이트 운영 퍼블리싱. 브랜드 컨벤션 준수 및 마크업 일관성 유지.</p>
+                </div>
+            </div>
+            <div class="career-item">
+                <div class="career-item-bar"></div>
+                <div class="career-period"><strong>2021.03 — 2021.12</strong>약 9개월</div>
+                <div>
+                    <h3 class="career-company">용감한 컴퍼니</h3>
+                    <p class="career-role">그로스디자인그룹 퍼블리싱팀 · 사원</p>
+                    <div class="career-stack"><span class="tag">HTML</span><span class="tag">CSS</span><span
+                            class="tag">JavaScript</span><span class="tag">GitHub</span><span
+                            class="tag">Jira</span><span class="tag">Adobe XD</span></div>
+                    <p class="career-desc">자사 온라인 교육 서비스 산하 브랜드 사이트 운영. 정기 프로모션 페이지, 콘텐츠 수정, 유지보수.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    
+    <section class="key-projects" id="key-projects">
+        <div class="section-header">
+            <span class="section-num">04</span>
+            <div class="section-line-el"></div>
+            <h2 class="section-title">Key Projects</h2>
+        </div>
+        <div class="kp-grid" id="kpGrid">
+            <div class="kp-card" data-bs-toggle="modal" data-bs-target="#modal-kp01">
+                <div class="kp-card-fill"></div>
+                <div class="kp-card-bg-num">01</div>
+                <p class="kp-tag">구축 · PL 단독</p>
+                <h3 class="kp-name">월드비전<br>크로스</h3>
+                <p class="kp-period">2025.03 — 2025.05 · 펜타브리드</p>
+                <p class="kp-desc">Vue.js 개발 환경에서 퍼블리싱 단독 진행. 일정 산정, 구조 설계, 협업까지 모두 책임진 프로젝트.</p>
+                <ul class="kp-feats">
+                    <li>퍼블리싱 일정 산정 및 작업 범위 관리</li>
+                    <li>공통 컴포넌트 · 어드민 · 가이드 페이지</li>
+                    <li>UI 인터랙션 구현 및 구조 설계</li>
+                    <li>개발자와의 직접 협업</li>
+                </ul>
+                <p class="kp-result">성과: <strong>퍼블리싱 PL · 기여도 100%</strong></p>
+            </div>
+            <div class="kp-card" data-bs-toggle="modal" data-bs-target="#modal-kp02">
+                <div class="kp-card-fill"></div>
+                <div class="kp-card-bg-num">02</div>
+                <p class="kp-tag">구축 · 반응형</p>
+                <h3 class="kp-name">세방그룹</h3>
+                <p class="kp-period">2024.10 — 2025.04 · 펜타브리드</p>
+                <p class="kp-desc">기획 1 · 디자인 2 · 퍼블 3 · 개발 1의 대형 구축. 일정 변경, 다중 프로젝트 병행 속에서 완수.</p>
+                <ul class="kp-feats">
+                    <li>퍼블리싱 일정 산정 및 PL 역할</li>
+                    <li>마크업 · 공통 컴포넌트 · 인터랙션</li>
+                    <li>Vue.js 개발 환경 내 작업</li>
+                    <li>잦은 수정 요청 대응 및 팀 커뮤니케이션</li>
+                </ul>
+                <p class="kp-result">성과: <strong>퍼블리싱 PL · 기여도 60%</strong></p>
+            </div>
+            <div class="kp-card" data-bs-toggle="modal" data-bs-target="#modal-kp03">
+                <div class="kp-card-fill"></div>
+                <div class="kp-card-bg-num">03</div>
+                <p class="kp-tag">구축 · 인터랙션</p>
+                <h3 class="kp-name">캐논코리아<br>RF렌즈</h3>
+                <p class="kp-period">2024.01 — 2024.03 · 펜타브리드</p>
+                <p class="kp-desc">RF렌즈 마이크로 사이트. 메인 페이지 인터랙션 구현 집중. 유튜브 영상 연동 UI 개발.</p>
+                <ul class="kp-feats">
+                    <li>메인 페이지 인터랙션 구현 담당</li>
+                    <li>유튜브 영상 관련 UI 집중 개발</li>
+                    <li>마크업 단독 진행</li>
+                </ul>
+                <p class="kp-result">성과: <strong>UI개발 기여도 70%</strong></p>
+            </div>
+            <div class="kp-card" data-bs-toggle="modal" data-bs-target="#modal-kp04">
+                <div class="kp-card-fill"></div>
+                <div class="kp-card-bg-num">04</div>
+                <p class="kp-tag">구축 · React 환경</p>
+                <h3 class="kp-name">안랩닷컴<br>전면 개편</h3>
+                <p class="kp-period">2023.07 — 2024.01 · 펜타브리드</p>
+                <p class="kp-desc">React 환경의 대규모 전면 개편. 기획 3 · 디자인 3 · 퍼블 4 · 개발 3의 대형 팀 협업.</p>
+                <ul class="kp-feats">
+                    <li>메인 페이지 인터랙션 구현 중심</li>
+                    <li>적응형 PC 퍼블리싱</li>
+                    <li>대형 팀 협업 경험 축적</li>
+                </ul>
+                <p class="kp-result">성과: <strong>퍼블리싱 기여도 20%</strong></p>
+            </div>
+        </div>
+    </section>
 
-    <!-- Sponsors Section -->
-    <section class="sponsors" aria-label="후원사">
-        <div class="sponsors__container">
-            <h2 class="sponsors__title">SPONSORS</h2>
-            <div class="sponsors__grid">
-                <div class="sponsors__item">
-                    <div class="sponsors__logo" aria-label="후원사 로고 1"></div>
+    <section class="proj-list" id="projects">
+        <div class="section-header">
+            <span class="section-num">05</span>
+            <div class="section-line-el"></div>
+            <h2 class="section-title">All Projects</h2>
+        </div>
+        <!-- FILTER BAR -->
+        <div class="filter-bar" id="filterBar">
+            <button class="filter-btn is-active" data-filter="all"><span>전체</span></button>
+            <button class="filter-btn" data-filter="구축"><span>구축</span></button>
+            <button class="filter-btn" data-filter="운영"><span>운영</span></button>
+            <p class="filter-count"><span id="filterNum">15</span>projects</p>
+        </div>
+        <div id="plistWrap">
+            <div class="plist-row" data-type="운영" data-bs-toggle="modal" data-bs-target="#modal-p01">
+                <div class="plist-row-bg"></div><span class="plist-idx">01</span>
+                <div class="plist-main"><span class="plist-name">캐논코리아 (운영)</span><span class="plist-sub">기업 사이트 운영 ·
+                        JSP · SVN · Jenkins</span></div>
+                <div class="plist-right"><span class="plist-period">2025.06 — 2025.12</span><span class="plist-link">↗
+                        상세보기</span></div>
+            </div>
+            <div class="plist-row" data-type="구축" data-bs-toggle="modal" data-bs-target="#modal-p02">
+                <div class="plist-row-bg"></div><span class="plist-idx">02</span>
+                <div class="plist-main"><span class="plist-name">월드비전 크로스 (구축)</span><span class="plist-sub">반응형 브랜드 사이트
+                        · Vue.js · PL 단독</span></div>
+                <div class="plist-right"><span class="plist-period">2025.03 — 2025.05</span><span class="plist-link">↗
+                        상세보기</span></div>
+            </div>
+            <div class="plist-row" data-type="구축" data-bs-toggle="modal" data-bs-target="#modal-p03">
+                <div class="plist-row-bg"></div><span class="plist-idx">03</span>
+                <div class="plist-main"><span class="plist-name">세방그룹 (구축)</span><span class="plist-sub">반응형 기업 사이트 ·
+                        Vue.js · PL</span></div>
+                <div class="plist-right"><span class="plist-period">2024.10 — 2025.04</span><span class="plist-link">↗
+                        상세보기</span></div>
+            </div>
+            <div class="plist-row" data-type="운영" data-bs-toggle="modal" data-bs-target="#modal-p04">
+                <div class="plist-row-bg"></div><span class="plist-idx">04</span>
+                <div class="plist-main"><span class="plist-name">현대엘리베이터 (운영)</span><span class="plist-sub">기업 사이트 유지보수
+                        · VPN</span></div>
+                <div class="plist-right"><span class="plist-period">2024.12 — 현재</span><span class="plist-link">↗
+                        상세보기</span></div>
+            </div>
+            <div class="plist-row" data-type="구축" data-bs-toggle="modal" data-bs-target="#modal-p05">
+                <div class="plist-row-bg"></div><span class="plist-idx">05</span>
+                <div class="plist-main"><span class="plist-name">H.Point 크리스마스 이벤트</span><span class="plist-sub">인터랙션 ·
+                        Grid 반응형 · CSS 애니메이션 · Gulp 세팅</span></div>
+                <div class="plist-right"><span class="plist-period">2024.11</span><span class="plist-link">↗ 상세보기</span>
                 </div>
-                <div class="sponsors__item">
-                    <div class="sponsors__logo" aria-label="후원사 로고 2"></div>
+            </div>
+            <div class="plist-row" data-type="구축" data-bs-toggle="modal" data-bs-target="#modal-p06">
+                <div class="plist-row-bg"></div><span class="plist-idx">06</span>
+                <div class="plist-main"><span class="plist-name">연합뉴스 디자인 시스템</span><span class="plist-sub">가이드 페이지 ·
+                        highlight.js · 공통 컴포넌트</span></div>
+                <div class="plist-right"><span class="plist-period">2024.09 — 2024.10</span><span class="plist-link">↗
+                        상세보기</span></div>
+            </div>
+            <div class="plist-row" data-type="구축" data-bs-toggle="modal" data-bs-target="#modal-p07">
+                <div class="plist-row-bg"></div><span class="plist-idx">07</span>
+                <div class="plist-main"><span class="plist-name">SK네트웍스 (구축)</span><span class="plist-sub">반응형 기업 사이트 ·
+                        웹접근성 마크 · Gulp 세팅</span></div>
+                <div class="plist-right"><span class="plist-period">2024.03 — 2024.07</span><span class="plist-link">↗
+                        상세보기</span></div>
+            </div>
+            <div class="plist-row" data-type="운영" data-bs-toggle="modal" data-bs-target="#modal-p08">
+                <div class="plist-row-bg"></div><span class="plist-idx">08</span>
+                <div class="plist-main"><span class="plist-name">SK네트웍스 (운영)</span><span class="plist-sub">기업 사이트 유지보수 ·
+                        VDI 환경</span></div>
+                <div class="plist-right"><span class="plist-period">2024.09 — 2025.06</span><span class="plist-link">↗
+                        상세보기</span></div>
+            </div>
+            <div class="plist-row" data-type="운영" data-bs-toggle="modal" data-bs-target="#modal-p09">
+                <div class="plist-row-bg"></div><span class="plist-idx">09</span>
+                <div class="plist-main"><span class="plist-name">현대 어린이책미술관 (운영)</span><span class="plist-sub">사이트 유지보수
+                        · VPN · Bitbucket</span></div>
+                <div class="plist-right"><span class="plist-period">2024.06 — 현재</span><span class="plist-link">↗
+                        상세보기</span></div>
+            </div>
+            <div class="plist-row" data-type="구축" data-bs-toggle="modal" data-bs-target="#modal-p10">
+                <div class="plist-row-bg"></div><span class="plist-idx">10</span>
+                <div class="plist-main"><span class="plist-name">캐논코리아 RF렌즈 마이크로사이트 (구축)</span><span
+                        class="plist-sub">인터랙션 중심 · 유튜브 UI · 기여도 70%</span></div>
+                <div class="plist-right"><span class="plist-period">2024.01 — 2024.03</span><span class="plist-link">↗
+                        상세보기</span></div>
+            </div>
+            <div class="plist-row" data-type="구축" data-bs-toggle="modal" data-bs-target="#modal-p11">
+                <div class="plist-row-bg"></div><span class="plist-idx">11</span>
+                <div class="plist-main"><span class="plist-name">안랩닷컴 전면개편 (구축)</span><span class="plist-sub">React 환경 ·
+                        메인 인터랙션 · 적응형 PC</span></div>
+                <div class="plist-right"><span class="plist-period">2023.07 — 2024.01</span><span class="plist-link">↗
+                        상세보기</span></div>
+            </div>
+            <div class="plist-row" data-type="운영" data-bs-toggle="modal" data-bs-target="#modal-p12">
+                <div class="plist-row-bg"></div><span class="plist-idx">12</span>
+                <div class="plist-main"><span class="plist-name">현대백화점 (운영)</span><span class="plist-sub">VPN 환경 · 프로모션
+                        페이지 퍼블리싱</span></div>
+                <div class="plist-right"><span class="plist-period">2023.08 — 2023.11</span><span class="plist-link">↗
+                        상세보기</span></div>
+            </div>
+            <div class="plist-row" data-type="구축" data-bs-toggle="modal" data-bs-target="#modal-p13">
+                <div class="plist-row-bg"></div><span class="plist-idx">13</span>
+                <div class="plist-main"><span class="plist-name">효성그룹 (구축)</span><span class="plist-sub">첫 구축 프로젝트 ·
+                        GSAP 스크롤 애니메이션 · SCSS</span></div>
+                <div class="plist-right"><span class="plist-period">2022.11 — 2023.05</span><span class="plist-link">↗
+                        상세보기</span></div>
+            </div>
+            <div class="plist-row" data-type="운영" data-bs-toggle="modal" data-bs-target="#modal-p14">
+                <div class="plist-row-bg"></div><span class="plist-idx">14</span>
+                <div class="plist-main"><span class="plist-name">아모레퍼시픽 (운영)</span><span class="plist-sub">브랜드 사이트 운영 ·
+                        PDP 퍼블리싱 · Gulp</span></div>
+                <div class="plist-right"><span class="plist-period">2022.06 — 2022.09</span><span class="plist-link">↗
+                        상세보기</span></div>
+            </div>
+            <div class="plist-row" data-type="운영" data-bs-toggle="modal" data-bs-target="#modal-p15">
+                <div class="plist-row-bg"></div><span class="plist-idx">15</span>
+                <div class="plist-main"><span class="plist-name">용감한 컴퍼니 (운영)</span><span class="plist-sub">교육 서비스 브랜드
+                        사이트 운영</span></div>
+                <div class="plist-right"><span class="plist-period">2021.03 — 2021.12</span><span class="plist-link">↗
+                        상세보기</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="edu" id="education">
+        <div class="section-header">
+            <span class="section-num">06</span>
+            <div class="section-line-el"></div>
+            <h2 class="section-title">Education</h2>
+        </div>
+        <div id="eduList">
+            <div class="edu-item">
+                <div>
+                    <p class="edu-period">2022.01 — 2022.04</p><span class="edu-badge">수료</span>
                 </div>
-                <div class="sponsors__item">
-                    <div class="sponsors__logo" aria-label="후원사 로고 3"></div>
+                <div>
+                    <h3 class="edu-school">아카데미 정글</h3>
+                    <p class="edu-major">프론트엔드 개발 아카데미</p>
+                    <p class="edu-detail">UI 개발, 웹접근성 · JavaScript 심화 학습</p>
                 </div>
-                <div class="sponsors__item">
-                    <div class="sponsors__logo" aria-label="후원사 로고 4"></div>
+            </div>
+            <div class="edu-item">
+                <div>
+                    <p class="edu-period">2020.05 — 2020.08</p><span class="edu-badge">수료</span>
                 </div>
-                <div class="sponsors__item">
-                    <div class="sponsors__logo" aria-label="후원사 로고 5"></div>
+                <div>
+                    <h3 class="edu-school">경기도여성능력개발센터</h3>
+                    <p class="edu-major">UI/UX 웹 퍼블리셔 포트폴리오 과정</p>
+                    <p class="edu-detail">HTML5, CSS3, JavaScript, jQuery · 취업 포트폴리오 제작</p>
+                </div>
+            </div>
+            <div class="edu-item">
+                <div>
+                    <p class="edu-period">2010.03 — 2012.02</p><span class="edu-badge">전문학사 졸업</span>
+                </div>
+                <div>
+                    <h3 class="edu-school">한양여자대학교</h3>
+                    <p class="edu-major">실용미술과 — 조형일러스트레이션</p>
+                    <p class="edu-detail">학점 3.5 / 4.5 · 서울 · 주간</p>
                 </div>
             </div>
         </div>
     </section>
-    <button id="openInfoModalBtn" class="info-modal-btn">CONTACT ME</button>
 
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="footer__container">
-            <div class="footer__content">
-                <div class="footer__section" aria-label="이벤트 정보">
-                    <h2>이벤트 정보</h2>
-                    <p>일정: 2025년 11월 3일-4일</p>
-                    <p>장소: 코엑스 서울</p>
-                    <p>시간: 오전 10:00 - 오후 6:00</p>
-                </div>
-                <div class="footer__section">
-                    <h4>문의</h4>
-                    <p>이메일: info@sk-aisummit.com</p>
-                    <p>전화: 02-1234-5678</p>
-                    <a href="#">FAQ 바로가기</a>
-                </div>
-                <div class="footer__section">
-                    <h4>소셜미디어</h4>
-                    <a href="#">페이스북</a><br>
-                    <a href="#">트위터</a><br>
-                    <a href="#">링크드인</a><br>
-                    <a href="#">유튜브</a>
-                </div>
-                <div class="footer__section">
-                    <h4>파트너</h4>
-                    <a href="#">후원사</a><br>
-                    <a href="#">미디어 파트너</a><br>
-                    <a href="#">기술 파트너</a>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p>&copy; 2026 HONG SU KI PORTFOLIO. All rights reserved.</p>
+    <section class="contact" id="contact">
+        <div class="contact-blob"></div>
+        <p class="contact-eyebrow" id="ctaEyebrow">Open to New Opportunity</p>
+        <h2 class="contact-heading" id="ctaHead">Let's<br><span class="outline-text">Work Together</span></h2>
+        <p class="contact-desc" id="ctaDesc">UI 인터랙션과 지속 가능한 마크업에 집중하는<br>5년 차 UI 개발자 홍수기입니다.</p>
+    </section>
+
+    <!-- ══ FLOATING BANNER ══════════════════════════════ -->
+    <div id="floatBanner">
+        <div class="float-accent-bar"></div>
+        <div class="float-inner">
+            <div class="float-dot"></div>
+            <div class="float-text">
+                <span class="float-label">UI Developer</span>
+                <span class="float-name">홍수기</span>
+                <span class="float-sub">5년차 · 에이전시 기반 · 인터랙션 구현</span>
             </div>
         </div>
+        <button class="float-close" id="floatClose" aria-label="닫기">✕</button>
+    </div>
+
+    <!-- ══ PROJECT MODALS ════════════════════════════════ -->
+
+    <!-- 캐논코리아 운영 -->
+    <div class="modal fade pj-modal" id="modal-p01" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="modal-eyebrow">운영 · 기업 사이트</p>
+                        <h5 class="modal-title">캐논코리아 (운영)</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-meta-row">
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">기간</p>
+                            <p class="modal-meta-val">2025.06 — 2025.12</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">소속</p>
+                            <p class="modal-meta-val">펜타브리드 PIX FIX</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">역할</p>
+                            <p class="modal-meta-val">운영 퍼블리셔</p>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">프로젝트 개요</p>
+                        <p>기업 사이트 운영 프로젝트. 급건 요청이 빈번한 환경에서 일정 압박 속에서도 운영 품질을 유지하는 대응 경험을 축적했습니다. VPN 기반 서버 환경에서 JSP 개발
+                            환경 내 퍼블리싱 작업을 수행했습니다.</p>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">담당 업무</p>
+                        <ul class="modal-feat-list">
+                            <li>정기 콘텐츠 퍼블리싱 및 UI 수정</li>
+                            <li>마이크로 사이트 및 기존 페이지 고도화 퍼블리싱</li>
+                            <li>JSP 기반 개발 환경 내 퍼블리싱</li>
+                            <li>Jira 기반 이슈 관리</li>
+                            <li>Jenkins 프로세스 배포 경험 / SVN 형상 관리</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">사용 기술</p>
+                        <div class="modal-stack"><span class="tag">HTML</span><span class="tag">CSS/SCSS</span><span
+                                class="tag">JavaScript</span><span class="tag">JSP</span><span
+                                class="tag">SVN</span><span class="tag">Jenkins</span><span class="tag">Jira</span><span
+                                class="tag">VPN</span></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://kr.canon/main" target="_blank" class="btn-visit">↗ 사이트 방문</a>
+                    <button class="btn-modal-close" data-bs-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 월드비전 크로스 -->
+    <div class="modal fade pj-modal" id="modal-p02" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="modal-eyebrow">구축 · PL 단독 · 기여도 100%</p>
+                        <h5 class="modal-title">월드비전 크로스</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-meta-row">
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">기간</p>
+                            <p class="modal-meta-val">2025.03 — 2025.05</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">소속</p>
+                            <p class="modal-meta-val">펜타브리드 PIX FIX</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">인력 구성</p>
+                            <p class="modal-meta-val">기획2 디자인1 퍼블1 개발1</p>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">프로젝트 개요</p>
+                        <p>Vue.js 기반 개발 환경에서 퍼블리싱을 단독으로 진행한 프로젝트. 일정 산정부터 구조 설계, 개발자 협업까지 퍼블리싱 전 과정을 혼자 책임졌습니다.</p>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">담당 업무</p>
+                        <ul class="modal-feat-list">
+                            <li>퍼블리싱 일정 산정 및 작업 범위 관리</li>
+                            <li>공통 컴포넌트, 어드민 페이지, 가이드 페이지 구축</li>
+                            <li>UI 인터랙션 구현 및 퍼블리싱 구조 설계</li>
+                            <li>Vue.js 개발 환경 내 직접 작업 및 개발자 협업</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">회고</p>
+                        <p>촉박한 일정 속 일정 관리와 우선순위 설정의 중요성을 체감. 공통 컴포넌트 선행 작업의 필요성과 퍼블리싱 구조 설계를 선행해야 한다는 기준을 확립했습니다.</p>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">사용 기술</p>
+                        <div class="modal-stack"><span class="tag">HTML</span><span class="tag">CSS/SCSS</span><span
+                                class="tag">JavaScript</span><span class="tag">Vue.js ENV</span><span
+                                class="tag">Figma</span><span class="tag">Notion</span></div>
+                    </div>
+                    <div class="modal-result-box">성과: <strong>퍼블리싱 PL 단독 · 기여도 100%</strong></div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://wvcross.or.kr/" target="_blank" class="btn-visit">↗ 사이트 방문</a>
+                    <button class="btn-modal-close" data-bs-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 세방그룹 -->
+    <div class="modal fade pj-modal" id="modal-p03" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="modal-eyebrow">구축 · PL · 기여도 60%</p>
+                        <h5 class="modal-title">세방그룹</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-meta-row">
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">기간</p>
+                            <p class="modal-meta-val">2024.10 — 2025.04</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">소속</p>
+                            <p class="modal-meta-val">펜타브리드 PIX FIX</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">인력 구성</p>
+                            <p class="modal-meta-val">기획1 디자인2 퍼블3 개발1</p>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">프로젝트 개요</p>
+                        <p>브랜드 사이트 반응형 웹 구축. 참여 인원이 가장 많았던 프로젝트로, 중간보고를 위한 빠른 작업 속도와 지속적인 수정 대응이 요구됐습니다.</p>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">담당 업무</p>
+                        <ul class="modal-feat-list">
+                            <li>퍼블리싱 일정 산정 및 PL 역할 수행</li>
+                            <li>마크업, 공통 컴포넌트, 인터랙션 구현 중심</li>
+                            <li>Vue.js 개발 환경 내 작업</li>
+                            <li>클라이언트 잦은 수정 요청 대응 및 팀 커뮤니케이션</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">사용 기술</p>
+                        <div class="modal-stack"><span class="tag">HTML</span><span class="tag">CSS/SCSS</span><span
+                                class="tag">JavaScript</span><span class="tag">Vue.js ENV</span><span
+                                class="tag">Figma</span></div>
+                    </div>
+                    <div class="modal-result-box">성과: <strong>퍼블리싱 PL · 기여도 60%</strong></div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://www.sebanggroup.com/" target="_blank" class="btn-visit">↗ 사이트 방문</a>
+                    <button class="btn-modal-close" data-bs-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 현대엘리베이터 -->
+    <div class="modal fade pj-modal" id="modal-p04" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="modal-eyebrow">운영 · 기업 사이트</p>
+                        <h5 class="modal-title">현대엘리베이터</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-meta-row">
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">기간</p>
+                            <p class="modal-meta-val">2024.12 — 현재</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">소속</p>
+                            <p class="modal-meta-val">펜타브리드 PIX FIX</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">환경</p>
+                            <p class="modal-meta-val">VPN 서버 배포</p>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">담당 업무</p>
+                        <ul class="modal-feat-list">
+                            <li>정기 콘텐츠 퍼블리싱</li>
+                            <li>VPN 환경 유지보수</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">사용 기술</p>
+                        <div class="modal-stack"><span class="tag">HTML</span><span class="tag">CSS</span><span
+                                class="tag">JavaScript</span><span class="tag">VPN</span></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://www.hyundaielevator.com/ko/index" target="_blank" class="btn-visit">↗ 사이트 방문</a>
+                    <button class="btn-modal-close" data-bs-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- H.Point 크리스마스 -->
+    <div class="modal fade pj-modal" id="modal-p05" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="modal-eyebrow">이벤트 페이지 · 기여도 100%</p>
+                        <h5 class="modal-title">H.Point 크리스마스 이벤트</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-meta-row">
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">기간</p>
+                            <p class="modal-meta-val">2024.11</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">인력 구성</p>
+                            <p class="modal-meta-val">기획1 디자인1 퍼블1 개발1</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">현재 상태</p>
+                            <p class="modal-meta-val">이벤트 종료</p>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">프로젝트 개요</p>
+                        <p>크리스마스를 한 달 앞두고 시작된 출석체크 이벤트 앱·웹 화면 퍼블리싱. 날짜별 active 효과, 일자별 다른 팝업 노출 구조를 구현했습니다.</p>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">담당 업무</p>
+                        <ul class="modal-feat-list">
+                            <li>커튼 + 곰돌이 CSS 인트로 애니메이션 구현</li>
+                            <li>Grid 구조 캘린더 레이아웃</li>
+                            <li>날짜별 active 이미지 전환 로직</li>
+                            <li>모바일 반응형 — vw 단위 기반 대응</li>
+                            <li>Gulp 빌드 환경 세팅</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">사용 기술</p>
+                        <div class="modal-stack"><span class="tag">HTML</span><span class="tag">CSS/SCSS</span><span
+                                class="tag">JavaScript</span><span class="tag">Gulp</span><span
+                                class="tag">Grid</span><span class="tag">vw 단위</span></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-modal-close" data-bs-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 연합뉴스 디자인 시스템 -->
+    <div class="modal fade pj-modal" id="modal-p06" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="modal-eyebrow">디자인 시스템 · 가이드 페이지</p>
+                        <h5 class="modal-title">연합뉴스 디자인 시스템</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-meta-row">
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">기간</p>
+                            <p class="modal-meta-val">2024.09 — 2024.10</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">소속</p>
+                            <p class="modal-meta-val">펜타브리드 PIX FIX</p>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">프로젝트 개요</p>
+                        <p>연합뉴스 웹사이트에 사용된 디자인 마크업 가이드라인 페이지 구축. Foundation(컬러, 타이포그래피, 레이아웃), 컴포넌트 구조, UI 가이드라인을 체계적으로
+                            정리했습니다.</p>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">담당 업무</p>
+                        <ul class="modal-feat-list">
+                            <li>가이드 페이지 마크업 및 공통 컴포넌트 작업</li>
+                            <li>highlight.js 활용 코드 샘플 가독성 구성</li>
+                            <li>CodePen 연동으로 컴포넌트 직접 확인·수정 가능한 구조 구현</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">사용 기술</p>
+                        <div class="modal-stack"><span class="tag">HTML</span><span class="tag">CSS/SCSS</span><span
+                                class="tag">JavaScript</span><span class="tag">highlight.js</span><span
+                                class="tag">CodePen</span></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-modal-close" data-bs-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SK네트웍스 구축 -->
+    <div class="modal fade pj-modal" id="modal-p07" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="modal-eyebrow">구축 · 웹접근성 마크 · 기여도 30%</p>
+                        <h5 class="modal-title">SK네트웍스 오피셜 (구축)</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-meta-row">
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">기간</p>
+                            <p class="modal-meta-val">2024.03 — 2024.07</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">인력 구성</p>
+                            <p class="modal-meta-val">기획2 디자인2 퍼블3 개발2</p>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">담당 업무</p>
+                        <ul class="modal-feat-list">
+                            <li>마크업 / 공통 컴포넌트 중심 퍼블리싱</li>
+                            <li>웹접근성 마크 취득 대응</li>
+                            <li>Gulp 빌드 환경 세팅</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">사용 기술</p>
+                        <div class="modal-stack"><span class="tag">HTML</span><span class="tag">CSS/SCSS</span><span
+                                class="tag">JavaScript</span><span class="tag">Gulp</span><span class="tag">Figma</span>
+                        </div>
+                    </div>
+                    <div class="modal-result-box">성과: <strong>웹접근성 마크 취득 · UI개발 기여도 30%</strong></div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://www.sknetworks.co.kr/" target="_blank" class="btn-visit">↗ 사이트 방문</a>
+                    <button class="btn-modal-close" data-bs-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SK네트웍스 운영 -->
+    <div class="modal fade pj-modal" id="modal-p08" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="modal-eyebrow">운영 · 기업 사이트</p>
+                        <h5 class="modal-title">SK네트웍스 오피셜 (운영)</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-meta-row">
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">기간</p>
+                            <p class="modal-meta-val">2024.09 — 2025.06</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">환경</p>
+                            <p class="modal-meta-val">VDI 환경 배포</p>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">담당 업무</p>
+                        <ul class="modal-feat-list">
+                            <li>고객 요구사항 대응</li>
+                            <li>정기 콘텐츠 퍼블리싱</li>
+                            <li>VDI 환경 배포</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">사용 기술</p>
+                        <div class="modal-stack"><span class="tag">HTML</span><span class="tag">CSS</span><span
+                                class="tag">JavaScript</span><span class="tag">VDI</span></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://www.sknetworks.co.kr/" target="_blank" class="btn-visit">↗ 사이트 방문</a>
+                    <button class="btn-modal-close" data-bs-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 현대 어린이책미술관 -->
+    <div class="modal fade pj-modal" id="modal-p09" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="modal-eyebrow">운영 · 기업 사이트</p>
+                        <h5 class="modal-title">현대 어린이책미술관</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-meta-row">
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">기간</p>
+                            <p class="modal-meta-val">2024.06 — 현재</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">환경</p>
+                            <p class="modal-meta-val">VPN · Bitbucket</p>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">담당 업무</p>
+                        <ul class="modal-feat-list">
+                            <li>정기 콘텐츠 퍼블리싱</li>
+                            <li>VPN 환경 유지보수</li>
+                            <li>Bitbucket 배포 환경</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">사용 기술</p>
+                        <div class="modal-stack"><span class="tag">HTML</span><span class="tag">CSS</span><span
+                                class="tag">JavaScript</span><span class="tag">VPN</span><span
+                                class="tag">Bitbucket</span></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://www.hmoka.org/main/index.do" target="_blank" class="btn-visit">↗ 사이트 방문</a>
+                    <button class="btn-modal-close" data-bs-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 캐논코리아 RF렌즈 -->
+    <div class="modal fade pj-modal" id="modal-p10" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="modal-eyebrow">구축 · 인터랙션 중심 · 기여도 70%</p>
+                        <h5 class="modal-title">캐논코리아 RF렌즈 마이크로사이트</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-meta-row">
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">기간</p>
+                            <p class="modal-meta-val">2024.01 — 2024.03</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">인력 구성</p>
+                            <p class="modal-meta-val">기획1 디자인2 퍼블1 개발2</p>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">담당 업무</p>
+                        <ul class="modal-feat-list">
+                            <li>RF렌즈 마이크로사이트 UI 개발</li>
+                            <li>메인 페이지 인터랙션 구현 집중</li>
+                            <li>유튜브 영상 관련 UI 집중 개발</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">사용 기술</p>
+                        <div class="modal-stack"><span class="tag">HTML</span><span class="tag">CSS/SCSS</span><span
+                                class="tag">JavaScript</span><span class="tag">YouTube API</span><span
+                                class="tag">Figma</span></div>
+                    </div>
+                    <div class="modal-result-box">성과: <strong>UI개발 기여도 70%</strong></div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://kr.canon/rflensworld" target="_blank" class="btn-visit">↗ 사이트 방문</a>
+                    <button class="btn-modal-close" data-bs-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 안랩닷컴 -->
+    <div class="modal fade pj-modal" id="modal-p11" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="modal-eyebrow">구축 · React 환경 · 기여도 20%</p>
+                        <h5 class="modal-title">안랩닷컴 전면개편</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-meta-row">
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">기간</p>
+                            <p class="modal-meta-val">2023.07 — 2024.01</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">인력 구성</p>
+                            <p class="modal-meta-val">기획3 디자인3 퍼블4 개발3</p>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">담당 업무</p>
+                        <ul class="modal-feat-list">
+                            <li>React 개발 환경 내 퍼블리싱</li>
+                            <li>메인 페이지 인터랙션 구현 중심</li>
+                            <li>적응형 PC 사이트 퍼블리싱</li>
+                            <li>대형 팀 협업 커뮤니케이션</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">사용 기술</p>
+                        <div class="modal-stack"><span class="tag">HTML</span><span class="tag">CSS/SCSS</span><span
+                                class="tag">JavaScript</span><span class="tag">React ENV</span><span
+                                class="tag">Figma</span><span class="tag">Jira</span></div>
+                    </div>
+                    <div class="modal-result-box">성과: <strong>퍼블리싱 기여도 20%</strong></div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://www.ahnlab.com/ko" target="_blank" class="btn-visit">↗ 사이트 방문</a>
+                    <button class="btn-modal-close" data-bs-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 현대백화점 -->
+    <div class="modal fade pj-modal" id="modal-p12" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="modal-eyebrow">운영 · 기업 계열사</p>
+                        <h5 class="modal-title">현대백화점</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-meta-row">
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">기간</p>
+                            <p class="modal-meta-val">2023.08 — 2023.11</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">환경</p>
+                            <p class="modal-meta-val">VPN 환경</p>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">담당 업무</p>
+                        <ul class="modal-feat-list">
+                            <li>현대백화점 산하 브랜드 사이트 운영</li>
+                            <li>정기 콘텐츠, 프로모션 페이지 퍼블리싱</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">사용 기술</p>
+                        <div class="modal-stack"><span class="tag">HTML</span><span class="tag">CSS</span><span
+                                class="tag">JavaScript</span><span class="tag">VPN</span></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-modal-close" data-bs-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 효성그룹 -->
+    <div class="modal fade pj-modal" id="modal-p13" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="modal-eyebrow">구축 · 첫 구축 프로젝트 · 기여도 20%</p>
+                        <h5 class="modal-title">효성그룹</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-meta-row">
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">기간</p>
+                            <p class="modal-meta-val">2022.11 — 2023.05</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">소속</p>
+                            <p class="modal-meta-val">펜타브리드 PIX FIX</p>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">프로젝트 개요</p>
+                        <p>첫 웹사이트 구축 프로젝트 참여. GSAP을 처음 접하고 스크롤 기반 애니메이션을 구현. 이 경험을 통해 공통 컴포넌트 가이드의 중요성을 실감하게 됐습니다.</p>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">담당 업무</p>
+                        <ul class="modal-feat-list">
+                            <li>메인 페이지 3개 중 1개 UI 개발</li>
+                            <li>GSAP ScrollTrigger 스크롤 애니메이션 구현</li>
+                            <li>SCSS 모듈화 구조 설계</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">사용 기술</p>
+                        <div class="modal-stack"><span class="tag">HTML</span><span class="tag">CSS/SCSS</span><span
+                                class="tag">JavaScript</span><span class="tag">GSAP</span><span class="tag">Figma</span>
+                        </div>
+                    </div>
+                    <div class="modal-result-box">성과: <strong>기여도 20% · GSAP 첫 실무 적용</strong></div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://www.hyosung.com/kr" target="_blank" class="btn-visit">↗ 사이트 방문</a>
+                    <button class="btn-modal-close" data-bs-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 아모레퍼시픽 -->
+    <div class="modal fade pj-modal" id="modal-p14" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="modal-eyebrow">운영 · 브랜드 사이트</p>
+                        <h5 class="modal-title">아모레퍼시픽</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-meta-row">
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">기간</p>
+                            <p class="modal-meta-val">2022.06 — 2022.09</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">소속</p>
+                            <p class="modal-meta-val">CTTD AP팀</p>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">담당 업무</p>
+                        <ul class="modal-feat-list">
+                            <li>아모레퍼시픽 산하 브랜드 사이트 운영</li>
+                            <li>PDP(상품 상세 페이지) 퍼블리싱 중심</li>
+                            <li>브랜드 컨벤션 준수, 마크업 일관성 유지</li>
+                            <li>Gulp 빌드 환경</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">사용 기술</p>
+                        <div class="modal-stack"><span class="tag">HTML</span><span class="tag">CSS</span><span
+                                class="tag">JavaScript</span><span class="tag">Gulp</span><span
+                                class="tag">GitHub</span></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-modal-close" data-bs-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 용감한 컴퍼니 -->
+    <div class="modal fade pj-modal" id="modal-p15" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="modal-eyebrow">운영 · 자사 서비스</p>
+                        <h5 class="modal-title">용감한 컴퍼니</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-meta-row">
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">기간</p>
+                            <p class="modal-meta-val">2021.03 — 2021.12</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">소속</p>
+                            <p class="modal-meta-val">그로스디자인그룹 퍼블리싱팀</p>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">담당 업무</p>
+                        <ul class="modal-feat-list">
+                            <li>용감한컴퍼니 산하 온라인교육 서비스 웹사이트 운영</li>
+                            <li>정기 콘텐츠, 프로모션 페이지 퍼블리싱</li>
+                            <li>유지보수 및 콘텐츠 수정</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">사용 기술</p>
+                        <div class="modal-stack"><span class="tag">HTML</span><span class="tag">CSS</span><span
+                                class="tag">JavaScript</span><span class="tag">GitHub</span><span
+                                class="tag">Jira</span><span class="tag">Adobe XD</span></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-modal-close" data-bs-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Project Modals (kp-card용) -->
+    <div class="modal fade pj-modal" id="modal-kp01" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="modal-eyebrow">구축 · PL 단독 · 기여도 100%</p>
+                        <h5 class="modal-title">월드비전 크로스</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-meta-row">
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">기간</p>
+                            <p class="modal-meta-val">2025.03 — 2025.05</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">인력 구성</p>
+                            <p class="modal-meta-val">기획2 디자인1 퍼블1 개발1</p>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">담당 업무</p>
+                        <ul class="modal-feat-list">
+                            <li>퍼블리싱 일정 산정 및 작업 범위 관리</li>
+                            <li>공통 컴포넌트 · 어드민 · 가이드 페이지</li>
+                            <li>UI 인터랙션 구현 및 구조 설계</li>
+                            <li>개발자와의 직접 협업</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">회고</p>
+                        <p>촉박한 일정 속 일정 관리와 우선순위 설정의 중요성을 체감. 공통 컴포넌트 선행 작업의 필요성과 퍼블리싱 구조 설계를 선행해야 한다는 기준을 확립했습니다.</p>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">사용 기술</p>
+                        <div class="modal-stack"><span class="tag">HTML</span><span class="tag">CSS/SCSS</span><span
+                                class="tag">JavaScript</span><span class="tag">Vue.js ENV</span></div>
+                    </div>
+                    <div class="modal-result-box">성과: <strong>퍼블리싱 PL 단독 · 기여도 100%</strong></div>
+                </div>
+                <div class="modal-footer"><a href="https://wvcross.or.kr/" target="_blank" class="btn-visit">↗ 사이트
+                        방문</a><button class="btn-modal-close" data-bs-dismiss="modal">닫기</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade pj-modal" id="modal-kp02" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="modal-eyebrow">구축 · PL · 기여도 60%</p>
+                        <h5 class="modal-title">세방그룹</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-meta-row">
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">기간</p>
+                            <p class="modal-meta-val">2024.10 — 2025.04</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">인력 구성</p>
+                            <p class="modal-meta-val">기획1 디자인2 퍼블3 개발1</p>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">담당 업무</p>
+                        <ul class="modal-feat-list">
+                            <li>퍼블리싱 일정 산정 및 PL 역할</li>
+                            <li>마크업 · 공통 컴포넌트 · 인터랙션</li>
+                            <li>Vue.js 개발 환경 내 작업</li>
+                            <li>잦은 수정 요청 대응</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">사용 기술</p>
+                        <div class="modal-stack"><span class="tag">HTML</span><span class="tag">CSS/SCSS</span><span
+                                class="tag">JavaScript</span><span class="tag">Vue.js ENV</span></div>
+                    </div>
+                    <div class="modal-result-box">성과: <strong>퍼블리싱 PL · 기여도 60%</strong></div>
+                </div>
+                <div class="modal-footer"><a href="https://www.sebanggroup.com/" target="_blank" class="btn-visit">↗ 사이트
+                        방문</a><button class="btn-modal-close" data-bs-dismiss="modal">닫기</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade pj-modal" id="modal-kp03" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="modal-eyebrow">구축 · 인터랙션 중심 · 기여도 70%</p>
+                        <h5 class="modal-title">캐논코리아 RF렌즈</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-meta-row">
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">기간</p>
+                            <p class="modal-meta-val">2024.01 — 2024.03</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">인력 구성</p>
+                            <p class="modal-meta-val">기획1 디자인2 퍼블1 개발2</p>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">담당 업무</p>
+                        <ul class="modal-feat-list">
+                            <li>메인 페이지 인터랙션 구현</li>
+                            <li>유튜브 영상 관련 UI 개발</li>
+                            <li>마크업 단독 진행</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">사용 기술</p>
+                        <div class="modal-stack"><span class="tag">HTML</span><span class="tag">CSS/SCSS</span><span
+                                class="tag">JavaScript</span><span class="tag">YouTube API</span></div>
+                    </div>
+                    <div class="modal-result-box">성과: <strong>UI개발 기여도 70%</strong></div>
+                </div>
+                <div class="modal-footer"><a href="https://kr.canon/rflensworld" target="_blank" class="btn-visit">↗ 사이트
+                        방문</a><button class="btn-modal-close" data-bs-dismiss="modal">닫기</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade pj-modal" id="modal-kp04" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <p class="modal-eyebrow">구축 · React 환경 · 기여도 20%</p>
+                        <h5 class="modal-title">안랩닷컴 전면개편</h5>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-meta-row">
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">기간</p>
+                            <p class="modal-meta-val">2023.07 — 2024.01</p>
+                        </div>
+                        <div class="modal-meta-cell">
+                            <p class="modal-meta-label">인력 구성</p>
+                            <p class="modal-meta-val">기획3 디자인3 퍼블4 개발3</p>
+                        </div>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">담당 업무</p>
+                        <ul class="modal-feat-list">
+                            <li>메인 페이지 인터랙션 구현 중심</li>
+                            <li>적응형 PC 퍼블리싱</li>
+                            <li>대형 팀 협업</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <p class="modal-section-title">사용 기술</p>
+                        <div class="modal-stack"><span class="tag">HTML</span><span class="tag">CSS/SCSS</span><span
+                                class="tag">JavaScript</span><span class="tag">React ENV</span></div>
+                    </div>
+                    <div class="modal-result-box">성과: <strong>퍼블리싱 기여도 20%</strong></div>
+                </div>
+                <div class="modal-footer"><a href="https://www.ahnlab.com/ko" target="_blank" class="btn-visit">↗ 사이트
+                        방문</a><button class="btn-modal-close" data-bs-dismiss="modal">닫기</button></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class="footer-copy">© 2025 홍수기 · UI Developer</p>
+        <p class="footer-stack">HTML · SCSS · JavaScript · <span>Gulp</span> · Node.js</p>
     </footer>
-</body>
-
-<!-- 구조화된 데이터(JSON-LD) 추가 -->
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Event",
-    "name": "SK AI SUMMIT 2025",
-    "description": "SK AI SUMMIT 2025 - 최고의 AI 전문가들과 함께하는 특별한 시간. 2025년 11월 3-4일, COEX SEOUL에서 개최.",
-    "startDate": "2025-11-03T10:00",
-    "endDate": "2025-11-04T18:00",
-    "eventStatus": "https://schema.org/EventScheduled",
-    "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
-    "tech": {
-        "@type": "Place",
-        "name": "COEX SEOUL",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "영동대로 513",
-            "addressLocality": "강남구",
-            "addressRegion": "서울특별시",
-            "postalCode": "06164",
-            "addressCountry": "KR"
-        }
-    },
-    "organizer": {
-        "@type": "Organization",
-        "name": "SK AI SUMMIT 조직위원회",
-        "url": "https://sk-aisummit.com"
-    },
-    "image": [
-        "/og-image.png"
-    ],
-    "offers": {
-        "@type": "Offer",
-        "url": "https://sk-aisummit.com",
-        "price": "0",
-        "priceCurrency": "KRW",
-        "availability": "https://schema.org/InStock"
-    }
-}
-</script>
 
 </html>
