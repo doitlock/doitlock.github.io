@@ -1,18 +1,13 @@
-# 👋 Hello, I'm Hong Su Ki
+# 안녕하세요. 홍수기입니다.
 
-웹표준과 UI 인터랙션 구현에 집중해온 4년차 웹 퍼블리셔입니다.
-에이전시에서 다양한 브랜드 구축·운영 프로젝트를 경험했습니다.
 ---
 
 ## 📌 About Me
-
-- 🎯 4년차 웹퍼블리셔 (에이전시 중심 실무)
 - 💡 UI/UX 중심의 마크업 및 인터랙션 구현
 - 🚀 GSAP, Swiper, Lenis 등 모션 중심 개발 경험
 - 🛠 HTML5 / SCSS / JavaScript / jQuery
 - 🤝 협업 툴: Slack, Jira, Trello, Notion, Redmine 등
 - 🧠 개발 환경: VS Code, IntelliJ, Git, Node.js, Gulp 등 셋업 경험 보유
-
 
 ---
 
@@ -56,7 +51,6 @@
 ## 🔗 Blog & Git
 
 - 📚 [기술 블로그](https://doitlock.tistory.com)  
-- 🧑‍💻 [GitHub](https://github.com/doitlock)
 
 ---
 
