@@ -105,6 +105,14 @@ function svg() {
     .pipe(browserSync.stream());
 }
 
+function swiper() {
+  return gulp.src([
+    './node_modules/swiper/swiper-bundle.min.css',
+    './node_modules/swiper/swiper-bundle.min.js'
+  ])
+  .pipe(gulp.dest('./dist/assets/swiper'));
+}
+
 function watchFiles() {
   gulp.watch(SRC_PATH.EJS + "/**/*.ejs", ejsCompile);
   gulp.watch(SRC_PATH.ASSETS.SCSS + "/**/*.scss", scssCompile);
@@ -136,7 +144,7 @@ const gh = (done) => {
 
 
 const prepare = gulp.series(clean);
-const build = gulp.series(clean, gulp.parallel(ejsCompile, scssCompile, jsCompile, images, svg));
+const build = gulp.series(clean, gulp.parallel(ejsCompile, scssCompile, jsCompile, images, svg, swiper));
 const dev = gulp.series(build, gulp.parallel(watchFiles, browserSyncInit));
 const watch = gulp.parallel(watchFiles, browserSyncInit);
 

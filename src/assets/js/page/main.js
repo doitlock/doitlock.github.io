@@ -83,37 +83,42 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
+
+  let lastScroll = 0;
+  const threshold = 10;
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+
+    // 최상단
+    if (currentScroll <= 0) {
+      nav.classList.remove('hide');
+      return;
+    }
+
+    // 아래로 스크롤
+    if (
+      currentScroll > lastScroll &&
+      currentScroll > threshold
+    ) {
+      nav.classList.add('hide');
+    }
+
+    // 위로 스크롤
+    else {
+      nav.classList.remove('hide');
+    }
+
+    lastScroll = currentScroll;
+  });
+
   // HERO intro
   var htl = gsap.timeline({ defaults: { ease: "power4.out" } });
   htl
     .to(".hero-name-line span", { y: "0%", duration: 1.1, stagger: 0.14 })
     .to(".hero-eyebrow", { opacity: 1, y: 0, duration: 0.8 }, "-=.7")
     .to(".hero-title-block", { opacity: 1, y: 0, duration: 0.8 }, "-=.55")
-    .to(".hero-desc-block", { opacity: 1, y: 0, duration: 0.8 }, "-=.6")
     .to("#heroScroll", { opacity: 1, duration: 0.6 }, "-=.3");
-
-  // hero parallax
-  gsap.to(".hero-grid-bg", {
-    y: 100,
-    ease: "none",
-    scrollTrigger: {
-      trigger: "#hero",
-      start: "top top",
-      end: "bottom top",
-      scrub: true,
-    },
-  });
-  gsap.to("#heroName", {
-    opacity: 0,
-    y: -50,
-    ease: "none",
-    scrollTrigger: {
-      trigger: "#hero",
-      start: "center top",
-      end: "bottom top",
-      scrub: true,
-    },
-  });
 
   // section lines
   gsap.utils.toArray(".section-line-el").forEach(function (el) {
@@ -189,24 +194,6 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   });
 
-  // KEY PROJECTS
-  gsap.from(".kp-card", {
-    opacity: 0,
-    y: 80,
-    stagger: 0.15,
-    duration: 1.1,
-    ease: "power3.out",
-    scrollTrigger: { trigger: "#kpGrid", start: "top 78%" },
-  });
-  document.querySelectorAll(".kp-card").forEach(function (card) {
-    card.addEventListener("mouseenter", function () {
-      gsap.to(card, { y: -8, duration: 0.35, ease: "power2.out" });
-    });
-    card.addEventListener("mouseleave", function () {
-      gsap.to(card, { y: 0, duration: 0.4, ease: "power2.inOut" });
-    });
-  });
-
   // PROJECT LIST
   gsap.from(".plist-row", {
     opacity: 0,
@@ -248,13 +235,6 @@ document.addEventListener("DOMContentLoaded", function () {
       { opacity: 0, y: 20, duration: 0.8, ease: "power3.out" },
       "-=.5",
     );
-  gsap.to(".contact-blob", {
-    scale: 1.2,
-    duration: 4,
-    yoyo: true,
-    repeat: -1,
-    ease: "sine.inOut",
-  });
 
   // FLOATING BANNER
   // var fb = document.getElementById('floatBanner');
@@ -299,11 +279,30 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  const kpSwiper = new Swiper('#kpGrid', {
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    spaceBetween: 16,
+    speed: 800,
+    // autoplay: {
+    //   delay: 3000,
+    //   disableOnInteraction: false,
+    // },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
   // PROJECT FILTER
   (function () {
     var btns = document.querySelectorAll(".filter-btn");
     var rows = document.querySelectorAll("#plistWrap .plist-row");
-    var numEl = document.getElementById("filterNum");
     var current = "all";
 
     function runFilter(filter) {
@@ -353,15 +352,6 @@ document.addEventListener("DOMContentLoaded", function () {
           ScrollTrigger.refresh();
           lenis.resize();
         },
-      });
-
-      numEl.textContent = show.length;
-
-      show.forEach(function (r, i) {
-        r.querySelector(".plist-idx").textContent = String(i + 1).padStart(
-          2,
-          "0",
-        );
       });
     }
 
