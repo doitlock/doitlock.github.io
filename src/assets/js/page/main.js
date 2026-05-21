@@ -92,38 +92,9 @@ document.addEventListener("DOMContentLoaded", function () {
     .to(".hero-desc-block", { opacity: 1, y: 0, duration: 0.8 }, "-=.6")
     .to("#heroScroll", { opacity: 1, duration: 0.6 }, "-=.3");
 
-  // blobs float
-  gsap.to(".blob-1", {
-    y: -40,
-    x: 18,
-    duration: 6,
-    yoyo: true,
-    repeat: -1,
-    ease: "sine.inOut",
-  });
-  gsap.to(".blob-2", {
-    y: 30,
-    x: -14,
-    duration: 7,
-    yoyo: true,
-    repeat: -1,
-    ease: "sine.inOut",
-    delay: 1,
-  });
-
   // hero parallax
   gsap.to(".hero-grid-bg", {
     y: 100,
-    ease: "none",
-    scrollTrigger: {
-      trigger: "#hero",
-      start: "top top",
-      end: "bottom top",
-      scrub: true,
-    },
-  });
-  gsap.to([".blob-1", ".blob-2"], {
-    y: 130,
     ease: "none",
     scrollTrigger: {
       trigger: "#hero",
