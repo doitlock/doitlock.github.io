@@ -136,8 +136,10 @@ const cleanDeploy = () => del([".publish"]);
 
 const gh = (done) => {
   ghPages.publish(path.join(__dirname, DIST_FOLDER), {
-    branch: 'gh-pages'
+    branch: 'gh-pages',
+    repo: 'https://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@github.com/doitlock/doitlock.github.io.git'
   }, (err) => {
+    if (err) console.error('배포 에러:', err);
     done();
   });
 };

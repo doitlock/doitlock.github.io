@@ -1,5 +1,7 @@
 .local-body.main-body {
 
+    background-color: var(--color-cream);
+
     //  GRAIN
     #grain {
         position: fixed;
@@ -83,12 +85,10 @@
         }
 
         a {
-            color: var(--color-secondary);
+            color: var(--color-dark);
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             font-weight: 500;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
             transition: color 0.3s;
             position: relative;
 
@@ -203,7 +203,7 @@
     }
 
     .hero-title {
-        font-size: clamp(1.8rem, 2.2vw, 2.6rem);
+        font-size: clamp(2rem, 2.2vw, 2.6rem);
         font-weight: 300;
         color: var(--color-dark);
         margin-bottom: 1.6rem;
@@ -270,7 +270,7 @@
         position: relative;
 
         @include mobile {
-            padding-block: 8rem;
+            padding-block: 5.8rem;
         }
 
         .section-inner {
@@ -357,6 +357,11 @@
     .about-quote-wrap {
         display: flex;
         align-items: flex-start;
+
+        @include web {
+            position: sticky;
+            top: 2.4rem;
+        }
     }
 
     .about-quote-bar {
@@ -373,11 +378,12 @@
     }
 
     .about-quote {
-        font-size: clamp(1.7rem, 2.2vw, 2.8rem);
+        font-size: clamp(2rem, 2.2vw, 2.8rem);
         letter-spacing: -0.04rem;
         line-height: 1.6;
         font-weight: 300;
         color: var(--color-cream);
+        word-break: keep-all;
 
         em {
             color: var(--color-secondary);
@@ -416,29 +422,28 @@
         }
 
         @include mobile {
-            padding: 2.4rem 4.2rem;
+            padding: 2.4rem 3.2rem;
         }
     }
 
     .about-card-label {
-        font-size: 1.4rem;
-        letter-spacing: 0.2em;
-        font-weight: 700;
-        text-transform: uppercase;
+        font-size: 1.6rem;
+        font-weight: 600;
         color: var(--color-secondary);
         margin-bottom: 1.2rem;
+
     }
 
     .about-card-val {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         color: var(--color-cream2);
-        font-weight: 300;
+        font-weight: 400;
         line-height: 1.6;
     }
 
     //  SKILLS 
     .skills {
-        background: var(--color-secondary);
+        background: var(--main-gradient);
     }
 
     .skills-grid {
@@ -456,7 +461,7 @@
         padding: 4.4rem 3.2rem;
         position: relative;
         overflow: hidden;
-        transition: background 0.4s;
+        transition: background 0.4s, border-radius 0.4s;
         border-radius: 2.8rem;
         border: 1px solid var(--color-cream);
 
@@ -471,11 +476,36 @@
             transition: width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        &:hover {
-            background: var(--color-secondary2);
+        @include web {
+            &:hover {
+                border-radius: 0;
+                -webkit-animation: shadow-drop-right 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                animation: shadow-drop-right 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
-            &::after {
-                width: 100%;
+                &::after {
+                    width: 100%;
+                }
+
+                @-webkit-keyframes shadow-drop-right {
+                    0% {
+                        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+                                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+                    }
+                    100% {
+                        -webkit-box-shadow: 12px 0 20px -12px rgba(0, 0, 0, 0.35);
+                                box-shadow: 12px 0 20px -12px rgba(0, 0, 0, 0.35);
+                    }
+                    }
+                    @keyframes shadow-drop-right {
+                    0% {
+                        -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+                                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+                    }
+                    100% {
+                        -webkit-box-shadow: 12px 0 20px -12px rgba(0, 0, 0, 0.35);
+                                box-shadow: 12px 0 20px -12px rgba(0, 0, 0, 0.35);
+                    }
+                }
             }
         }
 
@@ -495,22 +525,19 @@
     }
 
     .skill-cat {
-        font-size: 1.2rem;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
+        font-size: 1.4rem;
         color: var(--color-primary);
         margin-bottom: 1rem;
     }
 
     .skill-title {
         font-size: 3rem;
-        letter-spacing: -0.02em;
         font-weight: 700;
         margin-bottom: 2rem;
         color: var(--color-cream);
 
         @include mobile {
-            font-size: 2.4rem;
+            font-size: 2rem;
         }
     }
 
@@ -523,16 +550,15 @@
         li {
             font-size: 1.4rem;
             color: var(--color-cream);
-            font-weight: 200;
+            font-weight: 400;
             padding-left: 1.4rem;
             position: relative;
-            opacity: 0.9;
 
             &::before {
-                content: '-';
+                content: '•';
                 position: absolute;
                 left: 0;
-                color: var(--color-cream);
+                color: var(--color-cream2);
                 font-size: 1.4rem;
             }
         }
@@ -540,7 +566,6 @@
 
     //  CAREER 
     .career {
-        background: var(--color-cream);
 
         @include web {
             .section-inner {
@@ -565,8 +590,9 @@
         position: relative;
         overflow: hidden;
         word-break: keep-all;
-        box-shadow: 0 4px 11px -2px rgba(0,0,0,.05),0 2px 1px rgba(0,0,0,.06);
-        border-radius: 0 2.8rem 2.8rem 0;
+        border-radius: 2.8rem;
+        background-color: var(--white);
+        border: 1px solid var(--color-cream3);
 
 
         + .career-item {
@@ -575,6 +601,9 @@
 
         @include mobile {
             padding: 4.2rem 2rem;
+            + .career-item {
+                margin-top: 1.2rem;
+            }
         }
     }
 
@@ -583,7 +612,7 @@
         left: 0;
         top: 0;
         bottom: 0;
-        width: 0.3rem;
+        // width: 0.3rem;
         background: var(--color-secondary);
         transform: scaleY(0);
         transform-origin: top;
@@ -615,7 +644,7 @@
         margin-bottom: 1.2rem;
 
         @include mobile {
-            font-size: 3.2rem;
+            font-size: 2.4rem;
         }
     }
 
@@ -637,7 +666,8 @@
     .tag {
         font-size: 1.1rem;
         color: var(--color-dark2);
-        border: .1rem solid var(--color-dark2);
+        // border: .1rem solid var(--color-dark2);
+        background: var(--color-bg);
         padding: 0.3rem 1.1rem;
         border-radius: 0.4rem;
     }
@@ -651,7 +681,6 @@
 
     //  KEY PROJECTS 
     .key-projects {
-        background: var(--color-dark);
         overflow: hidden;
         
         .section-header {
@@ -670,7 +699,8 @@
         //     grid-template-columns: 1fr;
         // }
 
-        max-width: 1000px;
+        max-width: 100rem;
+        padding-inline: 3rem;
         margin: 0 auto;
         overflow: visible;
     }
@@ -714,7 +744,7 @@
         margin-bottom: 2.4rem;
 
         @include mobile {
-            font-size: 2.8rem;
+            font-size: 2.4rem;
         }
     }
 
@@ -727,8 +757,8 @@
     .kp-desc {
         font-size: 1.6rem;
         font-weight: 500;
-        color: var(--color-cream2);
-        font-weight: 300;
+        color: var(--color-cream);
+        font-weight: 400;
         line-height: 1.6;
         margin-bottom: 2.4rem;
         word-break: keep-all;
@@ -748,7 +778,7 @@
             position: relative;
 
             &::before {
-                content: '-';
+                content: '•';
                 position: absolute;
                 left: 0;
                 color: var(--color-cream);
@@ -799,9 +829,8 @@
         }
 
         @include mobile {
-            padding: 1.8rem 0;
+            padding: 1.8rem 1.2rem;
             gap: 1rem;
-            grid-template-columns: 2rem 1fr;
         }
     }
 
@@ -849,6 +878,7 @@
     .plist-right {
         display: flex;
         flex-direction: column;
+        align-items: end;
         gap: 0.6rem;
         position: relative;
 
@@ -892,7 +922,7 @@
         text-transform: uppercase;
         background: transparent;
         color: var(--muted);
-        border: 0.1rem solid var(--color-dark3);
+        border: 0.1rem solid var(--color-dark2);
         padding: 0.4rem 1.8rem;
         cursor: pointer;
         position: relative;
@@ -944,8 +974,13 @@
         grid-template-columns: 22rem 1fr;
         gap: 5.6rem;
         padding: 3.2rem;
-        box-shadow: 0 4px 11px -2px rgba(0, 0, 0, .05), 0 2px 1px rgba(0, 0, 0, .06);
         border-radius: 2.8rem;
+        background-color: var(--white);
+        border: 1px solid var(--color-cream3);
+
+        + .edu-item {
+            margin-top: 1.8rem;
+        }
 
         @include mobile {
             grid-template-columns: 1fr;
@@ -965,9 +1000,9 @@
         display: inline-block;
         margin-top: .8rem;
         font-size: 1.2rem;
-        background: var(--color-primary);
+        background: var(--color-secondary);
         color: var(--color-cream);
-        padding: 0.5rem 1rem;
+        padding: 0.3rem 1rem;
         border-radius: .6rem;
         font-weight: 500;
     }
@@ -979,14 +1014,14 @@
         margin-bottom: 1.2rem;
 
         @include mobile {
-            font-size: 2.4rem;
+            font-size: 2rem;
         }
     }
 
     .edu-major {
         font-size: 1.4rem;
         font-weight: 500;
-        color: var(--color-primary);
+        color: var(--color-secondary);
         margin-bottom: 0.8rem;
     }
 
@@ -1259,7 +1294,7 @@
             position: relative;
 
             &::before {
-                content: '-';
+                content: '•';
                 position: absolute;
                 left: 0;
                 color: var(--color-secondary);
@@ -1279,7 +1314,7 @@
     }
 
     .modal-result-box {
-        background: var(--color-secondary);
+        background: var(--main-gradient);
         border: 0.1rem solid rgba(254, 176, 93, 0.2);
         padding: 1.6rem 2rem;
         font-size: 1.2rem;
@@ -1295,7 +1330,7 @@
 
     .btn-visit {
         font-size: 1.4rem;
-        background: var(--color-primary);
+        background: var(--color-secondary3);
         color: var(--color-cream);
         font-weight: 500;
         border-radius: 0.6rem;
@@ -1423,7 +1458,7 @@
 
     //  CONTACT
     .contact {
-        background: var(--color-secondary);
+        background: var(--main-gradient);
         min-height: 60vh;
         display: flex;
         flex-direction: column;
@@ -1462,6 +1497,44 @@
             display: block;
             color: transparent;
             -webkit-text-stroke: 0.15rem var(--color-cream);
+        }
+
+        &.active {
+            -webkit-animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+            animation: tracking-in-expand-fwd-bottom 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+
+            @-webkit-keyframes tracking-in-expand-fwd-bottom {
+                0% {
+                    letter-spacing: -0.5em;
+                    -webkit-transform: translateZ(-700px) translateY(500px);
+                            transform: translateZ(-700px) translateY(500px);
+                    opacity: 0;
+                }
+                40% {
+                    opacity: 0.6;
+                }
+                100% {
+                    -webkit-transform: translateZ(0) translateY(0);
+                            transform: translateZ(0) translateY(0);
+                    opacity: 1;
+                }
+                }
+                @keyframes tracking-in-expand-fwd-bottom {
+                0% {
+                    letter-spacing: -0.5em;
+                    -webkit-transform: translateZ(-700px) translateY(500px);
+                            transform: translateZ(-700px) translateY(500px);
+                    opacity: 0;
+                }
+                40% {
+                    opacity: 0.6;
+                }
+                100% {
+                    -webkit-transform: translateZ(0) translateY(0);
+                            transform: translateZ(0) translateY(0);
+                    opacity: 1;
+                }
+            }
         }
     }
 

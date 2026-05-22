@@ -83,6 +83,16 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
+  document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      
+      // lenis.scrollTo() 메서드 사용 (라이브러리 선언부 아래에 작성하세요)
+      lenis.scrollTo(targetId); 
+    });
+  });
+
 
   let lastScroll = 0;
   const threshold = 10;
@@ -149,12 +159,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // ABOUT
-  gsap.to("#aboutBar", {
-    height: "100%",
-    duration: 1.4,
-    ease: "power2.out",
-    scrollTrigger: { trigger: "#aboutBar", start: "top 78%" },
-  });
   gsap.from(".about-quote", {
     opacity: 0,
     y: 50,
@@ -227,7 +231,12 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .from(
       "#ctaHead",
-      { opacity: 0, y: 60, duration: 1, ease: "power4.out" },
+      { 
+        opacity: 0, y: 60, duration: 1, ease: "power4.out",
+        onStart: function() {
+          document.querySelector("#ctaHead").classList.add("active");
+        }
+      },
       "-=.3",
     )
     .from(

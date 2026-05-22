@@ -66,8 +66,8 @@ desktop.ini
 .history
 node_modules
 package-lock.json
-.publish
 dist
+.publish
 .vscode
 
 # svn #
