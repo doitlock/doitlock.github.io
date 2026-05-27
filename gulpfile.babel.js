@@ -4,15 +4,15 @@ const gulp = require("gulp");
 const scss = require("gulp-sass")(require("sass"));
 const babel = require("gulp-babel");
 const sourcemaps = require("gulp-sourcemaps");
-const fileinclude = require('gulp-file-include');
-const htmlbeautify = require('gulp-html-beautify');
+const fileinclude = require("gulp-file-include");
+const htmlbeautify = require("gulp-html-beautify");
 const ejs = require("gulp-ejs");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
-const autoprefixer = require('gulp-autoprefixer');
+const autoprefixer = require("gulp-autoprefixer");
 const rename = require("gulp-rename");
 const browserSync = require("browser-sync").create();
-const del = require('del');
+const del = require("del");
 const ghPages = require("gh-pages");
 const path = require("path");
 
@@ -45,9 +45,10 @@ const OPTIONS = {
 };
 
 function html() {
-  return gulp.src([SRC_FOLDER + '**/*.html'], {
+  return gulp
+    .src([SRC_FOLDER + "**/*.html"], {
       base: SRC_FOLDER,
-      since: gulp.lastRun(html)
+      since: gulp.lastRun(html),
     })
     .pipe(gulp.dest(DIST_FOLDER))
     .pipe(browserSync.stream());
@@ -58,10 +59,12 @@ function ejsCompile() {
     .src([SRC_PATH.EJS + "/**/!(_)*.ejs", SRC_FOLDER + "/*.ejs"])
     .pipe(ejs())
     .pipe(rename({ extname: ".html" }))
-    .pipe(fileinclude({
-      prefix: '@@', // 사용할땐 앞에@@ 를 붙이면됨
-      basepath: '@file',
-    }))
+    .pipe(
+      fileinclude({
+        prefix: "@@", // 사용할땐 앞에@@ 를 붙이면됨
+        basepath: "@file",
+      }),
+    )
     .pipe(htmlbeautify({ indentSize: 4 }))
     .pipe(gulp.dest(DIST_FOLDER))
     .pipe(browserSync.stream());
@@ -69,15 +72,16 @@ function ejsCompile() {
 
 function handleError(err) {
   console.log(err.toString());
-  this.emit('end');
+  this.emit("end");
 }
 
 function scssCompile() {
-  return gulp.src(SRC_PATH.ASSETS.SCSS + "/*.scss")
+  return gulp
+    .src(SRC_PATH.ASSETS.SCSS + "/*.scss")
     .pipe(sourcemaps.init())
-    .pipe(scss(OPTIONS).on('error', handleError))
+    .pipe(scss(OPTIONS).on("error", handleError))
     .pipe(autoprefixer())
-    .pipe(sourcemaps.write('.'))
+    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(DEST_PATH.ASSETS.CSS))
     .pipe(browserSync.stream());
 }
@@ -106,11 +110,12 @@ function svg() {
 }
 
 function swiper() {
-  return gulp.src([
-    './node_modules/swiper/swiper-bundle.min.css',
-    './node_modules/swiper/swiper-bundle.min.js'
-  ])
-  .pipe(gulp.dest('./dist/assets/swiper'));
+  return gulp
+    .src([
+      "./node_modules/swiper/swiper-bundle.min.css",
+      "./node_modules/swiper/swiper-bundle.min.js",
+    ])
+    .pipe(gulp.dest("./dist/assets/swiper"));
 }
 
 function watchFiles() {
@@ -135,17 +140,23 @@ const clean = () => del([DIST_FOLDER]);
 const cleanDeploy = () => del([".publish"]);
 
 const gh = (done) => {
-  ghPages.publish(path.join(__dirname, DIST_FOLDER), {
-    branch: 'gh-pages',
-  }, (err) => {
-    if (err) console.error('배포 에러:', err);
-    done();
-  });
+  ghPages.publish(
+    path.join(__dirname, DIST_FOLDER),
+    {
+      branch: "gh-pages",
+    },
+    (err) => {
+      if (err) console.error("배포 에러:", err);
+      done();
+    },
+  );
 };
 
-
 const prepare = gulp.series(clean);
-const build = gulp.series(clean, gulp.parallel(ejsCompile, scssCompile, jsCompile, images, svg, swiper));
+const build = gulp.series(
+  clean,
+  gulp.parallel(ejsCompile, scssCompile, jsCompile, images, svg, swiper),
+);
 const dev = gulp.series(build, gulp.parallel(watchFiles, browserSyncInit));
 const watch = gulp.parallel(watchFiles, browserSyncInit);
 

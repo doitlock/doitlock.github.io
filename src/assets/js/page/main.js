@@ -83,40 +83,36 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+  document.querySelectorAll('.nav-links a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
       e.preventDefault();
-      const targetId = this.getAttribute('href');
-      
+      const targetId = this.getAttribute("href");
+
       // lenis.scrollTo() 메서드 사용 (라이브러리 선언부 아래에 작성하세요)
-      lenis.scrollTo(targetId); 
+      lenis.scrollTo(targetId);
     });
   });
-
 
   let lastScroll = 0;
   const threshold = 10;
 
-  window.addEventListener('scroll', () => {
+  window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
 
     // 최상단
     if (currentScroll <= 0) {
-      nav.classList.remove('hide');
+      nav.classList.remove("hide");
       return;
     }
 
     // 아래로 스크롤
-    if (
-      currentScroll > lastScroll &&
-      currentScroll > threshold
-    ) {
-      nav.classList.add('hide');
+    if (currentScroll > lastScroll && currentScroll > threshold) {
+      nav.classList.add("hide");
     }
 
     // 위로 스크롤
     else {
-      nav.classList.remove('hide');
+      nav.classList.remove("hide");
     }
 
     lastScroll = currentScroll;
@@ -231,11 +227,14 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .from(
       "#ctaHead",
-      { 
-        opacity: 0, y: 60, duration: 1, ease: "power4.out",
-        onStart: function() {
+      {
+        opacity: 0,
+        y: 60,
+        duration: 1,
+        ease: "power4.out",
+        onStart: function () {
           document.querySelector("#ctaHead").classList.add("active");
-        }
+        },
       },
       "-=.3",
     )
@@ -288,8 +287,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  const kpSwiper = new Swiper('#kpGrid', {
-    slidesPerView: 'auto',
+  const kpSwiper = new Swiper("#kpGrid", {
+    slidesPerView: "auto",
     centeredSlides: true,
     spaceBetween: 16,
     speed: 800,
@@ -298,13 +297,13 @@ document.addEventListener("DOMContentLoaded", function () {
     //   disableOnInteraction: false,
     // },
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
       clickable: true,
     },
 
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
   });
 
