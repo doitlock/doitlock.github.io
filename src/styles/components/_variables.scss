@@ -1,0 +1,27 @@
+@use "sass:map";
+@use "sass:color";
+@use "sass:math";
+
+// breakpoints
+$mobile : 320px;
+$tablet : 1024px;
+$web : 1920px;
+
+:root {
+    // Apple design.md — 단일 악센트: Action Blue (#0066cc)
+    --color-primary: #0066cc;
+    --color-secondary: #0066cc;
+    --color-secondary2: #0071e3; // focus blue
+    --color-secondary3: #0F172A;
+    --color-dark: #222;
+    --color-dark2: #1d1d1e;
+    --color-cream: #F8FAFC;
+    --color-cream2: #dcdcdc;
+    --color-cream3: #e8e8e8;
+    --color-bg: #f4f2f0;
+    --muted: rgba(208, 223, 255, 0.45);
+    --line: rgba(208, 221, 255, 0.14);
+    --white: #fff;
+    // 큰 면(skills/contact/kp-card 등) 배경 — 기존 블루→퍼플 그라데이션 유지 (사용자 선호)
+    --main-gradient: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+}

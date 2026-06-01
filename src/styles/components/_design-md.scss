@@ -1,0 +1,112 @@
+/* ============================================================
+   Apple design.md — 가벼운 악센트 적용 레이어
+   (https://getdesign.md/apple/design-md · 원문: /DESIGN.md)
+
+   적용 범위(사용자 선택: "가벼운 악센트만"):
+   - 폰트: Pretendard 유지, Apple 타입 규칙(음수 자간) + weight 사다리만
+   - 악센트: 단일 Action Blue (#0066cc), 다크 면에서는 on-dark 블루(#2997ff)
+   - 버튼: pill 형태 + 누름 시 scale(0.95) + focus ring
+   되돌리려면 style.scss 의 이 파일 @import 한 줄만 제거하면 됨.
+   ============================================================ */
+
+:root {
+  // Apple 토큰 (참고/확장용)
+  --apple-action-blue: #0066cc;
+  --apple-action-blue-focus: #0071e3;
+  --apple-action-blue-on-dark: #2997ff;
+  --apple-ink: #1d1d1f;
+  --apple-canvas: #ffffff;
+  --apple-parchment: #f5f5f7;
+  --apple-tile-dark: #272729;
+  --apple-hairline: #e0e0e0;
+  --apple-radius-sm: 8px;
+  --apple-radius-md: 11px;
+  --apple-radius-lg: 18px;
+  --apple-radius-pill: 9999px;
+}
+
+.local-body.main-body {
+  // Apple 본문 리듬: Pretendard 살짝 tighten (음수 자간)
+  letter-spacing: -0.01em;
+
+  // 디스플레이/헤딩은 더 강한 "Apple tight" 자간
+  .nav-logo,
+  .hero-eyebrow,
+  .hero-name,
+  .hero-title,
+  .section-title,
+  .skill-title,
+  .career-company,
+  .kp-name,
+  .plist-name,
+  .contact-heading,
+  .edu-school,
+  .modal-title,
+  .modal-eyebrow {
+    letter-spacing: -0.02em;
+  }
+
+  // 다크 타일 위에서는 Action Blue 가 어두워 대비가 떨어지므로
+  // 해당 섹션 한정으로 악센트 변수를 on-dark 블루로 로컬 재정의한다.
+  // (CSS 변수 캐스케이드로 하위 악센트가 일괄 보정됨)
+  .skills,
+  .contact,
+  .kp-card,
+  .modal-result-box {
+    --color-primary: var(--apple-action-blue-on-dark);
+    --color-secondary: var(--apple-action-blue-on-dark);
+  }
+
+  // 스크롤 진행 바 = Action Blue 얇은 악센트 라인
+  #progress {
+    background: var(--apple-action-blue);
+  }
+
+  // ===== 버튼 그래머 =====
+  // 1차 액션: Action Blue pill
+  .mail-btn {
+    border-radius: var(--apple-radius-pill);
+    background-color: var(--apple-action-blue);
+    color: #fff;
+    font-weight: 400;
+    box-shadow: none;
+
+    &:hover {
+      background-color: var(--apple-action-blue-focus);
+      color: #fff;
+      box-shadow: none;
+    }
+  }
+
+  .btn-visit {
+    background: var(--apple-action-blue);
+    border-radius: var(--apple-radius-pill);
+    font-weight: 400;
+
+    &:hover {
+      background: var(--apple-action-blue-focus);
+    }
+  }
+
+  // 보조/유틸 버튼도 pill 그래머로 통일
+  .btn-modal-close,
+  .filter-btn {
+    border-radius: var(--apple-radius-pill);
+  }
+
+  // 시스템 공통 마이크로 인터랙션: press = scale(0.95), focus ring
+  .mail-btn,
+  .btn-visit,
+  .btn-modal-close,
+  .filter-btn {
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s, transform 0.15s ease;
+
+    &:active {
+      transform: scale(0.95);
+    }
+    &:focus-visible {
+      outline: 2px solid var(--apple-action-blue-focus);
+      outline-offset: 2px;
+    }
+  }
+}

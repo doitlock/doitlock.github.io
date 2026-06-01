@@ -1,59 +1,45 @@
-# 안녕하세요. 홍수기입니다.
+# 홍수기 UI Developer Portfolio
 
----
+Vite + React + TypeScript 기반 포트폴리오. GitHub Pages(`https://doitlock.github.io/`)에 배포
 
-## 📌 About Me
-- 💡 UI/UX 중심의 마크업 및 인터랙션 구현
-- 🚀 GSAP, Swiper, Lenis 등 모션 중심 개발 경험
-- 🛠 HTML5 / SCSS / JavaScript / jQuery
-- 🤝 협업 툴: Slack, Jira, Trello, Notion, Redmine 등
-- 🧠 개발 환경: VS Code, IntelliJ, Git, Node.js, Gulp 등 셋업 경험 보유
+> 기존 Gulp + EJS 환경은 [`_legacy/`](./_legacy) 에 참고용으로 보존
 
----
+## 기술 스택
 
-## 💻 Tech Stack
+- **Vite** + **React 18** + **TypeScript**
+- **SCSS** (기존 스타일 그대로 이식, `src/styles/`)
+- **GSAP** / ScrollTrigger (`@gsap/react`) — 스크롤 인터랙션
+- **Lenis** — 스무스 스크롤 (PC 전용, 1024px 이하 비활성)
+- **Swiper** — Key Projects 캐러셀
 
-- **Languages & Markup** : HTML5, CSS3, SCSS, JavaScript, jQuery
-- **Animation Libraries** : GSAP, Lenis
-- **Build Tools** : Gulp
-- **Version Control** : Git (GitHub, GitLab)
-- **Design Tools** : Figma, Adobe XD, PhotoShop
-- **Collaboration Tools** : Slack, Jira, Trello, Redmine, Notion
-- **Other** : Node.js
-- **IDE / Editor** : Visual Studio Code, IntelliJ
+## 개발
 
----
+```bash
+npm install      # 최초 1회
+npm run dev      # 개발 서버 (http://localhost:5173)
+npm run build    # 프로덕션 빌드 → dist/
+npm run preview  # 빌드 결과 미리보기
+```
 
-## 🗂 Projects
+## 프로젝트 구조
 
-| type | 프로젝트명 | 설명 | 역할 | 기간 |
-|------|--|--|--|--|
-|  구축  | 롯데렌터카 지카 | 브랜드 사이트 반응형 웹 구축 | 퍼블리싱 100% 단독 | 25.11 ~ 26.01 |
-|  구축  | 월드비전 크로스 | 브랜드 마이크로사이트 반응형 웹 구축 | 퍼블리싱 담당 PL, 퍼블리싱 100% 단독 | 25.03 ~ 25.04 |
-|  구축  | 세방그룹 | 브랜드 사이트 반응형 웹 구축 | 퍼블리싱 담당 PL, 공통 컴포넌트/인터랙션 중심 | 24.12 ~ 25.04 |
-|  운영  | 현대 엘리베이터 | 기업 사이트 운영 | 정기 콘텐츠, 유지보수, VPN 환경 배포 | 24.12 ~ 26.01 |
-|  구축  | H.Point | 크리스마스 이벤트 제작 | 인터랙션 구현 중심(grid 레이아웃) | 24.11 ~ 24.11 |
-|  구축  | 연합뉴스 | 디자인 시스템 가이드 | 마크업, 공통 컴포넌트 | 24.09 ~ 24.10 |
-|  운영  | SK네트웍스 | 기업 사이트 운영 | 정기 콘텐츠, 유지보수, VDI 환경 배포 | 24.09 ~ 26.01 |
-|  구축  | SK네트웍스 | 기업 사이트 반응형 웹 구축 | 마크업, 공통 컴포넌트 중심 | 24.04 ~ 24.07 |
-|  운영  | 현대어린이미술관 운영 | VPN 환경 유지보수 | 정기 프로모션 페이지, 콘텐츠 | 24.06 ~ 진행중 |
-|  구축  | 캐논코리아 RF렌즈 마이크로 | 브랜드 마이크로사이트 반응형 웹 구축 | 인터랙션 구현 중심, 퍼블리싱 90% 단독 | 24.01 ~ 24.03 |
-|  구축  | 안랩닷컴 전면 개편 | React/TS 기반 페이지 퍼블 | 협업 중심, 메인 페이지 인터랙션 구현 | 23.07 ~ 24.01 |
-|  구축  | 효성그룹 | 그룹사 웹사이트 반응형 웹 구축 | 마크업, 공통 컴포넌트 | 22.11 ~ 23.05 |
-|  운영  | 현대백화점 | VPN 환경 유지보수 | 산하 브랜드 사이트 운영 | 23.08 ~ 23.11 |
-|  운영  | 아모레퍼시픽 계열사 운영 | 산하 브랜드 사이트 운영 | 디자인 정확도, 브랜드 컨벤션 준수, 마크업 일관성 유지 | 22.06 ~ 22.09 |
-|  운영  | 용감한컴퍼니 교육사업부 운영 | 자사 사이트 운영 | 정기 프로모션 페이지, 콘텐츠 수정, 유지보수 | 21.03 ~ 21.12 |
+```
+├─ index.html              # Vite 진입점
+├─ src/
+│  ├─ main.tsx             # 엔트리 (스타일/Swiper CSS import)
+│  ├─ App.tsx              # 전체 레이아웃 + Context
+│  ├─ components/          # 섹션 단위 컴포넌트
+│  ├─ data/projects.ts     # 프로젝트 데이터 (모달/리스트/키프로젝트)
+│  ├─ hooks/               # useMainAnimations (GSAP)
+│  ├─ context/             # ModalContext
+│  └─ styles/              # SCSS (style.scss 진입)
+├─ public/assets/          # 이미지 등 정적 파일
+└─ .github/workflows/      # GitHub Pages 자동 배포
+```
 
-👉 [🔗 포트폴리오 바로가기](https://doitlock.github.io/)
+## 배포 (GitHub Actions)
 
----
+`master` 브랜치에 push 하면 자동으로 빌드 후 GitHub Pages에 배포된다.
 
-## 🔗 Blog & Git
-
-- 📚 [기술 블로그](https://doitlock.tistory.com)  
-
----
-
-📬 연락처: doitlock@gmail.com  
-
-감사합니다 🙌
+최초 1회 설정: GitHub 레포 **Settings → Pages → Build and deployment → Source** 를
+**GitHub Actions** 로 변경한다.

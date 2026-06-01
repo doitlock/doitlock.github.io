@@ -1,0 +1,7 @@
+@charset 'utf-8';
+
+@import './components';
+@import './page';
+
+// Apple design.md 가벼운 악센트 레이어 (page 뒤에 두어 오버라이드)
+@import './components/design-md';
