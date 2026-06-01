@@ -3,7 +3,7 @@ export default function Hero() {
     <section className="hero" id="hero">
       <div className="section-inner">
         <p className="hero-eyebrow">
-          <span className="hero-eyebrow-line"></span>Frontend UI Developer · 5 Years
+          Frontend UI Developer · <span className="accent">5 Years</span>
         </p>
         <div className="hero-name" id="heroName">
           <span className="hero-name-line">
