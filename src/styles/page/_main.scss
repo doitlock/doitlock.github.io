@@ -246,7 +246,7 @@
             font-size: 1rem;
             padding: .4rem 1.2rem;
             color: var(--color-cream);
-            background: var(--color-dark);
+            background: var(--color-secondary2);
             border-radius: 0.4rem;
         }
 
@@ -456,7 +456,7 @@
         word-break: keep-all;
 
         em {
-            color: var(--color-secondary);
+            color: var(--color-secondary2);
             font-weight: 700;
         }
     }
@@ -499,7 +499,7 @@
     .about-card-label {
         font-size: 1.8rem;
         font-weight: 600;
-        color: var(--color-secondary);
+        color: var(--color-secondary2);
         margin-bottom: 1.2rem;
 
     }
@@ -787,13 +787,18 @@
                         background: var(--color-secondary);
                     }
                 }
-                .swiper-button-next, .swiper-button-prev {
+                .swiper-button-next, 
+                .swiper-button-prev {
                     width: 4rem;
                     height: 4rem;
                     background: var(--color-cream);
                     border-radius: 100%;
                     transform: translateY(-50%);
                     box-shadow: 0 0.1rem 4rem rgba(0, 0, 0, 0.2);
+
+                    svg {
+                        display: none;
+                    }
                 }
                 .swiper-button-next::after, 
                 .swiper-button-prev::after {
@@ -1178,7 +1183,7 @@
     .modal {
         position: fixed;
         inset: 0;
-        z-index: 1050;
+        z-index: 9999;
         display: none;
         overflow-x: hidden;
         overflow-y: auto;
