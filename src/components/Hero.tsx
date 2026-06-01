@@ -1,6 +1,70 @@
+import type { CSSProperties } from 'react';
+
+type Floaty = {
+  kind: 'emoji' | 'skill';
+  label: string;
+  top: number; // %
+  left: number; // %
+  rot: number; // deg
+  dur: number; // float 주기 (s)
+  delay: number; // 등장/플로팅 지연 (s)
+  range: number; // 위아래 이동 폭 (rem)
+  size?: number; // 이모지 폰트 크기 (rem)
+  accent?: boolean; // skill 칩 강조(그라데이션) 여부
+};
+
+// assistantly.com 의 .footer_emojis-wrapper 처럼 섹션 주변에 흩뿌려 둥둥 떠다니게.
+// 중앙(이름 영역)을 비우고 상단 밴드 + 좌우 여백에 배치, 이모지와 Skill 칩을 교차.
+const floaties: Floaty[] = [
+  { kind: 'skill', label: 'HTML', top: 11, left: 7, rot: -8, dur: 7, delay: 0.1, range: 1.4 },
+  { kind: 'emoji', label: '🚀', top: 18, left: 19, rot: 6, dur: 6.2, delay: 0.5, range: 1.6, size: 3.4 },
+  { kind: 'skill', label: 'SCSS', top: 8, left: 32, rot: -5, dur: 7.6, delay: 0.8, range: 1.2 },
+  { kind: 'emoji', label: '✨', top: 13, left: 47, rot: 8, dur: 6.8, delay: 0.25, range: 1.5, size: 2.8 },
+  { kind: 'skill', label: 'GSAP', top: 9, left: 60, rot: 5, dur: 7.2, delay: 0.6, range: 1.3, accent: true },
+  { kind: 'emoji', label: '🎨', top: 16, left: 78, rot: -7, dur: 6.4, delay: 1, range: 1.7, size: 3.2 },
+  { kind: 'skill', label: 'React', top: 8, left: 90, rot: 7, dur: 7.8, delay: 0.35, range: 1.2, accent: true },
+  { kind: 'emoji', label: '🔥', top: 31, left: 10, rot: -6, dur: 6.6, delay: 0.9, range: 1.6, size: 3 },
+  { kind: 'skill', label: 'Vue', top: 24, left: 27, rot: 5, dur: 8, delay: 0.45, range: 1.3 },
+  { kind: 'emoji', label: '🤝', top: 22, left: 70, rot: -5, dur: 6.3, delay: 0.75, range: 1.5, size: 3 },
+  { kind: 'skill', label: 'JavaScript', top: 41, left: 6, rot: 6, dur: 7.4, delay: 0.55, range: 1.4 },
+  { kind: 'emoji', label: '💡', top: 28, left: 88, rot: 8, dur: 6, delay: 0.7, range: 1.6, size: 3.2 },
+  { kind: 'skill', label: 'Figma', top: 39, left: 92, rot: -6, dur: 7.1, delay: 0.2, range: 1.3, accent: true },
+  { kind: 'emoji', label: '⚡', top: 52, left: 5, rot: 6, dur: 6.9, delay: 1.1, range: 1.5, size: 2.8 },
+  { kind: 'skill', label: 'Swiper', top: 50, left: 91, rot: -7, dur: 7.3, delay: 0.4, range: 1.2 },
+];
+
 export default function Hero() {
   return (
     <section className="hero" id="hero">
+      <div className="hero-floaties" aria-hidden="true">
+        {floaties.map((f, i) => (
+          <span
+            key={`${f.label}-${i}`}
+            className="hero-floaty"
+            style={
+              {
+                '--top': `${f.top}%`,
+                '--left': `${f.left}%`,
+                '--rot': `${f.rot}deg`,
+                '--dur': `${f.dur}s`,
+                '--delay': `${f.delay}s`,
+                '--range': `${f.range}rem`,
+                ...(f.size ? { '--size': `${f.size}rem` } : {}),
+              } as CSSProperties
+            }
+          >
+            <span
+              className={
+                f.kind === 'emoji'
+                  ? 'hero-floaty-tile is-emoji'
+                  : `hero-floaty-tile is-skill${f.accent ? ' is-accent' : ''}`
+              }
+            >
+              {f.label}
+            </span>
+          </span>
+        ))}
+      </div>
       <div className="section-inner">
         <p className="hero-eyebrow">
           Frontend UI Developer · <span className="accent">5 Years</span>
@@ -11,9 +75,9 @@ export default function Hero() {
           </span>
           <span className="hero-name-line outline">
             <span>
-              UI DEVELOPER
+              Ui developer
               <br />
-              PORTFOLIO
+              Portfolio
             </span>
           </span>
         </div>

@@ -8,6 +8,13 @@ interface EduItem {
 
 const edus: EduItem[] = [
   {
+    period: '2026.06 ~ ',
+    badge: '학습중',
+    school: '📚 codeit',
+    major: '피그마(Figma)와 AI로 쉽게 배우는 UI 디자인',
+    detail: 'UI 개발, 웹접근성 · JavaScript 심화 학습',
+  },
+  {
     period: '2022.01 ~ 2022.04',
     badge: '수료',
     school: '📚 아카데미 정글',

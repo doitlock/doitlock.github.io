@@ -2,7 +2,7 @@ export default function About() {
   return (
     <section className="section about" id="about">
       <div className="section-inner">
-        <div className="section-header">
+        <div className="section-header color2">
           <span className="section-num">💡</span>
           <div className="section-line-el"></div>
           <h2 className="section-title">About</h2>
@@ -14,7 +14,7 @@ export default function About() {
           <div className="about-cards" id="aboutCards">
             <p className="about-quote">
               안녕하세요!
-              <br /> 새로운 도전을 즐기며 묵묵하게 성과를 증명하는 5년 차 UI개발자 홍수기입니다. 🏃‍♂️
+              <br /> 새로운 도전을 즐기며 묵묵하게 성과를 증명하는 UI개발자 홍수기입니다. 🏃‍♂️
               <br />
               <br />
               다양한 대형 프로젝트를 경험하며, 촉박한 일정이나 낯선 기술 환경 앞에서도{' '}

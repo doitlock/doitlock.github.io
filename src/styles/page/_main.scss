@@ -40,7 +40,7 @@
         &.scrolled {
             padding: 1.6rem 5.6rem;
             background: rgba(255,255,255,.6);
-            backdrop-filter: blur(1.8rem);
+            backdrop-filter: blur(1rem);
             border-color: var(--line);
         }
 
@@ -133,6 +133,12 @@
             flex-flow: column;
             align-items: center;
             gap: 2rem;
+            position: relative;
+            z-index: 1; // 떠다니는 floaties(.hero-floaties) 위로
+
+            @include mobile {
+                align-items: normal;
+            }
         }
 
         .hero-eyebrow {
@@ -145,11 +151,12 @@
             opacity: 0;
 
             background: var(--white);
-            padding: 1.4rem 1.8rem;
+            padding: 1rem 1.4rem;
             border-radius: 10rem;
 
             .accent {
                 color: var(--color-secondary);
+                font-weight: 600;
             }
 
             @include mobile {
@@ -183,9 +190,10 @@
             }
 
             &.outline span {
-                font-size: clamp(5rem, 12vw, 16rem);
-                color: var(--white);
-                -webkit-text-stroke: 0.15rem var(--color-secondary);
+                font-size: clamp(4rem, 10vw, 13rem);
+                color: var(--color-dark3);
+                font-weight: 600;
+                // -webkit-text-stroke: 0.15rem var(--color-secondary);
             }
 
             // 첫 줄(홍수기)에만 그라데이션 텍스트 적용
@@ -246,7 +254,7 @@
             font-size: 1rem;
             padding: .4rem 1.2rem;
             color: var(--color-cream);
-            background: var(--color-secondary2);
+            background: var(--color-secondary);
             border-radius: 0.4rem;
         }
 
@@ -293,9 +301,8 @@
 
         .hero-util {
             position: absolute;
-            top: 50%;
-            right: 2rem;
-            transform: translateY(-50%);
+            bottom: 1rem;
+            right: 0;
             z-index: 999;
             .util-list {
                 display: flex;
@@ -327,9 +334,101 @@
                 display: none;
             }
         }
+
+        //  HERO FLOATIES (assistantly .footer_emojis-wrapper 풍 — 이모지 + Skill 혼합)
+        .hero-floaties {
+            position: absolute;
+            inset: 0;
+            z-index: 0; // 콘텐츠(.section-inner)보다 뒤
+            pointer-events: none; // 클릭/텍스트 선택 방해 금지
+            overflow: hidden;
+
+            @include mobile {
+                display: none; // 모바일은 영역이 좁아 숨김 (.hero-util 과 동일)
+            }
+        }
+
+        // 위치 + 등장 페이드 담당 (transform 은 안쪽 tile 이 전담)
+        .hero-floaty {
+            position: absolute;
+            top: var(--top);
+            left: var(--left);
+            opacity: 0;
+            will-change: opacity;
+            animation: heroFloatyIn 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+            animation-delay: var(--delay, 0s);
+        }
+
+        // 둥둥 떠다니는 모션 + 비주얼 담당
+        .hero-floaty-tile {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            will-change: transform;
+            transform: rotate(var(--rot, 0deg));
+            animation: heroFloat var(--dur, 7s) ease-in-out infinite;
+            animation-delay: var(--delay, 0s);
+
+            // 이모지
+            &.is-emoji {
+                font-size: var(--size, 3.2rem);
+                line-height: 1;
+                filter: drop-shadow(0 0.6rem 1.2rem rgba(37, 99, 235, 0.18));
+            }
+
+            // Skill 칩 (기본: 흰 배경 + 블루 텍스트)
+            &.is-skill {
+                font-size: 1.3rem;
+                font-weight: 600;
+                color: var(--color-secondary);
+                background: var(--white);
+                border: 0.1rem solid var(--color-cream3);
+                padding: 0.7rem 1.4rem;
+                border-radius: 10rem;
+                box-shadow: 0 0.8rem 2rem rgba(15, 23, 42, 0.08);
+            }
+
+            // Skill 칩 (강조: 그라데이션 채움)
+            &.is-skill.is-accent {
+                color: var(--color-cream);
+                background: var(--main-gradient);
+                border-color: transparent;
+                box-shadow: 0 0.8rem 2.2rem rgba(37, 99, 235, 0.32);
+            }
+        }
+
+        @keyframes heroFloatyIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes heroFloat {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(var(--rot, 0deg));
+            }
+
+            50% {
+                transform: translateY(calc(var(--range, 1.2rem) * -1)) rotate(calc(var(--rot, 0deg) * -0.5));
+            }
+        }
+
+        // 모션 최소화 선호 시 둥둥 효과 정지
+        @media (prefers-reduced-motion: reduce) {
+            .hero-floaty-tile {
+                animation: none;
+            }
+        }
     }
 
-    //  SECTION BASE 
+    //  SECTION BASE
     .section {
         padding-block: 13rem;
         position: relative;
@@ -398,122 +497,115 @@
 
     .section-title {
         font-size: clamp(3rem, 6vw, 6.4rem);
-        letter-spacing: -0.03em;
-        line-height: 1;
+        // line-height: 1;
         font-weight: 700;
         color: var(--color-cream);
-        text-transform: uppercase;
+        // text-transform: uppercase;
     }
 
     //  ABOUT
     .about {
-        background: var(--color-dark);
-    }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8rem;
+            align-items: start;
 
-    .about-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 8rem;
-        align-items: start;
-
-        @include mobile {
-            grid-template-columns: 1fr;
-            gap: 4.8rem;
-        }
-    }
-
-    .about-quote-wrap {
-        display: flex;
-        align-items: flex-start;
-        border-radius: 2.8rem;
-        overflow: hidden;
-
-        @include web {
-            position: sticky;
-            top: 2.4rem;
-        }
-    }
-
-    .about-quote-bar {
-        flex-shrink: 0;
-        width: 0.3rem;
-        height: 0;
-        background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
-        margin-right: 2.8rem;
-        margin-top: 0.4rem;
-
-        @include mobile {
-            display: none;
-        }
-    }
-
-    .about-quote {
-        font-size: clamp(2rem, 2.2vw, 2.8rem);
-        letter-spacing: -0.04rem;
-        line-height: 1.6;
-        font-weight: 300;
-        color: var(--color-cream);
-        word-break: keep-all;
-
-        em {
-            color: var(--color-secondary2);
-            font-weight: 700;
-        }
-    }
-
-    .about-cards {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .about-card {
-        border: 0.1rem solid var(--line);
-        padding: 2.4rem 2.8rem;
-        position: relative;
-        overflow: hidden;
-        transition: border-color 0.4s;
-
-        &::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(93, 149, 254, 0.06), transparent);
-            opacity: 0;
-            transition: opacity 0.4s;
-        }
-
-        &:hover {
-            border-color: var(--line);
-
-            &::before {
-                opacity: 1;
+            @include mobile {
+                grid-template-columns: 1fr;
+                gap: 4.8rem;
             }
         }
 
-        @include mobile {
-            padding: 2.4rem 3.2rem;
+        .about-quote-wrap {
+            display: flex;
+            align-items: flex-start;
+            border-radius: 2.8rem;
+            overflow: hidden;
+
+            @include web {
+                position: sticky;
+                top: 2.4rem;
+            }
+        }
+
+        .about-quote-bar {
+            flex-shrink: 0;
+            width: 0.3rem;
+            height: 0;
+            background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
+            margin-right: 2.8rem;
+            margin-top: 0.4rem;
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        .about-quote {
+            font-size: clamp(2rem, 2.2vw, 2.8rem);
+            letter-spacing: -0.04rem;
+            line-height: 1.6;
+            font-weight: 400;
+            color: var(--color-dark);
+            word-break: keep-all;
+
+            em {
+                color: var(--color-secondary2);
+                font-weight: 700;
+            }
+        }
+
+        .about-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .about-card {
+            border: 0.1rem solid var(--color-cream3);
+            background: var(--white);
+            padding: 2.4rem 2.8rem;
+            position: relative;
+            border-radius: 2.8rem;
+            overflow: hidden;
+            transition: border-color 0.4s;
+
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(135deg, rgba(93, 149, 254, 0.06), transparent);
+                opacity: 0;
+                transition: opacity 0.4s;
+            }
+
+            @include mobile {
+                padding: 2.4rem 2rem;
+            }
+        }
+
+        .about-card-label {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--color-secondary2);
+            margin-bottom: 1.2rem;
+
+        }
+
+        .about-card-val {
+            font-size: 1.6rem;
+            color: var(--color-dark3);
+            font-weight: 400;
+            line-height: 1.6;
+
+            @include mobile {
+                font-size: 1.4rem;
+            }
         }
     }
 
-    .about-card-label {
-        font-size: 1.8rem;
-        font-weight: 600;
-        color: var(--color-secondary2);
-        margin-bottom: 1.2rem;
-
-    }
-
-    .about-card-val {
-        font-size: 1.6rem;
-        color: var(--color-cream2);
-        font-weight: 400;
-        line-height: 1.6;
-
-        @include mobile {
-            font-size: 1.4rem;
-        }
-    }
+    
 
     //  SKILLS 
     .skills {
@@ -537,7 +629,7 @@
         overflow: hidden;
         transition: background 0.4s, border-radius 0.4s;
         border-radius: 2.8rem;
-        border: 1px solid var(--color-cream);
+        border: 1px solid var(--color-cream2);
 
         &::after {
             content: '';
@@ -589,18 +681,19 @@
     }
 
     .skill-num {
-        font-size: 5.6rem;
+        font-size: 2.6rem;
         line-height: 1;
-        font-weight: 700;
-        color: transparent;
-        -webkit-text-stroke: 0.1rem var(--color-cream);
+        font-weight: 500;
+        color: var(--color-cream);
+        // -webkit-text-stroke: 0.1rem var(--color-cream);
         margin-bottom: 1.2rem;
         display: block;
     }
 
     .skill-cat {
         font-size: 1.4rem;
-        color: var(--color-primary);
+        font-weight: 500;
+        color: var(--color-secondary5);
         margin-bottom: 1rem;
     }
 
@@ -609,6 +702,8 @@
         font-weight: 700;
         margin-bottom: 2rem;
         color: var(--color-cream);
+        border-bottom: 1px solid var(--color-cream3);
+        display: inline-block;
 
         @include mobile {
             font-size: 2rem;
@@ -832,9 +927,7 @@
 
             .kp-tag {
                 font-size: 1.2rem;
-                letter-spacing: 0.18em;
-                text-transform: uppercase;
-                color: var(--color-primary);
+                color: var(--color-secondary5);
                 margin-bottom: 1.8rem;
                 display: flex;
                 align-items: center;
@@ -844,7 +937,7 @@
                     content: '';
                     width: 2.4rem;
                     height: 0.1rem;
-                    background: var(--color-primary);
+                    background: var(--color-secondary5);
                 }
             }
 
@@ -957,7 +1050,7 @@
         @include web {
             &:hover .plist-name,
             &:hover .plist-link {
-                color: var(--color-primary);
+                color: var(--color-secondary4);
             }
         }
 
@@ -1623,17 +1716,16 @@
 
     .contact-heading {
         font-size: clamp(4rem, 9vw, 12rem);
-        font-weight: 700;
-        letter-spacing: -0.01em;
+        font-weight: 600;
         line-height: 0.95;
         margin-bottom: 4.8rem;
         position: relative;
-        text-transform: uppercase;
-
+        
         .outline-text {
             display: block;
-            color: transparent;
-            -webkit-text-stroke: 0.15rem var(--color-cream);
+            color: var(--white);
+            // color: transparent;
+            // -webkit-text-stroke: 0.15rem var(--color-cream);
         }
 
         &.active {
@@ -1686,7 +1778,7 @@
             font-size: 2.4rem;
             color: var(--color-cream2);
             font-weight: 300;
-            line-height: 2;
+            line-height: 1.6;
             word-break: keep-all;
 
             @include mobile {
@@ -1698,12 +1790,18 @@
             display: block;
             text-align: center;
             font-size: 1.6rem;
+            font-weight: 500;
             width: 20rem;
             padding: 2rem;
             border-radius: 2rem;
             background-color: var(--color-cream);
             color: var(--color-dark);
             transition: 0.3s;
+
+            @include mobile {
+                width: auto;
+                padding: 1.2rem 1.8rem;
+            }
 
             &:hover {
                 background-color: var(--color-primary);
