@@ -23,28 +23,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-
-      # Pages 를 활성화하고 빌드 소스를 "GitHub Actions" 로 설정 (없으면 자동 생성)
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
           enablement: true
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        run: npm run build
+      # 빌드 없음: 사이트 파일만 _site 로 모은다 (README, 워크플로 등은 제외)
+      - name: Collect site files
+        run: |
+          mkdir _site
+          cp index.html work.html style.css ide.css favicon.png _site/
+          cp -r assets _site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: _site
 
   deploy:
     needs: build

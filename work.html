@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project — Hong Suki</title>
+<link rel="icon" href="/favicon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./ide.css">
+</head>
+<body>
+
+<header class="ide-head">
+  <div class="ide-tabs">
+    <a class="who" href="./index.html">Hong Suki</a>
+    <nav class="tabs" aria-label="페이지 이동">
+      <a class="tab" href="./index.html"><i class="fi html">&lt;&gt;</i>index.html</a>
+      <a class="tab" href="./index.html#projects"><i class="fi tsx">TS</i>projects.tsx</a>
+      <a class="tab active" href="#" aria-current="page"><i class="fi tsx">TS</i><span class="tab-file">project.tsx</span></a>
+      <a class="tab" href="./index.html#profile"><i class="fi md">M↓</i>profile.md</a>
+      <a class="tab" href="./index.html#contact"><i class="fi sh">$</i>contact.sh</a>
+    </nav>
+  </div>
+  <p class="crumbs" aria-hidden="true">portfolio <span>›</span> src <span>›</span> projects <span>›</span> <b class="crumb-file">project.tsx</b></p>
+</header>
+
+<main id="detail"></main>
+
+<footer class="site-foot">© 2026 Hong Suki</footer>
+
+<div class="statusbar" aria-hidden="true">
+  <div class="grp"><span>⎇ main</span><span class="open">Open to work</span></div>
+  <div class="grp"><span class="st-file">project.tsx</span><span class="hide-m">UTF-8</span><span class="st-pct">0%</span></div>
+</div>
+
+<div class="layout-grid" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="cursor-tag" aria-hidden="true">
+  <svg viewBox="0 0 24 24"><path d="M3 2l7.5 19 2.6-7.9L21 10.5z" fill="#17804b" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+  <span>NEXT PROJECT</span>
+</div>
+<button type="button" class="to-top" aria-label="맨 위로">
+  <span><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 12V2M2.5 6.5L7 2l4.5 4.5"/></svg><br>TOP</span>
+</button>
+
+<script>
+  const works = [
+    {
+      id: 'gcar',
+      name: '롯데렌터카 지카',
+      summary: '롯데렌터카의 카셰어링 서비스 지카 사이트를 새로 만든 프로젝트입니다. 퍼블리싱은 혼자 맡았고, 일정을 짜는 것부터 개발 환경에 들어가 직접 작업하는 것까지 했습니다.',
+      tags: ['퍼블리싱 PL', '기여도 100%'],
+      meta: [
+        ['기간', '2025.11 — 2026.01'],
+        ['구분', '신규 구축 · 반응형'],
+        ['소속', '펜타브리드 PIX FIX팀'],
+        ['인력 구성', '기획 2 · 디자인 2 · 퍼블리싱 1 · 개발 2'],
+      ],
+      tech: ['HTML', 'SCSS', 'JavaScript', 'GSAP', 'Lenis', 'Figma', 'IntelliJ'],
+      url: 'https://www.greencar-gcar.co.kr/',
+      shots: [
+        { src: '/assets/images/main/project-thumb004.gif', title: '메인', desc: '스크롤에 따라 섹션이 전환되는 메인 화면' },
+        { title: '서브 페이지' },
+        { title: '모바일' },
+      ],
+      tasks: [
+        '반응형 전 페이지 마크업',
+        '퍼블리싱 일정 산정, 작업 범위 관리',
+        '공통 컴포넌트·어드민 페이지 퍼블리싱',
+        'UI 인터랙션 구현, 퍼블리싱 구조 설계',
+        '개발 환경 안에서 직접 작업하며 개발자와 협업',
+      ],
+    },
+    {
+      id: 'wvcross',
+      name: '월드비전 크로스',
+      summary: 'Vue.js로 만든 사이트의 퍼블리싱을 혼자 맡았습니다. 일정 산정과 구조 설계도 직접 했고, 개발자와 계속 맞춰 가며 작업했습니다.',
+      tags: ['퍼블리싱 단독'],
+      meta: [
+        ['기간', '2025.03 — 2025.05'],
+        ['구분', '신규 구축 · 반응형'],
+        ['소속', '펜타브리드 PIX FIX팀'],
+        ['인력 구성', '기획 2 · 디자인 1 · 퍼블리싱 1 · 개발 1'],
+      ],
+      tech: ['HTML', 'SCSS', 'JavaScript', 'Vue.js', 'GSAP', 'Lenis', 'Swiper', 'Figma'],
+      url: 'https://wvcross.or.kr/',
+      shots: [
+        { src: '/assets/images/main/project-thumb001.gif', title: '메인', desc: '캠페인 메인 화면과 인터랙션' },
+        { title: '가이드 페이지' },
+        { title: '어드민' },
+      ],
+      tasks: [
+        '퍼블리싱 일정 산정, 작업 범위 관리',
+        '공통 컴포넌트, 어드민 페이지, 가이드 페이지 구축',
+        'UI 인터랙션 구현, 퍼블리싱 구조 설계',
+        'Vue.js 개발 환경 안에서 직접 작업',
+      ],
+      note: '일정이 촉박해서 공통 컴포넌트부터 만들고 페이지를 붙여 나갔습니다. 그 뒤로는 다른 프로젝트도 이 순서로 작업합니다.',
+    },
+    {
+      id: 'sebang',
+      name: '세방그룹',
+      summary: '다른 프로젝트와 동시에 진행된 구축입니다. 퍼블리셔 3명 중 PL을 맡아 일정을 조율하면서 화면도 함께 만들었습니다.',
+      tags: ['퍼블리싱 PL'],
+      meta: [
+        ['기간', '2024.10 — 2025.04'],
+        ['구분', '신규 구축 · 반응형'],
+        ['소속', '펜타브리드 PIX FIX팀'],
+        ['인력 구성', '기획 1 · 디자인 2 · 퍼블리싱 3 · 개발 1'],
+      ],
+      tech: ['HTML', 'SCSS', 'JavaScript', 'Vue.js', 'GSAP', 'Lenis', 'Swiper', 'Figma'],
+      url: 'https://www.sebanggroup.com/',
+      shots: [
+        { src: '/assets/images/main/project-thumb002.gif', title: '메인', desc: '그룹사 메인 화면' },
+        { title: '직무소개' },
+        { title: '모바일' },
+      ],
+      tasks: [
+        '반응형 마크업, 공통 컴포넌트 개발',
+        '인터랙션 구현',
+        '직무소개 페이지는 JSON 데이터와 URL 파라미터로 내용이 바뀌도록 구성',
+        '일정 변경과 수정 요청 대응',
+      ],
+    },
+    {
+      id: 'ahnlab',
+      name: '안랩닷컴 전면 개편',
+      summary: '안랩 공식 사이트를 React·TypeScript로 새로 만든 프로젝트입니다. 퍼블리셔 4명이 함께했고, 저는 메인 페이지 인터랙션을 맡았습니다.',
+      tags: ['메인 인터랙션'],
+      meta: [
+        ['기간', '2023.07 — 2024.01'],
+        ['구분', '전면 개편 · 적응형 PC'],
+        ['소속', '펜타브리드 PIX FIX팀'],
+        ['인력 구성', '기획 3 · 디자인 3 · 퍼블리싱 4 · 개발 3'],
+      ],
+      tech: ['HTML', 'SCSS', 'JavaScript', 'React', 'TypeScript', 'GSAP', 'Swiper', 'Jira'],
+      url: 'https://www.ahnlab.com/ko',
+      shots: [
+        { src: '/assets/images/main/project-thumb003.gif', title: '메인', desc: '메인 비주얼과 스크롤 인터랙션' },
+        { title: '다국어 페이지' },
+      ],
+      tasks: [
+        'React 프로젝트 안에서 퍼블리싱',
+        '메인 페이지 인터랙션 구현',
+        '다국어(i18n) 환경의 적응형 UI 컴포넌트',
+        '13명 규모 팀 협업',
+      ],
+    },
+  ];
+
+  const pad = n => String(n).padStart(2, '0');
+  const id = new URLSearchParams(location.search).get('id') || works[0].id;
+  const idx = Math.max(0, works.findIndex(w => w.id === id));
+  const w = works[idx];
+  const next = works[(idx + 1) % works.length];
+  document.title = `${w.name} — Hong Suki`;
+  const fileName = `${w.id}.tsx`;
+  document.querySelectorAll('.tab-file, .crumb-file, .st-file').forEach(el => el.textContent = fileName);
+  addEventListener('scroll', () => {
+    const max = document.documentElement.scrollHeight - innerHeight;
+    document.querySelector('.st-pct').textContent = `${max > 0 ? Math.round(scrollY / max * 100) : 0}%`;
+  }, { passive: true });
+
+  const gridIcon = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1" y="1" width="12" height="12"/><path d="M5 1v12M9 1v12"/></svg>';
+  const frameIcon = '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 0v12M9 0v12M0 3h12M0 9h12"/></svg>';
+
+  const shot = s => `
+    <figure class="f-frame">
+      <figcaption class="f-label"><span>${frameIcon}${s.title}</span><span class="f-size"></span></figcaption>
+      <div class="f-body${s.src ? '' : ' empty'}">${s.src ? `<img src="${s.src}" alt="${w.name} ${s.title} 화면">` : '화면 캡처 자리'}</div>
+      ${s.desc ? `<p class="f-desc">${s.desc}</p>` : ''}
+    </figure>`;
+
+  document.getElementById('detail').innerHTML = `
+    <section class="d-canvas">
+      <div class="frame-label">
+        <span><b>Project</b> · ${pad(idx + 1)} / ${pad(works.length)}</span>
+        <span class="vp" aria-hidden="true"></span>
+      </div>
+      <a class="back" href="./index.html#projects">← 전체 프로젝트</a>
+      <p class="d-tags">${w.tags.map(t => `<span class="tag">${t}</span>`).join('')}</p>
+      <div class="select-box d-title">
+        <h1>${w.name}</h1>
+        <span class="hd tl"></span><span class="hd tr"></span><span class="hd bl"></span><span class="hd br"></span>
+        <span class="size" aria-hidden="true"></span>
+      </div>
+      <p class="summary">${w.summary}</p>
+      <div class="d-actions">
+        <a class="btn" href="${w.url}" target="_blank" rel="noopener">사이트 바로가기 <span>↗</span></a>
+        <div class="toolbar" role="toolbar" aria-label="캔버스 도구">
+          <button type="button" class="grid-btn" aria-pressed="false" title="12컬럼 레이아웃 그리드 보기">${gridIcon}그리드</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec d-body">
+      <div class="d-shots">${w.shots.map(shot).join('')}</div>
+      <aside class="inspect" aria-label="프로젝트 정보">
+        <p class="i-tab"><b>Properties</b></p>
+        <dl>${w.meta.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl>
+        <div class="i-group">
+          <p class="i-title">Tech</p>
+          <p class="i-chips">${w.tech.map(t => `<span>${t}</span>`).join('')}</p>
+        </div>
+        <div class="i-group">
+          <p class="i-title">Link</p>
+          <a class="i-link" href="${w.url}" target="_blank" rel="noopener">${w.url.replace(/^https?:\/\//, '').replace(/\/$/, '')} ↗</a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="sec band">
+      <div class="sec-head">
+        <div><span class="frame-name">담당 업무 ${w.tasks.length}</span><h2 class="sec-title">Role</h2></div>
+      </div>
+      <ul class="d-list">${w.tasks.map(t => `<li>${t}</li>`).join('')}</ul>
+      ${w.note ? `<p class="d-note">${w.note}</p>` : ''}
+    </section>
+
+    <section class="sec d-next">
+      <span class="frame-name">다음 프로젝트</span>
+      <a class="next" href="./work.html?id=${next.id}"><span class="name">${next.name}</span><span class="arr">→</span></a>
+    </section>`;
+
+  /* 화면 크기 · 선택 박스 · 이미지 원본 크기 표시 */
+  const vp = document.querySelector('.vp');
+  const box = document.querySelector('.d-title');
+  const updateSize = () => {
+    vp.textContent = `${innerWidth} × ${innerHeight}`;
+    box.querySelector('.size').textContent = `${Math.round(box.offsetWidth)} × ${Math.round(box.offsetHeight)}`;
+  };
+  addEventListener('resize', updateSize);
+  document.fonts.ready.then(updateSize);
+  document.querySelectorAll('.f-frame').forEach(f => {
+    const img = f.querySelector('img'), out = f.querySelector('.f-size');
+    if (!img) { out.textContent = '비어 있음'; return; }
+    const set = () => out.textContent = `${img.naturalWidth} × ${img.naturalHeight}`;
+    img.complete ? set() : img.addEventListener('load', set);
+  });
+
+  /* 레이아웃 그리드 토글 */
+  const gridBtn = document.querySelector('.grid-btn');
+  gridBtn.addEventListener('click', () => gridBtn.setAttribute('aria-pressed', document.body.classList.toggle('show-grid')));
+
+  /* 다음 프로젝트 커서 라벨 */
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const tag = document.querySelector('.cursor-tag');
+  const nextLink = document.querySelector('.d-next .next');
+  let tx = 0, ty = 0, x = 0, y = 0, raf;
+  const loop = () => {
+    x += (tx - x) * (reduce ? 1 : .25); y += (ty - y) * (reduce ? 1 : .25);
+    tag.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+    raf = requestAnimationFrame(loop);
+  };
+  nextLink.addEventListener('pointerenter', e => {
+    if (e.pointerType !== 'mouse') return;
+    x = tx = e.clientX; y = ty = e.clientY;
+    tag.classList.add('on'); cancelAnimationFrame(raf); loop();
+  });
+  nextLink.addEventListener('pointermove', e => { tx = e.clientX; ty = e.clientY; });
+  nextLink.addEventListener('pointerleave', () => { tag.classList.remove('on'); setTimeout(() => cancelAnimationFrame(raf), 250); });
+
+  /* TOP 버튼 */
+  const topBtn = document.querySelector('.to-top');
+  const canvas = document.querySelector('.d-canvas');
+  const onScroll = () => topBtn.classList.toggle('show', scrollY > canvas.offsetHeight - 80);
+  addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  topBtn.addEventListener('click', () => {
+    scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    document.querySelector('.ide-tabs .who').focus({ preventScroll: true });
+  });
+</script>
+</body>
+</html>
