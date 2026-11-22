@@ -78,9 +78,10 @@
       tech: ['HTML', 'SCSS', 'JavaScript', 'GSAP', 'Lenis', 'Figma', 'IntelliJ'],
       url: 'https://www.greencar-gcar.co.kr/',
       shots: [
-        { src: '/assets/images/main/project-thumb004.gif', title: '메인', desc: '스크롤에 따라 섹션이 전환되는 메인 화면' },
-        { title: '서브 페이지' },
-        { title: '모바일' },
+        { pair: '/assets/video/gcar-main', title: '메인', link: 'https://www.greencar-gcar.co.kr/' },
+        { pair: '/assets/video/gcar-sharing', title: 'G car 왕복', link: 'https://www.greencar-gcar.co.kr/sharing/gcar' },
+        { pair: '/assets/video/gcar-biz', title: 'G car 비즈', link: 'https://www.greencar-gcar.co.kr/service/gcar-biz' },
+        { pair: '/assets/video/gcar-magazine', title: '매거진', link: 'https://www.greencar-gcar.co.kr/magazine' },
       ],
       tasks: [
         '반응형 전 페이지 마크업',
@@ -93,7 +94,7 @@
     {
       id: 'wvcross',
       name: '월드비전 크로스',
-      summary: 'Vue.js로 만든 사이트의 퍼블리싱을 혼자 맡았습니다. 일정 산정과 구조 설계도 직접 했고, 개발자와 계속 맞춰 가며 작업했습니다.',
+      summary: 'Vue.js로 만든 사이트의 퍼블리싱을 혼자 맡았습니다. 일정이 촉박한 프로젝트였지만, 일정을 지키기 위해 끝까지 책임지고 마무리했습니다.',
       tags: ['퍼블리싱 단독'],
       meta: [
         ['기간', '2025.03 — 2025.05'],
@@ -104,9 +105,11 @@
       tech: ['HTML', 'SCSS', 'JavaScript', 'Vue.js', 'GSAP', 'Lenis', 'Swiper', 'Figma'],
       url: 'https://wvcross.or.kr/',
       shots: [
-        { src: '/assets/images/main/project-thumb001.gif', title: '메인', desc: '캠페인 메인 화면과 인터랙션' },
-        { title: '가이드 페이지' },
-        { title: '어드민' },
+        { pair: '/assets/video/wv-main', title: '메인', link: 'https://wvcross.or.kr/' },
+        { pair: '/assets/video/wv-vision', title: '비전주일', link: 'https://wvcross.or.kr/participate/visionIntro' },
+        { pair: '/assets/video/wv-challenge', title: '묵상챌린지', link: 'https://wvcross.or.kr/participate/contemplationChallenge' },
+        { pair: '/assets/video/wv-pray', title: '기도제목', link: 'https://wvcross.or.kr/prayer/pray' },
+        { pair: '/assets/video/wv-form', title: '기도제목 등록 폼', link: 'https://wvcross.or.kr/prayer/prayForm' },
       ],
       tasks: [
         '퍼블리싱 일정 산정, 작업 범위 관리',
@@ -120,7 +123,7 @@
       id: 'sebang',
       name: '세방그룹',
       summary: '다른 프로젝트와 동시에 진행된 구축입니다. 퍼블리셔 3명 중 PL을 맡아 일정을 조율하면서 화면도 함께 만들었습니다.',
-      tags: ['퍼블리싱 PL'],
+      tags: ['퍼블리싱 PL', 'JSON 데이터 바인딩'],
       meta: [
         ['기간', '2024.10 — 2025.04'],
         ['구분', '신규 구축 · 반응형'],
@@ -130,14 +133,14 @@
       tech: ['HTML', 'SCSS', 'JavaScript', 'Vue.js', 'GSAP', 'Lenis', 'Swiper', 'Figma'],
       url: 'https://www.sebanggroup.com/',
       shots: [
-        { src: '/assets/images/main/project-thumb002.gif', title: '메인', desc: '그룹사 메인 화면' },
-        { title: '직무소개' },
-        { title: '모바일' },
+        { pair: '/assets/video/sebang-summary', title: '그룹소개', link: 'https://www.sebanggroup.com/client/ko/company/summary' },
+        { pair: '/assets/video/sebang-areas', title: '사업영역', link: 'https://www.sebanggroup.com/client/ko/business/areas' },
+        { pair: '/assets/video/sebang-jobs', title: '직무소개', link: 'https://www.sebanggroup.com/client/ko/recruit/jobIntroduction', desc: '직무 내용을 JSON으로 직접 정리하고, URL 파라미터로 데이터를 불러와 상세 템플릿 하나로 모든 직무 페이지를 그리도록 만들었습니다. 별도 API 없이 개발·유지보수 공수를 줄였습니다.' },
       ],
       tasks: [
         '반응형 마크업, 공통 컴포넌트 개발',
         '인터랙션 구현',
-        '직무소개 페이지는 JSON 데이터와 URL 파라미터로 내용이 바뀌도록 구성',
+        '직무소개: URL 파라미터로 JSON 데이터를 바인딩해, 상세 템플릿 하나로 여러 직무 페이지를 그리도록 구현 (별도 API 없이 개발·유지보수 공수 절감)',
         '일정 변경과 수정 요청 대응',
       ],
     },
@@ -165,13 +168,96 @@
         '13명 규모 팀 협업',
       ],
     },
+
+    /* ---------- 콘텐츠 디자인 ---------- */
+    {
+      id: 'kmta',
+      name: '대한무에타이협회',
+      summary: '협회 SNS를 운영하면서, 아직 오픈 전인 홈페이지를 처음부터 만들고 있습니다. 화면설계서와 디자인 시스템을 직접 만들고, 빌더 플랫폼에 들어갈 코드 위젯을 코딩했습니다.',
+      tags: ['SNS 운영', '홈페이지 구축 중'],
+      meta: [
+        ['기간', '2026.11 — 진행 중'],
+        ['구분', 'SNS 운영 · 홈페이지 신규 구축 (오픈 전)'],
+        ['소속', '페이패스'],
+        ['역할', '기획 · 디자인 · 퍼블리싱 · 콘텐츠 제작'],
+      ],
+      tech: ['Figma', 'Photoshop', 'HTML', 'CSS', 'Imweb', 'PowerPoint', 'AI 이미지'],
+      url: 'https://www.instagram.com/kmta.korea/',
+      urlLabel: '인스타그램 보기',
+      shots: [
+        { srcs: n('/assets/images/design/kmta/youth', 7), cols: 4, title: '카드뉴스 · 세계는 유소년을 어떻게 키울까', desc: '해외 유소년 대회 사례를 7장으로 정리한 정보형 카드뉴스' },
+        { srcs: n('/assets/images/design/kmta/world', 5), cols: 4, title: '카드뉴스 · 세계무대 유망주들', desc: '국가대표 유소년 선수단 응원 카드뉴스' },
+      ],
+      tasks: [
+        '화면설계서 작성 (v0.1 — v0.3)',
+        '디자인 시스템 문서 정리 (색, 타이포, 컴포넌트)',
+        '메인 화면 시안 디자인',
+        '빌더 플랫폼용 코드 위젯 9종 코딩 (인사말, 연혁, 조직도, 참가신청, 후원 문의 등)',
+        '협회 인스타그램 운영, 카드뉴스 기획·디자인',
+      ],
+      note: '사진은 협회에서 받은 이미지와 AI로 만든 이미지를 함께 썼고, 보정 기준을 정해 톤을 직접 맞췄습니다.',
+    },
+    {
+      id: 'clhome',
+      name: 'CL SKIN LAB 홈페이지',
+      summary: 'CL SKIN LAB은 페이패스가 함께 운영하는 화장품 브랜드입니다. 카페24로 브랜드 쇼핑몰을 구축했고, 지금은 상품 등록부터 배너 교체, 화면 수정까지 운영과 유지보수를 맡고 있습니다.',
+      tags: ['카페24', '운영·유지보수'],
+      meta: [
+        ['기간', '2026 — 진행 중'],
+        ['구분', '브랜드 쇼핑몰 구축 · 운영'],
+        ['소속', '페이패스'],
+        ['역할', '구축 · 운영 · 유지보수'],
+      ],
+      tech: ['Cafe24', 'HTML', 'CSS', 'Figma', 'Photoshop'],
+      url: 'https://clskinlab.com/',
+      shots: [
+        { src: '/assets/images/design/clhome/main.webp', title: '메인', desc: '메인 비주얼과 카테고리 영역' },
+        { src: '/assets/images/design/clhome/products.webp', title: '추천 상품', desc: '카테고리와 추천 상품 목록' },
+      ],
+      tasks: [
+        '카페24로 브랜드 쇼핑몰 구축',
+        '상품 등록과 상세 정보 관리',
+        '메인 배너 교체, 화면 수정과 유지보수',
+      ],
+    },
+    {
+      id: 'mediadaily',
+      name: 'Media Daily',
+      summary: 'Media Daily의 공식 웹사이트 운영 및 유지보수와 인스타그램 SNS 운영을 맡고 있습니다. 뷰티, 경제, 문화 등 여러 분야의 기사를 카드뉴스로 기획하고, AI로 이미지를 만든 뒤 Figma에서 편집해 업로드합니다. 반복되는 작업은 Claude Code로 자동화해 제작 시간을 줄였습니다.',
+      tags: ['카드뉴스', '홈페이지 유지보수'],
+      meta: [
+        ['기간', '2026.07 — 진행 중'],
+        ['구분', 'SNS 카드뉴스 제작·업로드 · 홈페이지 UI 유지보수'],
+        ['소속', '페이패스'],
+        ['담당', '카드뉴스 레이아웃 디자인 · 제작'],
+      ],
+      tech: ['Figma', 'Photoshop', 'Imweb', 'AI 이미지', 'Claude Code'],
+      url: 'https://mediadaily.news/',
+      shots: [
+        { srcs: n('/assets/images/design/mediadaily/pink', 6), cols: 3, title: '같은 골목, 핑크 매장 두 곳', desc: '직접 디자인한 레이아웃 · 뷰티' },
+        { srcs: n('/assets/images/design/mediadaily/export', 6), cols: 3, title: 'K-뷰티 수출 내년에 27% 더', desc: '직접 디자인한 레이아웃 · 경제' },
+      ],
+      tasks: [
+        '아임웹 홈페이지 UI 변경·유지보수',
+        '기사 내용을 분석해 알맞은 레이아웃 템플릿으로 카드뉴스 제작',
+        '사진이 없는 기사는 AI로 참고 이미지를 만들고 보정',
+        'Claude Code로 반복 작업을 자동화해 작업 시간 단축',
+        '인스타그램 업로드와 채널 운영',
+      ],
+      note: 'AI로 만든 이미지를 쓴 카드뉴스에는 표지에 "AI로 생성한 참고 이미지입니다"라고 밝혔습니다.',
+    },
   ];
+  function n(prefix, count) { return Array.from({ length: count }, (_, i) => `${prefix}-${String(i + 1).padStart(2, '0')}.webp`); }
+
+  // 메인 Projects 순서와 같게 (세방그룹은 주소로만 열림)
+  const order = ['gcar', 'wvcross', 'sebang', 'kmta', 'clhome', 'mediadaily'];
 
   const pad = n => String(n).padStart(2, '0');
-  const id = new URLSearchParams(location.search).get('id') || works[0].id;
-  const idx = Math.max(0, works.findIndex(w => w.id === id));
-  const w = works[idx];
-  const next = works[(idx + 1) % works.length];
+  const id = new URLSearchParams(location.search).get('id') || order[0];
+  const w = works.find(x => x.id === id) || works.find(x => x.id === order[0]);
+  const pos = order.indexOf(w.id);
+  const idx = pos < 0 ? 0 : pos;
+  const next = works.find(x => x.id === order[(idx + 1) % order.length]);
   document.title = `${w.name} — Hong Suki`;
   const fileName = `${w.id}.tsx`;
   document.querySelectorAll('.tab-file, .crumb-file, .st-file').forEach(el => el.textContent = fileName);
@@ -183,17 +269,40 @@
   const gridIcon = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="1" y="1" width="12" height="12"/><path d="M5 1v12M9 1v12"/></svg>';
   const frameIcon = '<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3 0v12M9 0v12M0 3h12M0 9h12"/></svg>';
 
-  const shot = s => `
-    <figure class="f-frame">
-      <figcaption class="f-label"><span>${frameIcon}${s.title}</span><span class="f-size"></span></figcaption>
-      <div class="f-body${s.src ? '' : ' empty'}">${s.src ? `<img src="${s.src}" alt="${w.name} ${s.title} 화면">` : '화면 캡처 자리'}</div>
+  // 작업 화면: 한 장(src) · 여러 장 묶음(srcs) · 세로로 긴 이미지(tall, 프레임 안 스크롤)
+  const shot = s => {
+    let body, cls = '', size = s.size || '';
+    if (s.srcs) {
+      cls = ' f-grid' + (s.strips ? ' f-strips' : '');
+      size = size || `${s.srcs.length}장`;
+      body = s.srcs.map((src, i) => `<a href="${src}" target="_blank" rel="noopener"><img src="${src}" alt="${s.title} ${i + 1}" loading="lazy"></a>`).join('');
+    } else if (s.pair) {
+      cls = ' f-pair';
+      size = size || 'PC · Mobile';
+      const v = (dev, label) => `<figure class="${dev}"><video src="${s.pair}-${dev}.mp4" poster="${s.pair}-${dev}.jpg" muted loop playsinline preload="metadata" aria-label="${s.title} ${label} 화면 녹화"></video><figcaption>${label}</figcaption></figure>`;
+      body = v('pc', 'PC') + v('mo', 'Mobile');
+    } else if (s.video) {
+      body = `<video src="${s.video}" poster="${s.poster || ''}" muted loop playsinline preload="metadata" aria-label="${w.name} ${s.title} 스크롤 영상"></video>`;
+    } else if (s.tall) {
+      cls = ' f-tall';
+      body = s.tall.map((src, i) => `<img src="${src}" alt="${i === 0 ? `${w.name} ${s.title}` : ''}" loading="lazy">`).join('');
+    } else if (s.src) {
+      body = `<img src="${s.src}" alt="${w.name} ${s.title}" loading="lazy">`;
+    } else {
+      cls = ' empty'; body = '화면 캡처 자리';
+    }
+    return `
+    <figure class="f-frame${s.narrow ? ' f-narrow' : ''}">
+      <figcaption class="f-label"><span>${frameIcon}${s.title}${s.link ? ` <a class="f-link" href="${s.link}" target="_blank" rel="noopener" aria-label="${s.title} 페이지 열기">↗</a>` : ''}</span><span class="f-size" data-fixed="${size ? 1 : ''}">${size}</span></figcaption>
+      <div class="f-body${cls}" style="--cols:${s.cols || 3}" ${s.tall ? 'tabindex="0" aria-label="상세페이지 전체, 스크롤해서 보기"' : ''}>${body}</div>
       ${s.desc ? `<p class="f-desc">${s.desc}</p>` : ''}
     </figure>`;
+  };
 
   document.getElementById('detail').innerHTML = `
     <section class="d-canvas">
       <div class="frame-label">
-        <span><b>Project</b> · ${pad(idx + 1)} / ${pad(works.length)}</span>
+        <span><b>Project</b> · ${pos < 0 ? '—' : `${pad(idx + 1)} / ${pad(order.length)}`}</span>
         <span class="vp" aria-hidden="true"></span>
       </div>
       <a class="back" href="./index.html#projects">← 전체 프로젝트</a>
@@ -205,7 +314,7 @@
       </div>
       <p class="summary">${w.summary}</p>
       <div class="d-actions">
-        <a class="btn" href="${w.url}" target="_blank" rel="noopener">사이트 바로가기 <span>↗</span></a>
+        ${w.url ? `<a class="btn" href="${w.url}" target="_blank" rel="noopener">${w.urlLabel || '사이트 바로가기'} <span>↗</span></a>` : ''}
         <div class="toolbar" role="toolbar" aria-label="캔버스 도구">
           <button type="button" class="grid-btn" aria-pressed="false" title="12컬럼 레이아웃 그리드 보기">${gridIcon}그리드</button>
         </div>
@@ -221,10 +330,10 @@
           <p class="i-title">Tech</p>
           <p class="i-chips">${w.tech.map(t => `<span>${t}</span>`).join('')}</p>
         </div>
-        <div class="i-group">
+        ${w.url ? `<div class="i-group">
           <p class="i-title">Link</p>
           <a class="i-link" href="${w.url}" target="_blank" rel="noopener">${w.url.replace(/^https?:\/\//, '').replace(/\/$/, '')} ↗</a>
-        </div>
+        </div>` : ''}
       </aside>
     </section>
 
@@ -252,9 +361,16 @@
   document.fonts.ready.then(updateSize);
   document.querySelectorAll('.f-frame').forEach(f => {
     const img = f.querySelector('img'), out = f.querySelector('.f-size');
+    if (out.dataset.fixed) return;
     if (!img) { out.textContent = '비어 있음'; return; }
     const set = () => out.textContent = `${img.naturalWidth} × ${img.naturalHeight}`;
     img.complete ? set() : img.addEventListener('load', set);
+  });
+
+  /* 스크롤 영상: 화면에 보일 때만 재생, 움직임 줄이기 설정이면 직접 재생 */
+  document.querySelectorAll('.f-body video').forEach(v => {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { v.controls = true; return; }
+    new IntersectionObserver(([e]) => { e.isIntersecting ? v.play().catch(() => { v.controls = true; }) : v.pause(); }, { threshold: .35 }).observe(v);
   });
 
   /* 레이아웃 그리드 토글 */

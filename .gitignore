@@ -15,3 +15,10 @@ node_modules
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# 작업 자료 (회사 작업물 원본, 배포 제외)
+_자료/
+
+# 출시 전·오픈 전 작업 이미지 (공개 전까지 커밋 금지)
+assets/images/design/clskin/
+assets/images/design/kmta/sian.webp

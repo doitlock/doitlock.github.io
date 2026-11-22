@@ -66,7 +66,7 @@ body { padding-bottom: var(--status-h); }
 }
 .hero .h-foot { grid-template-columns: minmax(0, 1fr) auto; align-items: end; }
 .code-card {
-  width: min(380px, 100%); border-radius: 8px; overflow: hidden;
+  width: 420px; max-width: 100%; border-radius: 8px; overflow: hidden;
   background: var(--editor-bg); color: #d6d6d6; box-shadow: 0 18px 40px rgba(17,17,17,.18);
   font-family: var(--mono); font-size: 12.5px; line-height: 1.75; letter-spacing: 0;
 }
@@ -162,4 +162,57 @@ body { padding-bottom: var(--status-h); }
   .gutter { padding-right: 8px; }
   .editor .career-list { padding: 0 16px; }
   .statusbar .hide-m { display: none; }
+}
+
+/* Capabilities 타이핑: 아직 안 쳐진 글자 자리 */
+.tw-off { color: transparent; }
+
+/* Profile 교육 목록 */
+.edu li + li { margin-top: 4px; }
+.ps-facts .edu small { display: inline; margin-left: 8px; }
+
+/* 상세페이지: 디자인 작업물 보여주기 */
+.f-body.f-grid { display: grid; grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr)); gap: 8px; padding: 8px; background: var(--soft); }
+.f-grid a { display: block; }
+.f-grid img { width: 100%; height: auto; border: 1px solid var(--line); background: #fff; }
+.f-body.f-tall { height: min(78vh, 820px); overflow-y: auto; overscroll-behavior: contain; background: #111; }
+.f-tall img { display: block; width: 100%; height: auto; }
+.f-tall:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.f-narrow .f-body { max-width: 520px; }
+@media (max-width: 900px) {
+  .f-body.f-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .f-body.f-grid[style*="--cols:1"] { grid-template-columns: 1fr; }
+}
+
+/* 상세페이지를 세로 줄로 잘라 한눈에 보기 (스크롤 없음) */
+.f-body.f-grid.f-strips { gap: 6px; align-items: start; }
+.f-strips a { pointer-events: none; }
+.f-strips img { border: 0; }
+@media (max-width: 900px) {
+  .f-body.f-grid.f-strips { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 3px; padding: 4px; }
+}
+
+/* 모바일: 코드 카드는 화면 폭에 맞추고, 긴 줄은 카드 안에서 가로 스크롤 */
+@media (max-width: 900px) {
+  .code-card { width: 100%; }
+  .code-card pre { overflow-x: auto; font-size: 11.5px; }
+}
+
+/* 상세페이지 스크롤 영상 */
+.f-body video { display: block; width: 100%; height: auto; background: #111; }
+
+/* 상세페이지: PC · 모바일 영상 나란히 */
+.f-body.f-pair { display: flex; gap: 16px; align-items: flex-start; padding: 16px; background: var(--soft); }
+.f-pair figure { margin: 0; }
+.f-pair .pc { flex: 1 1 0; min-width: 0; }
+.f-pair .mo { flex: 0 0 24%; }
+.f-pair video { display: block; width: 100%; height: auto; background: #111; border: 1px solid var(--line); }
+.f-pair .pc video { border-radius: 6px; }
+.f-pair .mo video { border-radius: 14px; }
+.f-pair figcaption { margin-top: 6px; font-family: var(--mono); font-size: 11px; color: var(--muted); letter-spacing: 0; }
+.f-link { margin-left: 6px; color: var(--accent); font-weight: 700; }
+.f-link:hover { text-decoration: underline; }
+@media (max-width: 560px) {
+  .f-body.f-pair { gap: 8px; padding: 8px; }
+  .f-pair .mo { flex-basis: 30%; }
 }
